@@ -1,0 +1,22 @@
+	.file	"<stdin>"
+	.text
+	.globl	fullGtU
+	.type	fullGtU,@function
+fullGtU:                                # @fullGtU
+# BB#0:                                 # %entry
+	leal	1(%rsi), %eax
+	movslq	%eax, %rax
+	cmpb	$0, (%rdx,%rax)
+	jne	.LBB1_2
+# BB#1:                                 # %bb3
+	addl	$4, %esi
+                                        # kill: SIL<def> ESI<kill>
+	movzbl	%sil, %eax
+	ret
+.LBB1_2:                                # %bb34
+	xorl	%eax, %eax
+	ret
+	.size	fullGtU, .-fullGtU
+
+
+	.section	.note.GNU-stack,"",@progbits

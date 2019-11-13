@@ -1,0 +1,6 @@
+/root/llvm/codesample/39apps/mapserver-5.2.0-beta4
+-DHAVE_VSNPRINTF -DNEED_STRLCAT -DNEED_STRRSTR -DUSE_JPEG -DUSE_EPPL -DUSE_GD_GIF -DUSE_GD_PNG -DUSE_GD_JPEG -DUSE_GD_WBMP -DUSE_GD_FT -DGD_HAS_FTEX_XSHOW -DGD_HAS_GDIMAGEGIFPTR -DGD_HAS_GETBITMAPFONTS -DUSE_ICONV -DUSE_ZLIB
+-I. -I/root/llvm/codesample/39apps/gd-2.0.33/build/include
+-L. -lmapserver -L/root/llvm/codesample/39apps/gd-2.0.33/build/lib -lgd -ljpeg -lfreetype -lpng -lz -ljpeg -lfreetype -lpng -lz -ljpeg -lpng -lc -lz -lm -lstdc++ -rdynamic /root/llvm/Prober/libprober.so
+
+#define MS_VERSION "5.2.0-beta4"

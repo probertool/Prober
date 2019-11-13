@@ -1,0 +1,12 @@
+misc/libvlccore_la-update_crypto.lo: misc/update_crypto.c ../config.h \
+  ../include/vlc_fixups.h \
+  /root/llvm/llvm80/build/lib/clang/8.0.1/include/stddef.h \
+  /root/llvm/llvm80/build/lib/clang/8.0.1/include/__stddef_max_align_t.h
+
+../config.h:
+
+../include/vlc_fixups.h:
+
+/root/llvm/llvm80/build/lib/clang/8.0.1/include/stddef.h:
+
+/root/llvm/llvm80/build/lib/clang/8.0.1/include/__stddef_max_align_t.h:

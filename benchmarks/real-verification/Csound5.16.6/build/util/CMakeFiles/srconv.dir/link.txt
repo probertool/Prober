@@ -1,0 +1,1 @@
+/usr/bin/cc  -fopenmp   CMakeFiles/srconv.dir/srconv_main.c.o  -o ../srconv -Wl,-rpath,/root/llvm/codesample/39apps/Csound5.16.6/build: -rdynamic ../libcsound64.so.5.2 

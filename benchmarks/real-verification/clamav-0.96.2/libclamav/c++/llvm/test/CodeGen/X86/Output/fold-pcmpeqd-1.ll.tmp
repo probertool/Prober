@@ -1,0 +1,22 @@
+	.file	"<stdin>"
+	.text
+	.globl	foo
+	.align	16, 0x90
+	.type	foo,@function
+foo:                                    # @foo
+# BB#0:
+	pcmpeqd	%xmm0, %xmm0
+	ret
+	.size	foo, .-foo
+
+	.globl	bar
+	.align	16, 0x90
+	.type	bar,@function
+bar:                                    # @bar
+# BB#0:
+	xorps	%xmm0, %xmm0
+	ret
+	.size	bar, .-bar
+
+
+	.section	.note.GNU-stack,"",@progbits

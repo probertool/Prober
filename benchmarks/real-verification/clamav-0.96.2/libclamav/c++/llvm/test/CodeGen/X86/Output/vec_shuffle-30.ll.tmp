@@ -1,0 +1,28 @@
+	.file	"<stdin>"
+	.text
+	.globl	test
+	.align	16, 0x90
+	.type	test,@function
+test:                                   # @test
+# BB#0:                                 # %entry
+	movl	4(%esp), %eax
+	movlpd	(%eax), %xmm0
+	pshufhw	$-95, %xmm0, %xmm0
+	movaps	%xmm0, (%eax)
+	ret
+	.size	test, .-test
+
+	.globl	test2
+	.align	16, 0x90
+	.type	test2,@function
+test2:                                  # @test2
+# BB#0:                                 # %entry
+	xorps	%xmm1, %xmm1
+	shufps	$-124, %xmm0, %xmm1
+	movl	4(%esp), %eax
+	movaps	%xmm1, (%eax)
+	ret
+	.size	test2, .-test2
+
+
+	.section	.note.GNU-stack,"",@progbits

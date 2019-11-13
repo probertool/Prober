@@ -1,0 +1,180 @@
+	.file	"<stdin>"
+	.text
+	.globl	shuf_16i8_0
+	.align	16, 0x90
+	.type	shuf_16i8_0,@function
+shuf_16i8_0:                            # @shuf_16i8_0
+# BB#0:                                 # %entry
+	punpcklbw	%xmm0, %xmm0
+	punpcklbw	%xmm0, %xmm0
+	pshufd	$0, %xmm0, %xmm0
+	ret
+	.size	shuf_16i8_0, .-shuf_16i8_0
+
+	.globl	shuf_16i8_1
+	.align	16, 0x90
+	.type	shuf_16i8_1,@function
+shuf_16i8_1:                            # @shuf_16i8_1
+# BB#0:                                 # %entry
+	punpcklbw	%xmm0, %xmm0
+	punpcklbw	%xmm0, %xmm0
+	pshufd	$85, %xmm0, %xmm0
+	ret
+	.size	shuf_16i8_1, .-shuf_16i8_1
+
+	.globl	shuf_16i8_2
+	.align	16, 0x90
+	.type	shuf_16i8_2,@function
+shuf_16i8_2:                            # @shuf_16i8_2
+# BB#0:                                 # %entry
+	punpcklbw	%xmm0, %xmm0
+	punpcklbw	%xmm0, %xmm0
+	pshufd	$-86, %xmm0, %xmm0
+	ret
+	.size	shuf_16i8_2, .-shuf_16i8_2
+
+	.globl	shuf_16i8_3
+	.align	16, 0x90
+	.type	shuf_16i8_3,@function
+shuf_16i8_3:                            # @shuf_16i8_3
+# BB#0:                                 # %entry
+	punpcklbw	%xmm0, %xmm0
+	punpcklbw	%xmm0, %xmm0
+	pshufd	$-1, %xmm0, %xmm0
+	ret
+	.size	shuf_16i8_3, .-shuf_16i8_3
+
+	.globl	shuf_16i8_4
+	.align	16, 0x90
+	.type	shuf_16i8_4,@function
+shuf_16i8_4:                            # @shuf_16i8_4
+# BB#0:                                 # %entry
+	punpcklbw	%xmm0, %xmm0
+	punpckhbw	%xmm0, %xmm0
+	pshufd	$0, %xmm0, %xmm0
+	ret
+	.size	shuf_16i8_4, .-shuf_16i8_4
+
+	.globl	shuf_16i8_5
+	.align	16, 0x90
+	.type	shuf_16i8_5,@function
+shuf_16i8_5:                            # @shuf_16i8_5
+# BB#0:                                 # %entry
+	punpcklbw	%xmm0, %xmm0
+	punpckhbw	%xmm0, %xmm0
+	pshufd	$85, %xmm0, %xmm0
+	ret
+	.size	shuf_16i8_5, .-shuf_16i8_5
+
+	.globl	shuf_16i8_6
+	.align	16, 0x90
+	.type	shuf_16i8_6,@function
+shuf_16i8_6:                            # @shuf_16i8_6
+# BB#0:                                 # %entry
+	punpcklbw	%xmm0, %xmm0
+	punpckhbw	%xmm0, %xmm0
+	pshufd	$-86, %xmm0, %xmm0
+	ret
+	.size	shuf_16i8_6, .-shuf_16i8_6
+
+	.globl	shuf_16i8_7
+	.align	16, 0x90
+	.type	shuf_16i8_7,@function
+shuf_16i8_7:                            # @shuf_16i8_7
+# BB#0:                                 # %entry
+	punpcklbw	%xmm0, %xmm0
+	punpckhbw	%xmm0, %xmm0
+	pshufd	$-1, %xmm0, %xmm0
+	ret
+	.size	shuf_16i8_7, .-shuf_16i8_7
+
+	.globl	shuf_16i8_8
+	.align	16, 0x90
+	.type	shuf_16i8_8,@function
+shuf_16i8_8:                            # @shuf_16i8_8
+# BB#0:                                 # %entry
+	punpckhbw	%xmm0, %xmm0
+	punpcklbw	%xmm0, %xmm0
+	pshufd	$0, %xmm0, %xmm0
+	ret
+	.size	shuf_16i8_8, .-shuf_16i8_8
+
+	.globl	shuf_16i8_9
+	.align	16, 0x90
+	.type	shuf_16i8_9,@function
+shuf_16i8_9:                            # @shuf_16i8_9
+# BB#0:                                 # %entry
+	punpckhbw	%xmm0, %xmm0
+	punpcklbw	%xmm0, %xmm0
+	pshufd	$85, %xmm0, %xmm0
+	ret
+	.size	shuf_16i8_9, .-shuf_16i8_9
+
+	.globl	shuf_16i8_10
+	.align	16, 0x90
+	.type	shuf_16i8_10,@function
+shuf_16i8_10:                           # @shuf_16i8_10
+# BB#0:                                 # %entry
+	punpckhbw	%xmm0, %xmm0
+	punpcklbw	%xmm0, %xmm0
+	pshufd	$-86, %xmm0, %xmm0
+	ret
+	.size	shuf_16i8_10, .-shuf_16i8_10
+
+	.globl	shuf_16i8_11
+	.align	16, 0x90
+	.type	shuf_16i8_11,@function
+shuf_16i8_11:                           # @shuf_16i8_11
+# BB#0:                                 # %entry
+	punpckhbw	%xmm0, %xmm0
+	punpcklbw	%xmm0, %xmm0
+	pshufd	$-1, %xmm0, %xmm0
+	ret
+	.size	shuf_16i8_11, .-shuf_16i8_11
+
+	.globl	shuf_16i8_12
+	.align	16, 0x90
+	.type	shuf_16i8_12,@function
+shuf_16i8_12:                           # @shuf_16i8_12
+# BB#0:                                 # %entry
+	punpckhbw	%xmm0, %xmm0
+	punpckhbw	%xmm0, %xmm0
+	pshufd	$0, %xmm0, %xmm0
+	ret
+	.size	shuf_16i8_12, .-shuf_16i8_12
+
+	.globl	shuf_16i8_13
+	.align	16, 0x90
+	.type	shuf_16i8_13,@function
+shuf_16i8_13:                           # @shuf_16i8_13
+# BB#0:                                 # %entry
+	punpckhbw	%xmm0, %xmm0
+	punpckhbw	%xmm0, %xmm0
+	pshufd	$85, %xmm0, %xmm0
+	ret
+	.size	shuf_16i8_13, .-shuf_16i8_13
+
+	.globl	shuf_16i8_14
+	.align	16, 0x90
+	.type	shuf_16i8_14,@function
+shuf_16i8_14:                           # @shuf_16i8_14
+# BB#0:                                 # %entry
+	punpckhbw	%xmm0, %xmm0
+	punpckhbw	%xmm0, %xmm0
+	pshufd	$-86, %xmm0, %xmm0
+	ret
+	.size	shuf_16i8_14, .-shuf_16i8_14
+
+	.globl	shuf_16i8_15
+	.align	16, 0x90
+	.type	shuf_16i8_15,@function
+shuf_16i8_15:                           # @shuf_16i8_15
+# BB#0:                                 # %entry
+	punpckhbw	%xmm0, %xmm0
+	punpckhbw	%xmm0, %xmm0
+	pshufd	$-1, %xmm0, %xmm0
+	ret
+	.size	shuf_16i8_15, .-shuf_16i8_15
+
+
+	.section	.note.GNU-stack,"",@progbits

@@ -1,0 +1,1937 @@
+2019/06/26 06:40:58| Starting Squid Cache version 2.3.STABLE5 for ...
+2019/06/26 06:40:58| Process ID 5344
+2019/06/26 06:40:58| With 1024 file descriptors available
+2019/06/26 06:40:58| Performing DNS Tests...
+2019/06/26 06:40:58| Successful DNS name lookup tests...
+2019/06/26 06:40:58| DNS Socket created on FD 1
+2019/06/26 06:40:58| Adding nameserver 8.8.8.8 from /etc/resolv.conf
+2019/06/26 06:40:58| Adding nameserver 8.8.4.4 from /etc/resolv.conf
+2019/06/26 06:40:58| Unlinkd pipe opened on FD 6
+2019/06/26 06:40:58| Swap maxSize 102400 KB, estimated 7876 objects
+2019/06/26 06:40:58| Target number of buckets: 157
+2019/06/26 06:40:58| Using 8192 Store buckets
+2019/06/26 06:40:58| Max Mem  size: 8192 KB
+2019/06/26 06:40:58| Max Swap size: 102400 KB
+2019/06/26 06:40:58| Rebuilding storage in /root/llvm/codesample/real-effectiveness/squid-2.3/squid-2.3-install/cache (DIRTY)
+2019/06/26 06:40:58| Set Current Directory to /root/llvm/codesample/real-effectiveness/squid-2.3/squid-2.3-install/cache
+2019/06/26 06:40:58| Loaded Icons.
+2019/06/26 06:40:58| Accepting HTTP connections at 0.0.0.0, port 3128, FD 7.
+2019/06/26 06:40:58| Accepting ICP messages at 0.0.0.0, port 3130, FD 8.
+2019/06/26 06:40:58| WCCP Disabled.
+2019/06/26 06:40:58| Ready to serve requests.
+2019/06/26 06:40:58| Done scanning /root/llvm/codesample/real-effectiveness/squid-2.3/squid-2.3-install/cache swaplog (0 entries)
+2019/06/26 06:40:58| Finished rebuilding storage from disk.
+2019/06/26 06:40:58|         0 Entries scanned
+2019/06/26 06:40:58|         0 Invalid entries.
+2019/06/26 06:40:58|         0 With invalid flags.
+2019/06/26 06:40:58|         0 Objects loaded.
+2019/06/26 06:40:58|         0 Objects expired.
+2019/06/26 06:40:58|         0 Objects cancelled.
+2019/06/26 06:40:58|         0 Duplicate URLs purged.
+2019/06/26 06:40:58|         0 Swapfile clashes avoided.
+2019/06/26 06:40:58|   Took 0.3 seconds (   0.0 objects/sec).
+2019/06/26 06:40:58| Beginning Validation Procedure
+2019/06/26 06:40:58|   Completed Validation Procedure
+2019/06/26 06:40:58|   Validated 0 Entries
+2019/06/26 06:40:58|   store_swap_size = 21k
+2019/06/26 06:40:59| storeLateRelease: released 0 objects
+2019/06/26 06:42:08| Preparing for shutdown after 1 requests
+2019/06/26 06:42:08| Waiting 30 seconds for active connections to finish
+2019/06/26 06:42:08| FD 7 Closing HTTP connection
+2019/06/26 06:42:09| Shutting down...
+2019/06/26 06:42:09| FD 8 Closing ICP connection
+2019/06/26 06:42:09| Closing unlinkd pipe on FD 6
+2019/06/26 06:42:09| storeDirWriteCleanLogs: Starting...
+2019/06/26 06:42:09|   Finished.  Wrote 0 entries.
+2019/06/26 06:42:09|   Took 0.0 seconds (   0.0 entries/sec).
+CPU Usage: 0.092 seconds = 0.024 user + 0.068 sys
+Maximum Resident Size: 272832 KB
+Page faults with physical i/o: 0
+Memory usage for squid via mallinfo():
+	total space in arena:    2168 KB
+	Ordinary blocks:         2031 KB      7 blks
+	Small blocks:               0 KB      5 blks
+	Holding blocks:         17668 KB    133 blks
+	Free Small blocks:          0 KB
+	Free Ordinary blocks:     136 KB
+	Total in use:           19699 KB 909%
+	Total free:               137 KB 6%
+2019/06/26 06:42:09| Squid Cache (Version 2.3.STABLE5): Exiting normally.
+2019/06/26 07:03:13| Starting Squid Cache version 2.3.STABLE5 for ...
+2019/06/26 07:03:13| Process ID 5357
+2019/06/26 07:03:13| With 1024 file descriptors available
+2019/06/26 07:03:13| Performing DNS Tests...
+2019/06/26 07:03:13| Successful DNS name lookup tests...
+2019/06/26 07:03:13| DNS Socket created on FD 1
+2019/06/26 07:03:13| Adding nameserver 8.8.8.8 from /etc/resolv.conf
+2019/06/26 07:03:13| Adding nameserver 8.8.4.4 from /etc/resolv.conf
+2019/06/26 07:03:13| Unlinkd pipe opened on FD 6
+2019/06/26 07:03:13| Swap maxSize 102400 KB, estimated 7876 objects
+2019/06/26 07:03:13| Target number of buckets: 157
+2019/06/26 07:03:13| Using 8192 Store buckets
+2019/06/26 07:03:13| Max Mem  size: 8192 KB
+2019/06/26 07:03:13| Max Swap size: 102400 KB
+2019/06/26 07:03:13| Rebuilding storage in /root/llvm/codesample/real-effectiveness/squid-2.3/squid-2.3-install/cache (CLEAN)
+2019/06/26 07:03:13| Set Current Directory to /root/llvm/codesample/real-effectiveness/squid-2.3/squid-2.3-install/cache
+2019/06/26 07:03:13| Loaded Icons.
+2019/06/26 07:03:13| Accepting HTTP connections at 0.0.0.0, port 3128, FD 7.
+2019/06/26 07:03:13| Accepting ICP messages at 0.0.0.0, port 3130, FD 8.
+2019/06/26 07:03:13| WCCP Disabled.
+2019/06/26 07:03:13| Ready to serve requests.
+2019/06/26 07:03:14| Done scanning /root/llvm/codesample/real-effectiveness/squid-2.3/squid-2.3-install/cache swaplog (0 entries)
+2019/06/26 07:03:14| Finished rebuilding storage from disk.
+2019/06/26 07:03:14|         0 Entries scanned
+2019/06/26 07:03:14|         0 Invalid entries.
+2019/06/26 07:03:14|         0 With invalid flags.
+2019/06/26 07:03:14|         0 Objects loaded.
+2019/06/26 07:03:14|         0 Objects expired.
+2019/06/26 07:03:14|         0 Objects cancelled.
+2019/06/26 07:03:14|         0 Duplicate URLs purged.
+2019/06/26 07:03:14|         0 Swapfile clashes avoided.
+2019/06/26 07:03:14|   Took 0.3 seconds (   0.0 objects/sec).
+2019/06/26 07:03:14| Beginning Validation Procedure
+2019/06/26 07:03:14|   Completed Validation Procedure
+2019/06/26 07:03:14|   Validated 0 Entries
+2019/06/26 07:03:14|   store_swap_size = 21k
+2019/06/26 07:03:14| storeLateRelease: released 0 objects
+FATAL: Received Segment Violation...dying.
+2019/06/26 07:03:17| storeDirWriteCleanLogs: Starting...
+2019/06/26 07:03:18| WARNING: Closing open FD    7
+2019/06/26 07:03:18|   Finished.  Wrote 0 entries.
+2019/06/26 07:03:18|   Took 0.0 seconds (   0.0 entries/sec).
+CPU Usage: 0.100 seconds = 0.008 user + 0.092 sys
+Maximum Resident Size: 273488 KB
+Page faults with physical i/o: 0
+Memory usage for squid via mallinfo():
+	total space in arena:    2632 KB
+	Ordinary blocks:         2552 KB      3 blks
+	Small blocks:               0 KB      5 blks
+	Holding blocks:         17140 KB    129 blks
+	Free Small blocks:          0 KB
+	Free Ordinary blocks:      79 KB
+	Total in use:           19692 KB 748%
+	Total free:                79 KB 3%
+FATAL: Received signal 6...dying.
+2019/06/26 07:03:18| storeDirWriteCleanLogs: Starting...
+2019/06/26 07:03:18|   Finished.  Wrote 0 entries.
+2019/06/26 07:03:18|   Took 0.0 seconds (   0.0 entries/sec).
+CPU Usage: 0.112 seconds = 0.008 user + 0.104 sys
+Maximum Resident Size: 273584 KB
+Page faults with physical i/o: 0
+Memory usage for squid via mallinfo():
+	total space in arena:    2632 KB
+	Ordinary blocks:         2552 KB      2 blks
+	Small blocks:               0 KB      4 blks
+	Holding blocks:         17140 KB    129 blks
+	Free Small blocks:          0 KB
+	Free Ordinary blocks:      79 KB
+	Total in use:           19692 KB 748%
+	Total free:                79 KB 3%
+FATAL: Received signal 6...dying.
+2019/06/26 07:03:18| storeDirWriteCleanLogs: Starting...
+2019/06/26 07:03:19|   Finished.  Wrote 0 entries.
+2019/06/26 07:03:19|   Took 0.0 seconds (   0.0 entries/sec).
+CPU Usage: 0.128 seconds = 0.012 user + 0.116 sys
+Maximum Resident Size: 273600 KB
+Page faults with physical i/o: 0
+Memory usage for squid via mallinfo():
+	total space in arena:    2632 KB
+	Ordinary blocks:         2552 KB      2 blks
+	Small blocks:               0 KB      4 blks
+	Holding blocks:         17140 KB    129 blks
+	Free Small blocks:          0 KB
+	Free Ordinary blocks:      79 KB
+	Total in use:           19692 KB 748%
+	Total free:                79 KB 3%
+FATAL: Received signal 6...dying.
+2019/06/26 07:03:19| storeDirWriteCleanLogs: Starting...
+2019/06/26 07:03:19|   Finished.  Wrote 0 entries.
+2019/06/26 07:03:19|   Took 0.0 seconds (   0.0 entries/sec).
+CPU Usage: 0.148 seconds = 0.012 user + 0.136 sys
+Maximum Resident Size: 273616 KB
+Page faults with physical i/o: 0
+Memory usage for squid via mallinfo():
+	total space in arena:    2632 KB
+	Ordinary blocks:         2552 KB      2 blks
+	Small blocks:               0 KB      4 blks
+	Holding blocks:         17140 KB    129 blks
+	Free Small blocks:          0 KB
+	Free Ordinary blocks:      79 KB
+	Total in use:           19692 KB 748%
+	Total free:                79 KB 3%
+FATAL: Received signal 6...dying.
+2019/06/26 07:03:19| storeDirWriteCleanLogs: Starting...
+2019/06/26 07:03:20|   Finished.  Wrote 0 entries.
+2019/06/26 07:03:20|   Took 0.0 seconds (   0.0 entries/sec).
+CPU Usage: 0.172 seconds = 0.012 user + 0.160 sys
+Maximum Resident Size: 273632 KB
+Page faults with physical i/o: 0
+Memory usage for squid via mallinfo():
+	total space in arena:    2632 KB
+	Ordinary blocks:         2552 KB      2 blks
+	Small blocks:               0 KB      4 blks
+	Holding blocks:         17140 KB    129 blks
+	Free Small blocks:          0 KB
+	Free Ordinary blocks:      79 KB
+	Total in use:           19692 KB 748%
+	Total free:                79 KB 3%
+FATAL: Received signal 6...dying.
+2019/06/26 07:03:20| storeDirWriteCleanLogs: Starting...
+2019/06/26 07:03:21|   Finished.  Wrote 0 entries.
+2019/06/26 07:03:21|   Took 0.0 seconds (   0.0 entries/sec).
+CPU Usage: 0.196 seconds = 0.012 user + 0.184 sys
+Maximum Resident Size: 273664 KB
+Page faults with physical i/o: 0
+Memory usage for squid via mallinfo():
+	total space in arena:    2632 KB
+	Ordinary blocks:         2552 KB      2 blks
+	Small blocks:               0 KB      4 blks
+	Holding blocks:         17140 KB    129 blks
+	Free Small blocks:          0 KB
+	Free Ordinary blocks:      79 KB
+	Total in use:           19692 KB 748%
+	Total free:                79 KB 3%
+FATAL: Received signal 6...dying.
+2019/06/26 07:03:21| storeDirWriteCleanLogs: Starting...
+2019/06/26 07:03:22|   Finished.  Wrote 0 entries.
+2019/06/26 07:03:22|   Took 0.0 seconds (   0.0 entries/sec).
+CPU Usage: 0.228 seconds = 0.016 user + 0.212 sys
+Maximum Resident Size: 273680 KB
+Page faults with physical i/o: 0
+Memory usage for squid via mallinfo():
+	total space in arena:    2632 KB
+	Ordinary blocks:         2552 KB      2 blks
+	Small blocks:               0 KB      4 blks
+	Holding blocks:         17140 KB    129 blks
+	Free Small blocks:          0 KB
+	Free Ordinary blocks:      79 KB
+	Total in use:           19692 KB 748%
+	Total free:                79 KB 3%
+FATAL: Received signal 6...dying.
+2019/06/26 07:03:22| storeDirWriteCleanLogs: Starting...
+2019/06/26 07:03:23|   Finished.  Wrote 0 entries.
+2019/06/26 07:03:23|   Took 0.0 seconds (   0.0 entries/sec).
+CPU Usage: 0.260 seconds = 0.016 user + 0.244 sys
+Maximum Resident Size: 273696 KB
+Page faults with physical i/o: 0
+Memory usage for squid via mallinfo():
+	total space in arena:    2632 KB
+	Ordinary blocks:         2552 KB      2 blks
+	Small blocks:               0 KB      4 blks
+	Holding blocks:         17140 KB    129 blks
+	Free Small blocks:          0 KB
+	Free Ordinary blocks:      79 KB
+	Total in use:           19692 KB 748%
+	Total free:                79 KB 3%
+FATAL: Received signal 6...dying.
+2019/06/26 07:03:23| storeDirWriteCleanLogs: Starting...
+2019/06/26 07:03:24|   Finished.  Wrote 0 entries.
+2019/06/26 07:03:24|   Took 0.0 seconds (   0.0 entries/sec).
+CPU Usage: 0.296 seconds = 0.020 user + 0.276 sys
+Maximum Resident Size: 273712 KB
+Page faults with physical i/o: 0
+Memory usage for squid via mallinfo():
+	total space in arena:    2632 KB
+	Ordinary blocks:         2552 KB      2 blks
+	Small blocks:               0 KB      4 blks
+	Holding blocks:         17140 KB    129 blks
+	Free Small blocks:          0 KB
+	Free Ordinary blocks:      79 KB
+	Total in use:           19692 KB 748%
+	Total free:                79 KB 3%
+FATAL: Received signal 6...dying.
+2019/06/26 07:03:24| storeDirWriteCleanLogs: Starting...
+2019/06/26 07:03:26|   Finished.  Wrote 0 entries.
+2019/06/26 07:03:26|   Took 0.0 seconds (   0.0 entries/sec).
+CPU Usage: 0.336 seconds = 0.020 user + 0.316 sys
+Maximum Resident Size: 273728 KB
+Page faults with physical i/o: 0
+Memory usage for squid via mallinfo():
+	total space in arena:    2632 KB
+	Ordinary blocks:         2552 KB      2 blks
+	Small blocks:               0 KB      4 blks
+	Holding blocks:         17140 KB    129 blks
+	Free Small blocks:          0 KB
+	Free Ordinary blocks:      79 KB
+	Total in use:           19692 KB 748%
+	Total free:                79 KB 3%
+FATAL: Received signal 6...dying.
+2019/06/26 07:03:26| storeDirWriteCleanLogs: Starting...
+2019/06/26 07:03:27|   Finished.  Wrote 0 entries.
+2019/06/26 07:03:27|   Took 0.0 seconds (   0.0 entries/sec).
+CPU Usage: 0.376 seconds = 0.020 user + 0.356 sys
+Maximum Resident Size: 273744 KB
+Page faults with physical i/o: 0
+Memory usage for squid via mallinfo():
+	total space in arena:    2632 KB
+	Ordinary blocks:         2552 KB      2 blks
+	Small blocks:               0 KB      4 blks
+	Holding blocks:         17140 KB    129 blks
+	Free Small blocks:          0 KB
+	Free Ordinary blocks:      79 KB
+	Total in use:           19692 KB 748%
+	Total free:                79 KB 3%
+FATAL: Received signal 6...dying.
+2019/06/26 07:03:27| storeDirWriteCleanLogs: Starting...
+2019/06/26 07:03:29|   Finished.  Wrote 0 entries.
+2019/06/26 07:03:29|   Took 0.0 seconds (   0.0 entries/sec).
+CPU Usage: 0.424 seconds = 0.020 user + 0.404 sys
+Maximum Resident Size: 273760 KB
+Page faults with physical i/o: 0
+Memory usage for squid via mallinfo():
+	total space in arena:    2632 KB
+	Ordinary blocks:         2552 KB      2 blks
+	Small blocks:               0 KB      4 blks
+	Holding blocks:         17140 KB    129 blks
+	Free Small blocks:          0 KB
+	Free Ordinary blocks:      79 KB
+	Total in use:           19692 KB 748%
+	Total free:                79 KB 3%
+FATAL: Received signal 6...dying.
+2019/06/26 07:03:29| storeDirWriteCleanLogs: Starting...
+2019/06/26 07:03:31|   Finished.  Wrote 0 entries.
+2019/06/26 07:03:31|   Took 0.0 seconds (   0.0 entries/sec).
+CPU Usage: 0.472 seconds = 0.020 user + 0.452 sys
+Maximum Resident Size: 273776 KB
+Page faults with physical i/o: 0
+Memory usage for squid via mallinfo():
+	total space in arena:    2632 KB
+	Ordinary blocks:         2552 KB      2 blks
+	Small blocks:               0 KB      4 blks
+	Holding blocks:         17140 KB    129 blks
+	Free Small blocks:          0 KB
+	Free Ordinary blocks:      79 KB
+	Total in use:           19692 KB 748%
+	Total free:                79 KB 3%
+FATAL: Received signal 6...dying.
+2019/06/26 07:03:31| storeDirWriteCleanLogs: Starting...
+2019/06/26 07:03:33|   Finished.  Wrote 0 entries.
+2019/06/26 07:03:33|   Took 0.0 seconds (   0.0 entries/sec).
+CPU Usage: 0.524 seconds = 0.024 user + 0.500 sys
+Maximum Resident Size: 273792 KB
+Page faults with physical i/o: 0
+Memory usage for squid via mallinfo():
+	total space in arena:    2632 KB
+	Ordinary blocks:         2552 KB      2 blks
+	Small blocks:               0 KB      4 blks
+	Holding blocks:         17140 KB    129 blks
+	Free Small blocks:          0 KB
+	Free Ordinary blocks:      79 KB
+	Total in use:           19692 KB 748%
+	Total free:                79 KB 3%
+FATAL: Received signal 6...dying.
+2019/06/26 07:03:33| storeDirWriteCleanLogs: Starting...
+2019/06/26 07:03:35|   Finished.  Wrote 0 entries.
+2019/06/26 07:03:35|   Took 0.0 seconds (   0.0 entries/sec).
+CPU Usage: 0.580 seconds = 0.028 user + 0.552 sys
+Maximum Resident Size: 273808 KB
+Page faults with physical i/o: 0
+Memory usage for squid via mallinfo():
+	total space in arena:    2632 KB
+	Ordinary blocks:         2552 KB      2 blks
+	Small blocks:               0 KB      4 blks
+	Holding blocks:         17140 KB    129 blks
+	Free Small blocks:          0 KB
+	Free Ordinary blocks:      79 KB
+	Total in use:           19692 KB 748%
+	Total free:                79 KB 3%
+FATAL: Received signal 6...dying.
+2019/06/26 07:03:35| storeDirWriteCleanLogs: Starting...
+2019/06/26 07:03:38|   Finished.  Wrote 0 entries.
+2019/06/26 07:03:38|   Took 0.0 seconds (   0.0 entries/sec).
+CPU Usage: 0.640 seconds = 0.028 user + 0.612 sys
+Maximum Resident Size: 273824 KB
+Page faults with physical i/o: 0
+Memory usage for squid via mallinfo():
+	total space in arena:    2632 KB
+	Ordinary blocks:         2552 KB      2 blks
+	Small blocks:               0 KB      4 blks
+	Holding blocks:         17140 KB    129 blks
+	Free Small blocks:          0 KB
+	Free Ordinary blocks:      79 KB
+	Total in use:           19692 KB 748%
+	Total free:                79 KB 3%
+FATAL: Received signal 6...dying.
+2019/06/26 07:03:38| storeDirWriteCleanLogs: Starting...
+2019/06/26 07:03:40|   Finished.  Wrote 0 entries.
+2019/06/26 07:03:40|   Took 0.0 seconds (   0.0 entries/sec).
+CPU Usage: 0.704 seconds = 0.028 user + 0.676 sys
+Maximum Resident Size: 273840 KB
+Page faults with physical i/o: 0
+Memory usage for squid via mallinfo():
+	total space in arena:    2632 KB
+	Ordinary blocks:         2552 KB      2 blks
+	Small blocks:               0 KB      4 blks
+	Holding blocks:         17140 KB    129 blks
+	Free Small blocks:          0 KB
+	Free Ordinary blocks:      79 KB
+	Total in use:           19692 KB 748%
+	Total free:                79 KB 3%
+FATAL: Received signal 6...dying.
+2019/06/26 07:03:40| storeDirWriteCleanLogs: Starting...
+2019/06/26 07:03:43|   Finished.  Wrote 0 entries.
+2019/06/26 07:03:43|   Took 0.0 seconds (   0.0 entries/sec).
+CPU Usage: 0.768 seconds = 0.040 user + 0.728 sys
+Maximum Resident Size: 273856 KB
+Page faults with physical i/o: 0
+Memory usage for squid via mallinfo():
+	total space in arena:    2632 KB
+	Ordinary blocks:         2552 KB      2 blks
+	Small blocks:               0 KB      4 blks
+	Holding blocks:         17140 KB    129 blks
+	Free Small blocks:          0 KB
+	Free Ordinary blocks:      79 KB
+	Total in use:           19692 KB 748%
+	Total free:                79 KB 3%
+FATAL: Received signal 6...dying.
+2019/06/26 07:03:43| storeDirWriteCleanLogs: Starting...
+2019/06/26 07:03:46|   Finished.  Wrote 0 entries.
+2019/06/26 07:03:46|   Took 0.0 seconds (   0.0 entries/sec).
+CPU Usage: 0.836 seconds = 0.044 user + 0.792 sys
+Maximum Resident Size: 273872 KB
+Page faults with physical i/o: 0
+Memory usage for squid via mallinfo():
+	total space in arena:    2632 KB
+	Ordinary blocks:         2552 KB      2 blks
+	Small blocks:               0 KB      4 blks
+	Holding blocks:         17140 KB    129 blks
+	Free Small blocks:          0 KB
+	Free Ordinary blocks:      79 KB
+	Total in use:           19692 KB 748%
+	Total free:                79 KB 3%
+FATAL: Received signal 6...dying.
+2019/06/26 07:03:46| storeDirWriteCleanLogs: Starting...
+2019/06/26 07:03:49|   Finished.  Wrote 0 entries.
+2019/06/26 07:03:49|   Took 0.0 seconds (   0.0 entries/sec).
+CPU Usage: 0.908 seconds = 0.044 user + 0.864 sys
+Maximum Resident Size: 273888 KB
+Page faults with physical i/o: 0
+Memory usage for squid via mallinfo():
+	total space in arena:    2632 KB
+	Ordinary blocks:         2552 KB      2 blks
+	Small blocks:               0 KB      4 blks
+	Holding blocks:         17140 KB    129 blks
+	Free Small blocks:          0 KB
+	Free Ordinary blocks:      79 KB
+	Total in use:           19692 KB 748%
+	Total free:                79 KB 3%
+FATAL: Received signal 6...dying.
+2019/06/26 07:03:49| storeDirWriteCleanLogs: Starting...
+2019/06/26 07:03:52|   Finished.  Wrote 0 entries.
+2019/06/26 07:03:52|   Took 0.0 seconds (   0.0 entries/sec).
+CPU Usage: 0.984 seconds = 0.048 user + 0.936 sys
+Maximum Resident Size: 273904 KB
+Page faults with physical i/o: 0
+Memory usage for squid via mallinfo():
+	total space in arena:    2632 KB
+	Ordinary blocks:         2552 KB      2 blks
+	Small blocks:               0 KB      4 blks
+	Holding blocks:         17140 KB    129 blks
+	Free Small blocks:          0 KB
+	Free Ordinary blocks:      79 KB
+	Total in use:           19692 KB 748%
+	Total free:                79 KB 3%
+FATAL: Received signal 6...dying.
+2019/06/26 07:03:52| storeDirWriteCleanLogs: Starting...
+2019/06/26 07:03:55|   Finished.  Wrote 0 entries.
+2019/06/26 07:03:55|   Took 0.0 seconds (   0.0 entries/sec).
+CPU Usage: 1.064 seconds = 0.056 user + 1.008 sys
+Maximum Resident Size: 273936 KB
+Page faults with physical i/o: 0
+Memory usage for squid via mallinfo():
+	total space in arena:    2632 KB
+	Ordinary blocks:         2552 KB      2 blks
+	Small blocks:               0 KB      4 blks
+	Holding blocks:         17140 KB    129 blks
+	Free Small blocks:          0 KB
+	Free Ordinary blocks:      79 KB
+	Total in use:           19692 KB 748%
+	Total free:                79 KB 3%
+FATAL: Received signal 6...dying.
+2019/06/26 07:03:55| storeDirWriteCleanLogs: Starting...
+2019/06/26 07:03:58|   Finished.  Wrote 0 entries.
+2019/06/26 07:03:58|   Took 0.0 seconds (   0.0 entries/sec).
+CPU Usage: 1.144 seconds = 0.056 user + 1.088 sys
+Maximum Resident Size: 273952 KB
+Page faults with physical i/o: 0
+Memory usage for squid via mallinfo():
+	total space in arena:    2632 KB
+	Ordinary blocks:         2552 KB      2 blks
+	Small blocks:               0 KB      4 blks
+	Holding blocks:         17140 KB    129 blks
+	Free Small blocks:          0 KB
+	Free Ordinary blocks:      79 KB
+	Total in use:           19692 KB 748%
+	Total free:                79 KB 3%
+FATAL: Received signal 6...dying.
+2019/06/26 07:03:58| storeDirWriteCleanLogs: Starting...
+2019/06/26 07:04:02|   Finished.  Wrote 0 entries.
+2019/06/26 07:04:02|   Took 0.0 seconds (   0.0 entries/sec).
+CPU Usage: 1.228 seconds = 0.056 user + 1.172 sys
+Maximum Resident Size: 273968 KB
+Page faults with physical i/o: 0
+Memory usage for squid via mallinfo():
+	total space in arena:    2632 KB
+	Ordinary blocks:         2552 KB      2 blks
+	Small blocks:               0 KB      4 blks
+	Holding blocks:         17140 KB    129 blks
+	Free Small blocks:          0 KB
+	Free Ordinary blocks:      79 KB
+	Total in use:           19692 KB 748%
+	Total free:                79 KB 3%
+FATAL: Received signal 6...dying.
+2019/06/26 07:04:02| storeDirWriteCleanLogs: Starting...
+2019/06/26 07:04:05|   Finished.  Wrote 0 entries.
+2019/06/26 07:04:05|   Took 0.0 seconds (   0.0 entries/sec).
+CPU Usage: 1.320 seconds = 0.056 user + 1.264 sys
+Maximum Resident Size: 273984 KB
+Page faults with physical i/o: 0
+Memory usage for squid via mallinfo():
+	total space in arena:    2632 KB
+	Ordinary blocks:         2552 KB      2 blks
+	Small blocks:               0 KB      4 blks
+	Holding blocks:         17140 KB    129 blks
+	Free Small blocks:          0 KB
+	Free Ordinary blocks:      79 KB
+	Total in use:           19692 KB 748%
+	Total free:                79 KB 3%
+FATAL: Received signal 6...dying.
+2019/06/26 07:04:05| storeDirWriteCleanLogs: Starting...
+2019/06/26 07:04:09|   Finished.  Wrote 0 entries.
+2019/06/26 07:04:09|   Took 0.0 seconds (   0.0 entries/sec).
+CPU Usage: 1.412 seconds = 0.056 user + 1.356 sys
+Maximum Resident Size: 274000 KB
+Page faults with physical i/o: 0
+Memory usage for squid via mallinfo():
+	total space in arena:    2632 KB
+	Ordinary blocks:         2552 KB      2 blks
+	Small blocks:               0 KB      4 blks
+	Holding blocks:         17140 KB    129 blks
+	Free Small blocks:          0 KB
+	Free Ordinary blocks:      79 KB
+	Total in use:           19692 KB 748%
+	Total free:                79 KB 3%
+FATAL: Received signal 6...dying.
+2019/06/26 07:04:09| storeDirWriteCleanLogs: Starting...
+2019/06/26 07:04:13|   Finished.  Wrote 0 entries.
+2019/06/26 07:04:13|   Took 0.0 seconds (   0.0 entries/sec).
+CPU Usage: 1.508 seconds = 0.056 user + 1.452 sys
+Maximum Resident Size: 274016 KB
+Page faults with physical i/o: 0
+Memory usage for squid via mallinfo():
+	total space in arena:    2632 KB
+	Ordinary blocks:         2552 KB      2 blks
+	Small blocks:               0 KB      4 blks
+	Holding blocks:         17140 KB    129 blks
+	Free Small blocks:          0 KB
+	Free Ordinary blocks:      79 KB
+	Total in use:           19692 KB 748%
+	Total free:                79 KB 3%
+FATAL: Received signal 6...dying.
+2019/06/26 07:04:13| storeDirWriteCleanLogs: Starting...
+2019/06/26 07:04:17|   Finished.  Wrote 0 entries.
+2019/06/26 07:04:17|   Took 0.0 seconds (   0.0 entries/sec).
+CPU Usage: 1.604 seconds = 0.060 user + 1.544 sys
+Maximum Resident Size: 274032 KB
+Page faults with physical i/o: 0
+Memory usage for squid via mallinfo():
+	total space in arena:    2632 KB
+	Ordinary blocks:         2552 KB      2 blks
+	Small blocks:               0 KB      4 blks
+	Holding blocks:         17140 KB    129 blks
+	Free Small blocks:          0 KB
+	Free Ordinary blocks:      79 KB
+	Total in use:           19692 KB 748%
+	Total free:                79 KB 3%
+FATAL: Received signal 6...dying.
+2019/06/26 07:04:17| storeDirWriteCleanLogs: Starting...
+2019/06/26 07:04:21|   Finished.  Wrote 0 entries.
+2019/06/26 07:04:21|   Took 0.0 seconds (   0.0 entries/sec).
+CPU Usage: 1.708 seconds = 0.064 user + 1.644 sys
+Maximum Resident Size: 274048 KB
+Page faults with physical i/o: 0
+Memory usage for squid via mallinfo():
+	total space in arena:    2632 KB
+	Ordinary blocks:         2552 KB      2 blks
+	Small blocks:               0 KB      4 blks
+	Holding blocks:         17140 KB    129 blks
+	Free Small blocks:          0 KB
+	Free Ordinary blocks:      79 KB
+	Total in use:           19692 KB 748%
+	Total free:                79 KB 3%
+FATAL: Received signal 6...dying.
+2019/06/26 07:04:21| storeDirWriteCleanLogs: Starting...
+2019/06/26 07:04:26|   Finished.  Wrote 0 entries.
+2019/06/26 07:04:26|   Took 0.0 seconds (   0.0 entries/sec).
+CPU Usage: 1.812 seconds = 0.072 user + 1.740 sys
+Maximum Resident Size: 274064 KB
+Page faults with physical i/o: 0
+Memory usage for squid via mallinfo():
+	total space in arena:    2632 KB
+	Ordinary blocks:         2552 KB      2 blks
+	Small blocks:               0 KB      4 blks
+	Holding blocks:         17140 KB    129 blks
+	Free Small blocks:          0 KB
+	Free Ordinary blocks:      79 KB
+	Total in use:           19692 KB 748%
+	Total free:                79 KB 3%
+FATAL: Received signal 6...dying.
+2019/06/26 07:04:26| storeDirWriteCleanLogs: Starting...
+2019/06/26 07:04:30|   Finished.  Wrote 0 entries.
+2019/06/26 07:04:30|   Took 0.0 seconds (   0.0 entries/sec).
+CPU Usage: 1.920 seconds = 0.076 user + 1.844 sys
+Maximum Resident Size: 274080 KB
+Page faults with physical i/o: 0
+Memory usage for squid via mallinfo():
+	total space in arena:    2632 KB
+	Ordinary blocks:         2552 KB      2 blks
+	Small blocks:               0 KB      4 blks
+	Holding blocks:         17140 KB    129 blks
+	Free Small blocks:          0 KB
+	Free Ordinary blocks:      79 KB
+	Total in use:           19692 KB 748%
+	Total free:                79 KB 3%
+FATAL: Received signal 6...dying.
+2019/06/26 07:04:30| storeDirWriteCleanLogs: Starting...
+2019/06/26 07:04:35|   Finished.  Wrote 0 entries.
+2019/06/26 07:04:35|   Took 0.0 seconds (   0.0 entries/sec).
+CPU Usage: 2.032 seconds = 0.076 user + 1.956 sys
+Maximum Resident Size: 274096 KB
+Page faults with physical i/o: 0
+Memory usage for squid via mallinfo():
+	total space in arena:    2632 KB
+	Ordinary blocks:         2552 KB      2 blks
+	Small blocks:               0 KB      4 blks
+	Holding blocks:         17140 KB    129 blks
+	Free Small blocks:          0 KB
+	Free Ordinary blocks:      79 KB
+	Total in use:           19692 KB 748%
+	Total free:                79 KB 3%
+FATAL: Received signal 6...dying.
+2019/06/26 07:04:35| storeDirWriteCleanLogs: Starting...
+2019/06/26 07:04:40|   Finished.  Wrote 0 entries.
+2019/06/26 07:04:40|   Took 0.0 seconds (   0.0 entries/sec).
+CPU Usage: 2.148 seconds = 0.084 user + 2.064 sys
+Maximum Resident Size: 274112 KB
+Page faults with physical i/o: 0
+Memory usage for squid via mallinfo():
+	total space in arena:    2632 KB
+	Ordinary blocks:         2552 KB      2 blks
+	Small blocks:               0 KB      4 blks
+	Holding blocks:         17140 KB    129 blks
+	Free Small blocks:          0 KB
+	Free Ordinary blocks:      79 KB
+	Total in use:           19692 KB 748%
+	Total free:                79 KB 3%
+FATAL: Received signal 6...dying.
+2019/06/26 07:04:40| storeDirWriteCleanLogs: Starting...
+2019/06/26 07:04:45|   Finished.  Wrote 0 entries.
+2019/06/26 07:04:45|   Took 0.0 seconds (   0.0 entries/sec).
+CPU Usage: 2.264 seconds = 0.096 user + 2.168 sys
+Maximum Resident Size: 274128 KB
+Page faults with physical i/o: 0
+Memory usage for squid via mallinfo():
+	total space in arena:    2632 KB
+	Ordinary blocks:         2552 KB      2 blks
+	Small blocks:               0 KB      4 blks
+	Holding blocks:         17140 KB    129 blks
+	Free Small blocks:          0 KB
+	Free Ordinary blocks:      79 KB
+	Total in use:           19692 KB 748%
+	Total free:                79 KB 3%
+FATAL: Received signal 6...dying.
+2019/06/26 07:04:45| storeDirWriteCleanLogs: Starting...
+2019/06/26 07:04:50|   Finished.  Wrote 0 entries.
+2019/06/26 07:04:50|   Took 0.0 seconds (   0.0 entries/sec).
+CPU Usage: 2.388 seconds = 0.104 user + 2.284 sys
+Maximum Resident Size: 274144 KB
+Page faults with physical i/o: 0
+Memory usage for squid via mallinfo():
+	total space in arena:    2632 KB
+	Ordinary blocks:         2552 KB      2 blks
+	Small blocks:               0 KB      4 blks
+	Holding blocks:         17140 KB    129 blks
+	Free Small blocks:          0 KB
+	Free Ordinary blocks:      79 KB
+	Total in use:           19692 KB 748%
+	Total free:                79 KB 3%
+FATAL: Received signal 6...dying.
+2019/06/26 07:04:50| storeDirWriteCleanLogs: Starting...
+2019/06/26 07:04:55|   Finished.  Wrote 0 entries.
+2019/06/26 07:04:55|   Took 0.0 seconds (   0.0 entries/sec).
+CPU Usage: 2.512 seconds = 0.104 user + 2.408 sys
+Maximum Resident Size: 274160 KB
+Page faults with physical i/o: 0
+Memory usage for squid via mallinfo():
+	total space in arena:    2632 KB
+	Ordinary blocks:         2552 KB      2 blks
+	Small blocks:               0 KB      4 blks
+	Holding blocks:         17140 KB    129 blks
+	Free Small blocks:          0 KB
+	Free Ordinary blocks:      79 KB
+	Total in use:           19692 KB 748%
+	Total free:                79 KB 3%
+FATAL: Received signal 6...dying.
+2019/06/26 07:04:55| storeDirWriteCleanLogs: Starting...
+2019/06/26 07:05:00|   Finished.  Wrote 0 entries.
+2019/06/26 07:05:00|   Took 0.0 seconds (   0.0 entries/sec).
+CPU Usage: 2.640 seconds = 0.104 user + 2.536 sys
+Maximum Resident Size: 274176 KB
+Page faults with physical i/o: 0
+Memory usage for squid via mallinfo():
+	total space in arena:    2632 KB
+	Ordinary blocks:         2552 KB      2 blks
+	Small blocks:               0 KB      4 blks
+	Holding blocks:         17140 KB    129 blks
+	Free Small blocks:          0 KB
+	Free Ordinary blocks:      79 KB
+	Total in use:           19692 KB 748%
+	Total free:                79 KB 3%
+FATAL: Received signal 6...dying.
+2019/06/26 07:05:00| storeDirWriteCleanLogs: Starting...
+2019/06/26 07:05:06|   Finished.  Wrote 0 entries.
+2019/06/26 07:05:06|   Took 0.0 seconds (   0.0 entries/sec).
+CPU Usage: 2.772 seconds = 0.108 user + 2.664 sys
+Maximum Resident Size: 274208 KB
+Page faults with physical i/o: 0
+Memory usage for squid via mallinfo():
+	total space in arena:    2632 KB
+	Ordinary blocks:         2552 KB      2 blks
+	Small blocks:               0 KB      4 blks
+	Holding blocks:         17140 KB    129 blks
+	Free Small blocks:          0 KB
+	Free Ordinary blocks:      79 KB
+	Total in use:           19692 KB 748%
+	Total free:                79 KB 3%
+FATAL: Received signal 6...dying.
+2019/06/26 07:05:06| storeDirWriteCleanLogs: Starting...
+2019/06/26 07:05:12|   Finished.  Wrote 0 entries.
+2019/06/26 07:05:12|   Took 0.0 seconds (   0.0 entries/sec).
+CPU Usage: 2.904 seconds = 0.112 user + 2.792 sys
+Maximum Resident Size: 274224 KB
+Page faults with physical i/o: 0
+Memory usage for squid via mallinfo():
+	total space in arena:    2632 KB
+	Ordinary blocks:         2552 KB      2 blks
+	Small blocks:               0 KB      4 blks
+	Holding blocks:         17140 KB    129 blks
+	Free Small blocks:          0 KB
+	Free Ordinary blocks:      79 KB
+	Total in use:           19692 KB 748%
+	Total free:                79 KB 3%
+FATAL: Received signal 6...dying.
+2019/06/26 07:05:12| storeDirWriteCleanLogs: Starting...
+2019/06/26 07:05:18|   Finished.  Wrote 0 entries.
+2019/06/26 07:05:18|   Took 0.0 seconds (   0.0 entries/sec).
+CPU Usage: 3.044 seconds = 0.112 user + 2.932 sys
+Maximum Resident Size: 274240 KB
+Page faults with physical i/o: 0
+Memory usage for squid via mallinfo():
+	total space in arena:    2632 KB
+	Ordinary blocks:         2552 KB      2 blks
+	Small blocks:               0 KB      4 blks
+	Holding blocks:         17140 KB    129 blks
+	Free Small blocks:          0 KB
+	Free Ordinary blocks:      79 KB
+	Total in use:           19692 KB 748%
+	Total free:                79 KB 3%
+FATAL: Received signal 6...dying.
+2019/06/26 07:05:18| storeDirWriteCleanLogs: Starting...
+2019/06/26 07:05:24|   Finished.  Wrote 0 entries.
+2019/06/26 07:05:24|   Took 0.0 seconds (   0.0 entries/sec).
+CPU Usage: 3.184 seconds = 0.112 user + 3.072 sys
+Maximum Resident Size: 274256 KB
+Page faults with physical i/o: 0
+Memory usage for squid via mallinfo():
+	total space in arena:    2632 KB
+	Ordinary blocks:         2552 KB      2 blks
+	Small blocks:               0 KB      4 blks
+	Holding blocks:         17140 KB    129 blks
+	Free Small blocks:          0 KB
+	Free Ordinary blocks:      79 KB
+	Total in use:           19692 KB 748%
+	Total free:                79 KB 3%
+FATAL: Received signal 6...dying.
+2019/06/26 07:05:24| storeDirWriteCleanLogs: Starting...
+2019/06/26 07:05:30|   Finished.  Wrote 0 entries.
+2019/06/26 07:05:30|   Took 0.0 seconds (   0.0 entries/sec).
+CPU Usage: 3.328 seconds = 0.112 user + 3.216 sys
+Maximum Resident Size: 274272 KB
+Page faults with physical i/o: 0
+Memory usage for squid via mallinfo():
+	total space in arena:    2632 KB
+	Ordinary blocks:         2552 KB      2 blks
+	Small blocks:               0 KB      4 blks
+	Holding blocks:         17140 KB    129 blks
+	Free Small blocks:          0 KB
+	Free Ordinary blocks:      79 KB
+	Total in use:           19692 KB 748%
+	Total free:                79 KB 3%
+FATAL: Received signal 6...dying.
+2019/06/26 07:05:30| storeDirWriteCleanLogs: Starting...
+2019/06/26 07:05:36|   Finished.  Wrote 0 entries.
+2019/06/26 07:05:36|   Took 0.0 seconds (   0.0 entries/sec).
+CPU Usage: 3.476 seconds = 0.120 user + 3.356 sys
+Maximum Resident Size: 274288 KB
+Page faults with physical i/o: 0
+Memory usage for squid via mallinfo():
+	total space in arena:    2632 KB
+	Ordinary blocks:         2552 KB      2 blks
+	Small blocks:               0 KB      4 blks
+	Holding blocks:         17140 KB    129 blks
+	Free Small blocks:          0 KB
+	Free Ordinary blocks:      79 KB
+	Total in use:           19692 KB 748%
+	Total free:                79 KB 3%
+FATAL: Received signal 6...dying.
+2019/06/26 07:05:36| storeDirWriteCleanLogs: Starting...
+2019/06/26 07:05:42|   Finished.  Wrote 0 entries.
+2019/06/26 07:05:42|   Took 0.0 seconds (   0.0 entries/sec).
+CPU Usage: 3.628 seconds = 0.128 user + 3.500 sys
+Maximum Resident Size: 274304 KB
+Page faults with physical i/o: 0
+Memory usage for squid via mallinfo():
+	total space in arena:    2632 KB
+	Ordinary blocks:         2552 KB      2 blks
+	Small blocks:               0 KB      4 blks
+	Holding blocks:         17140 KB    129 blks
+	Free Small blocks:          0 KB
+	Free Ordinary blocks:      79 KB
+	Total in use:           19692 KB 748%
+	Total free:                79 KB 3%
+FATAL: Received signal 6...dying.
+2019/06/26 07:05:42| storeDirWriteCleanLogs: Starting...
+2019/06/26 07:05:49|   Finished.  Wrote 0 entries.
+2019/06/26 07:05:49|   Took 0.0 seconds (   0.0 entries/sec).
+CPU Usage: 3.780 seconds = 0.128 user + 3.652 sys
+Maximum Resident Size: 274320 KB
+Page faults with physical i/o: 0
+Memory usage for squid via mallinfo():
+	total space in arena:    2632 KB
+	Ordinary blocks:         2552 KB      2 blks
+	Small blocks:               0 KB      4 blks
+	Holding blocks:         17140 KB    129 blks
+	Free Small blocks:          0 KB
+	Free Ordinary blocks:      79 KB
+	Total in use:           19692 KB 748%
+	Total free:                79 KB 3%
+FATAL: Received signal 6...dying.
+2019/06/26 07:05:49| storeDirWriteCleanLogs: Starting...
+2019/06/26 07:05:56|   Finished.  Wrote 0 entries.
+2019/06/26 07:05:56|   Took 0.0 seconds (   0.0 entries/sec).
+CPU Usage: 3.940 seconds = 0.132 user + 3.808 sys
+Maximum Resident Size: 274336 KB
+Page faults with physical i/o: 0
+Memory usage for squid via mallinfo():
+	total space in arena:    2632 KB
+	Ordinary blocks:         2552 KB      2 blks
+	Small blocks:               0 KB      4 blks
+	Holding blocks:         17140 KB    129 blks
+	Free Small blocks:          0 KB
+	Free Ordinary blocks:      79 KB
+	Total in use:           19692 KB 748%
+	Total free:                79 KB 3%
+FATAL: Received signal 6...dying.
+2019/06/26 07:05:56| storeDirWriteCleanLogs: Starting...
+2019/06/26 07:06:02|   Finished.  Wrote 0 entries.
+2019/06/26 07:06:02|   Took 0.0 seconds (   0.0 entries/sec).
+CPU Usage: 4.100 seconds = 0.136 user + 3.964 sys
+Maximum Resident Size: 274352 KB
+Page faults with physical i/o: 0
+Memory usage for squid via mallinfo():
+	total space in arena:    2632 KB
+	Ordinary blocks:         2552 KB      2 blks
+	Small blocks:               0 KB      4 blks
+	Holding blocks:         17140 KB    129 blks
+	Free Small blocks:          0 KB
+	Free Ordinary blocks:      79 KB
+	Total in use:           19692 KB 748%
+	Total free:                79 KB 3%
+FATAL: Received signal 6...dying.
+2019/06/26 07:06:02| storeDirWriteCleanLogs: Starting...
+2019/06/26 07:06:09|   Finished.  Wrote 0 entries.
+2019/06/26 07:06:09|   Took 0.0 seconds (   0.0 entries/sec).
+CPU Usage: 4.264 seconds = 0.136 user + 4.128 sys
+Maximum Resident Size: 274368 KB
+Page faults with physical i/o: 0
+Memory usage for squid via mallinfo():
+	total space in arena:    2632 KB
+	Ordinary blocks:         2552 KB      2 blks
+	Small blocks:               0 KB      4 blks
+	Holding blocks:         17140 KB    129 blks
+	Free Small blocks:          0 KB
+	Free Ordinary blocks:      79 KB
+	Total in use:           19692 KB 748%
+	Total free:                79 KB 3%
+FATAL: Received signal 6...dying.
+2019/06/26 07:06:09| storeDirWriteCleanLogs: Starting...
+2019/06/26 07:06:17|   Finished.  Wrote 0 entries.
+2019/06/26 07:06:17|   Took 0.0 seconds (   0.0 entries/sec).
+CPU Usage: 4.432 seconds = 0.136 user + 4.296 sys
+Maximum Resident Size: 274384 KB
+Page faults with physical i/o: 0
+Memory usage for squid via mallinfo():
+	total space in arena:    2632 KB
+	Ordinary blocks:         2552 KB      2 blks
+	Small blocks:               0 KB      4 blks
+	Holding blocks:         17140 KB    129 blks
+	Free Small blocks:          0 KB
+	Free Ordinary blocks:      79 KB
+	Total in use:           19692 KB 748%
+	Total free:                79 KB 3%
+FATAL: Received signal 6...dying.
+2019/06/26 07:06:17| storeDirWriteCleanLogs: Starting...
+2019/06/26 07:06:24|   Finished.  Wrote 0 entries.
+2019/06/26 07:06:24|   Took 0.0 seconds (   0.0 entries/sec).
+CPU Usage: 4.600 seconds = 0.140 user + 4.460 sys
+Maximum Resident Size: 274400 KB
+Page faults with physical i/o: 0
+Memory usage for squid via mallinfo():
+	total space in arena:    2632 KB
+	Ordinary blocks:         2552 KB      2 blks
+	Small blocks:               0 KB      5 blks
+	Holding blocks:         17140 KB    129 blks
+	Free Small blocks:          0 KB
+	Free Ordinary blocks:      79 KB
+	Total in use:           19692 KB 748%
+	Total free:                79 KB 3%
+FATAL: Received signal 6...dying.
+2019/06/26 07:06:24| storeDirWriteCleanLogs: Starting...
+2019/06/26 07:06:31|   Finished.  Wrote 0 entries.
+2019/06/26 07:06:31|   Took 0.0 seconds (   0.0 entries/sec).
+CPU Usage: 4.772 seconds = 0.140 user + 4.632 sys
+Maximum Resident Size: 274416 KB
+Page faults with physical i/o: 0
+Memory usage for squid via mallinfo():
+	total space in arena:    2632 KB
+	Ordinary blocks:         2552 KB      2 blks
+	Small blocks:               0 KB      5 blks
+	Holding blocks:         17140 KB    129 blks
+	Free Small blocks:          0 KB
+	Free Ordinary blocks:      79 KB
+	Total in use:           19692 KB 748%
+	Total free:                79 KB 3%
+FATAL: Received signal 6...dying.
+2019/06/26 07:06:31| storeDirWriteCleanLogs: Starting...
+2019/06/26 07:06:39|   Finished.  Wrote 0 entries.
+2019/06/26 07:06:39|   Took 0.0 seconds (   0.0 entries/sec).
+CPU Usage: 4.940 seconds = 0.144 user + 4.796 sys
+Maximum Resident Size: 274432 KB
+Page faults with physical i/o: 0
+Memory usage for squid via mallinfo():
+	total space in arena:    2632 KB
+	Ordinary blocks:         2552 KB      2 blks
+	Small blocks:               0 KB      5 blks
+	Holding blocks:         17140 KB    129 blks
+	Free Small blocks:          0 KB
+	Free Ordinary blocks:      79 KB
+	Total in use:           19692 KB 748%
+	Total free:                79 KB 3%
+FATAL: Received signal 6...dying.
+2019/06/26 07:06:39| storeDirWriteCleanLogs: Starting...
+2019/06/26 07:06:46|   Finished.  Wrote 0 entries.
+2019/06/26 07:06:46|   Took 0.0 seconds (   0.0 entries/sec).
+CPU Usage: 5.104 seconds = 0.152 user + 4.952 sys
+Maximum Resident Size: 274448 KB
+Page faults with physical i/o: 0
+Memory usage for squid via mallinfo():
+	total space in arena:    2632 KB
+	Ordinary blocks:         2552 KB      2 blks
+	Small blocks:               0 KB      5 blks
+	Holding blocks:         17140 KB    129 blks
+	Free Small blocks:          0 KB
+	Free Ordinary blocks:      79 KB
+	Total in use:           19692 KB 748%
+	Total free:                79 KB 3%
+FATAL: Received signal 6...dying.
+2019/06/26 07:06:46| storeDirWriteCleanLogs: Starting...
+2019/06/26 07:06:53|   Finished.  Wrote 0 entries.
+2019/06/26 07:06:53|   Took 0.0 seconds (   0.0 entries/sec).
+CPU Usage: 5.276 seconds = 0.152 user + 5.124 sys
+Maximum Resident Size: 274480 KB
+Page faults with physical i/o: 0
+Memory usage for squid via mallinfo():
+	total space in arena:    2632 KB
+	Ordinary blocks:         2552 KB      2 blks
+	Small blocks:               0 KB      5 blks
+	Holding blocks:         17140 KB    129 blks
+	Free Small blocks:          0 KB
+	Free Ordinary blocks:      79 KB
+	Total in use:           19692 KB 748%
+	Total free:                79 KB 3%
+FATAL: Received signal 6...dying.
+2019/06/26 07:06:53| storeDirWriteCleanLogs: Starting...
+2019/06/26 07:07:01|   Finished.  Wrote 0 entries.
+2019/06/26 07:07:01|   Took 0.0 seconds (   0.0 entries/sec).
+CPU Usage: 5.440 seconds = 0.164 user + 5.276 sys
+Maximum Resident Size: 274496 KB
+Page faults with physical i/o: 0
+Memory usage for squid via mallinfo():
+	total space in arena:    2632 KB
+	Ordinary blocks:         2552 KB      2 blks
+	Small blocks:               0 KB      5 blks
+	Holding blocks:         17140 KB    129 blks
+	Free Small blocks:          0 KB
+	Free Ordinary blocks:      79 KB
+	Total in use:           19692 KB 748%
+	Total free:                79 KB 3%
+FATAL: Received signal 6...dying.
+2019/06/26 07:07:01| storeDirWriteCleanLogs: Starting...
+2019/06/26 07:07:08|   Finished.  Wrote 0 entries.
+2019/06/26 07:07:08|   Took 0.0 seconds (   0.0 entries/sec).
+CPU Usage: 5.612 seconds = 0.164 user + 5.448 sys
+Maximum Resident Size: 274512 KB
+Page faults with physical i/o: 0
+Memory usage for squid via mallinfo():
+	total space in arena:    2632 KB
+	Ordinary blocks:         2552 KB      2 blks
+	Small blocks:               0 KB      5 blks
+	Holding blocks:         17140 KB    129 blks
+	Free Small blocks:          0 KB
+	Free Ordinary blocks:      79 KB
+	Total in use:           19692 KB 748%
+	Total free:                79 KB 3%
+FATAL: Received signal 6...dying.
+2019/06/26 07:07:08| storeDirWriteCleanLogs: Starting...
+2019/06/26 07:07:15|   Finished.  Wrote 0 entries.
+2019/06/26 07:07:15|   Took 0.0 seconds (   0.0 entries/sec).
+CPU Usage: 5.780 seconds = 0.176 user + 5.604 sys
+Maximum Resident Size: 274528 KB
+Page faults with physical i/o: 0
+Memory usage for squid via mallinfo():
+	total space in arena:    2632 KB
+	Ordinary blocks:         2552 KB      2 blks
+	Small blocks:               0 KB      5 blks
+	Holding blocks:         17140 KB    129 blks
+	Free Small blocks:          0 KB
+	Free Ordinary blocks:      79 KB
+	Total in use:           19692 KB 748%
+	Total free:                79 KB 3%
+FATAL: Received signal 6...dying.
+2019/06/26 07:07:15| storeDirWriteCleanLogs: Starting...
+2019/06/26 07:07:23|   Finished.  Wrote 0 entries.
+2019/06/26 07:07:23|   Took 0.0 seconds (   0.0 entries/sec).
+CPU Usage: 5.948 seconds = 0.176 user + 5.772 sys
+Maximum Resident Size: 274544 KB
+Page faults with physical i/o: 0
+Memory usage for squid via mallinfo():
+	total space in arena:    2632 KB
+	Ordinary blocks:         2552 KB      2 blks
+	Small blocks:               0 KB      5 blks
+	Holding blocks:         17140 KB    129 blks
+	Free Small blocks:          0 KB
+	Free Ordinary blocks:      79 KB
+	Total in use:           19692 KB 748%
+	Total free:                79 KB 3%
+FATAL: Received signal 6...dying.
+2019/06/26 07:07:23| storeDirWriteCleanLogs: Starting...
+2019/06/26 07:07:30|   Finished.  Wrote 0 entries.
+2019/06/26 07:07:30|   Took 0.0 seconds (   0.0 entries/sec).
+CPU Usage: 6.116 seconds = 0.180 user + 5.936 sys
+Maximum Resident Size: 274560 KB
+Page faults with physical i/o: 0
+Memory usage for squid via mallinfo():
+	total space in arena:    2632 KB
+	Ordinary blocks:         2552 KB      2 blks
+	Small blocks:               0 KB      5 blks
+	Holding blocks:         17140 KB    129 blks
+	Free Small blocks:          0 KB
+	Free Ordinary blocks:      79 KB
+	Total in use:           19692 KB 748%
+	Total free:                79 KB 3%
+FATAL: Received signal 6...dying.
+2019/06/26 07:07:30| storeDirWriteCleanLogs: Starting...
+2019/06/26 07:07:38|   Finished.  Wrote 0 entries.
+2019/06/26 07:07:38|   Took 0.0 seconds (   0.0 entries/sec).
+CPU Usage: 6.284 seconds = 0.188 user + 6.096 sys
+Maximum Resident Size: 274576 KB
+Page faults with physical i/o: 0
+Memory usage for squid via mallinfo():
+	total space in arena:    2632 KB
+	Ordinary blocks:         2552 KB      2 blks
+	Small blocks:               0 KB      5 blks
+	Holding blocks:         17140 KB    129 blks
+	Free Small blocks:          0 KB
+	Free Ordinary blocks:      79 KB
+	Total in use:           19692 KB 748%
+	Total free:                79 KB 3%
+FATAL: Received signal 6...dying.
+2019/06/26 07:07:38| storeDirWriteCleanLogs: Starting...
+2019/06/26 07:07:45|   Finished.  Wrote 0 entries.
+2019/06/26 07:07:45|   Took 0.0 seconds (   0.0 entries/sec).
+CPU Usage: 6.452 seconds = 0.188 user + 6.264 sys
+Maximum Resident Size: 274592 KB
+Page faults with physical i/o: 0
+Memory usage for squid via mallinfo():
+	total space in arena:    2632 KB
+	Ordinary blocks:         2552 KB      2 blks
+	Small blocks:               0 KB      5 blks
+	Holding blocks:         17140 KB    129 blks
+	Free Small blocks:          0 KB
+	Free Ordinary blocks:      79 KB
+	Total in use:           19692 KB 748%
+	Total free:                79 KB 3%
+FATAL: Received signal 6...dying.
+2019/06/26 07:07:45| storeDirWriteCleanLogs: Starting...
+2019/06/26 07:07:52|   Finished.  Wrote 0 entries.
+2019/06/26 07:07:52|   Took 0.0 seconds (   0.0 entries/sec).
+CPU Usage: 6.616 seconds = 0.188 user + 6.428 sys
+Maximum Resident Size: 274608 KB
+Page faults with physical i/o: 0
+Memory usage for squid via mallinfo():
+	total space in arena:    2632 KB
+	Ordinary blocks:         2552 KB      2 blks
+	Small blocks:               0 KB      5 blks
+	Holding blocks:         17140 KB    129 blks
+	Free Small blocks:          0 KB
+	Free Ordinary blocks:      79 KB
+	Total in use:           19692 KB 748%
+	Total free:                79 KB 3%
+FATAL: Received signal 6...dying.
+2019/06/26 07:07:52| storeDirWriteCleanLogs: Starting...
+2019/06/26 07:08:00|   Finished.  Wrote 0 entries.
+2019/06/26 07:08:00|   Took 0.0 seconds (   0.0 entries/sec).
+CPU Usage: 6.784 seconds = 0.200 user + 6.584 sys
+Maximum Resident Size: 274624 KB
+Page faults with physical i/o: 0
+Memory usage for squid via mallinfo():
+	total space in arena:    2632 KB
+	Ordinary blocks:         2552 KB      2 blks
+	Small blocks:               0 KB      5 blks
+	Holding blocks:         17140 KB    129 blks
+	Free Small blocks:          0 KB
+	Free Ordinary blocks:      79 KB
+	Total in use:           19692 KB 748%
+	Total free:                79 KB 3%
+FATAL: Received signal 6...dying.
+2019/06/26 07:08:00| storeDirWriteCleanLogs: Starting...
+2019/06/26 07:08:07|   Finished.  Wrote 0 entries.
+2019/06/26 07:08:07|   Took 0.0 seconds (   0.0 entries/sec).
+CPU Usage: 6.952 seconds = 0.216 user + 6.736 sys
+Maximum Resident Size: 274640 KB
+Page faults with physical i/o: 0
+Memory usage for squid via mallinfo():
+	total space in arena:    2632 KB
+	Ordinary blocks:         2552 KB      2 blks
+	Small blocks:               0 KB      5 blks
+	Holding blocks:         17140 KB    129 blks
+	Free Small blocks:          0 KB
+	Free Ordinary blocks:      79 KB
+	Total in use:           19692 KB 748%
+	Total free:                79 KB 3%
+FATAL: Received signal 6...dying.
+2019/06/26 07:08:07| storeDirWriteCleanLogs: Starting...
+2019/06/26 07:08:15|   Finished.  Wrote 0 entries.
+2019/06/26 07:08:15|   Took 0.0 seconds (   0.0 entries/sec).
+CPU Usage: 7.120 seconds = 0.216 user + 6.904 sys
+Maximum Resident Size: 274656 KB
+Page faults with physical i/o: 0
+Memory usage for squid via mallinfo():
+	total space in arena:    2632 KB
+	Ordinary blocks:         2552 KB      2 blks
+	Small blocks:               0 KB      5 blks
+	Holding blocks:         17140 KB    129 blks
+	Free Small blocks:          0 KB
+	Free Ordinary blocks:      79 KB
+	Total in use:           19692 KB 748%
+	Total free:                79 KB 3%
+FATAL: Received signal 6...dying.
+2019/06/26 07:08:15| storeDirWriteCleanLogs: Starting...
+2019/06/26 07:08:22|   Finished.  Wrote 0 entries.
+2019/06/26 07:08:22|   Took 0.0 seconds (   0.0 entries/sec).
+CPU Usage: 7.288 seconds = 0.216 user + 7.072 sys
+Maximum Resident Size: 274672 KB
+Page faults with physical i/o: 0
+Memory usage for squid via mallinfo():
+	total space in arena:    2632 KB
+	Ordinary blocks:         2552 KB      2 blks
+	Small blocks:               0 KB      5 blks
+	Holding blocks:         17140 KB    129 blks
+	Free Small blocks:          0 KB
+	Free Ordinary blocks:      79 KB
+	Total in use:           19692 KB 748%
+	Total free:                79 KB 3%
+FATAL: Received signal 6...dying.
+2019/06/26 07:08:22| storeDirWriteCleanLogs: Starting...
+2019/06/26 07:08:29|   Finished.  Wrote 0 entries.
+2019/06/26 07:08:29|   Took 0.0 seconds (   0.0 entries/sec).
+CPU Usage: 7.456 seconds = 0.232 user + 7.224 sys
+Maximum Resident Size: 274688 KB
+Page faults with physical i/o: 0
+Memory usage for squid via mallinfo():
+	total space in arena:    2632 KB
+	Ordinary blocks:         2552 KB      2 blks
+	Small blocks:               0 KB      5 blks
+	Holding blocks:         17140 KB    129 blks
+	Free Small blocks:          0 KB
+	Free Ordinary blocks:      79 KB
+	Total in use:           19692 KB 748%
+	Total free:                79 KB 3%
+FATAL: Received signal 6...dying.
+2019/06/26 07:08:29| storeDirWriteCleanLogs: Starting...
+2019/06/26 07:08:37|   Finished.  Wrote 0 entries.
+2019/06/26 07:08:37|   Took 0.0 seconds (   0.0 entries/sec).
+CPU Usage: 7.624 seconds = 0.240 user + 7.384 sys
+Maximum Resident Size: 274704 KB
+Page faults with physical i/o: 0
+Memory usage for squid via mallinfo():
+	total space in arena:    2632 KB
+	Ordinary blocks:         2552 KB      2 blks
+	Small blocks:               0 KB      5 blks
+	Holding blocks:         17140 KB    129 blks
+	Free Small blocks:          0 KB
+	Free Ordinary blocks:      79 KB
+	Total in use:           19692 KB 748%
+	Total free:                79 KB 3%
+FATAL: Received signal 6...dying.
+2019/06/26 07:08:37| storeDirWriteCleanLogs: Starting...
+2019/06/26 07:08:44|   Finished.  Wrote 0 entries.
+2019/06/26 07:08:44|   Took 0.0 seconds (   0.0 entries/sec).
+CPU Usage: 7.788 seconds = 0.244 user + 7.544 sys
+Maximum Resident Size: 274720 KB
+Page faults with physical i/o: 0
+Memory usage for squid via mallinfo():
+	total space in arena:    2632 KB
+	Ordinary blocks:         2552 KB      2 blks
+	Small blocks:               0 KB      5 blks
+	Holding blocks:         17140 KB    129 blks
+	Free Small blocks:          0 KB
+	Free Ordinary blocks:      79 KB
+	Total in use:           19692 KB 748%
+	Total free:                79 KB 3%
+FATAL: Received signal 6...dying.
+2019/06/26 07:08:44| storeDirWriteCleanLogs: Starting...
+2019/06/26 07:08:52|   Finished.  Wrote 0 entries.
+2019/06/26 07:08:52|   Took 0.0 seconds (   0.0 entries/sec).
+CPU Usage: 7.956 seconds = 0.248 user + 7.708 sys
+Maximum Resident Size: 274752 KB
+Page faults with physical i/o: 0
+Memory usage for squid via mallinfo():
+	total space in arena:    2632 KB
+	Ordinary blocks:         2552 KB      2 blks
+	Small blocks:               0 KB      5 blks
+	Holding blocks:         17140 KB    129 blks
+	Free Small blocks:          0 KB
+	Free Ordinary blocks:      79 KB
+	Total in use:           19692 KB 748%
+	Total free:                79 KB 3%
+FATAL: Received signal 6...dying.
+2019/06/26 07:08:52| storeDirWriteCleanLogs: Starting...
+2019/06/26 07:08:59|   Finished.  Wrote 0 entries.
+2019/06/26 07:08:59|   Took 0.0 seconds (   0.0 entries/sec).
+CPU Usage: 8.124 seconds = 0.256 user + 7.868 sys
+Maximum Resident Size: 274768 KB
+Page faults with physical i/o: 0
+Memory usage for squid via mallinfo():
+	total space in arena:    2632 KB
+	Ordinary blocks:         2552 KB      2 blks
+	Small blocks:               0 KB      5 blks
+	Holding blocks:         17140 KB    129 blks
+	Free Small blocks:          0 KB
+	Free Ordinary blocks:      79 KB
+	Total in use:           19692 KB 748%
+	Total free:                79 KB 3%
+FATAL: Received signal 6...dying.
+2019/06/26 07:08:59| storeDirWriteCleanLogs: Starting...
+2019/06/26 07:09:06|   Finished.  Wrote 0 entries.
+2019/06/26 07:09:06|   Took 0.0 seconds (   0.0 entries/sec).
+CPU Usage: 8.292 seconds = 0.260 user + 8.032 sys
+Maximum Resident Size: 274784 KB
+Page faults with physical i/o: 0
+Memory usage for squid via mallinfo():
+	total space in arena:    2632 KB
+	Ordinary blocks:         2552 KB      2 blks
+	Small blocks:               0 KB      5 blks
+	Holding blocks:         17140 KB    129 blks
+	Free Small blocks:          0 KB
+	Free Ordinary blocks:      79 KB
+	Total in use:           19692 KB 748%
+	Total free:                79 KB 3%
+FATAL: Received signal 6...dying.
+2019/06/26 07:09:06| storeDirWriteCleanLogs: Starting...
+2019/06/26 07:09:14|   Finished.  Wrote 0 entries.
+2019/06/26 07:09:14|   Took 0.0 seconds (   0.0 entries/sec).
+CPU Usage: 8.460 seconds = 0.264 user + 8.196 sys
+Maximum Resident Size: 274800 KB
+Page faults with physical i/o: 0
+Memory usage for squid via mallinfo():
+	total space in arena:    2632 KB
+	Ordinary blocks:         2552 KB      2 blks
+	Small blocks:               0 KB      5 blks
+	Holding blocks:         17140 KB    129 blks
+	Free Small blocks:          0 KB
+	Free Ordinary blocks:      79 KB
+	Total in use:           19692 KB 748%
+	Total free:                79 KB 3%
+FATAL: Received signal 6...dying.
+2019/06/26 07:09:14| storeDirWriteCleanLogs: Starting...
+2019/06/26 07:09:21|   Finished.  Wrote 0 entries.
+2019/06/26 07:09:21|   Took 0.0 seconds (   0.0 entries/sec).
+CPU Usage: 8.628 seconds = 0.272 user + 8.356 sys
+Maximum Resident Size: 274816 KB
+Page faults with physical i/o: 0
+Memory usage for squid via mallinfo():
+	total space in arena:    2632 KB
+	Ordinary blocks:         2552 KB      2 blks
+	Small blocks:               0 KB      5 blks
+	Holding blocks:         17140 KB    129 blks
+	Free Small blocks:          0 KB
+	Free Ordinary blocks:      79 KB
+	Total in use:           19692 KB 748%
+	Total free:                79 KB 3%
+FATAL: Received signal 6...dying.
+2019/06/26 07:09:21| storeDirWriteCleanLogs: Starting...
+2019/06/26 07:09:29|   Finished.  Wrote 0 entries.
+2019/06/26 07:09:29|   Took 0.0 seconds (   0.0 entries/sec).
+CPU Usage: 8.796 seconds = 0.276 user + 8.520 sys
+Maximum Resident Size: 274832 KB
+Page faults with physical i/o: 0
+Memory usage for squid via mallinfo():
+	total space in arena:    2632 KB
+	Ordinary blocks:         2552 KB      2 blks
+	Small blocks:               0 KB      5 blks
+	Holding blocks:         17140 KB    129 blks
+	Free Small blocks:          0 KB
+	Free Ordinary blocks:      79 KB
+	Total in use:           19692 KB 748%
+	Total free:                79 KB 3%
+FATAL: Received signal 6...dying.
+2019/06/26 07:09:29| storeDirWriteCleanLogs: Starting...
+2019/06/26 07:09:36|   Finished.  Wrote 0 entries.
+2019/06/26 07:09:36|   Took 0.0 seconds (   0.0 entries/sec).
+CPU Usage: 8.964 seconds = 0.276 user + 8.688 sys
+Maximum Resident Size: 274848 KB
+Page faults with physical i/o: 0
+Memory usage for squid via mallinfo():
+	total space in arena:    2632 KB
+	Ordinary blocks:         2552 KB      2 blks
+	Small blocks:               0 KB      5 blks
+	Holding blocks:         17140 KB    129 blks
+	Free Small blocks:          0 KB
+	Free Ordinary blocks:      79 KB
+	Total in use:           19692 KB 748%
+	Total free:                79 KB 3%
+FATAL: Received signal 6...dying.
+2019/06/26 07:09:36| storeDirWriteCleanLogs: Starting...
+2019/06/26 07:09:43|   Finished.  Wrote 0 entries.
+2019/06/26 07:09:43|   Took 0.0 seconds (   0.0 entries/sec).
+CPU Usage: 9.136 seconds = 0.276 user + 8.860 sys
+Maximum Resident Size: 274864 KB
+Page faults with physical i/o: 0
+Memory usage for squid via mallinfo():
+	total space in arena:    2632 KB
+	Ordinary blocks:         2552 KB      2 blks
+	Small blocks:               0 KB      5 blks
+	Holding blocks:         17140 KB    129 blks
+	Free Small blocks:          0 KB
+	Free Ordinary blocks:      79 KB
+	Total in use:           19692 KB 748%
+	Total free:                79 KB 3%
+FATAL: Received signal 6...dying.
+2019/06/26 07:09:43| storeDirWriteCleanLogs: Starting...
+2019/06/26 07:09:51|   Finished.  Wrote 0 entries.
+2019/06/26 07:09:51|   Took 0.0 seconds (   0.0 entries/sec).
+CPU Usage: 9.300 seconds = 0.276 user + 9.024 sys
+Maximum Resident Size: 274880 KB
+Page faults with physical i/o: 0
+Memory usage for squid via mallinfo():
+	total space in arena:    2632 KB
+	Ordinary blocks:         2552 KB      2 blks
+	Small blocks:               0 KB      5 blks
+	Holding blocks:         17140 KB    129 blks
+	Free Small blocks:          0 KB
+	Free Ordinary blocks:      79 KB
+	Total in use:           19692 KB 748%
+	Total free:                79 KB 3%
+FATAL: Received signal 6...dying.
+2019/06/26 07:09:51| storeDirWriteCleanLogs: Starting...
+2019/06/26 07:09:58|   Finished.  Wrote 0 entries.
+2019/06/26 07:09:58|   Took 0.0 seconds (   0.0 entries/sec).
+CPU Usage: 9.468 seconds = 0.280 user + 9.188 sys
+Maximum Resident Size: 274896 KB
+Page faults with physical i/o: 0
+Memory usage for squid via mallinfo():
+	total space in arena:    2632 KB
+	Ordinary blocks:         2552 KB      2 blks
+	Small blocks:               0 KB      5 blks
+	Holding blocks:         17140 KB    129 blks
+	Free Small blocks:          0 KB
+	Free Ordinary blocks:      79 KB
+	Total in use:           19692 KB 748%
+	Total free:                79 KB 3%
+FATAL: Received signal 6...dying.
+2019/06/26 07:09:58| storeDirWriteCleanLogs: Starting...
+2019/06/26 07:10:06|   Finished.  Wrote 0 entries.
+2019/06/26 07:10:06|   Took 0.0 seconds (   0.0 entries/sec).
+CPU Usage: 9.636 seconds = 0.284 user + 9.352 sys
+Maximum Resident Size: 274912 KB
+Page faults with physical i/o: 0
+Memory usage for squid via mallinfo():
+	total space in arena:    2632 KB
+	Ordinary blocks:         2552 KB      2 blks
+	Small blocks:               0 KB      5 blks
+	Holding blocks:         17140 KB    129 blks
+	Free Small blocks:          0 KB
+	Free Ordinary blocks:      79 KB
+	Total in use:           19692 KB 748%
+	Total free:                79 KB 3%
+FATAL: Received signal 6...dying.
+2019/06/26 07:10:06| storeDirWriteCleanLogs: Starting...
+2019/06/26 07:10:13|   Finished.  Wrote 0 entries.
+2019/06/26 07:10:13|   Took 0.0 seconds (   0.0 entries/sec).
+CPU Usage: 9.804 seconds = 0.288 user + 9.516 sys
+Maximum Resident Size: 274928 KB
+Page faults with physical i/o: 0
+Memory usage for squid via mallinfo():
+	total space in arena:    2632 KB
+	Ordinary blocks:         2552 KB      2 blks
+	Small blocks:               0 KB      5 blks
+	Holding blocks:         17140 KB    129 blks
+	Free Small blocks:          0 KB
+	Free Ordinary blocks:      79 KB
+	Total in use:           19692 KB 748%
+	Total free:                79 KB 3%
+FATAL: Received signal 6...dying.
+2019/06/26 07:10:13| storeDirWriteCleanLogs: Starting...
+2019/06/26 07:10:20|   Finished.  Wrote 0 entries.
+2019/06/26 07:10:20|   Took 0.0 seconds (   0.0 entries/sec).
+CPU Usage: 9.972 seconds = 0.288 user + 9.684 sys
+Maximum Resident Size: 274944 KB
+Page faults with physical i/o: 0
+Memory usage for squid via mallinfo():
+	total space in arena:    2632 KB
+	Ordinary blocks:         2552 KB      2 blks
+	Small blocks:               0 KB      5 blks
+	Holding blocks:         17140 KB    129 blks
+	Free Small blocks:          0 KB
+	Free Ordinary blocks:      79 KB
+	Total in use:           19692 KB 748%
+	Total free:                79 KB 3%
+FATAL: Received signal 6...dying.
+2019/06/26 07:10:20| storeDirWriteCleanLogs: Starting...
+2019/06/26 07:10:28|   Finished.  Wrote 0 entries.
+2019/06/26 07:10:28|   Took 0.0 seconds (   0.0 entries/sec).
+CPU Usage: 10.140 seconds = 0.296 user + 9.844 sys
+Maximum Resident Size: 274960 KB
+Page faults with physical i/o: 0
+Memory usage for squid via mallinfo():
+	total space in arena:    2632 KB
+	Ordinary blocks:         2552 KB      2 blks
+	Small blocks:               0 KB      5 blks
+	Holding blocks:         17140 KB    129 blks
+	Free Small blocks:          0 KB
+	Free Ordinary blocks:      79 KB
+	Total in use:           19692 KB 748%
+	Total free:                79 KB 3%
+FATAL: Received signal 6...dying.
+2019/06/26 07:10:28| storeDirWriteCleanLogs: Starting...
+2019/06/26 07:10:35|   Finished.  Wrote 0 entries.
+2019/06/26 07:10:35|   Took 0.0 seconds (   0.0 entries/sec).
+CPU Usage: 10.308 seconds = 0.296 user + 10.012 sys
+Maximum Resident Size: 274976 KB
+Page faults with physical i/o: 0
+Memory usage for squid via mallinfo():
+	total space in arena:    2632 KB
+	Ordinary blocks:         2552 KB      2 blks
+	Small blocks:               0 KB      5 blks
+	Holding blocks:         17140 KB    129 blks
+	Free Small blocks:          0 KB
+	Free Ordinary blocks:      79 KB
+	Total in use:           19692 KB 748%
+	Total free:                79 KB 3%
+FATAL: Received signal 6...dying.
+2019/06/26 07:10:35| storeDirWriteCleanLogs: Starting...
+2019/06/26 07:10:43|   Finished.  Wrote 0 entries.
+2019/06/26 07:10:43|   Took 0.0 seconds (   0.0 entries/sec).
+CPU Usage: 10.476 seconds = 0.300 user + 10.176 sys
+Maximum Resident Size: 274992 KB
+Page faults with physical i/o: 0
+Memory usage for squid via mallinfo():
+	total space in arena:    2632 KB
+	Ordinary blocks:         2552 KB      2 blks
+	Small blocks:               0 KB      5 blks
+	Holding blocks:         17140 KB    129 blks
+	Free Small blocks:          0 KB
+	Free Ordinary blocks:      79 KB
+	Total in use:           19692 KB 748%
+	Total free:                79 KB 3%
+FATAL: Received signal 6...dying.
+2019/06/26 07:10:43| storeDirWriteCleanLogs: Starting...
+2019/06/26 07:10:50|   Finished.  Wrote 0 entries.
+2019/06/26 07:10:50|   Took 0.0 seconds (   0.0 entries/sec).
+CPU Usage: 10.644 seconds = 0.304 user + 10.340 sys
+Maximum Resident Size: 275024 KB
+Page faults with physical i/o: 0
+Memory usage for squid via mallinfo():
+	total space in arena:    2632 KB
+	Ordinary blocks:         2552 KB      2 blks
+	Small blocks:               0 KB      5 blks
+	Holding blocks:         17140 KB    129 blks
+	Free Small blocks:          0 KB
+	Free Ordinary blocks:      79 KB
+	Total in use:           19692 KB 748%
+	Total free:                79 KB 3%
+FATAL: Received signal 6...dying.
+2019/06/26 07:10:50| storeDirWriteCleanLogs: Starting...
+2019/06/26 07:10:57|   Finished.  Wrote 0 entries.
+2019/06/26 07:10:57|   Took 0.0 seconds (   0.0 entries/sec).
+CPU Usage: 10.812 seconds = 0.308 user + 10.504 sys
+Maximum Resident Size: 275040 KB
+Page faults with physical i/o: 0
+Memory usage for squid via mallinfo():
+	total space in arena:    2632 KB
+	Ordinary blocks:         2552 KB      2 blks
+	Small blocks:               0 KB      5 blks
+	Holding blocks:         17140 KB    129 blks
+	Free Small blocks:          0 KB
+	Free Ordinary blocks:      79 KB
+	Total in use:           19692 KB 748%
+	Total free:                79 KB 3%
+FATAL: Received signal 6...dying.
+2019/06/26 07:10:57| storeDirWriteCleanLogs: Starting...
+2019/06/26 07:11:05|   Finished.  Wrote 0 entries.
+2019/06/26 07:11:05|   Took 0.0 seconds (   0.0 entries/sec).
+CPU Usage: 10.980 seconds = 0.316 user + 10.664 sys
+Maximum Resident Size: 275056 KB
+Page faults with physical i/o: 0
+Memory usage for squid via mallinfo():
+	total space in arena:    2632 KB
+	Ordinary blocks:         2552 KB      2 blks
+	Small blocks:               0 KB      5 blks
+	Holding blocks:         17140 KB    129 blks
+	Free Small blocks:          0 KB
+	Free Ordinary blocks:      79 KB
+	Total in use:           19692 KB 748%
+	Total free:                79 KB 3%
+FATAL: Received signal 6...dying.
+2019/06/26 07:11:05| storeDirWriteCleanLogs: Starting...
+2019/06/26 07:11:12|   Finished.  Wrote 0 entries.
+2019/06/26 07:11:12|   Took 0.0 seconds (   0.0 entries/sec).
+CPU Usage: 11.148 seconds = 0.320 user + 10.828 sys
+Maximum Resident Size: 275072 KB
+Page faults with physical i/o: 0
+Memory usage for squid via mallinfo():
+	total space in arena:    2632 KB
+	Ordinary blocks:         2552 KB      2 blks
+	Small blocks:               0 KB      5 blks
+	Holding blocks:         17140 KB    129 blks
+	Free Small blocks:          0 KB
+	Free Ordinary blocks:      79 KB
+	Total in use:           19692 KB 748%
+	Total free:                79 KB 3%
+FATAL: Received signal 6...dying.
+2019/06/26 07:11:12| storeDirWriteCleanLogs: Starting...
+2019/06/26 07:11:19|   Finished.  Wrote 0 entries.
+2019/06/26 07:11:19|   Took 0.0 seconds (   0.0 entries/sec).
+CPU Usage: 11.316 seconds = 0.328 user + 10.988 sys
+Maximum Resident Size: 275088 KB
+Page faults with physical i/o: 0
+Memory usage for squid via mallinfo():
+	total space in arena:    2632 KB
+	Ordinary blocks:         2552 KB      2 blks
+	Small blocks:               0 KB      5 blks
+	Holding blocks:         17140 KB    129 blks
+	Free Small blocks:          0 KB
+	Free Ordinary blocks:      79 KB
+	Total in use:           19692 KB 748%
+	Total free:                79 KB 3%
+FATAL: Received signal 6...dying.
+2019/06/26 07:11:19| storeDirWriteCleanLogs: Starting...
+2019/06/26 07:11:27|   Finished.  Wrote 0 entries.
+2019/06/26 07:11:27|   Took 0.0 seconds (   0.0 entries/sec).
+CPU Usage: 11.484 seconds = 0.336 user + 11.148 sys
+Maximum Resident Size: 275104 KB
+Page faults with physical i/o: 0
+Memory usage for squid via mallinfo():
+	total space in arena:    2632 KB
+	Ordinary blocks:         2552 KB      2 blks
+	Small blocks:               0 KB      5 blks
+	Holding blocks:         17140 KB    129 blks
+	Free Small blocks:          0 KB
+	Free Ordinary blocks:      79 KB
+	Total in use:           19692 KB 748%
+	Total free:                79 KB 3%
+FATAL: Received signal 6...dying.
+2019/06/26 07:11:27| storeDirWriteCleanLogs: Starting...
+2019/06/26 07:11:34|   Finished.  Wrote 0 entries.
+2019/06/26 07:11:34|   Took 0.0 seconds (   0.0 entries/sec).
+CPU Usage: 11.652 seconds = 0.344 user + 11.308 sys
+Maximum Resident Size: 275120 KB
+Page faults with physical i/o: 0
+Memory usage for squid via mallinfo():
+	total space in arena:    2632 KB
+	Ordinary blocks:         2552 KB      2 blks
+	Small blocks:               0 KB      5 blks
+	Holding blocks:         17140 KB    129 blks
+	Free Small blocks:          0 KB
+	Free Ordinary blocks:      79 KB
+	Total in use:           19692 KB 748%
+	Total free:                79 KB 3%
+FATAL: Received signal 6...dying.
+2019/06/26 07:11:34| storeDirWriteCleanLogs: Starting...
+2019/06/26 07:11:42|   Finished.  Wrote 0 entries.
+2019/06/26 07:11:42|   Took 0.0 seconds (   0.0 entries/sec).
+CPU Usage: 11.820 seconds = 0.344 user + 11.476 sys
+Maximum Resident Size: 275136 KB
+Page faults with physical i/o: 0
+Memory usage for squid via mallinfo():
+	total space in arena:    2632 KB
+	Ordinary blocks:         2552 KB      2 blks
+	Small blocks:               0 KB      5 blks
+	Holding blocks:         17140 KB    129 blks
+	Free Small blocks:          0 KB
+	Free Ordinary blocks:      79 KB
+	Total in use:           19692 KB 748%
+	Total free:                79 KB 3%
+FATAL: Received signal 6...dying.
+2019/06/26 07:11:42| storeDirWriteCleanLogs: Starting...
+2019/06/26 07:11:49|   Finished.  Wrote 0 entries.
+2019/06/26 07:11:49|   Took 0.0 seconds (   0.0 entries/sec).
+CPU Usage: 11.984 seconds = 0.344 user + 11.640 sys
+Maximum Resident Size: 275152 KB
+Page faults with physical i/o: 0
+Memory usage for squid via mallinfo():
+	total space in arena:    2632 KB
+	Ordinary blocks:         2552 KB      2 blks
+	Small blocks:               0 KB      5 blks
+	Holding blocks:         17140 KB    129 blks
+	Free Small blocks:          0 KB
+	Free Ordinary blocks:      79 KB
+	Total in use:           19692 KB 748%
+	Total free:                79 KB 3%
+FATAL: Received signal 6...dying.
+2019/06/26 07:11:49| storeDirWriteCleanLogs: Starting...
+2019/06/26 07:11:56|   Finished.  Wrote 0 entries.
+2019/06/26 07:11:56|   Took 0.0 seconds (   0.0 entries/sec).
+CPU Usage: 12.152 seconds = 0.352 user + 11.800 sys
+Maximum Resident Size: 275168 KB
+Page faults with physical i/o: 0
+Memory usage for squid via mallinfo():
+	total space in arena:    2632 KB
+	Ordinary blocks:         2552 KB      2 blks
+	Small blocks:               0 KB      5 blks
+	Holding blocks:         17140 KB    129 blks
+	Free Small blocks:          0 KB
+	Free Ordinary blocks:      79 KB
+	Total in use:           19692 KB 748%
+	Total free:                79 KB 3%
+FATAL: Received signal 6...dying.
+2019/06/26 07:11:56| storeDirWriteCleanLogs: Starting...
+2019/06/26 07:12:04|   Finished.  Wrote 0 entries.
+2019/06/26 07:12:04|   Took 0.0 seconds (   0.0 entries/sec).
+CPU Usage: 12.320 seconds = 0.360 user + 11.960 sys
+Maximum Resident Size: 275184 KB
+Page faults with physical i/o: 0
+Memory usage for squid via mallinfo():
+	total space in arena:    2632 KB
+	Ordinary blocks:         2552 KB      2 blks
+	Small blocks:               0 KB      5 blks
+	Holding blocks:         17140 KB    129 blks
+	Free Small blocks:          0 KB
+	Free Ordinary blocks:      79 KB
+	Total in use:           19692 KB 748%
+	Total free:                79 KB 3%
+FATAL: Received signal 6...dying.
+2019/06/26 07:12:04| storeDirWriteCleanLogs: Starting...
+2019/06/26 07:12:11|   Finished.  Wrote 0 entries.
+2019/06/26 07:12:11|   Took 0.0 seconds (   0.0 entries/sec).
+CPU Usage: 12.488 seconds = 0.380 user + 12.108 sys
+Maximum Resident Size: 275200 KB
+Page faults with physical i/o: 0
+Memory usage for squid via mallinfo():
+	total space in arena:    2632 KB
+	Ordinary blocks:         2552 KB      2 blks
+	Small blocks:               0 KB      5 blks
+	Holding blocks:         17140 KB    129 blks
+	Free Small blocks:          0 KB
+	Free Ordinary blocks:      79 KB
+	Total in use:           19692 KB 748%
+	Total free:                79 KB 3%
+FATAL: Received signal 6...dying.
+2019/06/26 07:12:11| storeDirWriteCleanLogs: Starting...
+2019/06/26 07:12:19|   Finished.  Wrote 0 entries.
+2019/06/26 07:12:19|   Took 0.0 seconds (   0.0 entries/sec).
+CPU Usage: 12.656 seconds = 0.380 user + 12.276 sys
+Maximum Resident Size: 275216 KB
+Page faults with physical i/o: 0
+Memory usage for squid via mallinfo():
+	total space in arena:    2632 KB
+	Ordinary blocks:         2552 KB      2 blks
+	Small blocks:               0 KB      5 blks
+	Holding blocks:         17140 KB    129 blks
+	Free Small blocks:          0 KB
+	Free Ordinary blocks:      79 KB
+	Total in use:           19692 KB 748%
+	Total free:                79 KB 3%
+FATAL: Received signal 6...dying.
+2019/06/26 07:12:19| storeDirWriteCleanLogs: Starting...
+2019/06/26 07:12:26|   Finished.  Wrote 0 entries.
+2019/06/26 07:12:26|   Took 0.0 seconds (   0.0 entries/sec).
+CPU Usage: 12.824 seconds = 0.384 user + 12.440 sys
+Maximum Resident Size: 275232 KB
+Page faults with physical i/o: 0
+Memory usage for squid via mallinfo():
+	total space in arena:    2632 KB
+	Ordinary blocks:         2552 KB      2 blks
+	Small blocks:               0 KB      5 blks
+	Holding blocks:         17140 KB    129 blks
+	Free Small blocks:          0 KB
+	Free Ordinary blocks:      79 KB
+	Total in use:           19692 KB 748%
+	Total free:                79 KB 3%
+FATAL: Received signal 6...dying.
+2019/06/26 07:12:26| storeDirWriteCleanLogs: Starting...
+2019/06/26 07:12:33|   Finished.  Wrote 0 entries.
+2019/06/26 07:12:33|   Took 0.0 seconds (   0.0 entries/sec).
+CPU Usage: 12.992 seconds = 0.404 user + 12.588 sys
+Maximum Resident Size: 275248 KB
+Page faults with physical i/o: 0
+Memory usage for squid via mallinfo():
+	total space in arena:    2632 KB
+	Ordinary blocks:         2552 KB      2 blks
+	Small blocks:               0 KB      5 blks
+	Holding blocks:         17140 KB    129 blks
+	Free Small blocks:          0 KB
+	Free Ordinary blocks:      79 KB
+	Total in use:           19692 KB 748%
+	Total free:                79 KB 3%
+FATAL: Received signal 6...dying.
+2019/06/26 07:12:33| storeDirWriteCleanLogs: Starting...
+2019/06/26 07:12:41|   Finished.  Wrote 0 entries.
+2019/06/26 07:12:41|   Took 0.0 seconds (   0.0 entries/sec).
+CPU Usage: 13.160 seconds = 0.404 user + 12.756 sys
+Maximum Resident Size: 275264 KB
+Page faults with physical i/o: 0
+Memory usage for squid via mallinfo():
+	total space in arena:    2632 KB
+	Ordinary blocks:         2552 KB      2 blks
+	Small blocks:               0 KB      5 blks
+	Holding blocks:         17140 KB    129 blks
+	Free Small blocks:          0 KB
+	Free Ordinary blocks:      79 KB
+	Total in use:           19692 KB 748%
+	Total free:                79 KB 3%
+FATAL: Received signal 6...dying.
+2019/06/26 07:12:41| storeDirWriteCleanLogs: Starting...
+2019/06/26 07:12:48|   Finished.  Wrote 0 entries.
+2019/06/26 07:12:48|   Took 0.0 seconds (   0.0 entries/sec).
+CPU Usage: 13.332 seconds = 0.412 user + 12.920 sys
+Maximum Resident Size: 275296 KB
+Page faults with physical i/o: 0
+Memory usage for squid via mallinfo():
+	total space in arena:    2632 KB
+	Ordinary blocks:         2552 KB      2 blks
+	Small blocks:               0 KB      5 blks
+	Holding blocks:         17140 KB    129 blks
+	Free Small blocks:          0 KB
+	Free Ordinary blocks:      79 KB
+	Total in use:           19692 KB 748%
+	Total free:                79 KB 3%
+FATAL: Received signal 6...dying.
+2019/06/26 07:12:48| storeDirWriteCleanLogs: Starting...
+2019/06/26 07:12:56|   Finished.  Wrote 0 entries.
+2019/06/26 07:12:56|   Took 0.0 seconds (   0.0 entries/sec).
+CPU Usage: 13.500 seconds = 0.416 user + 13.084 sys
+Maximum Resident Size: 275312 KB
+Page faults with physical i/o: 0
+Memory usage for squid via mallinfo():
+	total space in arena:    2632 KB
+	Ordinary blocks:         2552 KB      2 blks
+	Small blocks:               0 KB      5 blks
+	Holding blocks:         17140 KB    129 blks
+	Free Small blocks:          0 KB
+	Free Ordinary blocks:      79 KB
+	Total in use:           19692 KB 748%
+	Total free:                79 KB 3%
+FATAL: Received signal 6...dying.
+2019/06/26 07:12:56| storeDirWriteCleanLogs: Starting...
+2019/06/26 07:13:03|   Finished.  Wrote 0 entries.
+2019/06/26 07:13:03|   Took 0.0 seconds (   0.0 entries/sec).
+CPU Usage: 13.668 seconds = 0.420 user + 13.248 sys
+Maximum Resident Size: 275328 KB
+Page faults with physical i/o: 0
+Memory usage for squid via mallinfo():
+	total space in arena:    2632 KB
+	Ordinary blocks:         2552 KB      2 blks
+	Small blocks:               0 KB      5 blks
+	Holding blocks:         17140 KB    129 blks
+	Free Small blocks:          0 KB
+	Free Ordinary blocks:      79 KB
+	Total in use:           19692 KB 748%
+	Total free:                79 KB 3%
+FATAL: Received signal 6...dying.
+2019/06/26 07:13:03| storeDirWriteCleanLogs: Starting...
+2019/06/26 07:13:10|   Finished.  Wrote 0 entries.
+2019/06/26 07:13:10|   Took 0.0 seconds (   0.0 entries/sec).
+CPU Usage: 13.836 seconds = 0.420 user + 13.416 sys
+Maximum Resident Size: 275344 KB
+Page faults with physical i/o: 0
+Memory usage for squid via mallinfo():
+	total space in arena:    2632 KB
+	Ordinary blocks:         2552 KB      2 blks
+	Small blocks:               0 KB      5 blks
+	Holding blocks:         17140 KB    129 blks
+	Free Small blocks:          0 KB
+	Free Ordinary blocks:      79 KB
+	Total in use:           19692 KB 748%
+	Total free:                79 KB 3%
+FATAL: Received signal 6...dying.
+2019/06/26 07:13:10| storeDirWriteCleanLogs: Starting...
+2019/06/26 07:13:18|   Finished.  Wrote 0 entries.
+2019/06/26 07:13:18|   Took 0.0 seconds (   0.0 entries/sec).
+CPU Usage: 14.004 seconds = 0.432 user + 13.572 sys
+Maximum Resident Size: 275360 KB
+Page faults with physical i/o: 0
+Memory usage for squid via mallinfo():
+	total space in arena:    2632 KB
+	Ordinary blocks:         2552 KB      2 blks
+	Small blocks:               0 KB      5 blks
+	Holding blocks:         17140 KB    129 blks
+	Free Small blocks:          0 KB
+	Free Ordinary blocks:      79 KB
+	Total in use:           19692 KB 748%
+	Total free:                79 KB 3%
+FATAL: Received signal 6...dying.
+2019/06/26 07:13:18| storeDirWriteCleanLogs: Starting...
+2019/06/26 07:13:25|   Finished.  Wrote 0 entries.
+2019/06/26 07:13:25|   Took 0.0 seconds (   0.0 entries/sec).
+CPU Usage: 14.172 seconds = 0.436 user + 13.736 sys
+Maximum Resident Size: 275376 KB
+Page faults with physical i/o: 0
+Memory usage for squid via mallinfo():
+	total space in arena:    2632 KB
+	Ordinary blocks:         2552 KB      2 blks
+	Small blocks:               0 KB      5 blks
+	Holding blocks:         17140 KB    129 blks
+	Free Small blocks:          0 KB
+	Free Ordinary blocks:      79 KB
+	Total in use:           19692 KB 748%
+	Total free:                79 KB 3%
+FATAL: Received signal 6...dying.
+2019/06/26 07:13:25| storeDirWriteCleanLogs: Starting...
+2019/06/26 07:13:33|   Finished.  Wrote 0 entries.
+2019/06/26 07:13:33|   Took 0.0 seconds (   0.0 entries/sec).
+CPU Usage: 14.340 seconds = 0.440 user + 13.900 sys
+Maximum Resident Size: 275392 KB
+Page faults with physical i/o: 0
+Memory usage for squid via mallinfo():
+	total space in arena:    2632 KB
+	Ordinary blocks:         2552 KB      2 blks
+	Small blocks:               0 KB      5 blks
+	Holding blocks:         17140 KB    129 blks
+	Free Small blocks:          0 KB
+	Free Ordinary blocks:      79 KB
+	Total in use:           19692 KB 748%
+	Total free:                79 KB 3%
+FATAL: Received signal 6...dying.
+2019/06/26 07:13:33| storeDirWriteCleanLogs: Starting...
+2019/06/26 07:13:40|   Finished.  Wrote 0 entries.
+2019/06/26 07:13:40|   Took 0.0 seconds (   0.0 entries/sec).
+CPU Usage: 14.512 seconds = 0.444 user + 14.068 sys
+Maximum Resident Size: 275408 KB
+Page faults with physical i/o: 0
+Memory usage for squid via mallinfo():
+	total space in arena:    2632 KB
+	Ordinary blocks:         2552 KB      2 blks
+	Small blocks:               0 KB      5 blks
+	Holding blocks:         17140 KB    129 blks
+	Free Small blocks:          0 KB
+	Free Ordinary blocks:      79 KB
+	Total in use:           19692 KB 748%
+	Total free:                79 KB 3%
+FATAL: Received signal 6...dying.
+2019/06/26 07:13:40| storeDirWriteCleanLogs: Starting...
+2019/06/26 07:13:47|   Finished.  Wrote 0 entries.
+2019/06/26 07:13:47|   Took 0.0 seconds (   0.0 entries/sec).
+CPU Usage: 14.680 seconds = 0.460 user + 14.220 sys
+Maximum Resident Size: 275424 KB
+Page faults with physical i/o: 0
+Memory usage for squid via mallinfo():
+	total space in arena:    2632 KB
+	Ordinary blocks:         2552 KB      2 blks
+	Small blocks:               0 KB      5 blks
+	Holding blocks:         17140 KB    129 blks
+	Free Small blocks:          0 KB
+	Free Ordinary blocks:      79 KB
+	Total in use:           19692 KB 748%
+	Total free:                79 KB 3%
+FATAL: Received signal 6...dying.
+2019/06/26 07:13:47| storeDirWriteCleanLogs: Starting...
+2019/06/26 07:13:55|   Finished.  Wrote 0 entries.
+2019/06/26 07:13:55|   Took 0.0 seconds (   0.0 entries/sec).
+CPU Usage: 14.848 seconds = 0.464 user + 14.384 sys
+Maximum Resident Size: 275440 KB
+Page faults with physical i/o: 0
+Memory usage for squid via mallinfo():
+	total space in arena:    2632 KB
+	Ordinary blocks:         2552 KB      2 blks
+	Small blocks:               0 KB      5 blks
+	Holding blocks:         17140 KB    129 blks
+	Free Small blocks:          0 KB
+	Free Ordinary blocks:      79 KB
+	Total in use:           19692 KB 748%
+	Total free:                79 KB 3%
+FATAL: Received signal 6...dying.
+2019/06/26 07:13:55| storeDirWriteCleanLogs: Starting...
+2019/06/26 07:14:02|   Finished.  Wrote 0 entries.
+2019/06/26 07:14:02|   Took 0.0 seconds (   0.0 entries/sec).
+CPU Usage: 15.016 seconds = 0.468 user + 14.548 sys
+Maximum Resident Size: 275456 KB
+Page faults with physical i/o: 0
+Memory usage for squid via mallinfo():
+	total space in arena:    2632 KB
+	Ordinary blocks:         2552 KB      2 blks
+	Small blocks:               0 KB      5 blks
+	Holding blocks:         17140 KB    129 blks
+	Free Small blocks:          0 KB
+	Free Ordinary blocks:      79 KB
+	Total in use:           19692 KB 748%
+	Total free:                79 KB 3%
+FATAL: Received signal 6...dying.
+2019/06/26 07:14:02| storeDirWriteCleanLogs: Starting...
+2019/06/26 07:14:10|   Finished.  Wrote 0 entries.
+2019/06/26 07:14:10|   Took 0.0 seconds (   0.0 entries/sec).
+CPU Usage: 15.184 seconds = 0.472 user + 14.712 sys
+Maximum Resident Size: 275472 KB
+Page faults with physical i/o: 0
+Memory usage for squid via mallinfo():
+	total space in arena:    2632 KB
+	Ordinary blocks:         2552 KB      2 blks
+	Small blocks:               0 KB      5 blks
+	Holding blocks:         17140 KB    129 blks
+	Free Small blocks:          0 KB
+	Free Ordinary blocks:      79 KB
+	Total in use:           19692 KB 748%
+	Total free:                79 KB 3%
+FATAL: Received signal 6...dying.
+2019/06/26 07:14:10| storeDirWriteCleanLogs: Starting...
+2019/06/26 07:14:17|   Finished.  Wrote 0 entries.
+2019/06/26 07:14:17|   Took 0.0 seconds (   0.0 entries/sec).
+CPU Usage: 15.352 seconds = 0.476 user + 14.876 sys
+Maximum Resident Size: 275488 KB
+Page faults with physical i/o: 0
+Memory usage for squid via mallinfo():
+	total space in arena:    2632 KB
+	Ordinary blocks:         2552 KB      2 blks
+	Small blocks:               0 KB      5 blks
+	Holding blocks:         17140 KB    129 blks
+	Free Small blocks:          0 KB
+	Free Ordinary blocks:      79 KB
+	Total in use:           19692 KB 748%
+	Total free:                79 KB 3%
+FATAL: Received signal 6...dying.
+2019/06/26 07:14:17| storeDirWriteCleanLogs: Starting...
+2019/06/26 07:14:24|   Finished.  Wrote 0 entries.
+2019/06/26 07:14:24|   Took 0.0 seconds (   0.0 entries/sec).
+CPU Usage: 15.520 seconds = 0.480 user + 15.040 sys
+Maximum Resident Size: 275504 KB
+Page faults with physical i/o: 0
+Memory usage for squid via mallinfo():
+	total space in arena:    2632 KB
+	Ordinary blocks:         2552 KB      2 blks
+	Small blocks:               0 KB      5 blks
+	Holding blocks:         17140 KB    129 blks
+	Free Small blocks:          0 KB
+	Free Ordinary blocks:      79 KB
+	Total in use:           19692 KB 748%
+	Total free:                79 KB 3%

@@ -1,0 +1,1 @@
+/usr/bin/cc  -fPIC -fopenmp  -shared  -o ../libudpsend.so CMakeFiles/udpsend.dir/socksend.c.o 

@@ -1,0 +1,14 @@
+	.file	"<stdin>"
+	.text
+	.globl	f
+	.align	16, 0x90
+	.type	f,@function
+f:                                      # @f
+# BB#0:                                 # %entry
+	movl	i@INDNTPOFF, %eax
+	movl	%gs:(%eax), %eax
+	ret
+	.size	f, .-f
+
+
+	.section	.note.GNU-stack,"",@progbits

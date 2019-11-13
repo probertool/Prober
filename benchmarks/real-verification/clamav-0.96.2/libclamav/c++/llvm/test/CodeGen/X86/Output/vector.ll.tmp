@@ -1,0 +1,379 @@
+	.file	"<stdin>"
+	.text
+	.globl	test_f1
+	.align	16, 0x90
+	.type	test_f1,@function
+test_f1:                                # @test_f1
+.Leh_func_begin1:
+# BB#0:
+	movl	4(%esp), %eax
+	movss	(%eax), %xmm0
+	movl	8(%esp), %eax
+	addss	(%eax), %xmm0
+	movl	12(%esp), %eax
+	movss	%xmm0, (%eax)
+	ret
+	.size	test_f1, .-test_f1
+.Leh_func_end1:
+
+	.globl	test_f2
+	.align	16, 0x90
+	.type	test_f2,@function
+test_f2:                                # @test_f2
+.Leh_func_begin2:
+# BB#0:
+	subl	$44, %esp
+.Llabel1:
+	movl	48(%esp), %eax
+	movq	(%eax), %mm0
+	movq	%mm0, 32(%esp)
+	movl	52(%esp), %eax
+	movq	(%eax), %mm1
+	movq	%mm1, 16(%esp)
+	movq	%mm0, 24(%esp)
+	movq	%mm1, 8(%esp)
+	movss	36(%esp), %xmm0
+	addss	20(%esp), %xmm0
+	movss	%xmm0, 4(%esp)
+	movss	24(%esp), %xmm0
+	addss	8(%esp), %xmm0
+	movss	%xmm0, (%esp)
+	movl	56(%esp), %eax
+	movq	(%esp), %mm0
+	movq	%mm0, (%eax)
+	addl	$44, %esp
+	ret
+	.size	test_f2, .-test_f2
+.Leh_func_end2:
+
+	.globl	test_f4
+	.align	16, 0x90
+	.type	test_f4,@function
+test_f4:                                # @test_f4
+.Leh_func_begin3:
+# BB#0:
+	movl	4(%esp), %eax
+	movaps	(%eax), %xmm0
+	movl	8(%esp), %eax
+	addps	(%eax), %xmm0
+	movl	12(%esp), %eax
+	movaps	%xmm0, (%eax)
+	ret
+	.size	test_f4, .-test_f4
+.Leh_func_end3:
+
+	.globl	test_f8
+	.align	16, 0x90
+	.type	test_f8,@function
+test_f8:                                # @test_f8
+.Leh_func_begin4:
+# BB#0:
+	movl	4(%esp), %eax
+	movaps	(%eax), %xmm0
+	movaps	16(%eax), %xmm1
+	movl	8(%esp), %eax
+	addps	(%eax), %xmm0
+	addps	16(%eax), %xmm1
+	movl	12(%esp), %eax
+	movaps	%xmm1, 16(%eax)
+	movaps	%xmm0, (%eax)
+	ret
+	.size	test_f8, .-test_f8
+.Leh_func_end4:
+
+	.globl	test_fmul
+	.align	16, 0x90
+	.type	test_fmul,@function
+test_fmul:                              # @test_fmul
+.Leh_func_begin5:
+# BB#0:
+	movl	4(%esp), %eax
+	movaps	(%eax), %xmm0
+	movaps	16(%eax), %xmm1
+	movl	8(%esp), %eax
+	mulps	(%eax), %xmm0
+	mulps	16(%eax), %xmm1
+	movl	12(%esp), %eax
+	movaps	%xmm1, 16(%eax)
+	movaps	%xmm0, (%eax)
+	ret
+	.size	test_fmul, .-test_fmul
+.Leh_func_end5:
+
+	.globl	test_div
+	.align	16, 0x90
+	.type	test_div,@function
+test_div:                               # @test_div
+.Leh_func_begin6:
+# BB#0:
+	movl	4(%esp), %eax
+	movaps	(%eax), %xmm0
+	movaps	16(%eax), %xmm1
+	movl	8(%esp), %eax
+	divps	(%eax), %xmm0
+	divps	16(%eax), %xmm1
+	movl	12(%esp), %eax
+	movaps	%xmm1, 16(%eax)
+	movaps	%xmm0, (%eax)
+	ret
+	.size	test_div, .-test_div
+.Leh_func_end6:
+
+	.section	.rodata.cst16,"aM",@progbits,16
+	.align	16
+.LCPI7_0:                               # constant pool %f4
+	.long	1036831949              # float 1.000000e-01
+	.long	1065353216              # float 1.000000e+00
+	.long	1073741824              # float 2.000000e+00
+	.long	1083179008              # float 4.500000e+00
+	.text
+	.globl	test_cst
+	.align	16, 0x90
+	.type	test_cst,@function
+test_cst:                               # @test_cst
+.Leh_func_begin7:
+# BB#0:
+	movl	4(%esp), %eax
+	movaps	(%eax), %xmm0
+	addps	.LCPI7_0, %xmm0
+	movl	8(%esp), %eax
+	movaps	%xmm0, (%eax)
+	ret
+	.size	test_cst, .-test_cst
+.Leh_func_end7:
+
+	.globl	test_zero
+	.align	16, 0x90
+	.type	test_zero,@function
+test_zero:                              # @test_zero
+.Leh_func_begin8:
+# BB#0:
+	movl	4(%esp), %eax
+	xorps	%xmm0, %xmm0
+	addps	(%eax), %xmm0
+	movl	8(%esp), %eax
+	movaps	%xmm0, (%eax)
+	ret
+	.size	test_zero, .-test_zero
+.Leh_func_end8:
+
+	.globl	test_undef
+	.align	16, 0x90
+	.type	test_undef,@function
+test_undef:                             # @test_undef
+.Leh_func_begin9:
+# BB#0:
+	movl	4(%esp), %eax
+	addps	(%eax), %xmm0
+	movl	8(%esp), %eax
+	movaps	%xmm0, (%eax)
+	ret
+	.size	test_undef, .-test_undef
+.Leh_func_end9:
+
+	.section	.rodata.cst4,"aM",@progbits,4
+	.align	4
+.LCPI10_0:                              # constant pool float
+	.long	1092616192              # float 1.000000e+01
+	.text
+	.globl	test_constant_insert
+	.align	16, 0x90
+	.type	test_constant_insert,@function
+test_constant_insert:                   # @test_constant_insert
+.Leh_func_begin10:
+# BB#0:
+	movss	.LCPI10_0, %xmm0
+	movl	4(%esp), %eax
+	movaps	%xmm0, (%eax)
+	ret
+	.size	test_constant_insert, .-test_constant_insert
+.Leh_func_end10:
+
+	.globl	test_variable_buildvector
+	.align	16, 0x90
+	.type	test_variable_buildvector,@function
+test_variable_buildvector:              # @test_variable_buildvector
+.Leh_func_begin11:
+# BB#0:
+	movss	4(%esp), %xmm0
+	movl	8(%esp), %eax
+	movaps	%xmm0, (%eax)
+	ret
+	.size	test_variable_buildvector, .-test_variable_buildvector
+.Leh_func_end11:
+
+	.globl	test_scalar_to_vector
+	.align	16, 0x90
+	.type	test_scalar_to_vector,@function
+test_scalar_to_vector:                  # @test_scalar_to_vector
+.Leh_func_begin12:
+# BB#0:
+	movss	4(%esp), %xmm0
+	movl	8(%esp), %eax
+	movaps	%xmm0, (%eax)
+	ret
+	.size	test_scalar_to_vector, .-test_scalar_to_vector
+.Leh_func_end12:
+
+	.globl	test_extract_elt
+	.align	16, 0x90
+	.type	test_extract_elt,@function
+test_extract_elt:                       # @test_extract_elt
+.Leh_func_begin13:
+# BB#0:
+	movl	4(%esp), %eax
+	flds	12(%eax)
+	ret
+	.size	test_extract_elt, .-test_extract_elt
+.Leh_func_end13:
+
+	.globl	test_extract_elt2
+	.align	16, 0x90
+	.type	test_extract_elt2,@function
+test_extract_elt2:                      # @test_extract_elt2
+.Leh_func_begin14:
+# BB#0:
+	movl	4(%esp), %eax
+	fldl	24(%eax)
+	ret
+	.size	test_extract_elt2, .-test_extract_elt2
+.Leh_func_end14:
+
+	.section	.rodata.cst16,"aM",@progbits,16
+	.align	16
+.LCPI15_0:                              # constant pool %f4
+	.long	1065353216              # float 1.000000e+00
+	.long	1073741824              # float 2.000000e+00
+	.long	1077936128              # float 3.000000e+00
+	.long	1082130432              # float 4.000000e+00
+.LCPI15_1:                              # constant pool %i4
+	.long	1                       # 0x1
+	.long	2                       # 0x2
+	.long	3                       # 0x3
+	.long	4                       # 0x4
+	.text
+	.globl	test_cast_1
+	.align	16, 0x90
+	.type	test_cast_1,@function
+test_cast_1:                            # @test_cast_1
+.Leh_func_begin15:
+# BB#0:
+	movl	4(%esp), %eax
+	movaps	(%eax), %xmm0
+	addps	.LCPI15_0, %xmm0
+	paddd	.LCPI15_1, %xmm0
+	movl	8(%esp), %eax
+	movaps	%xmm0, (%eax)
+	ret
+	.size	test_cast_1, .-test_cast_1
+.Leh_func_end15:
+
+	.globl	test_cast_2
+	.align	16, 0x90
+	.type	test_cast_2,@function
+test_cast_2:                            # @test_cast_2
+.Leh_func_begin16:
+# BB#0:
+	movl	4(%esp), %eax
+	movaps	(%eax), %xmm0
+	movaps	16(%eax), %xmm1
+	movl	8(%esp), %eax
+	movaps	%xmm1, 16(%eax)
+	movaps	%xmm0, (%eax)
+	ret
+	.size	test_cast_2, .-test_cast_2
+.Leh_func_end16:
+
+	.globl	splat
+	.align	16, 0x90
+	.type	splat,@function
+splat:                                  # @splat
+.Leh_func_begin17:
+# BB#0:
+	movss	12(%esp), %xmm0
+	pshufd	$0, %xmm0, %xmm0
+	movl	8(%esp), %eax
+	addps	(%eax), %xmm0
+	movl	4(%esp), %eax
+	movaps	%xmm0, (%eax)
+	ret
+	.size	splat, .-splat
+.Leh_func_end17:
+
+	.globl	splat_i4
+	.align	16, 0x90
+	.type	splat_i4,@function
+splat_i4:                               # @splat_i4
+.Leh_func_begin18:
+# BB#0:
+	movd	12(%esp), %xmm0
+	pshufd	$0, %xmm0, %xmm0
+	movl	8(%esp), %eax
+	paddd	(%eax), %xmm0
+	movl	4(%esp), %eax
+	movaps	%xmm0, (%eax)
+	ret
+	.size	splat_i4, .-splat_i4
+.Leh_func_end18:
+
+	.section	.eh_frame,"aw",@progbits
+.LEH_frame0:
+.Lsection_eh_frame:
+.Leh_frame_common:
+	.set	.Lset1eh,.Leh_frame_common_end-.Leh_frame_common_begin
+	.long	.Lset1eh                # Length of Common Information Entry
+.Leh_frame_common_begin:
+	.long	0                       # CIE Identifier Tag
+	.byte	1                       # DW_CIE_VERSION
+	.byte	0
+                                        # CIE Augmentation
+	.uleb128	1               # CIE Code Alignment Factor
+	.sleb128	-4              # CIE Data Alignment Factor
+	.byte	8
+                                        # CIE Return Address Column
+	.byte	12                      # CFA_def_cfa
+	.uleb128	4               # Register
+	.uleb128	4               # Offset
+	.byte	136                     # DW_CFA_offset + Reg (8)
+	.uleb128	1               # Offset
+	.align	4
+.Leh_frame_common_end:
+
+.Ltest_f1.eh = 0
+
+.Ltest_f2.eh = 0
+
+.Ltest_f4.eh = 0
+
+.Ltest_f8.eh = 0
+
+.Ltest_fmul.eh = 0
+
+.Ltest_div.eh = 0
+
+.Ltest_cst.eh = 0
+
+.Ltest_zero.eh = 0
+
+.Ltest_undef.eh = 0
+
+.Ltest_constant_insert.eh = 0
+
+.Ltest_variable_buildvector.eh = 0
+
+.Ltest_scalar_to_vector.eh = 0
+
+.Ltest_extract_elt.eh = 0
+
+.Ltest_extract_elt2.eh = 0
+
+.Ltest_cast_1.eh = 0
+
+.Ltest_cast_2.eh = 0
+
+.Lsplat.eh = 0
+
+.Lsplat_i4.eh = 0
+
+
+	.section	.note.GNU-stack,"",@progbits

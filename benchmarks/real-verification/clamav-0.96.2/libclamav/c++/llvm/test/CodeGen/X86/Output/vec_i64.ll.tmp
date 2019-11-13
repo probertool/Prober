@@ -1,0 +1,24 @@
+	.file	"<stdin>"
+	.text
+	.globl	foo1
+	.align	16, 0x90
+	.type	foo1,@function
+foo1:                                   # @foo1
+# BB#0:                                 # %entry
+	movl	4(%esp), %eax
+	movq	(%eax), %xmm0
+	ret
+	.size	foo1, .-foo1
+
+	.globl	foo2
+	.align	16, 0x90
+	.type	foo2,@function
+foo2:                                   # @foo2
+# BB#0:                                 # %entry
+	movl	4(%esp), %eax
+	movq	(%eax), %xmm0
+	ret
+	.size	foo2, .-foo2
+
+
+	.section	.note.GNU-stack,"",@progbits

@@ -1,0 +1,27 @@
+ 
+Items large and small which remain to be worked on.
+See website for "wish list".
+--------------------------------------------------------------------
+
+For 1.2 Branch
+==============
+
+  o Fix Scitex RGB reader to handle files written by Photoshop.
+
+  o Improve performance of Cineon coder.
+
+For later releases
+==================
+
+  o Fix polyline renderering (improperly closes shape) when line is very thick.
+
+  o Look into problem reported by Rick Mabry, "Shear produces artifacts for
+    a 0 y-shear (e.g. 60x0)."
+
+  o It appears that SyncImagePixels() silently fails if the region
+    includes parts outside of the underlying image. The API supports
+    requesting areas outside of the image, but then the underlying image
+    is not updated. This was first noted with -lat when the image is
+    entirely disk-based.
+
+

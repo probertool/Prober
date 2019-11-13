@@ -1,0 +1,20 @@
+	.file	"<stdin>"
+	.text
+	.globl	g
+	.align	16, 0x90
+	.type	g,@function
+g:                                      # @g
+# BB#0:                                 # %entry
+	leaq	f(%rip), %rax
+	ret
+	.size	g, .-g
+
+	.align	16, 0x90
+	.type	f,@function
+f:                                      # @f
+# BB#0:                                 # %entry
+	ret
+	.size	f, .-f
+
+
+	.section	.note.GNU-stack,"",@progbits

@@ -1,0 +1,550 @@
+#!/bin/bash
+
+prefix="/root/llvm/codesample/39apps/vlc-1.1.5/build"
+exec_prefix="${prefix}"
+exec_prefix_set=no
+datarootdir="${prefix}/share"
+
+debug="no"
+gprof="no"
+cprof="no"
+optim="speed"
+
+plugins="a52tofloat32 access_avio access_mmap access_oss atmo avcodec avformat cdda dbus dynamicoverlay fb flac freetype globalhotkeys gnutls inhibit mpgatofixed32 mux_ogg ogg oldhttp oldtelnet osd_parser osdmenu oss panoramix png postproc remoteosd stream_out_raop swscale telepathy telx unzip v4l2 vcd visual vorbis xcb_apps xcb_glx xcb_screen xcb_window xcb_x11 xcb_xv xdg_screensaver xml xscreensaver zip "
+builtins=" "
+
+cppflags=""
+cflags=""
+cxxflags=""
+objcflags=""
+ldflags=""
+libs=""
+
+cflags_tuning="-mtune=athlon64"
+cflags_optim_size=" -Os"
+cflags_optim_speed=" -O2 -ffast-math -funroll-loops"
+cflags_optim_nodebug=" -fomit-frame-pointer"
+cflags_nooptim=" -O0"
+
+#
+#  Do not touch below this place unless you really know what you are doing
+#
+usage()
+{
+        cat << BLAH
+Usage: vlc-config OPTIONS MODULES
+Options:
+        [--prefix[=DIR]]          set prefix
+        [--exec-prefix[=DIR]]     set exec prefix
+        [--version]               print version and exit
+        [--linkage]               print linkage mode (c, c++, objc)
+        [--list]                  print modules names and exit
+        [--libs]                  output linking flags
+        [--cflags]                output C compilation flags
+        [--cxxflags]              output C++ compilation flags
+        [--objcflags]             output Objective C compilation flags
+Modules:
+        vlc                       the main VLC object
+        plugin                    flags for plugin modules
+        builtin                   flags for built-in modules
+        pic                       flags for PIC code
+        MODULE                    any available module (dummy, gtk, avi, etc.)
+        libs                      flags for external libs
+BLAH
+        exit $1
+}
+
+register_flags()
+{
+  case "$1" in
+    a52tofloat32)
+      cppflags="${cppflags} "
+      libs="${libs} -la52 -lm"
+    ;;
+    access_avio)
+      cflags="${cflags} -I/usr/include/x86_64-linux-gnu"
+      libs="${libs} -lavformat -lavcodec -lavutil -lm"
+    ;;
+    access_http)
+      libs="${libs} -lz"
+    ;;
+    access_imem)
+      libs="${libs} -lm"
+    ;;
+    adjust)
+      libs="${libs} -lm"
+    ;;
+    audiobargraph_a)
+      libs="${libs} -lm"
+    ;;
+    avcodec)
+      cflags="${cflags} -I/usr/include/x86_64-linux-gnu"
+      libs="${libs} -lavcodec -lavutil -lm"
+    ;;
+    avformat)
+      cflags="${cflags} -I/usr/include/x86_64-linux-gnu"
+      libs="${libs} -lavformat -lavcodec -lavutil -lm"
+    ;;
+    ball)
+      libs="${libs} -lm"
+    ;;
+    chorus_flanger)
+      libs="${libs} -lm"
+    ;;
+    colorthres)
+      libs="${libs} -lm"
+    ;;
+    dbus)
+      cflags="${cflags} -I/usr/include/dbus-1.0 -I/usr/lib/x86_64-linux-gnu/dbus-1.0/include"
+      libs="${libs} -ldbus-1 -lm"
+    ;;
+    dmo)
+      libs="${libs} -lm"
+    ;;
+    dtstofloat32)
+      libs="${libs} -lm"
+    ;;
+    equalizer)
+      libs="${libs} -lm"
+    ;;
+    extract)
+      libs="${libs} -lm"
+    ;;
+    faad)
+      libs="${libs} -lm"
+    ;;
+    ffmpegaltivec)
+      libs="${libs} -lm"
+    ;;
+    flac)
+      cflags="${cflags} "
+      libs="${libs} -lFLAC -lm"
+    ;;
+    freetype)
+      cppflags="${cppflags} -I/usr/include/freetype2 -DHAVE_FONTCONFIG -I/usr/include/fribidi -DHAVE_FRIBIDI"
+      libs="${libs} -lfribidi -lfontconfig -lfreetype -lm"
+    ;;
+    gaussianblur)
+      libs="${libs} -lm"
+    ;;
+    globalhotkeys)
+      cflags="${cflags} "
+      libs="${libs} -lxcb-keysyms -lxcb -lxcb"
+    ;;
+    gnutls)
+      cflags="${cflags} -I/usr/include/p11-kit-1"
+      libs="${libs} -lgnutls -lgcrypt"
+    ;;
+    goom)
+      libs="${libs} -lm"
+    ;;
+    gradient)
+      libs="${libs} -lm"
+    ;;
+    grain)
+      libs="${libs} -lm"
+    ;;
+    headphone_channel_mixer)
+      libs="${libs} -lm"
+    ;;
+    hotkeys)
+      libs="${libs} -lm"
+    ;;
+    i420_rgb)
+      libs="${libs} -lm"
+    ;;
+    inhibit)
+      cflags="${cflags} -I/usr/include/dbus-1.0 -I/usr/lib/x86_64-linux-gnu/dbus-1.0/include"
+      libs="${libs} -ldbus-1"
+    ;;
+    kate)
+      libs="${libs} -lm"
+    ;;
+    libvlc)
+      ldflags="${ldflags} "
+      libs="${libs} -lpthread"
+    ;;
+    libvlccore)
+      cflags="${cflags} -I/usr/include/dbus-1.0 -I/usr/lib/x86_64-linux-gnu/dbus-1.0/include"
+      libs="${libs} -ldbus-1 -lrt -lpthread -ldl -lm"
+    ;;
+    lua)
+      cflags="${cflags} -I/usr/include/lua5.1"
+      libs="${libs} -llua5.1 -ldl -lm"
+    ;;
+    mkv)
+      libs="${libs} -lz"
+    ;;
+    mod)
+      libs="${libs} -lm"
+    ;;
+    mono)
+      libs="${libs} -lm"
+    ;;
+    mosaic)
+      libs="${libs} -lm"
+    ;;
+    mp4)
+      libs="${libs} -lz"
+    ;;
+    mpc)
+      libs="${libs} -lm"
+    ;;
+    mpgatofixed32)
+      libs="${libs} -lmad"
+    ;;
+    mux_ogg)
+      cflags="${cflags} "
+      libs="${libs} -logg"
+    ;;
+    noise)
+      libs="${libs} -lm"
+    ;;
+    normvol)
+      libs="${libs} -lm"
+    ;;
+    ogg)
+      cflags="${cflags} "
+      libs="${libs} -logg"
+    ;;
+    omapfb)
+      libs="${libs} -lSM -lICE -lX11"
+    ;;
+    opengl)
+      libs="${libs} -lm"
+    ;;
+    panoramix)
+      cflags="${cflags} "
+      libs="${libs} -lxcb-randr -lxcb -lm"
+    ;;
+    param_eq)
+      libs="${libs} -lm"
+    ;;
+    plugin)
+      ldflags="${ldflags} -bundle -undefined error"
+      libs="${libs} -lpthread"
+    ;;
+    png)
+      libs="${libs} -lpng -lz"
+    ;;
+    postproc)
+      cflags="${cflags} -I/usr/include/x86_64-linux-gnu"
+      libs="${libs} -lpostproc -lavutil -lm"
+    ;;
+    psychedelic)
+      libs="${libs} -lm"
+    ;;
+    pulse)
+      libs="${libs} -lSM -lICE -lX11"
+    ;;
+    qt4)
+      libs="${libs} -lm"
+    ;;
+    quicktime)
+      libs="${libs} -lm"
+    ;;
+    realvideo)
+      libs="${libs} -ldl -lm"
+    ;;
+    remoteosd)
+      cflags="${cflags} "
+      libs="${libs} -lgcrypt"
+    ;;
+    ripple)
+      libs="${libs} -lm"
+    ;;
+    rotate)
+      libs="${libs} -lm"
+    ;;
+    sap)
+      libs="${libs} -lz"
+    ;;
+    scene)
+      libs="${libs} -lm"
+    ;;
+    skins2)
+      cppflags="${cppflags} -I${top_srcdir}/libs/unzip -I/usr/include/freetype2 -I/usr/include/fribidi -DHAVE_FRIBIDI"
+      libs="${libs} -lfribidi -lfreetype ${top_builddir}/libs/unzip/libunzip.la -lz -lm"
+    ;;
+    spatializer)
+      libs="${libs} -lm"
+    ;;
+    speex)
+      libs="${libs} -lm"
+    ;;
+    stream_out_raop)
+      cflags="${cflags} "
+      libs="${libs} -lgcrypt -lgpg-error"
+    ;;
+    swscale)
+      cflags="${cflags} -I/usr/include/x86_64-linux-gnu"
+      libs="${libs} -lswscale -lm"
+    ;;
+    swscale_omap)
+      libs="${libs} -lm"
+    ;;
+    telepathy)
+      cflags="${cflags} -I/usr/include/dbus-1.0 -I/usr/lib/x86_64-linux-gnu/dbus-1.0/include"
+      libs="${libs} -ldbus-1"
+    ;;
+    twolame)
+      libs="${libs} -lm"
+    ;;
+    unzip)
+      libs="${libs} -lz"
+    ;;
+    visual)
+      libs="${libs} -lm"
+    ;;
+    vlc)
+      ldflags="${ldflags} /root/llvm/Prober/libprober.so"
+      libs="${libs} -lpthread"
+    ;;
+    vorbis)
+      cflags="${cflags} "
+      libs="${libs} -logg -lvorbis -lvorbisenc"
+    ;;
+    wave)
+      libs="${libs} -lm"
+    ;;
+    x264)
+      libs="${libs} -lm -lm"
+    ;;
+    xcb_window)
+      cflags="${cflags} -DHAVE_XCB_KEYSYMS"
+    ;;
+    xml)
+      cflags="${cflags} -I/usr/include/libxml2"
+      libs="${libs} -lxml2"
+    ;;
+    zip)
+      cflags="${cflags} -I${top_srcdir}/libs/unzip"
+      libs="${libs} ${top_builddir}/libs/unzip/libunzip.la -lz"
+    ;;
+    *)
+      ;;
+  esac
+}
+
+if test $# -eq 0; then
+        usage 1 1>&2
+fi
+
+if test "${top_builddir}" != ""; then
+  top_builddir="${top_builddir}/"
+elif test "${TOP_BUILDDIR}" != ""; then
+  top_builddir="${TOP_BUILDDIR}/"
+fi
+includes="${includes}"
+cppflags="${includes}"
+module=""
+linkage="c"
+
+#
+#  On Linux and Solaris, activate 64-bit off_t (by default under BSD)
+#
+cppflags="${cppflags} -D_FILE_OFFSET_BITS=64 -D__USE_UNIX98 -D_REENTRANT -D_THREAD_SAFE"
+
+#
+#  Various additional defines
+#
+if [ "${debug}" = yes ]; then
+  cflags="${cflags} -g"
+  cxxflags="${cxxflags} -g"
+  objcflags="${objcflags} -g"
+  ldflags="${ldflags} -g"
+fi
+if [ "${cprof}" = yes ]; then
+  cflags="${cflags} -finstrument-functions"
+  cxxflags="${cxxflags} -finstrument-functions"
+  objcflags="${objcflags} -finstrument-functions"
+fi
+if [ "${gprof}" = yes ]; then
+  cflags="${cflags} -pg"
+  cxxflags="${cxxflags} -pg"
+  objcflags="${objcflags} -pg"
+  ldflags="${ldflags} -pg"
+fi
+if [ "${optim}" = size ]; then
+  cflags="${cflags} ${cflags_optim_size} ${cflags_tuning}"
+  cxxflags="${cxxflags} ${cflags_optim_size} ${cflags_tuning}"
+  objcflags="${objcflags} ${cflags_optim_size} ${cflags_tuning}"
+  if [ "${debug}" != yes -a "${gprof}" != yes -a "${cprof}" != yes ]; then
+    cflags="${cflags} ${cflags_optim_nodebug}"
+    cxxflags="${cxxflags} ${cflags_optim_nodebug}"
+    objcflags="${objcflags} ${cflags_optim_nodebug}"
+  fi
+elif [ "${optim}" = speed ]; then
+  cflags="${cflags} ${cflags_optim_speed} ${cflags_tuning}"
+  cxxflags="${cxxflags} ${cflags_optim_speed} ${cflags_tuning}"
+  objcflags="${objcflags} ${cflags_optim_speed} ${cflags_tuning}"
+  if [ "${debug}" != yes -a "${gprof}" != yes -a "${cprof}" != yes ]; then
+    cflags="${cflags} ${cflags_optim_nodebug}"
+    cxxflags="${cxxflags} ${cflags_optim_nodebug}"
+    objcflags="${objcflags} ${cflags_optim_nodebug}"
+  fi
+else
+  cflags="${cflags} ${cflags_nooptim}"
+  cxxflags="${cxxflags} ${cflags_nooptim}"
+  objcflags="${objcflags} ${cflags_nooptim}"
+fi
+
+#
+#  The main argument loop
+#
+while test $# -gt 0; do
+  case "$1" in
+  -*=*) optarg=`echo "$1" | sed 's/-[_a-zA-Z0-9\-]*=//'` ;;
+  *) optarg= ;;
+  esac
+
+  # Mangle plugin name, if applicable
+  # This is just a convenience hack for modules/common.am
+  tgt="$1"
+  tgt="${tgt##*/}"
+  case "$tgt" in
+    lib*_plugin_la-*.lo)
+      tgt="${tgt#*lib}"
+      tgt="${tgt%_plugin_la-*.lo}"
+      ;;
+    lib*_plugin.la)
+      tgt="${tgt#lib}"
+      tgt="${tgt%_plugin.la}"
+      ;;
+    *)
+      ;;
+  esac
+
+  case "$tgt" in
+    --prefix=*)
+      prefix="${optarg}"
+      if test "${exec_prefix_set}" = no ; then
+        exec_prefix="${optarg}"
+      fi
+      ;;
+    --prefix)
+      echo_prefix=yes
+      ;;
+    --exec-prefix=*)
+      exec_prefix="${optarg}"
+      exec_prefix_set=yes
+      ;;
+    --exec-prefix)
+      echo_exec_prefix=yes
+      ;;
+    --version)
+      echo "1.1.5"
+      exit 0
+      ;;
+    --linkage)
+      echo_linkage=yes
+      ;;
+    --list)
+      echo_list=yes
+      ;;
+    --cflags)
+      echo_cflags=yes
+      ;;
+    --cppflags)
+      echo_cppflags=yes
+      ;;
+    --cxxflags)
+      echo_cxxflags=yes
+      ;;
+    --objcflags)
+      echo_objcflags=yes
+      ;;
+    --ldflags)
+      echo_ldflags=yes
+      ;;
+    --libs|-libs)
+      echo_libs=yes
+      ;;
+    -*)
+      usage 1 1>&1
+      ;;
+    libvlccore)
+      cppflags="${cppflags} -D__LIBVLC__ -I${top_builddir}src/misc"
+      ;;
+    plugin)
+      echo_plugin=yes
+      cppflags="${cppflags} -D__LIBVLC__ -D__PLUGIN__"
+      ;;
+    builtin)
+      echo_builtin=yes
+      cppflags="${cppflags} -D__LIBVLC__ -D__BUILTIN__"
+      ;;
+    pic)
+      ;;
+    mozilla)
+      ;;
+    *)
+      module="$tgt"
+      ;;
+  esac
+
+  # Register per-module *FLAGS
+  register_flags "$tgt"
+
+  shift
+done
+
+#
+#  If a module was requested, use its name
+#
+if test -n "${module}"; then
+  cppflags="${cppflags} -DMODULE_NAME=${module} -DMODULE_NAME_IS_${module} -DMODULE_STRING=\"${module}\""
+fi
+
+#
+#  Output what we were asked
+#
+if test "${echo_linkage}" = yes; then
+  echo "${linkage}"
+  exit 0
+fi
+
+if test "${echo_list}" = yes; then
+  if test "${echo_plugin}" = yes; then
+    echo "${plugins}"
+    printf '\n'
+  fi
+  if test "${echo_builtin}" = yes; then
+    echo "${builtins}"
+    printf '\n'
+  fi
+  exit 0
+fi
+
+if test "${echo_prefix}" = yes; then
+  echo "${prefix}"
+fi
+if test "${echo_exec_prefix}" = yes; then
+  echo "${exec_prefix}"
+fi
+if test "${echo_cppflags}" = yes; then
+  echo "${cppflags}"
+fi
+if test "${echo_cflags}" = yes; then
+  echo "${cppflags} ${cflags}"
+fi
+if test "${echo_cxxflags}" = yes; then
+  echo "${cppflags} ${cxxflags}"
+fi
+if test "${echo_objcflags}" = yes; then
+  echo "${cppflags} ${objcflags}"
+fi
+if test "${echo_ldflags}" = yes; then
+  echo "${ldflags}"
+fi
+
+# Libs
+# There are 4 possibilities
+#  - We are a plugin or a builtin
+#  - We are building something from the inside (builtin)
+#       - Link with builtins in place
+#  If you want something shared from the inside (binding),
+#  you need "builtin vlc"
+if test "${echo_libs}" = yes; then
+  echo "${libs}"
+fi

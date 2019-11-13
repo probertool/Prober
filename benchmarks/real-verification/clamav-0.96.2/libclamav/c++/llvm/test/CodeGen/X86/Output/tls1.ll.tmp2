@@ -1,0 +1,21 @@
+	.file	"<stdin>"
+	.text
+	.globl	f
+	.align	16, 0x90
+	.type	f,@function
+f:                                      # @f
+# BB#0:                                 # %entry
+	movl	%fs:i@TPOFF, %eax
+	ret
+	.size	f, .-f
+
+	.type	i,@object
+	.section	.tdata,"awT",@progbits
+	.globl	i
+	.align	4
+i:                                      # @i
+	.long	15                      # 0xf
+	.size	i, 4
+
+
+	.section	.note.GNU-stack,"",@progbits

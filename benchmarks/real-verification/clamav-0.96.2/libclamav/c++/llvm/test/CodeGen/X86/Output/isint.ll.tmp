@@ -1,0 +1,39 @@
+	.file	"<stdin>"
+	.text
+	.globl	isint_return
+	.align	16, 0x90
+	.type	isint_return,@function
+isint_return:                           # @isint_return
+# BB#0:
+	movsd	4(%esp), %xmm0
+	cvttsd2si	%xmm0, %eax
+	cvtsi2sd	%eax, %xmm1
+	ucomisd	%xmm1, %xmm0
+	setnp	%al
+	sete	%cl
+	andb	%al, %cl
+	movzbl	%cl, %eax
+	ret
+	.size	isint_return, .-isint_return
+
+	.globl	isint_branch
+	.align	16, 0x90
+	.type	isint_branch,@function
+isint_branch:                           # @isint_branch
+# BB#0:
+	subl	$4, %esp
+	movsd	8(%esp), %xmm0
+	cvttsd2si	%xmm0, %eax
+	cvtsi2sd	%eax, %xmm1
+	ucomisd	%xmm1, %xmm0
+	jne	.LBB2_2
+	jp	.LBB2_2
+# BB#1:                                 # %true
+	call	foo
+.LBB2_2:                                # %false
+	addl	$4, %esp
+	ret
+	.size	isint_branch, .-isint_branch
+
+
+	.section	.note.GNU-stack,"",@progbits

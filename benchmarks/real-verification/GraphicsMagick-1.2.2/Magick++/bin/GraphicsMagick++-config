@@ -1,0 +1,51 @@
+#!/bin/sh
+#
+# Configure options script for re-calling compilation
+# options required to use the Magick++ library.
+#
+# Concept derived from gtk-config in the Gtk package except that Autoconf-style
+# configuration information is presented instead so that it may be used more
+# effictively in configure scripts.
+#
+usage='Usage: GraphicsMagick++-config [--cppflags] [--cxxflags] [--exec-prefix] [--ldflags] [--libs] [--prefix] [--version]
+
+ For example, "example.cpp" may be compiled to produce "example" as follows:
+
+  "c++ -o example example.cpp `GraphicsMagick++-config --cppflags --cxxflags --ldflags --libs`"'
+
+if test $# -eq 0; then
+      echo "${usage}" 1>&2
+      exit 1
+fi
+
+while test $# -gt 0; do
+  case $1 in
+    --prefix)
+      echo /root/llvm/codesample/39apps/GraphicsMagick-1.2.2/build
+      ;;
+    --exec-prefix)
+      echo /root/llvm/codesample/39apps/GraphicsMagick-1.2.2/build
+      ;;
+    --version)
+      echo 1.2.2
+      ;;
+    --cppflags)
+      echo '-I/root/llvm/codesample/39apps/GraphicsMagick-1.2.2/build/include/GraphicsMagick'
+      ;;
+    --cxxflags)
+      echo '-flto -v -g -pthread'
+      ;;
+    --ldflags)
+      echo '-L/root/llvm/codesample/39apps/GraphicsMagick-1.2.2/build/lib /root/llvm/Prober/libprober.so -L/usr/lib -L/usr/lib'
+      ;;
+    --libs)
+      echo '-lGraphicsMagick++ -lGraphicsMagick -lfreetype -ljpeg -lpng -lXext -lSM -lICE -lX11 -lxml2 -lz -lm -lgomp -lpthread '
+      ;;
+    *)
+      echo "${usage}" 1>&2
+      exit 1
+      ;;
+  esac
+  shift
+done
+

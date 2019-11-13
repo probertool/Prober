@@ -1,0 +1,1 @@
+/usr/bin/cc  -fPIC -fopenmp  -shared  -o ../libudprecv.so CMakeFiles/udprecv.dir/sockrecv.c.o 

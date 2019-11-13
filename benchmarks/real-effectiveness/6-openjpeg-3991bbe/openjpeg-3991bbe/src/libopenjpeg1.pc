@@ -1,0 +1,12 @@
+prefix=/usr/local
+bindir=${prefix}/bin
+datadir=${prefix}/share/openjpeg-1.99
+libdir=${prefix}/lib
+includedir=${prefix}/include/openjpeg-1.99
+
+Name: openjpeg
+Description: JPEG2000 files library
+URL: http://www.openjpeg.org/
+Version: 1.99.0
+Libs: -L${libdir} -lopenjpeg
+Cflags: -I${includedir}

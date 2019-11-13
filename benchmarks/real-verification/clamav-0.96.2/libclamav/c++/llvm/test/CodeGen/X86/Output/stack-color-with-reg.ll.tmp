@@ -1,0 +1,251 @@
+	.section	__TEXT,__text,regular,pure_instructions
+	.globl	_dropCell
+	.align	4, 0x90
+_dropCell:                              ## @dropCell
+## BB#0:                                ## %entry
+	pushq	%rbp
+	movq	%rsp, %rbp
+	pushq	%r14
+	pushq	%r13
+	pushq	%r12
+	pushq	%rbx
+	cmpl	$4, %edx
+	movl	$4, %eax
+	cmovgel	%edx, %eax
+	movzwl	14(%rdi), %ecx
+	movl	%ecx, -60(%rbp)         ## 4-byte Spill
+	leal	(%rcx,%rsi,2), %ecx
+	movslq	%ecx, %rcx
+	movq	112(%rdi), %rdx
+	movq	%rdx, -40(%rbp)         ## 8-byte Spill
+	movzbl	1(%rdx,%rcx), %r8d
+	movzbl	(%rdx,%rcx), %ecx
+	movl	%ecx, %r13d
+	shll	$8, %ecx
+	addl	%r8d, %ecx
+	movzbl	8(%rdi), %edx
+	movq	%rdx, -56(%rbp)         ## 8-byte Spill
+	leal	1(%rdx), %edx
+	movl	%edx, -64(%rbp)         ## 4-byte Spill
+	.align	4, 0x90
+LBB1_1:                                 ## %bb3.i
+                                        ## =>This Inner Loop Header: Depth=1
+	movslq	%edx, %r9
+	movq	-40(%rbp), %rdx         ## 8-byte Reload
+	movzbl	1(%rdx,%r9), %r10d
+	movzbl	(%rdx,%r9), %r11d
+	movl	%r11d, %edx
+	shll	$8, %edx
+	orl	%r10d, %edx
+	je	LBB1_3
+## BB#2:                                ## %bb3.i
+                                        ##   in Loop: Header=BB1_1 Depth=1
+	cmpl	%ecx, %edx
+	jb	LBB1_1
+LBB1_3:                                 ## %bb5.i
+	movl	%r13d, %edx
+	movq	-40(%rbp), %rbx         ## 8-byte Reload
+	movb	%dl, (%rbx,%r9)
+	movb	%r8b, 1(%rbx,%r9)
+	movb	%r11b, (%rbx,%rcx)
+	movb	%r10b, 1(%rbx,%rcx)
+	addl	$2, %ecx
+	movb	%ah, (%rbx,%rcx)  # NOREX
+	movb	%al, 1(%rbx,%rcx)
+	addw	%ax, 18(%rdi)
+	movzbl	8(%rdi), %eax
+	incl	%eax
+	.align	4, 0x90
+LBB1_4:                                 ## %bb11.outer.i
+                                        ## =>This Loop Header: Depth=1
+                                        ##     Child Loop BB1_8 Depth 2
+	movslq	%eax, %rax
+	movq	%rax, %r14
+	jmp	LBB1_8
+	.align	4, 0x90
+LBB1_5:                                 ## %bb6.i
+                                        ##   in Loop: Header=BB1_8 Depth=2
+	movl	%eax, %ecx
+	movq	-40(%rbp), %rdx         ## 8-byte Reload
+	movzbl	1(%rdx,%rcx), %r8d
+	movzbl	(%rdx,%rcx), %r9d
+	shll	$8, %r9d
+	addl	%r8d, %r9d
+	leal	2(%rcx), %ebx
+	movq	%rbx, -48(%rbp)         ## 8-byte Spill
+	movzbl	1(%rdx,%rbx), %r10d
+	movzbl	(%rdx,%rbx), %edx
+	shll	$8, %edx
+	addl	%r10d, %edx
+	leal	3(%rcx,%rdx), %edx
+	cmpl	%r9d, %edx
+	jl	LBB1_4
+## BB#6:                                ## %bb6.i
+                                        ##   in Loop: Header=BB1_8 Depth=2
+	testl	%r9d, %r9d
+	je	LBB1_4
+## BB#7:                                ## %bb9.i
+                                        ##   in Loop: Header=BB1_8 Depth=2
+	movl	%r12d, %eax
+                                        ## kill: AL<def> EAX<kill>
+	movb	%al, %r12b
+	subb	%r8b, %al
+	addb	%r10b, %al
+	movzbl	8(%rdi), %edx
+	addl	$7, %edx
+	movq	-40(%rbp), %rbx         ## 8-byte Reload
+	addb	%al, (%rbx,%rdx)
+	movb	(%rbx,%r9), %al
+	movb	%al, (%rbx,%rcx)
+	movb	1(%rbx,%r9), %al
+	movb	%al, 1(%rbx,%rcx)
+	leal	2(%r9), %eax
+	movzbl	1(%rbx,%rax), %edx
+	movzbl	(%rbx,%rax), %r10d
+	shll	$8, %r10d
+	addl	%edx, %r10d
+	subl	%ecx, %r9d
+	addl	%r10d, %r9d
+	movl	%r9d, %ecx
+	movq	-48(%rbp), %rdx         ## 8-byte Reload
+	movb	%ch, (%rbx,%rdx)  # NOREX
+	subb	%r12b, %r8b
+	addb	1(%rbx,%rax), %r8b
+	movb	%r8b, 1(%rbx,%rdx)
+LBB1_8:                                 ## %bb11.i
+                                        ##   Parent Loop BB1_4 Depth=1
+                                        ## =>  This Inner Loop Header: Depth=2
+	movq	-40(%rbp), %rcx         ## 8-byte Reload
+	movq	%r14, %rax
+	movzbl	1(%rcx,%rax), %edx
+	movl	%edx, %r12d
+	movzbl	(%rcx,%rax), %eax
+	shll	$8, %eax
+	orl	%edx, %eax
+	jne	LBB1_5
+## BB#9:                                ## %bb12.i
+	movl	-64(%rbp), %eax         ## 4-byte Reload
+	movzbl	(%rcx,%rax), %edx
+	movq	-56(%rbp), %r8          ## 8-byte Reload
+	leal	5(%r8), %ebx
+	movq	%rbx, -48(%rbp)         ## 8-byte Spill
+	cmpb	(%rcx,%rbx), %dl
+	jne	LBB1_12
+## BB#10:                               ## %bb13.i
+	leal	6(%r8), %r8d
+	movb	(%rcx,%r8), %r8b
+	movq	-56(%rbp), %rcx         ## 8-byte Reload
+	addl	$2, %ecx
+	movq	%rcx, -56(%rbp)         ## 8-byte Spill
+	movq	-40(%rbp), %rbx         ## 8-byte Reload
+	cmpb	%r8b, (%rbx,%rcx)
+	jne	LBB1_12
+## BB#11:                               ## %bb14.i
+	movzbl	1(%rbx,%rax), %r8d
+	shll	$8, %edx
+	addl	%r8d, %edx
+	movw	(%rbx,%rdx), %r8w
+	movw	%r8w, (%rbx,%rax)
+	movq	-48(%rbp), %rax         ## 8-byte Reload
+	movzbl	1(%rbx,%rax), %r8d
+	movzbl	(%rbx,%rax), %r9d
+	shll	$8, %r9d
+	addl	%r8d, %r9d
+	addl	$2, %edx
+	movzbl	1(%rbx,%rdx), %r10d
+	movzbl	(%rbx,%rdx), %ebx
+	shll	$8, %ebx
+	addl	%r10d, %ebx
+	addl	%r9d, %ebx
+                                        ## kill: BH<def> EBX<kill>
+	movq	-40(%rbp), %rcx         ## 8-byte Reload
+	movb	%bh, (%rcx,%rax)  # NOREX
+	addb	1(%rcx,%rdx), %r8b
+	movb	%r8b, 1(%rcx,%rax)
+LBB1_12:                                ## %bb1.preheader
+	leal	1(%rsi), %eax
+	movzwl	20(%rdi), %ecx
+	cmpl	%eax, %ecx
+	jle	LBB1_15
+## BB#13:                               ## %bb.preheader
+	movl	-60(%rbp), %ecx         ## 4-byte Reload
+	leal	(%rcx,%rsi,2), %ecx
+	movslq	%ecx, %rax
+	movq	-40(%rbp), %rcx         ## 8-byte Reload
+	leaq	3(%rax,%rcx), %rax
+	incl	%esi
+	.align	4, 0x90
+LBB1_14:                                ## %bb
+                                        ## =>This Inner Loop Header: Depth=1
+	movb	-1(%rax), %cl
+	movb	%cl, -3(%rax)
+	movb	(%rax), %cl
+	movb	%cl, -2(%rax)
+	addq	$2, %rax
+	incl	%esi
+	movzwl	20(%rdi), %ecx
+	cmpl	%esi, %ecx
+	jg	LBB1_14
+LBB1_15:                                ## %bb2
+	decw	%cx
+	movw	%cx, 20(%rdi)
+	movzbl	8(%rdi), %eax
+	addl	$3, %eax
+	movq	-40(%rbp), %rdx         ## 8-byte Reload
+	movb	%ch, (%rdx,%rax)  # NOREX
+	movb	20(%rdi), %al
+	movzbl	8(%rdi), %ecx
+	addl	$3, %ecx
+	movb	%al, 1(%rcx,%rdx)
+	addw	$2, 18(%rdi)
+	movb	$1, 1(%rdi)
+	popq	%rbx
+	popq	%r12
+	popq	%r13
+	popq	%r14
+	popq	%rbp
+	ret
+
+.no_dead_strip _dropCell
+
+.subsections_via_symbols
+===-------------------------------------------------------------------------===
+                          ... Statistics Collected ...
+===-------------------------------------------------------------------------===
+
+173 asm-printer      - Number of machine instrs printed
+  4 branchfolding    - Number of branches optimized
+  3 branchfolding    - Number of dead blocks removed
+  4 code-placement   - Number of loops aligned
+131 dagcombine       - Number of dag nodes combined
+  3 ext-opt          - Number of extension results reused
+  9 liveintervals    - Number of intervals split
+  2 liveintervals    - Number of loads/stores folded into instructions
+202 liveintervals    - Number of original intervals
+  3 loopsimplify     - Number of pre-header or exit blocks inserted
+  8 machine-sink     - Number of machine instructions sunk
+  5 phielim          - Number of atomic phis lowered
+  1 phielim          - Number of critical edges split on demand
+268 regalloc         - Number of iterations performed
+ 57 regalloc         - Number of registers downgraded
+ 17 regalloc         - Number of times we had to backtrack
+ 40 regcoalescing    - Number of cross class joins performed
+134 regcoalescing    - Number of identity moves eliminated after coalescing
+131 regcoalescing    - Number of interval joins performed
+  1 scalar-evolution - Number of loops without predictable loop counts
+  8 stackcoloring    - Number of stack slot refs replaced with reg refs
+  5 stackcoloring    - Number of stack slots eliminated due to coloring
+  2 twoaddrinstr     - Number of instructions aggressively commuted
+  2 twoaddrinstr     - Number of instructions commuted to coalesce
+  6 twoaddrinstr     - Number of instructions promoted to 3-address
+  1 twoaddrinstr     - Number of instructions re-materialized
+ 44 twoaddrinstr     - Number of two-address instructions
+ 11 virtregmap       - Number of register spills
+  4 virtregrewriter  - Number of copies elided
+  1 virtregrewriter  - Number of dead spill slots removed
+  1 virtregrewriter  - Number of dead stores elided
+ 18 virtregrewriter  - Number of loads added
+  1 virtregrewriter  - Number of reloads omited
+  4 virtregrewriter  - Number of stores added
+ 33 virtregrewriter  - Number of values reused
+

@@ -1,0 +1,56 @@
+#!/bin/sh
+CONFIG_LIBS="-L/root/llvm/codesample/39apps/gd-2.0.33/build/lib -lgd -ljpeg -lfreetype -lpng -lz     -ljpeg -lfreetype -lpng -lz    -ljpeg -lpng          -lc  -lz   -lm -lstdc++ "
+CONFIG_DEP_LIBS=""
+CONFIG_CFLAGS="-flto -v -fPIC -Wall     -DHAVE_VSNPRINTF -DNEED_STRLCAT -DNEED_STRRSTR                    -DUSE_JPEG      -DUSE_EPPL     -DUSE_GD_GIF -DUSE_GD_PNG -DUSE_GD_JPEG -DUSE_GD_WBMP -DUSE_GD_FT -DGD_HAS_FTEX_XSHOW -DGD_HAS_GDIMAGEGIFPTR -DGD_HAS_GETBITMAPFONTS -DUSE_ICONV -DUSE_ZLIB     -I/root/llvm/codesample/39apps/gd-2.0.33/build/include                   "
+CONFIG_DEFINES="  -DHAVE_VSNPRINTF -DNEED_STRLCAT -DNEED_STRRSTR                    -DUSE_JPEG      -DUSE_EPPL     -DUSE_GD_GIF -DUSE_GD_PNG -DUSE_GD_JPEG -DUSE_GD_WBMP -DUSE_GD_FT -DGD_HAS_FTEX_XSHOW -DGD_HAS_GDIMAGEGIFPTR -DGD_HAS_GETBITMAPFONTS -DUSE_ICONV -DUSE_ZLIB  "
+CONFIG_INCLUDES="  -I/root/llvm/codesample/39apps/gd-2.0.33/build/include                   "
+CONFIG_VERSION="5.2.0-beta4"
+usage()
+{
+	cat <<EOF
+Usage: mapserver-config [OPTIONS]
+Options:
+	[--libs]
+	[--dep-libs]
+	[--cflags]
+	[--defines]
+	[--includes]
+	[--version]
+EOF
+	exit $1
+}
+
+if test $# -eq 0; then
+	usage 1 1>&2
+fi
+
+case $1 in 
+  --libs)
+    echo $CONFIG_LIBS
+    ;;
+
+  --defines)
+    echo $CONFIG_DEFINES
+    ;;
+
+  --includes)
+    echo $CONFIG_INCLUDES
+    ;;
+
+  --dep-libs)
+    echo $CONFIG_DEP_LIBS
+    ;;
+
+  --cflags)
+    echo $CONFIG_CFLAGS
+    ;;
+
+  --version)
+    echo $CONFIG_VERSION
+    ;;
+
+  *)
+    usage 1 1>&2
+    ;;
+
+esac

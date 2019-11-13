@@ -1,0 +1,35 @@
+	.file	"<stdin>"
+	.text
+	.globl	foo16
+	.align	16, 0x90
+	.type	foo16,@function
+foo16:                                  # @foo16
+# BB#0:
+                                        # kill: AX<def> EAX<kill>
+                                        # kill: AH<def> AX<kill>
+	movb	%ah, (%edx)
+	ret
+	.size	foo16, .-foo16
+
+	.globl	foo32
+	.align	16, 0x90
+	.type	foo32,@function
+foo32:                                  # @foo32
+# BB#0:
+                                        # kill: AH<def> EAX<kill>
+	movb	%ah, (%edx)
+	ret
+	.size	foo32, .-foo32
+
+	.globl	foo64
+	.align	16, 0x90
+	.type	foo64,@function
+foo64:                                  # @foo64
+# BB#0:
+                                        # kill: AH<def> EAX<kill>
+	movb	%ah, (%ecx)
+	ret
+	.size	foo64, .-foo64
+
+
+	.section	.note.GNU-stack,"",@progbits

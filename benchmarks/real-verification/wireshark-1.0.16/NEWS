@@ -1,0 +1,104 @@
+Wireshark 1.0.16 Release Notes
+
+   ------------------------------------------------------------------
+
+What is Wireshark?
+
+   Wireshark is the world's most popular network protocol analyzer.
+   It is used for troubleshooting, analysis, development, and
+   education.
+
+What's New
+
+  Bug Fixes
+
+   The following vulnerabilities have been fixed. See the security
+   advisory for details and a workaround.
+
+     o Wireshark is vulnerable to DLL hijacking as described in
+       Microsoft Security Advisory 2269637. This problem is fully
+       fixed on Windows XP SP1 and later. It is partially fixed on
+       Windows 2000 and XP without services packs. We expect to
+       address those platforms in future releases. If you are running
+       Wireshark on Windows 2000 or XP we recommend that you only
+       open capture files within Wireshark. (Bug 5133)
+
+       Versions affected: All previous Windows versions up to and
+       including 1.0.15 and 1.2.10.
+
+       CVE-2010-3133
+
+  New and Updated Features
+
+   There are no new or updated features in this release.
+
+  New Protocol Support
+
+   There are no new protocols in this release.
+
+  Updated Protocol Support
+
+   There are no updated protocols in this release.
+
+  New and Updated Capture File Support
+
+   There is no new or updated capture file support.
+
+Getting Wireshark
+
+   Wireshark source code and installation packages are available from
+   http://www.wireshark.org/download.html.
+
+  Vendor-supplied Packages
+
+   Most Linux and Unix vendors supply their own Wireshark packages.
+   You can usually install or upgrade Wireshark using the package
+   management system specific to that platform. A list of third-party
+   packages can be found on the download page on the Wireshark web
+   site.
+
+File Locations
+
+   Wireshark and TShark look in several different locations for
+   preference files, plugins, SNMP MIBS, and RADIUS dictionaries.
+   These locations vary from platform to platform. You can use
+   About->Folders to find the default locations on your system.
+
+Known Problems
+
+   Wireshark may appear offscreen on multi-monitor Windows systems.
+   (Bug 553)
+
+   Wireshark might make your system disassociate from a wireless
+   network on OS X. (Bug 1315)
+
+   Dumpcap might not quit if Wireshark or TShark crashes. (Bug 1419)
+
+   The BER dissector might infinitely loop. (Bug 1516)
+
+   Wireshark can't dynamically update the packet list. This means
+   that host name resolutions above a certain response time threshold
+   won't show up in the packet list. (Bug 1605)
+
+   Capture filters aren't applied when capturing from named pipes.
+   (Bug 1814)
+
+   Wireshark might freeze when reading from a pipe. (Bug 2082)
+
+   Capturing from named pipes might be delayed on Windows. (Bug 2200)
+
+   Filtering tshark captures with display filters (-R) no longer
+   works. (Bug 2234)
+
+Getting Help
+
+   Community support is available on the wireshark-users mailing
+   list. Subscription information and archives for all of Wireshark's
+   mailing lists can be found on the web site.
+
+   Commercial support and development services are available from
+   CACE Technologies.
+
+Frequently Asked Questions
+
+   A complete FAQ is available on the Wireshark web site.

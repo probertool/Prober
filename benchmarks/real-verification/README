@@ -1,0 +1,15 @@
+For each folder, if there is corresponding sample folder (FOLDERNAME-sample), that means we grasp the sample of the code to do instrumentation. Otherwise, we instrument the code itself.
+
+For the apps we instrument the code itself, when we compile the app, we mainly need to do the following settings when compile the app:
+
+Setting CC="PATH/OF/clang" CXX="PATH/OF/clang++" CFLAGS="-flto -fPIC -v -g" CXXFLAGS="-flto -fPIC -v -g" LDFLAGS="PATH/OF/libprober.so" .
+
+The corresponding script is in the folder with name NUM-BenchmarkName. The "NUM" in the name is just a id number of the app we used during our work to keep it consistent with the following paper: 
+
+T. Ye, L. Zhang, L. Wang, and X. Li. An empirical study on detecting and fixing buffer overflow bugs. In 2016 IEEE International Conference on Software Testing, Verification and Validation (ICST), pages 91–101, April 2016
+
+For the apps we instrument the code sample, just need to run Makefile under each file.
+
+Two objects come from vectors, we don't handle this case, including app psi-0.12, libwpd-0.8.12.
+
+The folders not belong to our benchmark subject, just the required libraries to support other apps to build successfully, including gd-2.0.33.

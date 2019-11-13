@@ -1,0 +1,140 @@
+	.file	"<stdin>"
+	.text
+	.globl	add
+	.align	16, 0x90
+	.type	add,@function
+add:                                    # @add
+# BB#0:
+	pushl	%ebp
+	pushl	%ebx
+	pushl	%edi
+	pushl	%esi
+	subl	$36, %esp
+	movl	56(%esp), %eax
+	movl	(%eax), %ecx
+	movl	%ecx, 32(%esp)          # 4-byte Spill
+	movl	4(%eax), %ecx
+	movl	%ecx, 28(%esp)          # 4-byte Spill
+	movl	8(%eax), %ecx
+	movl	%ecx, 24(%esp)          # 4-byte Spill
+	movl	12(%eax), %edx
+	movl	%edx, 20(%esp)          # 4-byte Spill
+	movl	60(%esp), %edx
+	movl	12(%edx), %ecx
+	movl	%ecx, (%esp)            # 4-byte Spill
+	movl	16(%edx), %esi
+	movl	%esi, 16(%esp)          # 4-byte Spill
+	movl	16(%eax), %esi
+	movl	20(%edx), %edi
+	movl	%edi, 12(%esp)          # 4-byte Spill
+	movl	20(%eax), %edi
+	movl	24(%edx), %ebx
+	movl	%ebx, 8(%esp)           # 4-byte Spill
+	movl	24(%eax), %ebx
+	movl	28(%edx), %ebp
+	movl	%ebp, 4(%esp)           # 4-byte Spill
+	movl	28(%eax), %ebp
+	movl	32(%esp), %ecx          # 4-byte Reload
+	addl	(%edx), %ecx
+	movl	%ecx, 32(%esp)          # 4-byte Spill
+	movl	28(%esp), %ecx          # 4-byte Reload
+	adcl	4(%edx), %ecx
+	movl	%ecx, 28(%esp)          # 4-byte Spill
+	movl	24(%esp), %ecx          # 4-byte Reload
+	adcl	8(%edx), %ecx
+	movl	%ecx, 24(%esp)          # 4-byte Spill
+	movl	(%esp), %ecx            # 4-byte Reload
+	adcl	20(%esp), %ecx          # 4-byte Folded Reload
+	adcl	16(%esp), %esi          # 4-byte Folded Reload
+	adcl	12(%esp), %edi          # 4-byte Folded Reload
+	adcl	8(%esp), %ebx           # 4-byte Folded Reload
+	adcl	4(%esp), %ebp           # 4-byte Folded Reload
+	movl	%ebp, 28(%eax)
+	movl	%ebx, 24(%eax)
+	movl	%edi, 20(%eax)
+	movl	%esi, 16(%eax)
+	movl	%ecx, 12(%eax)
+	movl	24(%esp), %ecx          # 4-byte Reload
+	movl	%ecx, 8(%eax)
+	movl	28(%esp), %ecx          # 4-byte Reload
+	movl	%ecx, 4(%eax)
+	movl	32(%esp), %ecx          # 4-byte Reload
+	movl	%ecx, (%eax)
+	addl	$36, %esp
+	popl	%esi
+	popl	%edi
+	popl	%ebx
+	popl	%ebp
+	ret
+	.size	add, .-add
+
+	.globl	sub
+	.align	16, 0x90
+	.type	sub,@function
+sub:                                    # @sub
+# BB#0:
+	pushl	%ebp
+	pushl	%ebx
+	pushl	%edi
+	pushl	%esi
+	subl	$36, %esp
+	movl	56(%esp), %eax
+	movl	(%eax), %ecx
+	movl	%ecx, 32(%esp)          # 4-byte Spill
+	movl	4(%eax), %ecx
+	movl	%ecx, 28(%esp)          # 4-byte Spill
+	movl	8(%eax), %ecx
+	movl	%ecx, 24(%esp)          # 4-byte Spill
+	movl	12(%eax), %ecx
+	movl	%ecx, (%esp)            # 4-byte Spill
+	movl	60(%esp), %edx
+	movl	12(%edx), %esi
+	movl	%esi, 16(%esp)          # 4-byte Spill
+	movl	16(%edx), %esi
+	movl	%esi, 20(%esp)          # 4-byte Spill
+	movl	16(%eax), %esi
+	movl	20(%edx), %edi
+	movl	%edi, 12(%esp)          # 4-byte Spill
+	movl	20(%eax), %edi
+	movl	24(%edx), %ebx
+	movl	%ebx, 8(%esp)           # 4-byte Spill
+	movl	24(%eax), %ebx
+	movl	28(%edx), %ebp
+	movl	%ebp, 4(%esp)           # 4-byte Spill
+	movl	28(%eax), %ebp
+	movl	32(%esp), %ecx          # 4-byte Reload
+	subl	(%edx), %ecx
+	movl	%ecx, 32(%esp)          # 4-byte Spill
+	movl	28(%esp), %ecx          # 4-byte Reload
+	sbbl	4(%edx), %ecx
+	movl	%ecx, 28(%esp)          # 4-byte Spill
+	movl	24(%esp), %ecx          # 4-byte Reload
+	sbbl	8(%edx), %ecx
+	movl	%ecx, 24(%esp)          # 4-byte Spill
+	movl	(%esp), %ecx            # 4-byte Reload
+	sbbl	16(%esp), %ecx          # 4-byte Folded Reload
+	sbbl	20(%esp), %esi          # 4-byte Folded Reload
+	sbbl	12(%esp), %edi          # 4-byte Folded Reload
+	sbbl	8(%esp), %ebx           # 4-byte Folded Reload
+	sbbl	4(%esp), %ebp           # 4-byte Folded Reload
+	movl	%ebp, 28(%eax)
+	movl	%ebx, 24(%eax)
+	movl	%edi, 20(%eax)
+	movl	%esi, 16(%eax)
+	movl	%ecx, 12(%eax)
+	movl	24(%esp), %ecx          # 4-byte Reload
+	movl	%ecx, 8(%eax)
+	movl	28(%esp), %ecx          # 4-byte Reload
+	movl	%ecx, 4(%eax)
+	movl	32(%esp), %ecx          # 4-byte Reload
+	movl	%ecx, (%eax)
+	addl	$36, %esp
+	popl	%esi
+	popl	%edi
+	popl	%ebx
+	popl	%ebp
+	ret
+	.size	sub, .-sub
+
+
+	.section	.note.GNU-stack,"",@progbits

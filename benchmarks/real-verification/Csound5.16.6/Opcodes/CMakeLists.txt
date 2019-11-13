@@ -1,0 +1,151 @@
+option(BUILD_CHUA_OPCODES "Build the chua opcodes (requires boost)" ON)
+option(BUILD_DSSI_OPCODES "Build the DSSI opcodes" ON)
+option(BUILD_FLUID_OPCODES "Build the fluidsynth opcodes" ON)
+option(BUILD_JACK_OPCODES "Build the JACK related opcodes" ON)
+option(BUILD_LINEAR_ALGEBRA_OPCODES "Build the Linear Algebra Opcodes" ON)
+option(BUILD_OSC_OPCODES "Build the OSC Opcodes" ON)
+option(BUILD_IMAGE_OPCODES "Build the image opcodes" ON)
+option(BUILD_PYTHON_OPCODES "Build the Python opcodes" ON)
+option(BUILD_LUA_OPCODES "Build the Lua opcodes" ON)
+
+find_package(Boost)
+check_include_file(ladspa.h LADSPA_H)
+check_include_file(fluidsynth.h FLUIDSYNTH_H)
+find_library(JACK_LIBRARY jack)
+find_library(JACKDMP_LIBRARY jackdmp)
+check_include_file(jack/jack.h JACK_HEADER)
+check_include_file_cxx(gmm/gmm.h GMM_HEADER)
+check_include_file(lo/lo.h OSC_HEADER)
+find_package(PNG)
+find_package(PythonLibs)
+find_package(Lua51)
+
+
+## OPCODE LIBS WITH NO EXTERNAL DEPENDENCIES ##
+
+make_plugin(mixer mixer.cpp)
+make_plugin(signalflowgraph signalflowgraph.cpp)
+
+make_plugin(ampmidid ampmidid.cpp)
+make_plugin(cs_date date.c)
+make_plugin(system_call system_call.c)
+make_plugin(doppler doppler.cpp)
+make_plugin(fractalnoise tl/fractalnoise.cpp)
+
+make_plugin(fareygen fareygen.c)
+
+# temporarily do not build on Windows until these opcodes are fixed
+# to compile
+if(NOT WIN32) 
+    make_plugin(udprecv sockrecv.c)
+    make_plugin(udpsend socksend.c)
+
+endif()
+
+set(scansyn_SRCS
+    scansyn.c scansynx.c)
+make_plugin(scansyn "${scansyn_SRCS}" m)
+
+if(UNIX)
+    make_plugin(control control.c)
+endif()
+
+if(LINUX)
+    make_plugin(urandom urandom.c)
+endif()
+
+## OPCODES WITH EXTERNAL DEPENDENCIES ##
+
+check_deps(BUILD_CHUA_OPCODES Boost_FOUND)
+if(BUILD_CHUA_OPCODES)
+    include_directories(${Boost_INCLUDE_DIRS})
+    make_plugin(chua chua/ChuaOscillator.cpp)
+endif()
+
+check_deps(BUILD_DSSI_OPCODES LADSPA_H)
+if(BUILD_DSSI_OPCODES)
+    set(dssi_SRC dssi4cs/src/load.c dssi4cs/src/dssi4cs.c)
+    make_plugin(dssi4cs "${dssi_SRC}" )
+endif()
+
+check_deps(BUILD_FLUID_OPCODES FLUIDSYNTH_H)
+if(BUILD_FLUID_OPCODES)
+    make_plugin(fluidOpcodes fluidOpcodes/fluidOpcodes.cpp fluidsynth)
+endif()
+
+set(JACK_LIB (JACK_LIBRARY OR JACKDMP_LIBRARY))
+check_deps(BUILD_JACK_OPCODES JACK_HEADER JACK_LIB)
+if(BUILD_JACK_OPCODES)
+    set(jack_LIBS ${PTHREAD_LIBRARY})
+    if(JACKDMP_LIBRARY)
+        list(APPEND jack_LIBS ${JACKDMP_LIBRARY})
+    else()
+        list(APPEND jack_LIBS ${JACK_LIBRARY})
+    endif()
+    make_plugin(jacko jacko.cpp "${jack_LIBS}")
+    make_plugin(jackTransport jackTransport.c "${jack_LIBS}")
+endif()
+
+check_deps(BUILD_LINEAR_ALGEBRA_OPCODES GMM_HEADER)
+if(BUILD_LINEAR_ALGEBRA_OPCODES)
+    make_plugin(linear_algebra linear_algebra.cpp)
+endif()
+
+check_deps(BUILD_OSC_OPCODES OSC_HEADER)
+if(BUILD_OSC_OPCODES)
+    make_plugin(osc OSC.c)
+    target_link_libraries(osc lo pthread)
+endif()
+
+check_deps(BUILD_IMAGE_OPCODES PNG_FOUND)
+if(BUILD_IMAGE_OPCODES)
+    include_directories(${PNG_INCLUDE_DIR})
+    make_plugin(image imageOpcodes.c "${PNG_LIBRARIES}")
+    set_target_properties(image
+        PROPERTIES COMPILER_FLAGS "${PNG_DEFINITIONS}")
+endif()
+
+check_deps(BUILD_PYTHON_OPCODES PYTHONLIBS_FOUND)
+if(BUILD_PYTHON_OPCODES)
+    include_directories(${PYTHON_INCLUDE_DIRS})
+    make_plugin(py py/pythonopcodes.c ${PYTHON_LIBRARIES})
+endif()
+
+check_deps(BUILD_LUA_OPCODES LUA51_FOUND)
+if(BUILD_LUA_OPCODES)
+    include_directories(${LUA_INCLUDE_DIR})
+    make_plugin(LuaCsound LuaCsound.cpp ${LUA_LIBRARIES})
+endif()
+
+# OGG Opcode previously was built only for OLPC
+#if(VORBISFILE_LIBRARY)
+#    set(vorbis_LIBS ${libcsound_LIBS} ${VORBISFILE_LIBRARY})
+#    make_plugin(ogg ogg.c "${vorbis_LIBS}")
+#endif()
+
+
+
+#set(sfont_FLAGS "")
+
+#if(CMAKE_C_COMPILER MATCHES "gcc")
+#    set(sfont_FLAGS ${sfont_FLAGS} -fno-strict-aliasing)
+#endif()
+#if(BIG_ENDIAN)
+#    set(sfont_FLAGS ${sfont_FLAGS} -DWORDS_BIGENDIAN)
+#endif()
+#message(STATUS "Compiler flags used for sfont lib: ${sfont_FLAGS}")
+#make_plugin(sfont sfont.c m)
+#set_target_properties(sfont
+#    PROPERTIES COMPILER_FLAGS "${sfont_FLAGS}")
+
+    
+          
+
+#if wiifound==1:
+#  WiiEnvironment = pluginEnvironment.Clone()
+#  makePlugin(WiiEnvironment, 'wiimote', ['wiimote.c'])
+#if p5gfound==1:
+#  P5GEnvironment = pluginEnvironment.Clone()
+#  makePlugin(P5GEnvironment, 'p5g', ['p5glove.c'])
+
+add_subdirectory(stk)

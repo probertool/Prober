@@ -1,0 +1,22 @@
+# Hashes of file build rules.
+4eab8b7aacc62859fcae4b1b26b50488 CMakeFiles/NewParser
+ce530ee5ec9a0cb0bcb0b2e82355d6f4 csound_orclex.c
+c00243c6a294dfa03b450289c08e1309 csound_orcparse.c
+ca44426d48802ce94aae8b6588b8a843 csound_prelex.c
+148f0867a7392b32bd54460c4cc23333 frontends/beats.tab.c
+7d16ea5d0959c6f08f87d8aa8acad0ec frontends/lex.yy.c
+4861aa280938431c3b8d3c936fa7d544 po/CMakeFiles/de.mo
+4861aa280938431c3b8d3c936fa7d544 po/CMakeFiles/en_US.mo
+4861aa280938431c3b8d3c936fa7d544 po/CMakeFiles/es_CO.mo
+4861aa280938431c3b8d3c936fa7d544 po/CMakeFiles/fr.mo
+4861aa280938431c3b8d3c936fa7d544 po/CMakeFiles/it.mo
+4861aa280938431c3b8d3c936fa7d544 po/CMakeFiles/ro.mo
+4861aa280938431c3b8d3c936fa7d544 po/CMakeFiles/ru.mo
+96a84941b4e1cf1f54cf7edb25d8f233 po/CMakeFiles/translations
+153c8fd0a06a3c9e5548622c256a46b2 po/de.mo
+21e5d930632c613cbe807cb060324529 po/en_US.mo
+4bd4e93ebb7f765b7aedca0d83caa23b po/es_CO.mo
+e6f5948524002a8174c6c1dd7ec9852a po/fr.mo
+964e0d96954abae108f4f05d8c097e4b po/it.mo
+c6d0decfd019204d28cefce3b05e82a9 po/ro.mo
+8cd11ba061d25fbe4bb27b85835a9f5a po/ru.mo

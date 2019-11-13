@@ -1,0 +1,29 @@
+	.file	"<stdin>"
+	.text
+	.globl	test
+	.align	16, 0x90
+	.type	test,@function
+test:                                   # @test
+# BB#0:                                 # %entry
+	unpcklpd	%xmm1, %xmm0
+	movl	4(%esp), %eax
+	movapd	%xmm0, (%eax)
+	ret
+	.size	test, .-test
+
+	.globl	test2
+	.align	16, 0x90
+	.type	test2,@function
+test2:                                  # @test2
+# BB#0:                                 # %entry
+	movl	4(%esp), %eax
+	movd	(%eax), %xmm0
+	pinsrd	$1, 4(%eax), %xmm0
+	pmovzxwd	%xmm0, %xmm0
+	movl	8(%esp), %eax
+	movaps	%xmm0, (%eax)
+	ret
+	.size	test2, .-test2
+
+
+	.section	.note.GNU-stack,"",@progbits

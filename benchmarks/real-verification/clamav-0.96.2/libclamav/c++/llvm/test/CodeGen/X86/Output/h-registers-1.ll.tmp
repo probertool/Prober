@@ -1,0 +1,73 @@
+	.file	"<stdin>"
+	.text
+	.globl	foo
+	.align	16, 0x90
+	.type	foo,@function
+foo:                                    # @foo
+.Leh_func_begin1:
+# BB#0:
+	pushq	%rbp
+.Llabel1:
+	pushq	%rbx
+.Llabel2:
+.Llabel3:
+	movq	32(%rsp), %rax
+	movzbl	%ah, %eax  # NOREX
+	movq	%rax, -8(%rsp)          # 8-byte Spill
+	movq	24(%rsp), %rax
+	movzbl	%ah, %ebx  # NOREX
+	movq	%r9, %rax
+	movzbl	%ah, %eax  # NOREX
+	movq	%rax, -16(%rsp)         # 8-byte Spill
+	movq	%r8, %rax
+	movzbl	%ah, %ebp  # NOREX
+                                        # kill: CH<def> RCX<kill>
+	movzbl	%ch, %ecx  # NOREX
+                                        # kill: DH<def> RDX<kill>
+	movzbl	%dh, %edx  # NOREX
+	movq	%rsi, %rax
+	movzbl	%ah, %esi  # NOREX
+	movq	%rdi, %rax
+	movzbl	%ah, %eax  # NOREX
+	addq	-8(%rsp), %rbx          # 8-byte Folded Reload
+	addq	-16(%rsp), %rbp         # 8-byte Folded Reload
+	addq	%rbx, %rbp
+	addq	%rcx, %rdx
+	addq	%rsi, %rax
+	addq	%rdx, %rax
+	addq	%rbp, %rax
+	popq	%rbx
+	popq	%rbp
+	ret
+	.size	foo, .-foo
+.Leh_func_end1:
+
+	.section	.eh_frame,"aw",@progbits
+.LEH_frame0:
+.Lsection_eh_frame:
+.Leh_frame_common:
+	.set	.Lset1eh,.Leh_frame_common_end-.Leh_frame_common_begin
+	.long	.Lset1eh                # Length of Common Information Entry
+.Leh_frame_common_begin:
+	.long	0                       # CIE Identifier Tag
+	.byte	1                       # DW_CIE_VERSION
+	.asciz	 "zR"
+                                        # CIE Augmentation
+	.uleb128	1               # CIE Code Alignment Factor
+	.sleb128	-8              # CIE Data Alignment Factor
+	.byte	16
+                                        # CIE Return Address Column
+	.uleb128	1               # Augmentation Size
+	.byte	3                       # FDE Encoding = udata4
+	.byte	12                      # CFA_def_cfa
+	.uleb128	7               # Register
+	.uleb128	8               # Offset
+	.byte	144                     # DW_CFA_offset + Reg (16)
+	.uleb128	1               # Offset
+	.align	8
+.Leh_frame_common_end:
+
+.Lfoo.eh = 0
+
+
+	.section	.note.GNU-stack,"",@progbits

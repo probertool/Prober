@@ -1,0 +1,62 @@
+	.section	__TEXT,__text,regular,pure_instructions
+	.globl	_loadAndRLEsource_no_exit_2E_1_label_2E_0
+	.align	4, 0x90
+_loadAndRLEsource_no_exit_2E_1_label_2E_0: ## @loadAndRLEsource_no_exit_2E_1_label_2E_0
+Leh_func_begin1:
+## BB#0:                                ## %newFuncRoot
+	pushl	%esi
+Llabel1:
+Llabel2:
+	movl	12(%esp), %eax
+	movl	8(%esp), %ecx
+	movl	_last, %edx
+	leal	1(%edx), %esi
+	movl	%esi, _last
+	movl	_block, %esi
+	movb	%cl, 1(%esi,%edx)
+	cmpl	%eax, _last
+	jge	LBB1_3
+## BB#1:                                ## %label.0
+	cmpl	$257, %ecx              ## imm = 0x101
+	je	LBB1_3
+## BB#2:                                ## %label.0.no_exit.1_crit_edge.exitStub
+	movb	$1, %al
+	popl	%esi
+	ret
+LBB1_3:                                 ## %codeRepl5.exitStub
+	xorb	%al, %al
+	popl	%esi
+	ret
+Leh_func_end1:
+
+	.section	__TEXT,__eh_frame,coalesced,no_toc+strip_static_syms+live_support
+EH_frame0:
+Lsection_eh_frame:
+Leh_frame_common:
+	.set	Lset1eh,Leh_frame_common_end-Leh_frame_common_begin
+	.long	Lset1eh                 ## Length of Common Information Entry
+Leh_frame_common_begin:
+	.long	0                       ## CIE Identifier Tag
+	.byte	1                       ## DW_CIE_VERSION
+	.asciz	 "zR"
+                                        ## CIE Augmentation
+	.byte	1                       ## CIE Code Alignment Factor
+	.byte	124                     ## CIE Data Alignment Factor
+	.byte	8
+                                        ## CIE Return Address Column
+	.byte	1                       ## Augmentation Size
+	.byte	16                      ## FDE Encoding = pcrel
+	.byte	12                      ## CFA_def_cfa
+	.byte	5                       ## Register
+	.byte	4                       ## Offset
+	.byte	136                     ## DW_CFA_offset + Reg (8)
+	.byte	1                       ## Offset
+	.align	2
+Leh_frame_common_end:
+
+	.globl	_loadAndRLEsource_no_exit_2E_1_label_2E_0.eh
+_loadAndRLEsource_no_exit_2E_1_label_2E_0.eh = 0
+.no_dead_strip _loadAndRLEsource_no_exit_2E_1_label_2E_0.eh
+
+
+.subsections_via_symbols

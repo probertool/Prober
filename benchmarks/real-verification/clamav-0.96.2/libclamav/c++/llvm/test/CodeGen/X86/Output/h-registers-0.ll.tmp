@@ -1,0 +1,71 @@
+	.file	"<stdin>"
+	.text
+	.globl	bar64
+	.align	16, 0x90
+	.type	bar64,@function
+bar64:                                  # @bar64
+# BB#0:
+                                        # kill: AH<def> EAX<kill>
+	incb	%ah
+	movb	%ah, (%ecx)
+	ret
+	.size	bar64, .-bar64
+
+	.globl	bar32
+	.align	16, 0x90
+	.type	bar32,@function
+bar32:                                  # @bar32
+# BB#0:
+                                        # kill: AH<def> EAX<kill>
+	incb	%ah
+	movb	%ah, (%edx)
+	ret
+	.size	bar32, .-bar32
+
+	.globl	bar16
+	.align	16, 0x90
+	.type	bar16,@function
+bar16:                                  # @bar16
+# BB#0:
+                                        # kill: AX<def> EAX<kill>
+                                        # kill: AH<def> AX<kill>
+	incb	%ah
+	movb	%ah, (%edx)
+	ret
+	.size	bar16, .-bar16
+
+	.globl	qux64
+	.align	16, 0x90
+	.type	qux64,@function
+qux64:                                  # @qux64
+# BB#0:
+                                        # kill: AH<def> EAX<kill>
+	movzbl	%ah, %eax
+	xorl	%edx, %edx
+	ret
+	.size	qux64, .-qux64
+
+	.globl	qux32
+	.align	16, 0x90
+	.type	qux32,@function
+qux32:                                  # @qux32
+# BB#0:
+                                        # kill: AH<def> EAX<kill>
+	movzbl	%ah, %eax
+	ret
+	.size	qux32, .-qux32
+
+	.globl	qux16
+	.align	16, 0x90
+	.type	qux16,@function
+qux16:                                  # @qux16
+# BB#0:
+                                        # kill: AX<def> EAX<kill>
+                                        # kill: AH<def> AX<kill>
+	movzbl	%ah, %eax
+                                        # kill: AX<def> EAX<kill>
+	ret
+	.size	qux16, .-qux16
+
+
+	.section	.note.GNU-stack,"",@progbits

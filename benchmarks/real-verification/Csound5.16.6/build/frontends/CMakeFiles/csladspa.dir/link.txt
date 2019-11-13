@@ -1,0 +1,1 @@
+/usr/bin/c++  -fPIC -fopenmp  -shared  -o ../csladspa.so CMakeFiles/csladspa.dir/csladspa/csladspa.cpp.o -Wl,-rpath,/root/llvm/codesample/39apps/Csound5.16.6/build: ../libcsound64.so.5.2 

@@ -1,0 +1,1 @@
+/usr/bin/c++  -fPIC -fopenmp  -shared  -o ../libfractalnoise.so CMakeFiles/fractalnoise.dir/tl/fractalnoise.cpp.o 

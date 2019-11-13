@@ -1,0 +1,1963 @@
+	.section	__TEXT,__text,regular,pure_instructions
+	.globl	_test_op_ignore
+	.align	4, 0x90
+_test_op_ignore:                        ## @test_op_ignore
+## BB#0:                                ## %entry
+	pushq	%rbp
+	pushq	%r15
+	pushq	%r14
+	pushq	%r13
+	pushq	%r12
+	pushq	%rbx
+	movq	_sc@GOTPCREL(%rip), %rcx
+	lock
+	incb	(%rcx)
+	movq	_uc@GOTPCREL(%rip), %rdx
+	lock
+	incb	(%rdx)
+	movq	_ss@GOTPCREL(%rip), %rsi
+	lock
+	incw	(%rsi)
+	movq	_us@GOTPCREL(%rip), %rdi
+	lock
+	incw	(%rdi)
+	movq	_si@GOTPCREL(%rip), %r8
+	lock
+	incl	(%r8)
+	movq	_ui@GOTPCREL(%rip), %r9
+	lock
+	incl	(%r9)
+	movq	_sl@GOTPCREL(%rip), %r10
+	lock
+	incq	(%r10)
+	movq	_ul@GOTPCREL(%rip), %r11
+	lock
+	incq	(%r11)
+	movq	_sll@GOTPCREL(%rip), %rax
+	lock
+	incq	(%rax)
+	movq	_ull@GOTPCREL(%rip), %rbx
+	lock
+	incq	(%rbx)
+	lock
+	decb	(%rcx)
+	lock
+	decb	(%rdx)
+	lock
+	decw	(%rsi)
+	lock
+	decw	(%rdi)
+	lock
+	decl	(%r8)
+	lock
+	decl	(%r9)
+	lock
+	decq	(%r10)
+	lock
+	decq	(%r11)
+	lock
+	decq	(%rax)
+	lock
+	decq	(%rbx)
+	movb	$1, %bl
+	.align	4, 0x90
+LBB1_1:                                 ## %entry
+                                        ## =>This Inner Loop Header: Depth=1
+	movb	(%rcx), %al
+	movb	%al, %r14b
+	orb	%bl, %r14b
+	lock
+	cmpxchgb	%r14b, (%rcx)
+	jne	LBB1_1
+	.align	4, 0x90
+LBB1_2:                                 ## %entry
+                                        ## =>This Inner Loop Header: Depth=1
+	movb	(%rdx), %al
+	movb	%al, %r14b
+	orb	%bl, %r14b
+	lock
+	cmpxchgb	%r14b, (%rdx)
+	jne	LBB1_2
+## BB#3:                                ## %entry
+	movw	$1, %r14w
+	.align	4, 0x90
+LBB1_4:                                 ## %entry
+                                        ## =>This Inner Loop Header: Depth=1
+	movw	(%rsi), %ax
+	movw	%ax, %r15w
+	orw	%r14w, %r15w
+	lock
+	cmpxchgw	%r15w, (%rsi)
+	jne	LBB1_4
+	.align	4, 0x90
+LBB1_5:                                 ## %entry
+                                        ## =>This Inner Loop Header: Depth=1
+	movw	(%rdi), %ax
+	movw	%ax, %r15w
+	orw	%r14w, %r15w
+	lock
+	cmpxchgw	%r15w, (%rdi)
+	jne	LBB1_5
+## BB#6:                                ## %entry
+	movl	$1, %r15d
+	.align	4, 0x90
+LBB1_7:                                 ## %entry
+                                        ## =>This Inner Loop Header: Depth=1
+	movl	(%r8), %eax
+	movl	%eax, %r12d
+	orl	%r15d, %r12d
+	lock
+	cmpxchgl	%r12d, (%r8)
+	jne	LBB1_7
+	.align	4, 0x90
+LBB1_8:                                 ## %entry
+                                        ## =>This Inner Loop Header: Depth=1
+	movl	(%r9), %eax
+	movl	%eax, %r12d
+	orl	%r15d, %r12d
+	lock
+	cmpxchgl	%r12d, (%r9)
+	jne	LBB1_8
+## BB#9:                                ## %entry
+	movl	$1, %r12d
+	.align	4, 0x90
+LBB1_10:                                ## %entry
+                                        ## =>This Inner Loop Header: Depth=1
+	movq	(%r10), %rax
+	movq	%rax, %r13
+	orq	%r12, %r13
+	lock
+	cmpxchgq	%r13,(%r10)
+	jne	LBB1_10
+	.align	4, 0x90
+LBB1_11:                                ## %entry
+                                        ## =>This Inner Loop Header: Depth=1
+	movq	(%r11), %rax
+	movq	%rax, %r13
+	orq	%r12, %r13
+	lock
+	cmpxchgq	%r13,(%r11)
+	jne	LBB1_11
+	.align	4, 0x90
+LBB1_12:                                ## %entry
+                                        ## =>This Inner Loop Header: Depth=1
+	movq	_sll@GOTPCREL(%rip), %r13
+	movq	(%r13), %rax
+	movq	%rax, %rbp
+	orq	%r12, %rbp
+	lock
+	cmpxchgq	%rbp,(%r13)
+	jne	LBB1_12
+	.align	4, 0x90
+LBB1_13:                                ## %entry
+                                        ## =>This Inner Loop Header: Depth=1
+	movq	_ull@GOTPCREL(%rip), %rax
+	movq	(%rax), %rax
+	movq	%rax, %r13
+	orq	%r12, %r13
+	movq	_ull@GOTPCREL(%rip), %rbp
+	lock
+	cmpxchgq	%r13,(%rbp)
+	jne	LBB1_13
+	.align	4, 0x90
+LBB1_14:                                ## %entry
+                                        ## =>This Inner Loop Header: Depth=1
+	movb	(%rcx), %al
+	movb	%al, %r13b
+	xorb	%bl, %r13b
+	lock
+	cmpxchgb	%r13b, (%rcx)
+	jne	LBB1_14
+	.align	4, 0x90
+LBB1_15:                                ## %entry
+                                        ## =>This Inner Loop Header: Depth=1
+	movb	(%rdx), %al
+	movb	%al, %r13b
+	xorb	%bl, %r13b
+	lock
+	cmpxchgb	%r13b, (%rdx)
+	jne	LBB1_15
+	.align	4, 0x90
+LBB1_16:                                ## %entry
+                                        ## =>This Inner Loop Header: Depth=1
+	movw	(%rsi), %ax
+	movw	%ax, %r13w
+	xorw	%r14w, %r13w
+	lock
+	cmpxchgw	%r13w, (%rsi)
+	jne	LBB1_16
+	.align	4, 0x90
+LBB1_17:                                ## %entry
+                                        ## =>This Inner Loop Header: Depth=1
+	movw	(%rdi), %ax
+	movw	%ax, %r13w
+	xorw	%r14w, %r13w
+	lock
+	cmpxchgw	%r13w, (%rdi)
+	jne	LBB1_17
+	.align	4, 0x90
+LBB1_18:                                ## %entry
+                                        ## =>This Inner Loop Header: Depth=1
+	movl	(%r8), %eax
+	movl	%eax, %r13d
+	xorl	%r15d, %r13d
+	lock
+	cmpxchgl	%r13d, (%r8)
+	jne	LBB1_18
+	.align	4, 0x90
+LBB1_19:                                ## %entry
+                                        ## =>This Inner Loop Header: Depth=1
+	movl	(%r9), %eax
+	movl	%eax, %r13d
+	xorl	%r15d, %r13d
+	lock
+	cmpxchgl	%r13d, (%r9)
+	jne	LBB1_19
+	.align	4, 0x90
+LBB1_20:                                ## %entry
+                                        ## =>This Inner Loop Header: Depth=1
+	movq	(%r10), %rax
+	movq	%rax, %r13
+	xorq	%r12, %r13
+	lock
+	cmpxchgq	%r13,(%r10)
+	jne	LBB1_20
+	.align	4, 0x90
+LBB1_21:                                ## %entry
+                                        ## =>This Inner Loop Header: Depth=1
+	movq	(%r11), %rax
+	movq	%rax, %r13
+	xorq	%r12, %r13
+	lock
+	cmpxchgq	%r13,(%r11)
+	jne	LBB1_21
+	.align	4, 0x90
+LBB1_22:                                ## %entry
+                                        ## =>This Inner Loop Header: Depth=1
+	movq	_sll@GOTPCREL(%rip), %r13
+	movq	(%r13), %rax
+	movq	%rax, %rbp
+	xorq	%r12, %rbp
+	lock
+	cmpxchgq	%rbp,(%r13)
+	jne	LBB1_22
+	.align	4, 0x90
+LBB1_23:                                ## %entry
+                                        ## =>This Inner Loop Header: Depth=1
+	movq	_ull@GOTPCREL(%rip), %r13
+	movq	(%r13), %rax
+	movq	%rax, %rbp
+	xorq	%r12, %rbp
+	lock
+	cmpxchgq	%rbp,(%r13)
+	jne	LBB1_23
+	.align	4, 0x90
+LBB1_24:                                ## %entry
+                                        ## =>This Inner Loop Header: Depth=1
+	movb	(%rcx), %al
+	movb	%al, %r13b
+	andb	%bl, %r13b
+	lock
+	cmpxchgb	%r13b, (%rcx)
+	jne	LBB1_24
+	.align	4, 0x90
+LBB1_25:                                ## %entry
+                                        ## =>This Inner Loop Header: Depth=1
+	movb	(%rdx), %al
+	movb	%al, %r13b
+	andb	%bl, %r13b
+	lock
+	cmpxchgb	%r13b, (%rdx)
+	jne	LBB1_25
+	.align	4, 0x90
+LBB1_26:                                ## %entry
+                                        ## =>This Inner Loop Header: Depth=1
+	movw	(%rsi), %ax
+	movw	%ax, %r13w
+	andw	%r14w, %r13w
+	lock
+	cmpxchgw	%r13w, (%rsi)
+	jne	LBB1_26
+	.align	4, 0x90
+LBB1_27:                                ## %entry
+                                        ## =>This Inner Loop Header: Depth=1
+	movw	(%rdi), %ax
+	movw	%ax, %r13w
+	andw	%r14w, %r13w
+	lock
+	cmpxchgw	%r13w, (%rdi)
+	jne	LBB1_27
+	.align	4, 0x90
+LBB1_28:                                ## %entry
+                                        ## =>This Inner Loop Header: Depth=1
+	movl	(%r8), %eax
+	movl	%eax, %r13d
+	andl	%r15d, %r13d
+	lock
+	cmpxchgl	%r13d, (%r8)
+	jne	LBB1_28
+	.align	4, 0x90
+LBB1_29:                                ## %entry
+                                        ## =>This Inner Loop Header: Depth=1
+	movl	(%r9), %eax
+	movl	%eax, %r13d
+	andl	%r15d, %r13d
+	lock
+	cmpxchgl	%r13d, (%r9)
+	jne	LBB1_29
+	.align	4, 0x90
+LBB1_30:                                ## %entry
+                                        ## =>This Inner Loop Header: Depth=1
+	movq	(%r10), %rax
+	movq	%rax, %r13
+	andq	%r12, %r13
+	lock
+	cmpxchgq	%r13,(%r10)
+	jne	LBB1_30
+	.align	4, 0x90
+LBB1_31:                                ## %entry
+                                        ## =>This Inner Loop Header: Depth=1
+	movq	(%r11), %rax
+	movq	%rax, %r13
+	andq	%r12, %r13
+	lock
+	cmpxchgq	%r13,(%r11)
+	jne	LBB1_31
+	.align	4, 0x90
+LBB1_32:                                ## %entry
+                                        ## =>This Inner Loop Header: Depth=1
+	movq	_sll@GOTPCREL(%rip), %r13
+	movq	(%r13), %rax
+	movq	%rax, %rbp
+	andq	%r12, %rbp
+	lock
+	cmpxchgq	%rbp,(%r13)
+	jne	LBB1_32
+	.align	4, 0x90
+LBB1_33:                                ## %entry
+                                        ## =>This Inner Loop Header: Depth=1
+	movq	_ull@GOTPCREL(%rip), %r13
+	movq	(%r13), %rax
+	movq	%rax, %rbp
+	andq	%r12, %rbp
+	lock
+	cmpxchgq	%rbp,(%r13)
+	jne	LBB1_33
+	.align	4, 0x90
+LBB1_34:                                ## %entry
+                                        ## =>This Inner Loop Header: Depth=1
+	movb	(%rcx), %al
+	movb	%al, %r13b
+	notb	%r13b
+	andb	%bl, %r13b
+	lock
+	cmpxchgb	%r13b, (%rcx)
+	jne	LBB1_34
+	.align	4, 0x90
+LBB1_35:                                ## %entry
+                                        ## =>This Inner Loop Header: Depth=1
+	movb	(%rdx), %al
+	movb	%al, %cl
+	notb	%cl
+	andb	%bl, %cl
+	lock
+	cmpxchgb	%cl, (%rdx)
+	jne	LBB1_35
+	.align	4, 0x90
+LBB1_36:                                ## %entry
+                                        ## =>This Inner Loop Header: Depth=1
+	movw	(%rsi), %ax
+	movw	%ax, %cx
+	notw	%cx
+	andw	%r14w, %cx
+	lock
+	cmpxchgw	%cx, (%rsi)
+	jne	LBB1_36
+	.align	4, 0x90
+LBB1_37:                                ## %entry
+                                        ## =>This Inner Loop Header: Depth=1
+	movw	(%rdi), %ax
+	movw	%ax, %cx
+	notw	%cx
+	andw	%r14w, %cx
+	lock
+	cmpxchgw	%cx, (%rdi)
+	jne	LBB1_37
+	.align	4, 0x90
+LBB1_38:                                ## %entry
+                                        ## =>This Inner Loop Header: Depth=1
+	movl	(%r8), %eax
+	movl	%eax, %ecx
+	notl	%ecx
+	andl	%r15d, %ecx
+	lock
+	cmpxchgl	%ecx, (%r8)
+	jne	LBB1_38
+	.align	4, 0x90
+LBB1_39:                                ## %entry
+                                        ## =>This Inner Loop Header: Depth=1
+	movl	(%r9), %eax
+	movl	%eax, %ecx
+	notl	%ecx
+	andl	%r15d, %ecx
+	lock
+	cmpxchgl	%ecx, (%r9)
+	jne	LBB1_39
+	.align	4, 0x90
+LBB1_40:                                ## %entry
+                                        ## =>This Inner Loop Header: Depth=1
+	movq	(%r10), %rax
+	movq	%rax, %rcx
+	notq	%rcx
+	andq	%r12, %rcx
+	lock
+	cmpxchgq	%rcx,(%r10)
+	jne	LBB1_40
+	.align	4, 0x90
+LBB1_41:                                ## %entry
+                                        ## =>This Inner Loop Header: Depth=1
+	movq	(%r11), %rax
+	movq	%rax, %rcx
+	notq	%rcx
+	andq	%r12, %rcx
+	lock
+	cmpxchgq	%rcx,(%r11)
+	jne	LBB1_41
+	.align	4, 0x90
+LBB1_42:                                ## %entry
+                                        ## =>This Inner Loop Header: Depth=1
+	movq	_sll@GOTPCREL(%rip), %rcx
+	movq	(%rcx), %rax
+	movq	%rax, %rdx
+	notq	%rdx
+	andq	%r12, %rdx
+	lock
+	cmpxchgq	%rdx,(%rcx)
+	jne	LBB1_42
+	.align	4, 0x90
+LBB1_43:                                ## %entry
+                                        ## =>This Inner Loop Header: Depth=1
+	movq	_ull@GOTPCREL(%rip), %rcx
+	movq	(%rcx), %rax
+	movq	%rax, %rdx
+	notq	%rdx
+	andq	%r12, %rdx
+	lock
+	cmpxchgq	%rdx,(%rcx)
+	jne	LBB1_43
+## BB#44:                               ## %return
+	popq	%rbx
+	popq	%r12
+	popq	%r13
+	popq	%r14
+	popq	%r15
+	popq	%rbp
+	ret
+
+	.globl	_test_fetch_and_op
+	.align	4, 0x90
+_test_fetch_and_op:                     ## @test_fetch_and_op
+## BB#0:                                ## %entry
+	pushq	%rbp
+	pushq	%r15
+	pushq	%r14
+	pushq	%r13
+	pushq	%r12
+	pushq	%rbx
+	movq	_sc@GOTPCREL(%rip), %rcx
+	movb	$11, %dl
+	movb	$11, %al
+	lock
+	xaddb	%al, (%rcx)
+	movb	%al, (%rcx)
+	movq	_uc@GOTPCREL(%rip), %rsi
+	movb	$11, %al
+	lock
+	xaddb	%al, (%rsi)
+	movb	%al, (%rsi)
+	movq	_ss@GOTPCREL(%rip), %rdi
+	movw	$11, %r8w
+	movw	$11, %ax
+	lock
+	xaddw	%ax, (%rdi)
+	movw	%ax, (%rdi)
+	movq	_us@GOTPCREL(%rip), %r9
+	movw	$11, %ax
+	lock
+	xaddw	%ax, (%r9)
+	movw	%ax, (%r9)
+	movq	_si@GOTPCREL(%rip), %r10
+	movl	$11, %eax
+	lock
+	xaddl	%eax, (%r10)
+	movl	%eax, (%r10)
+	movq	_ui@GOTPCREL(%rip), %r11
+	movl	$11, %eax
+	lock
+	xaddl	%eax, (%r11)
+	movl	%eax, (%r11)
+	movq	_sl@GOTPCREL(%rip), %rbx
+	movl	$11, %r14d
+	movl	$11, %eax
+	lock
+	xadd	%rax, (%rbx)
+	movq	%rax, (%rbx)
+	movq	_ul@GOTPCREL(%rip), %r15
+	movl	$11, %eax
+	lock
+	xadd	%rax, (%r15)
+	movq	%rax, (%r15)
+	movq	_sll@GOTPCREL(%rip), %r12
+	movl	$11, %eax
+	lock
+	xadd	%rax, (%r12)
+	movq	%rax, (%r12)
+	movl	$11, %eax
+	movq	_ull@GOTPCREL(%rip), %r13
+	lock
+	xadd	%rax, (%r13)
+	movq	%rax, (%r13)
+	movb	$-11, %al
+	lock
+	xaddb	%al, (%rcx)
+	movb	%al, (%rcx)
+	movb	$-11, %al
+	lock
+	xaddb	%al, (%rsi)
+	movb	%al, (%rsi)
+	movw	$-11, %ax
+	lock
+	xaddw	%ax, (%rdi)
+	movw	%ax, (%rdi)
+	movw	$-11, %ax
+	lock
+	xaddw	%ax, (%r9)
+	movw	%ax, (%r9)
+	movl	$-11, %eax
+	lock
+	xaddl	%eax, (%r10)
+	movl	%eax, (%r10)
+	movl	$-11, %eax
+	lock
+	xaddl	%eax, (%r11)
+	movl	%eax, (%r11)
+	movq	$-11, %rax
+	lock
+	xadd	%rax, (%rbx)
+	movq	%rax, (%rbx)
+	movq	$-11, %rax
+	lock
+	xadd	%rax, (%r15)
+	movq	%rax, (%r15)
+	movq	$-11, %rax
+	lock
+	xadd	%rax, (%r12)
+	movq	%rax, (%r12)
+	movq	$-11, %rax
+	lock
+	xadd	%rax, (%r13)
+	movq	%rax, (%r13)
+	.align	4, 0x90
+LBB2_1:                                 ## %entry
+                                        ## =>This Inner Loop Header: Depth=1
+	movb	(%rcx), %al
+	movb	%al, %r13b
+	orb	%dl, %r13b
+	lock
+	cmpxchgb	%r13b, (%rcx)
+	jne	LBB2_1
+## BB#2:                                ## %entry
+	movb	%al, (%rcx)
+	.align	4, 0x90
+LBB2_3:                                 ## %entry
+                                        ## =>This Inner Loop Header: Depth=1
+	movb	(%rsi), %al
+	movb	%al, %r13b
+	orb	%dl, %r13b
+	lock
+	cmpxchgb	%r13b, (%rsi)
+	jne	LBB2_3
+## BB#4:                                ## %entry
+	movb	%al, (%rsi)
+	.align	4, 0x90
+LBB2_5:                                 ## %entry
+                                        ## =>This Inner Loop Header: Depth=1
+	movw	(%rdi), %ax
+	movw	%ax, %r13w
+	orw	%r8w, %r13w
+	lock
+	cmpxchgw	%r13w, (%rdi)
+	jne	LBB2_5
+## BB#6:                                ## %entry
+	movw	%ax, (%rdi)
+	.align	4, 0x90
+LBB2_7:                                 ## %entry
+                                        ## =>This Inner Loop Header: Depth=1
+	movw	(%r9), %ax
+	movw	%ax, %r13w
+	orw	%r8w, %r13w
+	lock
+	cmpxchgw	%r13w, (%r9)
+	jne	LBB2_7
+## BB#8:                                ## %entry
+	movw	%ax, (%r9)
+	.align	4, 0x90
+LBB2_9:                                 ## %entry
+                                        ## =>This Inner Loop Header: Depth=1
+	movl	(%r10), %eax
+	movl	%eax, %r13d
+	movl	$11, %ebp
+	orl	%ebp, %r13d
+	lock
+	cmpxchgl	%r13d, (%r10)
+	jne	LBB2_9
+## BB#10:                               ## %entry
+	movl	%eax, (%r10)
+	.align	4, 0x90
+LBB2_11:                                ## %entry
+                                        ## =>This Inner Loop Header: Depth=1
+	movl	(%r11), %eax
+	movl	%eax, %r13d
+	movl	$11, %ebp
+	orl	%ebp, %r13d
+	lock
+	cmpxchgl	%r13d, (%r11)
+	jne	LBB2_11
+## BB#12:                               ## %entry
+	movl	%eax, (%r11)
+	.align	4, 0x90
+LBB2_13:                                ## %entry
+                                        ## =>This Inner Loop Header: Depth=1
+	movq	(%rbx), %rax
+	movq	%rax, %r13
+	orq	%r14, %r13
+	lock
+	cmpxchgq	%r13,(%rbx)
+	jne	LBB2_13
+## BB#14:                               ## %entry
+	movq	%rax, (%rbx)
+	.align	4, 0x90
+LBB2_15:                                ## %entry
+                                        ## =>This Inner Loop Header: Depth=1
+	movq	(%r15), %rax
+	movq	%rax, %r13
+	orq	%r14, %r13
+	lock
+	cmpxchgq	%r13,(%r15)
+	jne	LBB2_15
+## BB#16:                               ## %entry
+	movq	%rax, (%r15)
+	.align	4, 0x90
+LBB2_17:                                ## %entry
+                                        ## =>This Inner Loop Header: Depth=1
+	movq	(%r12), %rax
+	movq	%rax, %r13
+	orq	%r14, %r13
+	lock
+	cmpxchgq	%r13,(%r12)
+	jne	LBB2_17
+## BB#18:                               ## %entry
+	movq	%rax, (%r12)
+	.align	4, 0x90
+LBB2_19:                                ## %entry
+                                        ## =>This Inner Loop Header: Depth=1
+	movq	_ull@GOTPCREL(%rip), %r13
+	movq	(%r13), %rax
+	movq	%rax, %rbp
+	orq	%r14, %rbp
+	lock
+	cmpxchgq	%rbp,(%r13)
+	jne	LBB2_19
+## BB#20:                               ## %entry
+	movq	%rax, (%r13)
+	.align	4, 0x90
+LBB2_21:                                ## %entry
+                                        ## =>This Inner Loop Header: Depth=1
+	movb	(%rcx), %al
+	movb	%al, %r13b
+	xorb	%dl, %r13b
+	lock
+	cmpxchgb	%r13b, (%rcx)
+	jne	LBB2_21
+## BB#22:                               ## %entry
+	movb	%al, (%rcx)
+	.align	4, 0x90
+LBB2_23:                                ## %entry
+                                        ## =>This Inner Loop Header: Depth=1
+	movb	(%rsi), %al
+	movb	%al, %r13b
+	xorb	%dl, %r13b
+	lock
+	cmpxchgb	%r13b, (%rsi)
+	jne	LBB2_23
+## BB#24:                               ## %entry
+	movb	%al, (%rsi)
+	.align	4, 0x90
+LBB2_25:                                ## %entry
+                                        ## =>This Inner Loop Header: Depth=1
+	movw	(%rdi), %ax
+	movw	%ax, %r13w
+	xorw	%r8w, %r13w
+	lock
+	cmpxchgw	%r13w, (%rdi)
+	jne	LBB2_25
+## BB#26:                               ## %entry
+	movw	%ax, (%rdi)
+	.align	4, 0x90
+LBB2_27:                                ## %entry
+                                        ## =>This Inner Loop Header: Depth=1
+	movw	(%r9), %ax
+	movw	%ax, %r13w
+	xorw	%r8w, %r13w
+	lock
+	cmpxchgw	%r13w, (%r9)
+	jne	LBB2_27
+## BB#28:                               ## %entry
+	movw	%ax, (%r9)
+	.align	4, 0x90
+LBB2_29:                                ## %entry
+                                        ## =>This Inner Loop Header: Depth=1
+	movl	(%r10), %eax
+	movl	%eax, %r13d
+	movl	$11, %ebp
+	xorl	%ebp, %r13d
+	lock
+	cmpxchgl	%r13d, (%r10)
+	jne	LBB2_29
+## BB#30:                               ## %entry
+	movl	%eax, (%r10)
+	.align	4, 0x90
+LBB2_31:                                ## %entry
+                                        ## =>This Inner Loop Header: Depth=1
+	movl	(%r11), %eax
+	movl	%eax, %r13d
+	movl	$11, %ebp
+	xorl	%ebp, %r13d
+	lock
+	cmpxchgl	%r13d, (%r11)
+	jne	LBB2_31
+## BB#32:                               ## %entry
+	movl	%eax, (%r11)
+	.align	4, 0x90
+LBB2_33:                                ## %entry
+                                        ## =>This Inner Loop Header: Depth=1
+	movq	(%rbx), %rax
+	movq	%rax, %r13
+	xorq	%r14, %r13
+	lock
+	cmpxchgq	%r13,(%rbx)
+	jne	LBB2_33
+## BB#34:                               ## %entry
+	movq	%rax, (%rbx)
+	.align	4, 0x90
+LBB2_35:                                ## %entry
+                                        ## =>This Inner Loop Header: Depth=1
+	movq	(%r15), %rax
+	movq	%rax, %r13
+	xorq	%r14, %r13
+	lock
+	cmpxchgq	%r13,(%r15)
+	jne	LBB2_35
+## BB#36:                               ## %entry
+	movq	%rax, (%r15)
+	.align	4, 0x90
+LBB2_37:                                ## %entry
+                                        ## =>This Inner Loop Header: Depth=1
+	movq	(%r12), %rax
+	movq	%rax, %r13
+	xorq	%r14, %r13
+	lock
+	cmpxchgq	%r13,(%r12)
+	jne	LBB2_37
+## BB#38:                               ## %entry
+	movq	%rax, (%r12)
+	.align	4, 0x90
+LBB2_39:                                ## %entry
+                                        ## =>This Inner Loop Header: Depth=1
+	movq	_ull@GOTPCREL(%rip), %r13
+	movq	(%r13), %rax
+	movq	%rax, %rbp
+	xorq	%r14, %rbp
+	lock
+	cmpxchgq	%rbp,(%r13)
+	jne	LBB2_39
+## BB#40:                               ## %entry
+	movq	%rax, (%r13)
+	.align	4, 0x90
+LBB2_41:                                ## %entry
+                                        ## =>This Inner Loop Header: Depth=1
+	movb	(%rcx), %al
+	movb	%al, %r13b
+	andb	%dl, %r13b
+	lock
+	cmpxchgb	%r13b, (%rcx)
+	jne	LBB2_41
+## BB#42:                               ## %entry
+	movb	%al, (%rcx)
+	.align	4, 0x90
+LBB2_43:                                ## %entry
+                                        ## =>This Inner Loop Header: Depth=1
+	movb	(%rsi), %al
+	movb	%al, %r13b
+	andb	%dl, %r13b
+	lock
+	cmpxchgb	%r13b, (%rsi)
+	jne	LBB2_43
+## BB#44:                               ## %entry
+	movb	%al, (%rsi)
+	.align	4, 0x90
+LBB2_45:                                ## %entry
+                                        ## =>This Inner Loop Header: Depth=1
+	movw	(%rdi), %ax
+	movw	%ax, %r13w
+	andw	%r8w, %r13w
+	lock
+	cmpxchgw	%r13w, (%rdi)
+	jne	LBB2_45
+## BB#46:                               ## %entry
+	movw	%ax, (%rdi)
+	.align	4, 0x90
+LBB2_47:                                ## %entry
+                                        ## =>This Inner Loop Header: Depth=1
+	movw	(%r9), %ax
+	movw	%ax, %r13w
+	andw	%r8w, %r13w
+	lock
+	cmpxchgw	%r13w, (%r9)
+	jne	LBB2_47
+## BB#48:                               ## %entry
+	movw	%ax, (%r9)
+	.align	4, 0x90
+LBB2_49:                                ## %entry
+                                        ## =>This Inner Loop Header: Depth=1
+	movl	(%r10), %eax
+	movl	%eax, %r13d
+	movl	$11, %ebp
+	andl	%ebp, %r13d
+	lock
+	cmpxchgl	%r13d, (%r10)
+	jne	LBB2_49
+## BB#50:                               ## %entry
+	movl	%eax, (%r10)
+	.align	4, 0x90
+LBB2_51:                                ## %entry
+                                        ## =>This Inner Loop Header: Depth=1
+	movl	(%r11), %eax
+	movl	%eax, %r13d
+	movl	$11, %ebp
+	andl	%ebp, %r13d
+	lock
+	cmpxchgl	%r13d, (%r11)
+	jne	LBB2_51
+## BB#52:                               ## %entry
+	movl	%eax, (%r11)
+	.align	4, 0x90
+LBB2_53:                                ## %entry
+                                        ## =>This Inner Loop Header: Depth=1
+	movq	(%rbx), %rax
+	movq	%rax, %r13
+	andq	%r14, %r13
+	lock
+	cmpxchgq	%r13,(%rbx)
+	jne	LBB2_53
+## BB#54:                               ## %entry
+	movq	%rax, (%rbx)
+	.align	4, 0x90
+LBB2_55:                                ## %entry
+                                        ## =>This Inner Loop Header: Depth=1
+	movq	(%r15), %rax
+	movq	%rax, %r13
+	andq	%r14, %r13
+	lock
+	cmpxchgq	%r13,(%r15)
+	jne	LBB2_55
+## BB#56:                               ## %entry
+	movq	%rax, (%r15)
+	.align	4, 0x90
+LBB2_57:                                ## %entry
+                                        ## =>This Inner Loop Header: Depth=1
+	movq	(%r12), %rax
+	movq	%rax, %r13
+	andq	%r14, %r13
+	lock
+	cmpxchgq	%r13,(%r12)
+	jne	LBB2_57
+## BB#58:                               ## %entry
+	movq	%rax, (%r12)
+	.align	4, 0x90
+LBB2_59:                                ## %entry
+                                        ## =>This Inner Loop Header: Depth=1
+	movq	_ull@GOTPCREL(%rip), %r13
+	movq	(%r13), %rax
+	movq	%rax, %rbp
+	andq	%r14, %rbp
+	lock
+	cmpxchgq	%rbp,(%r13)
+	jne	LBB2_59
+## BB#60:                               ## %entry
+	movq	%rax, (%r13)
+	.align	4, 0x90
+LBB2_61:                                ## %entry
+                                        ## =>This Inner Loop Header: Depth=1
+	movb	(%rcx), %al
+	movb	%al, %r13b
+	notb	%r13b
+	andb	%dl, %r13b
+	lock
+	cmpxchgb	%r13b, (%rcx)
+	jne	LBB2_61
+## BB#62:                               ## %entry
+	movb	%al, (%rcx)
+	.align	4, 0x90
+LBB2_63:                                ## %entry
+                                        ## =>This Inner Loop Header: Depth=1
+	movb	(%rsi), %al
+	movb	%al, %cl
+	notb	%cl
+	andb	%dl, %cl
+	lock
+	cmpxchgb	%cl, (%rsi)
+	jne	LBB2_63
+## BB#64:                               ## %entry
+	movb	%al, (%rsi)
+	.align	4, 0x90
+LBB2_65:                                ## %entry
+                                        ## =>This Inner Loop Header: Depth=1
+	movw	(%rdi), %ax
+	movw	%ax, %cx
+	notw	%cx
+	andw	%r8w, %cx
+	lock
+	cmpxchgw	%cx, (%rdi)
+	jne	LBB2_65
+## BB#66:                               ## %entry
+	movw	%ax, (%rdi)
+	.align	4, 0x90
+LBB2_67:                                ## %entry
+                                        ## =>This Inner Loop Header: Depth=1
+	movw	(%r9), %ax
+	movw	%ax, %cx
+	notw	%cx
+	andw	%r8w, %cx
+	lock
+	cmpxchgw	%cx, (%r9)
+	jne	LBB2_67
+## BB#68:                               ## %entry
+	movw	%ax, (%r9)
+	.align	4, 0x90
+LBB2_69:                                ## %entry
+                                        ## =>This Inner Loop Header: Depth=1
+	movl	(%r10), %eax
+	movl	%eax, %ecx
+	notl	%ecx
+	movl	$11, %edx
+	andl	%edx, %ecx
+	lock
+	cmpxchgl	%ecx, (%r10)
+	jne	LBB2_69
+## BB#70:                               ## %entry
+	movl	%eax, (%r10)
+	.align	4, 0x90
+LBB2_71:                                ## %entry
+                                        ## =>This Inner Loop Header: Depth=1
+	movl	(%r11), %eax
+	movl	%eax, %ecx
+	notl	%ecx
+	movl	$11, %edx
+	andl	%edx, %ecx
+	lock
+	cmpxchgl	%ecx, (%r11)
+	jne	LBB2_71
+## BB#72:                               ## %entry
+	movl	%eax, (%r11)
+	.align	4, 0x90
+LBB2_73:                                ## %entry
+                                        ## =>This Inner Loop Header: Depth=1
+	movq	(%rbx), %rax
+	movq	%rax, %rcx
+	notq	%rcx
+	andq	%r14, %rcx
+	lock
+	cmpxchgq	%rcx,(%rbx)
+	jne	LBB2_73
+## BB#74:                               ## %entry
+	movq	%rax, (%rbx)
+	.align	4, 0x90
+LBB2_75:                                ## %entry
+                                        ## =>This Inner Loop Header: Depth=1
+	movq	(%r15), %rax
+	movq	%rax, %rcx
+	notq	%rcx
+	andq	%r14, %rcx
+	lock
+	cmpxchgq	%rcx,(%r15)
+	jne	LBB2_75
+## BB#76:                               ## %entry
+	movq	%rax, (%r15)
+	.align	4, 0x90
+LBB2_77:                                ## %entry
+                                        ## =>This Inner Loop Header: Depth=1
+	movq	(%r12), %rax
+	movq	%rax, %rcx
+	notq	%rcx
+	andq	%r14, %rcx
+	lock
+	cmpxchgq	%rcx,(%r12)
+	jne	LBB2_77
+## BB#78:                               ## %entry
+	movq	%rax, (%r12)
+	.align	4, 0x90
+LBB2_79:                                ## %entry
+                                        ## =>This Inner Loop Header: Depth=1
+	movq	_ull@GOTPCREL(%rip), %rcx
+	movq	(%rcx), %rax
+	movq	%rax, %rdx
+	notq	%rdx
+	andq	%r14, %rdx
+	lock
+	cmpxchgq	%rdx,(%rcx)
+	jne	LBB2_79
+## BB#80:                               ## %entry
+	movq	%rax, (%rcx)
+	popq	%rbx
+	popq	%r12
+	popq	%r13
+	popq	%r14
+	popq	%r15
+	popq	%rbp
+	ret
+
+	.globl	_test_op_and_fetch
+	.align	4, 0x90
+_test_op_and_fetch:                     ## @test_op_and_fetch
+## BB#0:                                ## %entry
+	pushq	%r15
+	pushq	%r14
+	pushq	%r12
+	pushq	%rbx
+	movq	_uc@GOTPCREL(%rip), %rcx
+	movb	(%rcx), %al
+	movq	_sc@GOTPCREL(%rip), %rdx
+	movb	%al, %sil
+	lock
+	xaddb	%sil, (%rdx)
+	addb	%al, %sil
+	movb	%sil, (%rdx)
+	movb	(%rcx), %al
+	movb	%al, %sil
+	lock
+	xaddb	%sil, (%rcx)
+	addb	%al, %sil
+	movb	%sil, (%rcx)
+	movzbl	(%rcx), %eax
+	movq	_ss@GOTPCREL(%rip), %rsi
+	movw	%ax, %di
+	lock
+	xaddw	%di, (%rsi)
+	addw	%ax, %di
+	movw	%di, (%rsi)
+	movzbl	(%rcx), %eax
+	movq	_us@GOTPCREL(%rip), %rdi
+	movw	%ax, %r8w
+	lock
+	xaddw	%r8w, (%rdi)
+	addw	%ax, %r8w
+	movw	%r8w, (%rdi)
+	movzbl	(%rcx), %eax
+	movq	_si@GOTPCREL(%rip), %r8
+	movl	%eax, %r9d
+	lock
+	xaddl	%r9d, (%r8)
+	addl	%eax, %r9d
+	movl	%r9d, (%r8)
+	movzbl	(%rcx), %eax
+	movq	_ui@GOTPCREL(%rip), %r9
+	movl	%eax, %r10d
+	lock
+	xaddl	%r10d, (%r9)
+	addl	%eax, %r10d
+	movl	%r10d, (%r9)
+	movzbl	(%rcx), %eax
+	movq	_sl@GOTPCREL(%rip), %r10
+	movq	%rax, %r11
+	lock
+	xadd	%r11, (%r10)
+	addq	%rax, %r11
+	movq	%r11, (%r10)
+	movzbl	(%rcx), %eax
+	movq	_ul@GOTPCREL(%rip), %r11
+	movq	%rax, %rbx
+	lock
+	xadd	%rbx, (%r11)
+	addq	%rax, %rbx
+	movq	%rbx, (%r11)
+	movzbl	(%rcx), %eax
+	movq	_sll@GOTPCREL(%rip), %rbx
+	movq	%rax, %r14
+	lock
+	xadd	%r14, (%rbx)
+	addq	%rax, %r14
+	movq	%r14, (%rbx)
+	movzbl	(%rcx), %eax
+	movq	_ull@GOTPCREL(%rip), %r14
+	movq	%rax, %r15
+	lock
+	xadd	%r15, (%r14)
+	addq	%rax, %r15
+	movq	%r15, (%r14)
+	movb	(%rcx), %al
+	movb	%al, %r15b
+	negb	%r15b
+	lock
+	xaddb	%r15b, (%rdx)
+	subb	%al, %r15b
+	movb	%r15b, (%rdx)
+	movb	(%rcx), %al
+	movb	%al, %r15b
+	negb	%r15b
+	lock
+	xaddb	%r15b, (%rcx)
+	subb	%al, %r15b
+	movb	%r15b, (%rcx)
+	movzbl	(%rcx), %eax
+	movw	%ax, %r15w
+	negw	%r15w
+	lock
+	xaddw	%r15w, (%rsi)
+	subw	%ax, %r15w
+	movw	%r15w, (%rsi)
+	movzbl	(%rcx), %eax
+	movw	%ax, %r15w
+	negw	%r15w
+	lock
+	xaddw	%r15w, (%rdi)
+	subw	%ax, %r15w
+	movw	%r15w, (%rdi)
+	movzbl	(%rcx), %eax
+	movl	%eax, %r15d
+	negl	%r15d
+	lock
+	xaddl	%r15d, (%r8)
+	subl	%eax, %r15d
+	movl	%r15d, (%r8)
+	movzbl	(%rcx), %eax
+	movl	%eax, %r15d
+	negl	%r15d
+	lock
+	xaddl	%r15d, (%r9)
+	subl	%eax, %r15d
+	movl	%r15d, (%r9)
+	movzbl	(%rcx), %eax
+	movq	%rax, %r15
+	negq	%r15
+	lock
+	xadd	%r15, (%r10)
+	subq	%rax, %r15
+	movq	%r15, (%r10)
+	movzbl	(%rcx), %eax
+	movq	%rax, %r15
+	negq	%r15
+	lock
+	xadd	%r15, (%r11)
+	subq	%rax, %r15
+	movq	%r15, (%r11)
+	movzbl	(%rcx), %eax
+	movq	%rax, %r15
+	negq	%r15
+	lock
+	xadd	%r15, (%rbx)
+	subq	%rax, %r15
+	movq	%r15, (%rbx)
+	movzbl	(%rcx), %eax
+	movq	%rax, %r15
+	negq	%r15
+	lock
+	xadd	%r15, (%r14)
+	subq	%rax, %r15
+	movq	%r15, (%r14)
+	movb	(%rcx), %r15b
+	.align	4, 0x90
+LBB3_1:                                 ## %entry
+                                        ## =>This Inner Loop Header: Depth=1
+	movb	(%rdx), %al
+	movb	%al, %r12b
+	orb	%r15b, %r12b
+	lock
+	cmpxchgb	%r12b, (%rdx)
+	jne	LBB3_1
+## BB#2:                                ## %entry
+	orb	%r15b, %al
+	movb	%al, (%rdx)
+	movb	(%rcx), %r15b
+	.align	4, 0x90
+LBB3_3:                                 ## %entry
+                                        ## =>This Inner Loop Header: Depth=1
+	movb	(%rcx), %al
+	movb	%al, %r12b
+	orb	%r15b, %r12b
+	lock
+	cmpxchgb	%r12b, (%rcx)
+	jne	LBB3_3
+## BB#4:                                ## %entry
+	orb	%r15b, %al
+	movb	%al, (%rcx)
+	movzbl	(%rcx), %r15d
+	.align	4, 0x90
+LBB3_5:                                 ## %entry
+                                        ## =>This Inner Loop Header: Depth=1
+	movw	(%rsi), %ax
+	movw	%ax, %r12w
+	orw	%r15w, %r12w
+	lock
+	cmpxchgw	%r12w, (%rsi)
+	jne	LBB3_5
+## BB#6:                                ## %entry
+	orw	%r15w, %ax
+	movw	%ax, (%rsi)
+	movzbl	(%rcx), %r15d
+	.align	4, 0x90
+LBB3_7:                                 ## %entry
+                                        ## =>This Inner Loop Header: Depth=1
+	movw	(%rdi), %ax
+	movw	%ax, %r12w
+	orw	%r15w, %r12w
+	lock
+	cmpxchgw	%r12w, (%rdi)
+	jne	LBB3_7
+## BB#8:                                ## %entry
+	orw	%r15w, %ax
+	movw	%ax, (%rdi)
+	movzbl	(%rcx), %r15d
+	.align	4, 0x90
+LBB3_9:                                 ## %entry
+                                        ## =>This Inner Loop Header: Depth=1
+	movl	(%r8), %eax
+	movl	%eax, %r12d
+	orl	%r15d, %r12d
+	lock
+	cmpxchgl	%r12d, (%r8)
+	jne	LBB3_9
+## BB#10:                               ## %entry
+	orl	%r15d, %eax
+	movl	%eax, (%r8)
+	movzbl	(%rcx), %r15d
+	.align	4, 0x90
+LBB3_11:                                ## %entry
+                                        ## =>This Inner Loop Header: Depth=1
+	movl	(%r9), %eax
+	movl	%eax, %r12d
+	orl	%r15d, %r12d
+	lock
+	cmpxchgl	%r12d, (%r9)
+	jne	LBB3_11
+## BB#12:                               ## %entry
+	orl	%r15d, %eax
+	movl	%eax, (%r9)
+	movzbl	(%rcx), %r15d
+	.align	4, 0x90
+LBB3_13:                                ## %entry
+                                        ## =>This Inner Loop Header: Depth=1
+	movq	(%r10), %rax
+	movq	%rax, %r12
+	orq	%r15, %r12
+	lock
+	cmpxchgq	%r12,(%r10)
+	jne	LBB3_13
+## BB#14:                               ## %entry
+	orq	%r15, %rax
+	movq	%rax, (%r10)
+	movzbl	(%rcx), %r15d
+	.align	4, 0x90
+LBB3_15:                                ## %entry
+                                        ## =>This Inner Loop Header: Depth=1
+	movq	(%r11), %rax
+	movq	%rax, %r12
+	orq	%r15, %r12
+	lock
+	cmpxchgq	%r12,(%r11)
+	jne	LBB3_15
+## BB#16:                               ## %entry
+	orq	%r15, %rax
+	movq	%rax, (%r11)
+	movzbl	(%rcx), %r15d
+	.align	4, 0x90
+LBB3_17:                                ## %entry
+                                        ## =>This Inner Loop Header: Depth=1
+	movq	(%rbx), %rax
+	movq	%rax, %r12
+	orq	%r15, %r12
+	lock
+	cmpxchgq	%r12,(%rbx)
+	jne	LBB3_17
+## BB#18:                               ## %entry
+	orq	%r15, %rax
+	movq	%rax, (%rbx)
+	movzbl	(%rcx), %r15d
+	.align	4, 0x90
+LBB3_19:                                ## %entry
+                                        ## =>This Inner Loop Header: Depth=1
+	movq	(%r14), %rax
+	movq	%rax, %r12
+	orq	%r15, %r12
+	lock
+	cmpxchgq	%r12,(%r14)
+	jne	LBB3_19
+## BB#20:                               ## %entry
+	orq	%r15, %rax
+	movq	%rax, (%r14)
+	movb	(%rcx), %r15b
+	.align	4, 0x90
+LBB3_21:                                ## %entry
+                                        ## =>This Inner Loop Header: Depth=1
+	movb	(%rdx), %al
+	movb	%al, %r12b
+	xorb	%r15b, %r12b
+	lock
+	cmpxchgb	%r12b, (%rdx)
+	jne	LBB3_21
+## BB#22:                               ## %entry
+	xorb	%r15b, %al
+	movb	%al, (%rdx)
+	movb	(%rcx), %r15b
+	.align	4, 0x90
+LBB3_23:                                ## %entry
+                                        ## =>This Inner Loop Header: Depth=1
+	movb	(%rcx), %al
+	movb	%al, %r12b
+	xorb	%r15b, %r12b
+	lock
+	cmpxchgb	%r12b, (%rcx)
+	jne	LBB3_23
+## BB#24:                               ## %entry
+	xorb	%r15b, %al
+	movb	%al, (%rcx)
+	movzbl	(%rcx), %r15d
+	.align	4, 0x90
+LBB3_25:                                ## %entry
+                                        ## =>This Inner Loop Header: Depth=1
+	movw	(%rsi), %ax
+	movw	%ax, %r12w
+	xorw	%r15w, %r12w
+	lock
+	cmpxchgw	%r12w, (%rsi)
+	jne	LBB3_25
+## BB#26:                               ## %entry
+	xorw	%r15w, %ax
+	movw	%ax, (%rsi)
+	movzbl	(%rcx), %r15d
+	.align	4, 0x90
+LBB3_27:                                ## %entry
+                                        ## =>This Inner Loop Header: Depth=1
+	movw	(%rdi), %ax
+	movw	%ax, %r12w
+	xorw	%r15w, %r12w
+	lock
+	cmpxchgw	%r12w, (%rdi)
+	jne	LBB3_27
+## BB#28:                               ## %entry
+	xorw	%r15w, %ax
+	movw	%ax, (%rdi)
+	movzbl	(%rcx), %r15d
+	.align	4, 0x90
+LBB3_29:                                ## %entry
+                                        ## =>This Inner Loop Header: Depth=1
+	movl	(%r8), %eax
+	movl	%eax, %r12d
+	xorl	%r15d, %r12d
+	lock
+	cmpxchgl	%r12d, (%r8)
+	jne	LBB3_29
+## BB#30:                               ## %entry
+	xorl	%r15d, %eax
+	movl	%eax, (%r8)
+	movzbl	(%rcx), %r15d
+	.align	4, 0x90
+LBB3_31:                                ## %entry
+                                        ## =>This Inner Loop Header: Depth=1
+	movl	(%r9), %eax
+	movl	%eax, %r12d
+	xorl	%r15d, %r12d
+	lock
+	cmpxchgl	%r12d, (%r9)
+	jne	LBB3_31
+## BB#32:                               ## %entry
+	xorl	%r15d, %eax
+	movl	%eax, (%r9)
+	movzbl	(%rcx), %r15d
+	.align	4, 0x90
+LBB3_33:                                ## %entry
+                                        ## =>This Inner Loop Header: Depth=1
+	movq	(%r10), %rax
+	movq	%rax, %r12
+	xorq	%r15, %r12
+	lock
+	cmpxchgq	%r12,(%r10)
+	jne	LBB3_33
+## BB#34:                               ## %entry
+	xorq	%r15, %rax
+	movq	%rax, (%r10)
+	movzbl	(%rcx), %r15d
+	.align	4, 0x90
+LBB3_35:                                ## %entry
+                                        ## =>This Inner Loop Header: Depth=1
+	movq	(%r11), %rax
+	movq	%rax, %r12
+	xorq	%r15, %r12
+	lock
+	cmpxchgq	%r12,(%r11)
+	jne	LBB3_35
+## BB#36:                               ## %entry
+	xorq	%r15, %rax
+	movq	%rax, (%r11)
+	movzbl	(%rcx), %r15d
+	.align	4, 0x90
+LBB3_37:                                ## %entry
+                                        ## =>This Inner Loop Header: Depth=1
+	movq	(%rbx), %rax
+	movq	%rax, %r12
+	xorq	%r15, %r12
+	lock
+	cmpxchgq	%r12,(%rbx)
+	jne	LBB3_37
+## BB#38:                               ## %entry
+	xorq	%r15, %rax
+	movq	%rax, (%rbx)
+	movzbl	(%rcx), %r15d
+	.align	4, 0x90
+LBB3_39:                                ## %entry
+                                        ## =>This Inner Loop Header: Depth=1
+	movq	(%r14), %rax
+	movq	%rax, %r12
+	xorq	%r15, %r12
+	lock
+	cmpxchgq	%r12,(%r14)
+	jne	LBB3_39
+## BB#40:                               ## %entry
+	xorq	%r15, %rax
+	movq	%rax, (%r14)
+	movb	(%rcx), %r15b
+	.align	4, 0x90
+LBB3_41:                                ## %entry
+                                        ## =>This Inner Loop Header: Depth=1
+	movb	(%rdx), %al
+	movb	%al, %r12b
+	andb	%r15b, %r12b
+	lock
+	cmpxchgb	%r12b, (%rdx)
+	jne	LBB3_41
+## BB#42:                               ## %entry
+	andb	%r15b, %al
+	movb	%al, (%rdx)
+	movb	(%rcx), %r15b
+	.align	4, 0x90
+LBB3_43:                                ## %entry
+                                        ## =>This Inner Loop Header: Depth=1
+	movb	(%rcx), %al
+	movb	%al, %r12b
+	andb	%r15b, %r12b
+	lock
+	cmpxchgb	%r12b, (%rcx)
+	jne	LBB3_43
+## BB#44:                               ## %entry
+	andb	%r15b, %al
+	movb	%al, (%rcx)
+	movzbl	(%rcx), %r15d
+	.align	4, 0x90
+LBB3_45:                                ## %entry
+                                        ## =>This Inner Loop Header: Depth=1
+	movw	(%rsi), %ax
+	movw	%ax, %r12w
+	andw	%r15w, %r12w
+	lock
+	cmpxchgw	%r12w, (%rsi)
+	jne	LBB3_45
+## BB#46:                               ## %entry
+	andw	%r15w, %ax
+	movw	%ax, (%rsi)
+	movzbl	(%rcx), %r15d
+	.align	4, 0x90
+LBB3_47:                                ## %entry
+                                        ## =>This Inner Loop Header: Depth=1
+	movw	(%rdi), %ax
+	movw	%ax, %r12w
+	andw	%r15w, %r12w
+	lock
+	cmpxchgw	%r12w, (%rdi)
+	jne	LBB3_47
+## BB#48:                               ## %entry
+	andw	%r15w, %ax
+	movw	%ax, (%rdi)
+	movzbl	(%rcx), %r15d
+	.align	4, 0x90
+LBB3_49:                                ## %entry
+                                        ## =>This Inner Loop Header: Depth=1
+	movl	(%r8), %eax
+	movl	%eax, %r12d
+	andl	%r15d, %r12d
+	lock
+	cmpxchgl	%r12d, (%r8)
+	jne	LBB3_49
+## BB#50:                               ## %entry
+	andl	%r15d, %eax
+	movl	%eax, (%r8)
+	movzbl	(%rcx), %r15d
+	.align	4, 0x90
+LBB3_51:                                ## %entry
+                                        ## =>This Inner Loop Header: Depth=1
+	movl	(%r9), %eax
+	movl	%eax, %r12d
+	andl	%r15d, %r12d
+	lock
+	cmpxchgl	%r12d, (%r9)
+	jne	LBB3_51
+## BB#52:                               ## %entry
+	andl	%r15d, %eax
+	movl	%eax, (%r9)
+	movzbl	(%rcx), %r15d
+	.align	4, 0x90
+LBB3_53:                                ## %entry
+                                        ## =>This Inner Loop Header: Depth=1
+	movq	(%r10), %rax
+	movq	%rax, %r12
+	andq	%r15, %r12
+	lock
+	cmpxchgq	%r12,(%r10)
+	jne	LBB3_53
+## BB#54:                               ## %entry
+	andq	%r15, %rax
+	movq	%rax, (%r10)
+	movzbl	(%rcx), %r15d
+	.align	4, 0x90
+LBB3_55:                                ## %entry
+                                        ## =>This Inner Loop Header: Depth=1
+	movq	(%r11), %rax
+	movq	%rax, %r12
+	andq	%r15, %r12
+	lock
+	cmpxchgq	%r12,(%r11)
+	jne	LBB3_55
+## BB#56:                               ## %entry
+	andq	%r15, %rax
+	movq	%rax, (%r11)
+	movzbl	(%rcx), %r15d
+	.align	4, 0x90
+LBB3_57:                                ## %entry
+                                        ## =>This Inner Loop Header: Depth=1
+	movq	(%rbx), %rax
+	movq	%rax, %r12
+	andq	%r15, %r12
+	lock
+	cmpxchgq	%r12,(%rbx)
+	jne	LBB3_57
+## BB#58:                               ## %entry
+	andq	%r15, %rax
+	movq	%rax, (%rbx)
+	movzbl	(%rcx), %r15d
+	.align	4, 0x90
+LBB3_59:                                ## %entry
+                                        ## =>This Inner Loop Header: Depth=1
+	movq	(%r14), %rax
+	movq	%rax, %r12
+	andq	%r15, %r12
+	lock
+	cmpxchgq	%r12,(%r14)
+	jne	LBB3_59
+## BB#60:                               ## %entry
+	andq	%r15, %rax
+	movq	%rax, (%r14)
+	movb	(%rcx), %r15b
+	.align	4, 0x90
+LBB3_61:                                ## %entry
+                                        ## =>This Inner Loop Header: Depth=1
+	movb	(%rdx), %al
+	movb	%al, %r12b
+	notb	%r12b
+	andb	%r15b, %r12b
+	lock
+	cmpxchgb	%r12b, (%rdx)
+	jne	LBB3_61
+## BB#62:                               ## %entry
+	notb	%al
+	andb	%r15b, %al
+	movb	%al, (%rdx)
+	movb	(%rcx), %dl
+	.align	4, 0x90
+LBB3_63:                                ## %entry
+                                        ## =>This Inner Loop Header: Depth=1
+	movb	(%rcx), %al
+	movb	%al, %r15b
+	notb	%r15b
+	andb	%dl, %r15b
+	lock
+	cmpxchgb	%r15b, (%rcx)
+	jne	LBB3_63
+## BB#64:                               ## %entry
+	notb	%al
+	andb	%dl, %al
+	movb	%al, (%rcx)
+	movzbl	(%rcx), %edx
+	.align	4, 0x90
+LBB3_65:                                ## %entry
+                                        ## =>This Inner Loop Header: Depth=1
+	movw	(%rsi), %ax
+	movw	%ax, %r15w
+	notw	%r15w
+	andw	%dx, %r15w
+	lock
+	cmpxchgw	%r15w, (%rsi)
+	jne	LBB3_65
+## BB#66:                               ## %entry
+	notw	%ax
+	andw	%dx, %ax
+	movw	%ax, (%rsi)
+	movzbl	(%rcx), %edx
+	.align	4, 0x90
+LBB3_67:                                ## %entry
+                                        ## =>This Inner Loop Header: Depth=1
+	movw	(%rdi), %ax
+	movw	%ax, %si
+	notw	%si
+	andw	%dx, %si
+	lock
+	cmpxchgw	%si, (%rdi)
+	jne	LBB3_67
+## BB#68:                               ## %entry
+	notw	%ax
+	andw	%dx, %ax
+	movw	%ax, (%rdi)
+	movzbl	(%rcx), %edx
+	.align	4, 0x90
+LBB3_69:                                ## %entry
+                                        ## =>This Inner Loop Header: Depth=1
+	movl	(%r8), %eax
+	movl	%eax, %esi
+	notl	%esi
+	andl	%edx, %esi
+	lock
+	cmpxchgl	%esi, (%r8)
+	jne	LBB3_69
+## BB#70:                               ## %entry
+	notl	%eax
+	andl	%edx, %eax
+	movl	%eax, (%r8)
+	movzbl	(%rcx), %edx
+	.align	4, 0x90
+LBB3_71:                                ## %entry
+                                        ## =>This Inner Loop Header: Depth=1
+	movl	(%r9), %eax
+	movl	%eax, %esi
+	notl	%esi
+	andl	%edx, %esi
+	lock
+	cmpxchgl	%esi, (%r9)
+	jne	LBB3_71
+## BB#72:                               ## %entry
+	notl	%eax
+	andl	%edx, %eax
+	movl	%eax, (%r9)
+	movzbl	(%rcx), %edx
+	.align	4, 0x90
+LBB3_73:                                ## %entry
+                                        ## =>This Inner Loop Header: Depth=1
+	movq	(%r10), %rax
+	movq	%rax, %rsi
+	notq	%rsi
+	andq	%rdx, %rsi
+	lock
+	cmpxchgq	%rsi,(%r10)
+	jne	LBB3_73
+## BB#74:                               ## %entry
+                                        ## kill: EAX<def> RAX<kill>
+	notl	%eax
+	andq	%rdx, %rax
+	movq	%rax, (%r10)
+	movzbl	(%rcx), %edx
+	.align	4, 0x90
+LBB3_75:                                ## %entry
+                                        ## =>This Inner Loop Header: Depth=1
+	movq	(%r11), %rax
+	movq	%rax, %rsi
+	notq	%rsi
+	andq	%rdx, %rsi
+	lock
+	cmpxchgq	%rsi,(%r11)
+	jne	LBB3_75
+## BB#76:                               ## %entry
+                                        ## kill: EAX<def> RAX<kill>
+	notl	%eax
+	andq	%rdx, %rax
+	movq	%rax, (%r11)
+	movzbl	(%rcx), %edx
+	.align	4, 0x90
+LBB3_77:                                ## %entry
+                                        ## =>This Inner Loop Header: Depth=1
+	movq	(%rbx), %rax
+	movq	%rax, %rsi
+	notq	%rsi
+	andq	%rdx, %rsi
+	lock
+	cmpxchgq	%rsi,(%rbx)
+	jne	LBB3_77
+## BB#78:                               ## %entry
+                                        ## kill: EAX<def> RAX<kill>
+	notl	%eax
+	andq	%rdx, %rax
+	movq	%rax, (%rbx)
+	movzbl	(%rcx), %ecx
+	.align	4, 0x90
+LBB3_79:                                ## %entry
+                                        ## =>This Inner Loop Header: Depth=1
+	movq	(%r14), %rax
+	movq	%rax, %rdx
+	notq	%rdx
+	andq	%rcx, %rdx
+	lock
+	cmpxchgq	%rdx,(%r14)
+	jne	LBB3_79
+## BB#80:                               ## %entry
+                                        ## kill: EAX<def> RAX<kill>
+	notl	%eax
+	andq	%rcx, %rax
+	movq	%rax, (%r14)
+	popq	%rbx
+	popq	%r12
+	popq	%r14
+	popq	%r15
+	ret
+
+	.globl	_test_compare_and_swap
+	.align	4, 0x90
+_test_compare_and_swap:                 ## @test_compare_and_swap
+## BB#0:                                ## %entry
+	pushq	%r15
+	pushq	%r14
+	pushq	%r12
+	pushq	%rbx
+	movq	_uc@GOTPCREL(%rip), %rcx
+	movb	(%rcx), %al
+	movq	_sc@GOTPCREL(%rip), %rdx
+	movb	(%rdx), %sil
+	lock
+	cmpxchgb	%sil, (%rdx)
+	movb	%al, %sil
+	movb	%sil, (%rdx)
+	movb	(%rcx), %al
+	lock
+	cmpxchgb	%sil, (%rcx)
+	movb	%al, (%rcx)
+	movzbl	(%rcx), %eax
+	movsbl	(%rdx), %esi
+	movq	_ss@GOTPCREL(%rip), %rdi
+	lock
+	cmpxchgw	%si, (%rdi)
+	movw	%ax, (%rdi)
+	movzbl	(%rcx), %eax
+	movsbl	(%rdx), %esi
+	movq	_us@GOTPCREL(%rip), %r8
+	lock
+	cmpxchgw	%si, (%r8)
+	movw	%ax, (%r8)
+	movzbl	(%rcx), %eax
+	movsbl	(%rdx), %esi
+	movq	_si@GOTPCREL(%rip), %r9
+	lock
+	cmpxchgl	%esi, (%r9)
+	movl	%eax, (%r9)
+	movzbl	(%rcx), %eax
+	movsbl	(%rdx), %esi
+	movq	_ui@GOTPCREL(%rip), %r10
+	lock
+	cmpxchgl	%esi, (%r10)
+	movl	%eax, (%r10)
+	movzbl	(%rcx), %eax
+	movsbq	(%rdx), %rsi
+	movq	_sl@GOTPCREL(%rip), %r11
+	lock
+	cmpxchgq	%rsi,(%r11)
+	movq	%rax, (%r11)
+	movzbl	(%rcx), %eax
+	movsbq	(%rdx), %rsi
+	movq	_ul@GOTPCREL(%rip), %rbx
+	lock
+	cmpxchgq	%rsi,(%rbx)
+	movq	%rax, (%rbx)
+	movzbl	(%rcx), %eax
+	movsbq	(%rdx), %rsi
+	movq	_sll@GOTPCREL(%rip), %r14
+	lock
+	cmpxchgq	%rsi,(%r14)
+	movq	%rax, (%r14)
+	movzbl	(%rcx), %eax
+	movsbq	(%rdx), %rsi
+	movq	_ull@GOTPCREL(%rip), %r15
+	lock
+	cmpxchgq	%rsi,(%r15)
+	movq	%rax, (%r15)
+	movb	(%rcx), %sil
+	movb	(%rdx), %r12b
+	movb	%sil, %al
+	lock
+	cmpxchgb	%r12b, (%rdx)
+	cmpb	%sil, %al
+	sete	%al
+	movzbl	%al, %eax
+	movl	%eax, (%r10)
+	movb	(%rcx), %sil
+	movb	(%rdx), %r12b
+	movb	%sil, %al
+	lock
+	cmpxchgb	%r12b, (%rcx)
+	cmpb	%sil, %al
+	sete	%al
+	movzbl	%al, %eax
+	movl	%eax, (%r10)
+	movb	(%rcx), %sil
+	movb	(%rdx), %r12b
+	movb	%sil, %al
+	lock
+	cmpxchgb	%r12b, (%rdi)
+	cmpb	%sil, %al
+	sete	%al
+	movzbl	%al, %eax
+	movl	%eax, (%r10)
+	movb	(%rcx), %sil
+	movb	(%rdx), %dil
+	movb	%sil, %al
+	lock
+	cmpxchgb	%dil, (%r8)
+	cmpb	%sil, %al
+	sete	%al
+	movzbl	%al, %eax
+	movl	%eax, (%r10)
+	movb	(%rcx), %sil
+	movb	(%rdx), %dil
+	movb	%sil, %al
+	lock
+	cmpxchgb	%dil, (%r9)
+	cmpb	%sil, %al
+	sete	%al
+	movzbl	%al, %eax
+	movl	%eax, (%r10)
+	movb	(%rcx), %sil
+	movb	(%rdx), %dil
+	movb	%sil, %al
+	lock
+	cmpxchgb	%dil, (%r10)
+	cmpb	%sil, %al
+	sete	%al
+	movzbl	%al, %eax
+	movl	%eax, (%r10)
+	movb	(%rcx), %sil
+	movb	(%rdx), %dil
+	movb	%sil, %al
+	lock
+	cmpxchgb	%dil, (%r11)
+	cmpb	%sil, %al
+	sete	%al
+	movzbl	%al, %eax
+	movl	%eax, (%r10)
+	movb	(%rcx), %sil
+	movb	(%rdx), %dil
+	movb	%sil, %al
+	lock
+	cmpxchgb	%dil, (%rbx)
+	cmpb	%sil, %al
+	sete	%al
+	movzbl	%al, %eax
+	movl	%eax, (%r10)
+	movb	(%rcx), %sil
+	movb	(%rdx), %dil
+	movb	%sil, %al
+	lock
+	cmpxchgb	%dil, (%r14)
+	cmpb	%sil, %al
+	sete	%al
+	movzbl	%al, %eax
+	movl	%eax, (%r10)
+	movb	(%rcx), %cl
+	movb	(%rdx), %dl
+	movb	%cl, %al
+	lock
+	cmpxchgb	%dl, (%r15)
+	cmpb	%cl, %al
+	sete	%al
+	movzbl	%al, %eax
+	movl	%eax, (%r10)
+	popq	%rbx
+	popq	%r12
+	popq	%r14
+	popq	%r15
+	ret
+
+	.globl	_test_lock
+	.align	4, 0x90
+_test_lock:                             ## @test_lock
+## BB#0:                                ## %entry
+	pushq	%r14
+	pushq	%rbx
+	movq	_sc@GOTPCREL(%rip), %rax
+	movb	$1, %cl
+	xchgb	%cl, (%rax)
+	movb	%cl, (%rax)
+	movq	_uc@GOTPCREL(%rip), %rcx
+	movb	$1, %dl
+	xchgb	%dl, (%rcx)
+	movb	%dl, (%rcx)
+	movq	_ss@GOTPCREL(%rip), %rdx
+	movw	$1, %si
+	xchgw	%si, (%rdx)
+	movw	%si, (%rdx)
+	movq	_us@GOTPCREL(%rip), %rsi
+	movw	$1, %di
+	xchgw	%di, (%rsi)
+	movw	%di, (%rsi)
+	movq	_si@GOTPCREL(%rip), %rdi
+	movl	$1, %r8d
+	xchgl	%r8d, (%rdi)
+	movl	%r8d, (%rdi)
+	movq	_ui@GOTPCREL(%rip), %r8
+	movl	$1, %r9d
+	xchgl	%r9d, (%r8)
+	movl	%r9d, (%r8)
+	movq	_sl@GOTPCREL(%rip), %r9
+	movl	$1, %r10d
+	xchgq	%r10, (%r9)
+	movq	%r10, (%r9)
+	movq	_ul@GOTPCREL(%rip), %r10
+	movl	$1, %r11d
+	xchgq	%r11, (%r10)
+	movq	%r11, (%r10)
+	movq	_sll@GOTPCREL(%rip), %r11
+	movl	$1, %ebx
+	xchgq	%rbx, (%r11)
+	movq	%rbx, (%r11)
+	movq	_ull@GOTPCREL(%rip), %rbx
+	movl	$1, %r14d
+	xchgq	%r14, (%rbx)
+	movq	%r14, (%rbx)
+	movb	$0, (%rax)
+	movb	$0, (%rcx)
+	movw	$0, (%rdx)
+	movw	$0, (%rsi)
+	movl	$0, (%rdi)
+	movl	$0, (%r8)
+	movq	$0, (%r9)
+	movq	$0, (%r10)
+	movq	$0, (%r11)
+	movq	$0, (%rbx)
+	popq	%rbx
+	popq	%r14
+	ret
+
+	.comm	_sc,1,0                 ## @sc
+	.comm	_uc,1,0                 ## @uc
+	.comm	_ss,2,1                 ## @ss
+	.comm	_us,2,1                 ## @us
+	.comm	_si,4,2                 ## @si
+	.comm	_ui,4,2                 ## @ui
+	.comm	_sl,8,3                 ## @sl
+	.comm	_ul,8,3                 ## @ul
+	.comm	_sll,8,3                ## @sll
+	.comm	_ull,8,3                ## @ull
+
+.subsections_via_symbols

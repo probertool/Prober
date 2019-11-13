@@ -1,0 +1,17 @@
+	.file	"<stdin>"
+	.text
+	.globl	t
+	.align	16, 0x90
+	.type	t,@function
+t:                                      # @t
+# BB#0:                                 # %entry
+	movl	4(%esp), %eax
+	prefetcht2	(%eax)
+	prefetcht1	(%eax)
+	prefetcht0	(%eax)
+	prefetchnta	(%eax)
+	ret
+	.size	t, .-t
+
+
+	.section	.note.GNU-stack,"",@progbits

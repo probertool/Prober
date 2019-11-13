@@ -1,0 +1,1 @@
+/usr/bin/cc  -fPIC -fopenmp  -shared  -o ../liburandom.so CMakeFiles/urandom.dir/urandom.c.o 

@@ -1,0 +1,1024 @@
+The system is: Linux - 4.4.0-154-generic - x86_64
+Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
+Compiler: /root/llvm/llvm80/build/bin/clang 
+Build flags: -flto;-v;-g
+Id flags: 
+
+The output was:
+0
+clang version 8.0.1 (https://github.com/llvm-mirror/clang.git 2e4c9c5fc864c2c432e4c262a67c42d824b265c6) (https://github.com/rqtian/llvm80-bufferoverflow.git 3b5df6d2abd65c292843e89e82bd69d3349a41e2)
+Target: x86_64-unknown-linux-gnu
+Thread model: posix
+InstalledDir: /root/llvm/llvm80/build/bin
+Found candidate GCC installation: /usr/lib/gcc/x86_64-linux-gnu/6
+Found candidate GCC installation: /usr/lib/gcc/x86_64-linux-gnu/6.3.0
+Selected GCC installation: /usr/lib/gcc/x86_64-linux-gnu/6.3.0
+Candidate multilib: .;@m64
+Selected multilib: .;@m64
+ "/root/llvm/llvm80/build/bin/clang-8" -cc1 -triple x86_64-unknown-linux-gnu -emit-llvm-bc -flto -flto-unit -disable-free -main-file-name CMakeCCompilerId.c -mrelocation-model static -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debug-info-kind=limited -dwarf-version=4 -debugger-tuning=gdb -v -resource-dir /root/llvm/llvm80/build/lib/clang/8.0.1 -internal-isystem /usr/local/include -internal-isystem /root/llvm/llvm80/build/lib/clang/8.0.1/include -internal-externc-isystem /usr/include/x86_64-linux-gnu -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdebug-compilation-dir /root/llvm/codesample/39apps/libproxy-0.4.8/libproxy/CMakeFiles/3.7.2/CompilerIdC -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fdiagnostics-show-option -o /tmp/CMakeCCompilerId-4bc2df.o -x c CMakeCCompilerId.c -faddrsig
+clang -cc1 version 8.0.1 based upon LLVM 8.0.1 default target x86_64-unknown-linux-gnu
+ignoring nonexistent directory "/include"
+#include "..." search starts here:
+#include <...> search starts here:
+ /usr/local/include
+ /root/llvm/llvm80/build/lib/clang/8.0.1/include
+ /usr/include/x86_64-linux-gnu
+ /usr/include
+End of search list.
+ "/usr/local/bin/ld" --hash-style=both --eh-frame-hdr -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o a.out /usr/lib/gcc/x86_64-linux-gnu/6.3.0/../../../x86_64-linux-gnu/crt1.o /usr/lib/gcc/x86_64-linux-gnu/6.3.0/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/6.3.0/crtbegin.o -L/usr/lib/gcc/x86_64-linux-gnu/6.3.0 -L/usr/lib/gcc/x86_64-linux-gnu/6.3.0/../../../x86_64-linux-gnu -L/lib/x86_64-linux-gnu -L/lib/../lib64 -L/usr/lib/x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/6.3.0/../../.. -L/root/llvm/llvm80/build/bin/../lib -L/lib -L/usr/lib -plugin /root/llvm/llvm80/build/bin/../lib/LLVMgold.so -plugin-opt=mcpu=x86-64 /tmp/CMakeCCompilerId-4bc2df.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/lib/gcc/x86_64-linux-gnu/6.3.0/crtend.o /usr/lib/gcc/x86_64-linux-gnu/6.3.0/../../../x86_64-linux-gnu/crtn.o
+======= Start handling file: ld-temp.o =======
+malloc wrapper: malloc
+malloc wrapper: calloc
+malloc wrapper: realloc
+malloc wrapper: valloc
+malloc wrapper: g_malloc
+malloc wrapper: g_realloc
+======= Finish handling file: ld-temp.o =======
+
+
+Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "a.out"
+
+Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "ld-temp.o.ll"
+
+Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "ld-temp.o1563739791257000.inst.ll"
+
+The C compiler identification is Clang, found in "/root/llvm/codesample/39apps/libproxy-0.4.8/libproxy/CMakeFiles/3.7.2/CompilerIdC/a.out"
+
+Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
+Compiler: /root/llvm/llvm80/build/bin/clang++ 
+Build flags: -flto;-v;-g
+Id flags: 
+
+The output was:
+0
+clang version 8.0.1 (https://github.com/llvm-mirror/clang.git 2e4c9c5fc864c2c432e4c262a67c42d824b265c6) (https://github.com/rqtian/llvm80-bufferoverflow.git 3b5df6d2abd65c292843e89e82bd69d3349a41e2)
+Target: x86_64-unknown-linux-gnu
+Thread model: posix
+InstalledDir: /root/llvm/llvm80/build/bin
+Found candidate GCC installation: /usr/lib/gcc/x86_64-linux-gnu/6
+Found candidate GCC installation: /usr/lib/gcc/x86_64-linux-gnu/6.3.0
+Selected GCC installation: /usr/lib/gcc/x86_64-linux-gnu/6.3.0
+Candidate multilib: .;@m64
+Selected multilib: .;@m64
+ "/root/llvm/llvm80/build/bin/clang-8" -cc1 -triple x86_64-unknown-linux-gnu -emit-llvm-bc -flto -flto-unit -disable-free -main-file-name CMakeCXXCompilerId.cpp -mrelocation-model static -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debug-info-kind=limited -dwarf-version=4 -debugger-tuning=gdb -v -resource-dir /root/llvm/llvm80/build/lib/clang/8.0.1 -internal-isystem /usr/lib/gcc/x86_64-linux-gnu/6.3.0/../../../../include/c++/6.3.0 -internal-isystem /usr/lib/gcc/x86_64-linux-gnu/6.3.0/../../../../include/x86_64-linux-gnu/c++/6.3.0 -internal-isystem /usr/lib/gcc/x86_64-linux-gnu/6.3.0/../../../../include/x86_64-linux-gnu/c++/6.3.0 -internal-isystem /usr/lib/gcc/x86_64-linux-gnu/6.3.0/../../../../include/c++/6.3.0/backward -internal-isystem /usr/local/include -internal-isystem /root/llvm/llvm80/build/lib/clang/8.0.1/include -internal-externc-isystem /usr/include/x86_64-linux-gnu -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdeprecated-macro -fdebug-compilation-dir /root/llvm/codesample/39apps/libproxy-0.4.8/libproxy/CMakeFiles/3.7.2/CompilerIdCXX -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fcxx-exceptions -fexceptions -fdiagnostics-show-option -o /tmp/CMakeCXXCompilerId-d031dd.o -x c++ CMakeCXXCompilerId.cpp -faddrsig
+clang -cc1 version 8.0.1 based upon LLVM 8.0.1 default target x86_64-unknown-linux-gnu
+ignoring nonexistent directory "/include"
+ignoring duplicate directory "/usr/lib/gcc/x86_64-linux-gnu/6.3.0/../../../../include/x86_64-linux-gnu/c++/6.3.0"
+#include "..." search starts here:
+#include <...> search starts here:
+ /usr/lib/gcc/x86_64-linux-gnu/6.3.0/../../../../include/c++/6.3.0
+ /usr/lib/gcc/x86_64-linux-gnu/6.3.0/../../../../include/x86_64-linux-gnu/c++/6.3.0
+ /usr/lib/gcc/x86_64-linux-gnu/6.3.0/../../../../include/c++/6.3.0/backward
+ /usr/local/include
+ /root/llvm/llvm80/build/lib/clang/8.0.1/include
+ /usr/include/x86_64-linux-gnu
+ /usr/include
+End of search list.
+ "/usr/local/bin/ld" --hash-style=both --eh-frame-hdr -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o a.out /usr/lib/gcc/x86_64-linux-gnu/6.3.0/../../../x86_64-linux-gnu/crt1.o /usr/lib/gcc/x86_64-linux-gnu/6.3.0/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/6.3.0/crtbegin.o -L/usr/lib/gcc/x86_64-linux-gnu/6.3.0 -L/usr/lib/gcc/x86_64-linux-gnu/6.3.0/../../../x86_64-linux-gnu -L/lib/x86_64-linux-gnu -L/lib/../lib64 -L/usr/lib/x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/6.3.0/../../.. -L/root/llvm/llvm80/build/bin/../lib -L/lib -L/usr/lib -plugin /root/llvm/llvm80/build/bin/../lib/LLVMgold.so -plugin-opt=mcpu=x86-64 /tmp/CMakeCXXCompilerId-d031dd.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-linux-gnu/6.3.0/crtend.o /usr/lib/gcc/x86_64-linux-gnu/6.3.0/../../../x86_64-linux-gnu/crtn.o
+======= Start handling file: ld-temp.o =======
+malloc wrapper: malloc
+malloc wrapper: calloc
+malloc wrapper: realloc
+malloc wrapper: valloc
+malloc wrapper: g_malloc
+malloc wrapper: g_realloc
+======= Finish handling file: ld-temp.o =======
+
+
+Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "a.out"
+
+Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "ld-temp.o.ll"
+
+Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "ld-temp.o1563739791327000.inst.ll"
+
+The CXX compiler identification is Clang, found in "/root/llvm/codesample/39apps/libproxy-0.4.8/libproxy/CMakeFiles/3.7.2/CompilerIdCXX/a.out"
+
+Determining if the C compiler works passed with the following output:
+Change Dir: /root/llvm/codesample/39apps/libproxy-0.4.8/libproxy/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_a87d5/fast"
+/usr/bin/make -f CMakeFiles/cmTC_a87d5.dir/build.make CMakeFiles/cmTC_a87d5.dir/build
+make[1]: Entering directory '/root/llvm/codesample/39apps/libproxy-0.4.8/libproxy/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_a87d5.dir/testCCompiler.c.o
+/root/llvm/llvm80/build/bin/clang    -flto -v -g    -o CMakeFiles/cmTC_a87d5.dir/testCCompiler.c.o   -c /root/llvm/codesample/39apps/libproxy-0.4.8/libproxy/CMakeFiles/CMakeTmp/testCCompiler.c
+clang version 8.0.1 (https://github.com/llvm-mirror/clang.git 2e4c9c5fc864c2c432e4c262a67c42d824b265c6) (https://github.com/rqtian/llvm80-bufferoverflow.git 3b5df6d2abd65c292843e89e82bd69d3349a41e2)
+Target: x86_64-unknown-linux-gnu
+Thread model: posix
+InstalledDir: /root/llvm/llvm80/build/bin
+Found candidate GCC installation: /usr/lib/gcc/x86_64-linux-gnu/6
+Found candidate GCC installation: /usr/lib/gcc/x86_64-linux-gnu/6.3.0
+Selected GCC installation: /usr/lib/gcc/x86_64-linux-gnu/6.3.0
+Candidate multilib: .;@m64
+Selected multilib: .;@m64
+ "/root/llvm/llvm80/build/bin/clang-8" -cc1 -triple x86_64-unknown-linux-gnu -emit-llvm-bc -flto -flto-unit -disable-free -main-file-name testCCompiler.c -mrelocation-model static -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debug-info-kind=limited -dwarf-version=4 -debugger-tuning=gdb -v -coverage-notes-file /root/llvm/codesample/39apps/libproxy-0.4.8/libproxy/CMakeFiles/CMakeTmp/CMakeFiles/cmTC_a87d5.dir/testCCompiler.c.gcno -resource-dir /root/llvm/llvm80/build/lib/clang/8.0.1 -internal-isystem /usr/local/include -internal-isystem /root/llvm/llvm80/build/lib/clang/8.0.1/include -internal-externc-isystem /usr/include/x86_64-linux-gnu -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdebug-compilation-dir /root/llvm/codesample/39apps/libproxy-0.4.8/libproxy/CMakeFiles/CMakeTmp -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fdiagnostics-show-option -o CMakeFiles/cmTC_a87d5.dir/testCCompiler.c.o -x c /root/llvm/codesample/39apps/libproxy-0.4.8/libproxy/CMakeFiles/CMakeTmp/testCCompiler.c -faddrsig
+clang -cc1 version 8.0.1 based upon LLVM 8.0.1 default target x86_64-unknown-linux-gnu
+ignoring nonexistent directory "/include"
+#include "..." search starts here:
+#include <...> search starts here:
+ /usr/local/include
+ /root/llvm/llvm80/build/lib/clang/8.0.1/include
+ /usr/include/x86_64-linux-gnu
+ /usr/include
+End of search list.
+Linking C executable cmTC_a87d5
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_a87d5.dir/link.txt --verbose=1
+/root/llvm/llvm80/build/bin/clang  -flto -v -g     CMakeFiles/cmTC_a87d5.dir/testCCompiler.c.o  -o cmTC_a87d5 -rdynamic 
+clang version 8.0.1 (https://github.com/llvm-mirror/clang.git 2e4c9c5fc864c2c432e4c262a67c42d824b265c6) (https://github.com/rqtian/llvm80-bufferoverflow.git 3b5df6d2abd65c292843e89e82bd69d3349a41e2)
+Target: x86_64-unknown-linux-gnu
+Thread model: posix
+InstalledDir: /root/llvm/llvm80/build/bin
+Found candidate GCC installation: /usr/lib/gcc/x86_64-linux-gnu/6
+Found candidate GCC installation: /usr/lib/gcc/x86_64-linux-gnu/6.3.0
+Selected GCC installation: /usr/lib/gcc/x86_64-linux-gnu/6.3.0
+Candidate multilib: .;@m64
+Selected multilib: .;@m64
+ "/usr/local/bin/ld" -export-dynamic --hash-style=both --eh-frame-hdr -m elf_x86_64 -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_a87d5 /usr/lib/gcc/x86_64-linux-gnu/6.3.0/../../../x86_64-linux-gnu/crt1.o /usr/lib/gcc/x86_64-linux-gnu/6.3.0/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/6.3.0/crtbegin.o -L/usr/lib/gcc/x86_64-linux-gnu/6.3.0 -L/usr/lib/gcc/x86_64-linux-gnu/6.3.0/../../../x86_64-linux-gnu -L/lib/x86_64-linux-gnu -L/lib/../lib64 -L/usr/lib/x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/6.3.0/../../.. -L/root/llvm/llvm80/build/bin/../lib -L/lib -L/usr/lib -plugin /root/llvm/llvm80/build/bin/../lib/LLVMgold.so -plugin-opt=mcpu=x86-64 CMakeFiles/cmTC_a87d5.dir/testCCompiler.c.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/lib/gcc/x86_64-linux-gnu/6.3.0/crtend.o /usr/lib/gcc/x86_64-linux-gnu/6.3.0/../../../x86_64-linux-gnu/crtn.o
+======= Start handling file: ld-temp.o =======
+malloc wrapper: malloc
+malloc wrapper: calloc
+malloc wrapper: realloc
+malloc wrapper: valloc
+malloc wrapper: g_malloc
+malloc wrapper: g_realloc
+======= Finish handling file: ld-temp.o =======
+make[1]: Leaving directory '/root/llvm/codesample/39apps/libproxy-0.4.8/libproxy/CMakeFiles/CMakeTmp'
+
+
+Detecting C compiler ABI info compiled with the following output:
+Change Dir: /root/llvm/codesample/39apps/libproxy-0.4.8/libproxy/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_e27ad/fast"
+/usr/bin/make -f CMakeFiles/cmTC_e27ad.dir/build.make CMakeFiles/cmTC_e27ad.dir/build
+make[1]: Entering directory '/root/llvm/codesample/39apps/libproxy-0.4.8/libproxy/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_e27ad.dir/CMakeCCompilerABI.c.o
+/root/llvm/llvm80/build/bin/clang    -flto -v -g    -o CMakeFiles/cmTC_e27ad.dir/CMakeCCompilerABI.c.o   -c /usr/share/cmake-3.7/Modules/CMakeCCompilerABI.c
+clang version 8.0.1 (https://github.com/llvm-mirror/clang.git 2e4c9c5fc864c2c432e4c262a67c42d824b265c6) (https://github.com/rqtian/llvm80-bufferoverflow.git 3b5df6d2abd65c292843e89e82bd69d3349a41e2)
+Target: x86_64-unknown-linux-gnu
+Thread model: posix
+InstalledDir: /root/llvm/llvm80/build/bin
+Found candidate GCC installation: /usr/lib/gcc/x86_64-linux-gnu/6
+Found candidate GCC installation: /usr/lib/gcc/x86_64-linux-gnu/6.3.0
+Selected GCC installation: /usr/lib/gcc/x86_64-linux-gnu/6.3.0
+Candidate multilib: .;@m64
+Selected multilib: .;@m64
+ "/root/llvm/llvm80/build/bin/clang-8" -cc1 -triple x86_64-unknown-linux-gnu -emit-llvm-bc -flto -flto-unit -disable-free -main-file-name CMakeCCompilerABI.c -mrelocation-model static -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debug-info-kind=limited -dwarf-version=4 -debugger-tuning=gdb -v -coverage-notes-file /root/llvm/codesample/39apps/libproxy-0.4.8/libproxy/CMakeFiles/CMakeTmp/CMakeFiles/cmTC_e27ad.dir/CMakeCCompilerABI.c.gcno -resource-dir /root/llvm/llvm80/build/lib/clang/8.0.1 -internal-isystem /usr/local/include -internal-isystem /root/llvm/llvm80/build/lib/clang/8.0.1/include -internal-externc-isystem /usr/include/x86_64-linux-gnu -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdebug-compilation-dir /root/llvm/codesample/39apps/libproxy-0.4.8/libproxy/CMakeFiles/CMakeTmp -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fdiagnostics-show-option -o CMakeFiles/cmTC_e27ad.dir/CMakeCCompilerABI.c.o -x c /usr/share/cmake-3.7/Modules/CMakeCCompilerABI.c -faddrsig
+clang -cc1 version 8.0.1 based upon LLVM 8.0.1 default target x86_64-unknown-linux-gnu
+ignoring nonexistent directory "/include"
+#include "..." search starts here:
+#include <...> search starts here:
+ /usr/local/include
+ /root/llvm/llvm80/build/lib/clang/8.0.1/include
+ /usr/include/x86_64-linux-gnu
+ /usr/include
+End of search list.
+Linking C executable cmTC_e27ad
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_e27ad.dir/link.txt --verbose=1
+/root/llvm/llvm80/build/bin/clang  -flto -v -g    -v CMakeFiles/cmTC_e27ad.dir/CMakeCCompilerABI.c.o  -o cmTC_e27ad -rdynamic  
+clang version 8.0.1 (https://github.com/llvm-mirror/clang.git 2e4c9c5fc864c2c432e4c262a67c42d824b265c6) (https://github.com/rqtian/llvm80-bufferoverflow.git 3b5df6d2abd65c292843e89e82bd69d3349a41e2)
+Target: x86_64-unknown-linux-gnu
+Thread model: posix
+InstalledDir: /root/llvm/llvm80/build/bin
+Found candidate GCC installation: /usr/lib/gcc/x86_64-linux-gnu/6
+Found candidate GCC installation: /usr/lib/gcc/x86_64-linux-gnu/6.3.0
+Selected GCC installation: /usr/lib/gcc/x86_64-linux-gnu/6.3.0
+Candidate multilib: .;@m64
+Selected multilib: .;@m64
+ "/usr/local/bin/ld" -export-dynamic --hash-style=both --eh-frame-hdr -m elf_x86_64 -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_e27ad /usr/lib/gcc/x86_64-linux-gnu/6.3.0/../../../x86_64-linux-gnu/crt1.o /usr/lib/gcc/x86_64-linux-gnu/6.3.0/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/6.3.0/crtbegin.o -L/usr/lib/gcc/x86_64-linux-gnu/6.3.0 -L/usr/lib/gcc/x86_64-linux-gnu/6.3.0/../../../x86_64-linux-gnu -L/lib/x86_64-linux-gnu -L/lib/../lib64 -L/usr/lib/x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/6.3.0/../../.. -L/root/llvm/llvm80/build/bin/../lib -L/lib -L/usr/lib -plugin /root/llvm/llvm80/build/bin/../lib/LLVMgold.so -plugin-opt=mcpu=x86-64 CMakeFiles/cmTC_e27ad.dir/CMakeCCompilerABI.c.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/lib/gcc/x86_64-linux-gnu/6.3.0/crtend.o /usr/lib/gcc/x86_64-linux-gnu/6.3.0/../../../x86_64-linux-gnu/crtn.o
+======= Start handling file: ld-temp.o =======
+malloc wrapper: malloc
+malloc wrapper: calloc
+malloc wrapper: realloc
+malloc wrapper: valloc
+malloc wrapper: g_malloc
+malloc wrapper: g_realloc
+======= Finish handling file: ld-temp.o =======
+make[1]: Leaving directory '/root/llvm/codesample/39apps/libproxy-0.4.8/libproxy/CMakeFiles/CMakeTmp'
+
+
+Parsed C implicit link information from above output:
+  link line regex: [^( *|.*[/\])(ld|([^/\]+-)?ld|collect2)[^/\]*( |$)]
+  ignore line: [Change Dir: /root/llvm/codesample/39apps/libproxy-0.4.8/libproxy/CMakeFiles/CMakeTmp]
+  ignore line: []
+  ignore line: [Run Build Command:"/usr/bin/make" "cmTC_e27ad/fast"]
+  ignore line: [/usr/bin/make -f CMakeFiles/cmTC_e27ad.dir/build.make CMakeFiles/cmTC_e27ad.dir/build]
+  ignore line: [make[1]: Entering directory '/root/llvm/codesample/39apps/libproxy-0.4.8/libproxy/CMakeFiles/CMakeTmp']
+  ignore line: [Building C object CMakeFiles/cmTC_e27ad.dir/CMakeCCompilerABI.c.o]
+  ignore line: [/root/llvm/llvm80/build/bin/clang    -flto -v -g    -o CMakeFiles/cmTC_e27ad.dir/CMakeCCompilerABI.c.o   -c /usr/share/cmake-3.7/Modules/CMakeCCompilerABI.c]
+  ignore line: [clang version 8.0.1 (https://github.com/llvm-mirror/clang.git 2e4c9c5fc864c2c432e4c262a67c42d824b265c6) (https://github.com/rqtian/llvm80-bufferoverflow.git 3b5df6d2abd65c292843e89e82bd69d3349a41e2)]
+  ignore line: [Target: x86_64-unknown-linux-gnu]
+  ignore line: [Thread model: posix]
+  ignore line: [InstalledDir: /root/llvm/llvm80/build/bin]
+  ignore line: [Found candidate GCC installation: /usr/lib/gcc/x86_64-linux-gnu/6]
+  ignore line: [Found candidate GCC installation: /usr/lib/gcc/x86_64-linux-gnu/6.3.0]
+  ignore line: [Selected GCC installation: /usr/lib/gcc/x86_64-linux-gnu/6.3.0]
+  ignore line: [Candidate multilib: .]
+  ignore line: [@m64]
+  ignore line: [Selected multilib: .]
+  ignore line: [@m64]
+  ignore line: [ "/root/llvm/llvm80/build/bin/clang-8" -cc1 -triple x86_64-unknown-linux-gnu -emit-llvm-bc -flto -flto-unit -disable-free -main-file-name CMakeCCompilerABI.c -mrelocation-model static -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debug-info-kind=limited -dwarf-version=4 -debugger-tuning=gdb -v -coverage-notes-file /root/llvm/codesample/39apps/libproxy-0.4.8/libproxy/CMakeFiles/CMakeTmp/CMakeFiles/cmTC_e27ad.dir/CMakeCCompilerABI.c.gcno -resource-dir /root/llvm/llvm80/build/lib/clang/8.0.1 -internal-isystem /usr/local/include -internal-isystem /root/llvm/llvm80/build/lib/clang/8.0.1/include -internal-externc-isystem /usr/include/x86_64-linux-gnu -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdebug-compilation-dir /root/llvm/codesample/39apps/libproxy-0.4.8/libproxy/CMakeFiles/CMakeTmp -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fdiagnostics-show-option -o CMakeFiles/cmTC_e27ad.dir/CMakeCCompilerABI.c.o -x c /usr/share/cmake-3.7/Modules/CMakeCCompilerABI.c -faddrsig]
+  ignore line: [clang -cc1 version 8.0.1 based upon LLVM 8.0.1 default target x86_64-unknown-linux-gnu]
+  ignore line: [ignoring nonexistent directory "/include"]
+  ignore line: [#include "..." search starts here:]
+  ignore line: [#include <...> search starts here:]
+  ignore line: [ /usr/local/include]
+  ignore line: [ /root/llvm/llvm80/build/lib/clang/8.0.1/include]
+  ignore line: [ /usr/include/x86_64-linux-gnu]
+  ignore line: [ /usr/include]
+  ignore line: [End of search list.]
+  ignore line: [Linking C executable cmTC_e27ad]
+  ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_e27ad.dir/link.txt --verbose=1]
+  ignore line: [/root/llvm/llvm80/build/bin/clang  -flto -v -g    -v CMakeFiles/cmTC_e27ad.dir/CMakeCCompilerABI.c.o  -o cmTC_e27ad -rdynamic  ]
+  ignore line: [clang version 8.0.1 (https://github.com/llvm-mirror/clang.git 2e4c9c5fc864c2c432e4c262a67c42d824b265c6) (https://github.com/rqtian/llvm80-bufferoverflow.git 3b5df6d2abd65c292843e89e82bd69d3349a41e2)]
+  ignore line: [Target: x86_64-unknown-linux-gnu]
+  ignore line: [Thread model: posix]
+  ignore line: [InstalledDir: /root/llvm/llvm80/build/bin]
+  ignore line: [Found candidate GCC installation: /usr/lib/gcc/x86_64-linux-gnu/6]
+  ignore line: [Found candidate GCC installation: /usr/lib/gcc/x86_64-linux-gnu/6.3.0]
+  ignore line: [Selected GCC installation: /usr/lib/gcc/x86_64-linux-gnu/6.3.0]
+  ignore line: [Candidate multilib: .]
+  ignore line: [@m64]
+  ignore line: [Selected multilib: .]
+  ignore line: [@m64]
+  link line: [ "/usr/local/bin/ld" -export-dynamic --hash-style=both --eh-frame-hdr -m elf_x86_64 -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_e27ad /usr/lib/gcc/x86_64-linux-gnu/6.3.0/../../../x86_64-linux-gnu/crt1.o /usr/lib/gcc/x86_64-linux-gnu/6.3.0/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/6.3.0/crtbegin.o -L/usr/lib/gcc/x86_64-linux-gnu/6.3.0 -L/usr/lib/gcc/x86_64-linux-gnu/6.3.0/../../../x86_64-linux-gnu -L/lib/x86_64-linux-gnu -L/lib/../lib64 -L/usr/lib/x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/6.3.0/../../.. -L/root/llvm/llvm80/build/bin/../lib -L/lib -L/usr/lib -plugin /root/llvm/llvm80/build/bin/../lib/LLVMgold.so -plugin-opt=mcpu=x86-64 CMakeFiles/cmTC_e27ad.dir/CMakeCCompilerABI.c.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/lib/gcc/x86_64-linux-gnu/6.3.0/crtend.o /usr/lib/gcc/x86_64-linux-gnu/6.3.0/../../../x86_64-linux-gnu/crtn.o]
+    arg [/usr/local/bin/ld] ==> ignore
+    arg [-export-dynamic] ==> ignore
+    arg [--hash-style=both] ==> ignore
+    arg [--eh-frame-hdr] ==> ignore
+    arg [-m] ==> ignore
+    arg [elf_x86_64] ==> ignore
+    arg [-export-dynamic] ==> ignore
+    arg [-dynamic-linker] ==> ignore
+    arg [/lib64/ld-linux-x86-64.so.2] ==> ignore
+    arg [-o] ==> ignore
+    arg [cmTC_e27ad] ==> ignore
+    arg [/usr/lib/gcc/x86_64-linux-gnu/6.3.0/../../../x86_64-linux-gnu/crt1.o] ==> ignore
+    arg [/usr/lib/gcc/x86_64-linux-gnu/6.3.0/../../../x86_64-linux-gnu/crti.o] ==> ignore
+    arg [/usr/lib/gcc/x86_64-linux-gnu/6.3.0/crtbegin.o] ==> ignore
+    arg [-L/usr/lib/gcc/x86_64-linux-gnu/6.3.0] ==> dir [/usr/lib/gcc/x86_64-linux-gnu/6.3.0]
+    arg [-L/usr/lib/gcc/x86_64-linux-gnu/6.3.0/../../../x86_64-linux-gnu] ==> dir [/usr/lib/gcc/x86_64-linux-gnu/6.3.0/../../../x86_64-linux-gnu]
+    arg [-L/lib/x86_64-linux-gnu] ==> dir [/lib/x86_64-linux-gnu]
+    arg [-L/lib/../lib64] ==> dir [/lib/../lib64]
+    arg [-L/usr/lib/x86_64-linux-gnu] ==> dir [/usr/lib/x86_64-linux-gnu]
+    arg [-L/usr/lib/gcc/x86_64-linux-gnu/6.3.0/../../..] ==> dir [/usr/lib/gcc/x86_64-linux-gnu/6.3.0/../../..]
+    arg [-L/root/llvm/llvm80/build/bin/../lib] ==> dir [/root/llvm/llvm80/build/bin/../lib]
+    arg [-L/lib] ==> dir [/lib]
+    arg [-L/usr/lib] ==> dir [/usr/lib]
+    arg [-plugin] ==> ignore
+    arg [/root/llvm/llvm80/build/bin/../lib/LLVMgold.so] ==> ignore
+    arg [-plugin-opt=mcpu=x86-64] ==> ignore
+    arg [CMakeFiles/cmTC_e27ad.dir/CMakeCCompilerABI.c.o] ==> ignore
+    arg [-lgcc] ==> lib [gcc]
+    arg [--as-needed] ==> ignore
+    arg [-lgcc_s] ==> lib [gcc_s]
+    arg [--no-as-needed] ==> ignore
+    arg [-lc] ==> lib [c]
+    arg [-lgcc] ==> lib [gcc]
+    arg [--as-needed] ==> ignore
+    arg [-lgcc_s] ==> lib [gcc_s]
+    arg [--no-as-needed] ==> ignore
+    arg [/usr/lib/gcc/x86_64-linux-gnu/6.3.0/crtend.o] ==> ignore
+    arg [/usr/lib/gcc/x86_64-linux-gnu/6.3.0/../../../x86_64-linux-gnu/crtn.o] ==> ignore
+  remove lib [gcc]
+  remove lib [gcc_s]
+  remove lib [gcc]
+  remove lib [gcc_s]
+  collapse library dir [/usr/lib/gcc/x86_64-linux-gnu/6.3.0] ==> [/usr/lib/gcc/x86_64-linux-gnu/6.3.0]
+  collapse library dir [/usr/lib/gcc/x86_64-linux-gnu/6.3.0/../../../x86_64-linux-gnu] ==> [/usr/lib/x86_64-linux-gnu]
+  collapse library dir [/lib/x86_64-linux-gnu] ==> [/lib/x86_64-linux-gnu]
+  collapse library dir [/lib/../lib64] ==> [/lib64]
+  collapse library dir [/usr/lib/x86_64-linux-gnu] ==> [/usr/lib/x86_64-linux-gnu]
+  collapse library dir [/usr/lib/gcc/x86_64-linux-gnu/6.3.0/../../..] ==> [/usr/lib]
+  collapse library dir [/root/llvm/llvm80/build/bin/../lib] ==> [/root/llvm/llvm80/build/lib]
+  collapse library dir [/lib] ==> [/lib]
+  collapse library dir [/usr/lib] ==> [/usr/lib]
+  implicit libs: [c]
+  implicit dirs: [/usr/lib/gcc/x86_64-linux-gnu/6.3.0;/usr/lib/x86_64-linux-gnu;/lib/x86_64-linux-gnu;/lib64;/usr/lib;/root/llvm/llvm80/build/lib;/lib]
+  implicit fwks: []
+
+
+
+
+Detecting C [-std=c11] compiler features compiled with the following output:
+Change Dir: /root/llvm/codesample/39apps/libproxy-0.4.8/libproxy/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_3029b/fast"
+/usr/bin/make -f CMakeFiles/cmTC_3029b.dir/build.make CMakeFiles/cmTC_3029b.dir/build
+make[1]: Entering directory '/root/llvm/codesample/39apps/libproxy-0.4.8/libproxy/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_3029b.dir/feature_tests.c.o
+/root/llvm/llvm80/build/bin/clang    -flto -v -g    -std=c11 -o CMakeFiles/cmTC_3029b.dir/feature_tests.c.o   -c /root/llvm/codesample/39apps/libproxy-0.4.8/libproxy/CMakeFiles/feature_tests.c
+clang version 8.0.1 (https://github.com/llvm-mirror/clang.git 2e4c9c5fc864c2c432e4c262a67c42d824b265c6) (https://github.com/rqtian/llvm80-bufferoverflow.git 3b5df6d2abd65c292843e89e82bd69d3349a41e2)
+Target: x86_64-unknown-linux-gnu
+Thread model: posix
+InstalledDir: /root/llvm/llvm80/build/bin
+Found candidate GCC installation: /usr/lib/gcc/x86_64-linux-gnu/6
+Found candidate GCC installation: /usr/lib/gcc/x86_64-linux-gnu/6.3.0
+Selected GCC installation: /usr/lib/gcc/x86_64-linux-gnu/6.3.0
+Candidate multilib: .;@m64
+Selected multilib: .;@m64
+ "/root/llvm/llvm80/build/bin/clang-8" -cc1 -triple x86_64-unknown-linux-gnu -emit-llvm-bc -flto -flto-unit -disable-free -main-file-name feature_tests.c -mrelocation-model static -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debug-info-kind=limited -dwarf-version=4 -debugger-tuning=gdb -v -coverage-notes-file /root/llvm/codesample/39apps/libproxy-0.4.8/libproxy/CMakeFiles/CMakeTmp/CMakeFiles/cmTC_3029b.dir/feature_tests.c.gcno -resource-dir /root/llvm/llvm80/build/lib/clang/8.0.1 -internal-isystem /usr/local/include -internal-isystem /root/llvm/llvm80/build/lib/clang/8.0.1/include -internal-externc-isystem /usr/include/x86_64-linux-gnu -internal-externc-isystem /include -internal-externc-isystem /usr/include -std=c11 -fdebug-compilation-dir /root/llvm/codesample/39apps/libproxy-0.4.8/libproxy/CMakeFiles/CMakeTmp -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fdiagnostics-show-option -o CMakeFiles/cmTC_3029b.dir/feature_tests.c.o -x c /root/llvm/codesample/39apps/libproxy-0.4.8/libproxy/CMakeFiles/feature_tests.c -faddrsig
+clang -cc1 version 8.0.1 based upon LLVM 8.0.1 default target x86_64-unknown-linux-gnu
+ignoring nonexistent directory "/include"
+#include "..." search starts here:
+#include <...> search starts here:
+ /usr/local/include
+ /root/llvm/llvm80/build/lib/clang/8.0.1/include
+ /usr/include/x86_64-linux-gnu
+ /usr/include
+End of search list.
+Linking C executable cmTC_3029b
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_3029b.dir/link.txt --verbose=1
+/root/llvm/llvm80/build/bin/clang  -flto -v -g     CMakeFiles/cmTC_3029b.dir/feature_tests.c.o  -o cmTC_3029b -rdynamic 
+clang version 8.0.1 (https://github.com/llvm-mirror/clang.git 2e4c9c5fc864c2c432e4c262a67c42d824b265c6) (https://github.com/rqtian/llvm80-bufferoverflow.git 3b5df6d2abd65c292843e89e82bd69d3349a41e2)
+Target: x86_64-unknown-linux-gnu
+Thread model: posix
+InstalledDir: /root/llvm/llvm80/build/bin
+Found candidate GCC installation: /usr/lib/gcc/x86_64-linux-gnu/6
+Found candidate GCC installation: /usr/lib/gcc/x86_64-linux-gnu/6.3.0
+Selected GCC installation: /usr/lib/gcc/x86_64-linux-gnu/6.3.0
+Candidate multilib: .;@m64
+Selected multilib: .;@m64
+ "/usr/local/bin/ld" -export-dynamic --hash-style=both --eh-frame-hdr -m elf_x86_64 -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_3029b /usr/lib/gcc/x86_64-linux-gnu/6.3.0/../../../x86_64-linux-gnu/crt1.o /usr/lib/gcc/x86_64-linux-gnu/6.3.0/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/6.3.0/crtbegin.o -L/usr/lib/gcc/x86_64-linux-gnu/6.3.0 -L/usr/lib/gcc/x86_64-linux-gnu/6.3.0/../../../x86_64-linux-gnu -L/lib/x86_64-linux-gnu -L/lib/../lib64 -L/usr/lib/x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/6.3.0/../../.. -L/root/llvm/llvm80/build/bin/../lib -L/lib -L/usr/lib -plugin /root/llvm/llvm80/build/bin/../lib/LLVMgold.so -plugin-opt=mcpu=x86-64 CMakeFiles/cmTC_3029b.dir/feature_tests.c.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/lib/gcc/x86_64-linux-gnu/6.3.0/crtend.o /usr/lib/gcc/x86_64-linux-gnu/6.3.0/../../../x86_64-linux-gnu/crtn.o
+======= Start handling file: ld-temp.o =======
+malloc wrapper: malloc
+malloc wrapper: calloc
+malloc wrapper: realloc
+malloc wrapper: valloc
+malloc wrapper: g_malloc
+malloc wrapper: g_realloc
+======= Finish handling file: ld-temp.o =======
+make[1]: Leaving directory '/root/llvm/codesample/39apps/libproxy-0.4.8/libproxy/CMakeFiles/CMakeTmp'
+
+
+    Feature record: C_FEATURE:1c_function_prototypes
+    Feature record: C_FEATURE:1c_restrict
+    Feature record: C_FEATURE:1c_static_assert
+    Feature record: C_FEATURE:1c_variadic_macros
+
+
+Detecting C [-std=c99] compiler features compiled with the following output:
+Change Dir: /root/llvm/codesample/39apps/libproxy-0.4.8/libproxy/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_2380f/fast"
+/usr/bin/make -f CMakeFiles/cmTC_2380f.dir/build.make CMakeFiles/cmTC_2380f.dir/build
+make[1]: Entering directory '/root/llvm/codesample/39apps/libproxy-0.4.8/libproxy/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_2380f.dir/feature_tests.c.o
+/root/llvm/llvm80/build/bin/clang    -flto -v -g    -std=c99 -o CMakeFiles/cmTC_2380f.dir/feature_tests.c.o   -c /root/llvm/codesample/39apps/libproxy-0.4.8/libproxy/CMakeFiles/feature_tests.c
+clang version 8.0.1 (https://github.com/llvm-mirror/clang.git 2e4c9c5fc864c2c432e4c262a67c42d824b265c6) (https://github.com/rqtian/llvm80-bufferoverflow.git 3b5df6d2abd65c292843e89e82bd69d3349a41e2)
+Target: x86_64-unknown-linux-gnu
+Thread model: posix
+InstalledDir: /root/llvm/llvm80/build/bin
+Found candidate GCC installation: /usr/lib/gcc/x86_64-linux-gnu/6
+Found candidate GCC installation: /usr/lib/gcc/x86_64-linux-gnu/6.3.0
+Selected GCC installation: /usr/lib/gcc/x86_64-linux-gnu/6.3.0
+Candidate multilib: .;@m64
+Selected multilib: .;@m64
+ "/root/llvm/llvm80/build/bin/clang-8" -cc1 -triple x86_64-unknown-linux-gnu -emit-llvm-bc -flto -flto-unit -disable-free -main-file-name feature_tests.c -mrelocation-model static -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debug-info-kind=limited -dwarf-version=4 -debugger-tuning=gdb -v -coverage-notes-file /root/llvm/codesample/39apps/libproxy-0.4.8/libproxy/CMakeFiles/CMakeTmp/CMakeFiles/cmTC_2380f.dir/feature_tests.c.gcno -resource-dir /root/llvm/llvm80/build/lib/clang/8.0.1 -internal-isystem /usr/local/include -internal-isystem /root/llvm/llvm80/build/lib/clang/8.0.1/include -internal-externc-isystem /usr/include/x86_64-linux-gnu -internal-externc-isystem /include -internal-externc-isystem /usr/include -std=c99 -fdebug-compilation-dir /root/llvm/codesample/39apps/libproxy-0.4.8/libproxy/CMakeFiles/CMakeTmp -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fdiagnostics-show-option -o CMakeFiles/cmTC_2380f.dir/feature_tests.c.o -x c /root/llvm/codesample/39apps/libproxy-0.4.8/libproxy/CMakeFiles/feature_tests.c -faddrsig
+clang -cc1 version 8.0.1 based upon LLVM 8.0.1 default target x86_64-unknown-linux-gnu
+ignoring nonexistent directory "/include"
+#include "..." search starts here:
+#include <...> search starts here:
+ /usr/local/include
+ /root/llvm/llvm80/build/lib/clang/8.0.1/include
+ /usr/include/x86_64-linux-gnu
+ /usr/include
+End of search list.
+Linking C executable cmTC_2380f
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_2380f.dir/link.txt --verbose=1
+/root/llvm/llvm80/build/bin/clang  -flto -v -g     CMakeFiles/cmTC_2380f.dir/feature_tests.c.o  -o cmTC_2380f -rdynamic 
+clang version 8.0.1 (https://github.com/llvm-mirror/clang.git 2e4c9c5fc864c2c432e4c262a67c42d824b265c6) (https://github.com/rqtian/llvm80-bufferoverflow.git 3b5df6d2abd65c292843e89e82bd69d3349a41e2)
+Target: x86_64-unknown-linux-gnu
+Thread model: posix
+InstalledDir: /root/llvm/llvm80/build/bin
+Found candidate GCC installation: /usr/lib/gcc/x86_64-linux-gnu/6
+Found candidate GCC installation: /usr/lib/gcc/x86_64-linux-gnu/6.3.0
+Selected GCC installation: /usr/lib/gcc/x86_64-linux-gnu/6.3.0
+Candidate multilib: .;@m64
+Selected multilib: .;@m64
+ "/usr/local/bin/ld" -export-dynamic --hash-style=both --eh-frame-hdr -m elf_x86_64 -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_2380f /usr/lib/gcc/x86_64-linux-gnu/6.3.0/../../../x86_64-linux-gnu/crt1.o /usr/lib/gcc/x86_64-linux-gnu/6.3.0/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/6.3.0/crtbegin.o -L/usr/lib/gcc/x86_64-linux-gnu/6.3.0 -L/usr/lib/gcc/x86_64-linux-gnu/6.3.0/../../../x86_64-linux-gnu -L/lib/x86_64-linux-gnu -L/lib/../lib64 -L/usr/lib/x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/6.3.0/../../.. -L/root/llvm/llvm80/build/bin/../lib -L/lib -L/usr/lib -plugin /root/llvm/llvm80/build/bin/../lib/LLVMgold.so -plugin-opt=mcpu=x86-64 CMakeFiles/cmTC_2380f.dir/feature_tests.c.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/lib/gcc/x86_64-linux-gnu/6.3.0/crtend.o /usr/lib/gcc/x86_64-linux-gnu/6.3.0/../../../x86_64-linux-gnu/crtn.o
+======= Start handling file: ld-temp.o =======
+malloc wrapper: malloc
+malloc wrapper: calloc
+malloc wrapper: realloc
+malloc wrapper: valloc
+malloc wrapper: g_malloc
+malloc wrapper: g_realloc
+======= Finish handling file: ld-temp.o =======
+make[1]: Leaving directory '/root/llvm/codesample/39apps/libproxy-0.4.8/libproxy/CMakeFiles/CMakeTmp'
+
+
+    Feature record: C_FEATURE:1c_function_prototypes
+    Feature record: C_FEATURE:1c_restrict
+    Feature record: C_FEATURE:0c_static_assert
+    Feature record: C_FEATURE:1c_variadic_macros
+
+
+Detecting C [-std=c90] compiler features compiled with the following output:
+Change Dir: /root/llvm/codesample/39apps/libproxy-0.4.8/libproxy/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_6260a/fast"
+/usr/bin/make -f CMakeFiles/cmTC_6260a.dir/build.make CMakeFiles/cmTC_6260a.dir/build
+make[1]: Entering directory '/root/llvm/codesample/39apps/libproxy-0.4.8/libproxy/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_6260a.dir/feature_tests.c.o
+/root/llvm/llvm80/build/bin/clang    -flto -v -g    -std=c90 -o CMakeFiles/cmTC_6260a.dir/feature_tests.c.o   -c /root/llvm/codesample/39apps/libproxy-0.4.8/libproxy/CMakeFiles/feature_tests.c
+clang version 8.0.1 (https://github.com/llvm-mirror/clang.git 2e4c9c5fc864c2c432e4c262a67c42d824b265c6) (https://github.com/rqtian/llvm80-bufferoverflow.git 3b5df6d2abd65c292843e89e82bd69d3349a41e2)
+Target: x86_64-unknown-linux-gnu
+Thread model: posix
+InstalledDir: /root/llvm/llvm80/build/bin
+Found candidate GCC installation: /usr/lib/gcc/x86_64-linux-gnu/6
+Found candidate GCC installation: /usr/lib/gcc/x86_64-linux-gnu/6.3.0
+Selected GCC installation: /usr/lib/gcc/x86_64-linux-gnu/6.3.0
+Candidate multilib: .;@m64
+Selected multilib: .;@m64
+ "/root/llvm/llvm80/build/bin/clang-8" -cc1 -triple x86_64-unknown-linux-gnu -emit-llvm-bc -flto -flto-unit -disable-free -main-file-name feature_tests.c -mrelocation-model static -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debug-info-kind=limited -dwarf-version=4 -debugger-tuning=gdb -v -coverage-notes-file /root/llvm/codesample/39apps/libproxy-0.4.8/libproxy/CMakeFiles/CMakeTmp/CMakeFiles/cmTC_6260a.dir/feature_tests.c.gcno -resource-dir /root/llvm/llvm80/build/lib/clang/8.0.1 -internal-isystem /usr/local/include -internal-isystem /root/llvm/llvm80/build/lib/clang/8.0.1/include -internal-externc-isystem /usr/include/x86_64-linux-gnu -internal-externc-isystem /include -internal-externc-isystem /usr/include -std=c90 -fdebug-compilation-dir /root/llvm/codesample/39apps/libproxy-0.4.8/libproxy/CMakeFiles/CMakeTmp -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fdiagnostics-show-option -o CMakeFiles/cmTC_6260a.dir/feature_tests.c.o -x c /root/llvm/codesample/39apps/libproxy-0.4.8/libproxy/CMakeFiles/feature_tests.c -faddrsig
+clang -cc1 version 8.0.1 based upon LLVM 8.0.1 default target x86_64-unknown-linux-gnu
+ignoring nonexistent directory "/include"
+#include "..." search starts here:
+#include <...> search starts here:
+ /usr/local/include
+ /root/llvm/llvm80/build/lib/clang/8.0.1/include
+ /usr/include/x86_64-linux-gnu
+ /usr/include
+End of search list.
+Linking C executable cmTC_6260a
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_6260a.dir/link.txt --verbose=1
+/root/llvm/llvm80/build/bin/clang  -flto -v -g     CMakeFiles/cmTC_6260a.dir/feature_tests.c.o  -o cmTC_6260a -rdynamic 
+clang version 8.0.1 (https://github.com/llvm-mirror/clang.git 2e4c9c5fc864c2c432e4c262a67c42d824b265c6) (https://github.com/rqtian/llvm80-bufferoverflow.git 3b5df6d2abd65c292843e89e82bd69d3349a41e2)
+Target: x86_64-unknown-linux-gnu
+Thread model: posix
+InstalledDir: /root/llvm/llvm80/build/bin
+Found candidate GCC installation: /usr/lib/gcc/x86_64-linux-gnu/6
+Found candidate GCC installation: /usr/lib/gcc/x86_64-linux-gnu/6.3.0
+Selected GCC installation: /usr/lib/gcc/x86_64-linux-gnu/6.3.0
+Candidate multilib: .;@m64
+Selected multilib: .;@m64
+ "/usr/local/bin/ld" -export-dynamic --hash-style=both --eh-frame-hdr -m elf_x86_64 -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_6260a /usr/lib/gcc/x86_64-linux-gnu/6.3.0/../../../x86_64-linux-gnu/crt1.o /usr/lib/gcc/x86_64-linux-gnu/6.3.0/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/6.3.0/crtbegin.o -L/usr/lib/gcc/x86_64-linux-gnu/6.3.0 -L/usr/lib/gcc/x86_64-linux-gnu/6.3.0/../../../x86_64-linux-gnu -L/lib/x86_64-linux-gnu -L/lib/../lib64 -L/usr/lib/x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/6.3.0/../../.. -L/root/llvm/llvm80/build/bin/../lib -L/lib -L/usr/lib -plugin /root/llvm/llvm80/build/bin/../lib/LLVMgold.so -plugin-opt=mcpu=x86-64 CMakeFiles/cmTC_6260a.dir/feature_tests.c.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/lib/gcc/x86_64-linux-gnu/6.3.0/crtend.o /usr/lib/gcc/x86_64-linux-gnu/6.3.0/../../../x86_64-linux-gnu/crtn.o
+======= Start handling file: ld-temp.o =======
+malloc wrapper: malloc
+malloc wrapper: calloc
+malloc wrapper: realloc
+malloc wrapper: valloc
+malloc wrapper: g_malloc
+malloc wrapper: g_realloc
+======= Finish handling file: ld-temp.o =======
+make[1]: Leaving directory '/root/llvm/codesample/39apps/libproxy-0.4.8/libproxy/CMakeFiles/CMakeTmp'
+
+
+    Feature record: C_FEATURE:1c_function_prototypes
+    Feature record: C_FEATURE:0c_restrict
+    Feature record: C_FEATURE:0c_static_assert
+    Feature record: C_FEATURE:0c_variadic_macros
+Determining if the CXX compiler works passed with the following output:
+Change Dir: /root/llvm/codesample/39apps/libproxy-0.4.8/libproxy/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_2bfeb/fast"
+/usr/bin/make -f CMakeFiles/cmTC_2bfeb.dir/build.make CMakeFiles/cmTC_2bfeb.dir/build
+make[1]: Entering directory '/root/llvm/codesample/39apps/libproxy-0.4.8/libproxy/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_2bfeb.dir/testCXXCompiler.cxx.o
+/root/llvm/llvm80/build/bin/clang++     -flto -v -g    -o CMakeFiles/cmTC_2bfeb.dir/testCXXCompiler.cxx.o -c /root/llvm/codesample/39apps/libproxy-0.4.8/libproxy/CMakeFiles/CMakeTmp/testCXXCompiler.cxx
+clang version 8.0.1 (https://github.com/llvm-mirror/clang.git 2e4c9c5fc864c2c432e4c262a67c42d824b265c6) (https://github.com/rqtian/llvm80-bufferoverflow.git 3b5df6d2abd65c292843e89e82bd69d3349a41e2)
+Target: x86_64-unknown-linux-gnu
+Thread model: posix
+InstalledDir: /root/llvm/llvm80/build/bin
+Found candidate GCC installation: /usr/lib/gcc/x86_64-linux-gnu/6
+Found candidate GCC installation: /usr/lib/gcc/x86_64-linux-gnu/6.3.0
+Selected GCC installation: /usr/lib/gcc/x86_64-linux-gnu/6.3.0
+Candidate multilib: .;@m64
+Selected multilib: .;@m64
+ "/root/llvm/llvm80/build/bin/clang-8" -cc1 -triple x86_64-unknown-linux-gnu -emit-llvm-bc -flto -flto-unit -disable-free -main-file-name testCXXCompiler.cxx -mrelocation-model static -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debug-info-kind=limited -dwarf-version=4 -debugger-tuning=gdb -v -coverage-notes-file /root/llvm/codesample/39apps/libproxy-0.4.8/libproxy/CMakeFiles/CMakeTmp/CMakeFiles/cmTC_2bfeb.dir/testCXXCompiler.cxx.gcno -resource-dir /root/llvm/llvm80/build/lib/clang/8.0.1 -internal-isystem /usr/lib/gcc/x86_64-linux-gnu/6.3.0/../../../../include/c++/6.3.0 -internal-isystem /usr/lib/gcc/x86_64-linux-gnu/6.3.0/../../../../include/x86_64-linux-gnu/c++/6.3.0 -internal-isystem /usr/lib/gcc/x86_64-linux-gnu/6.3.0/../../../../include/x86_64-linux-gnu/c++/6.3.0 -internal-isystem /usr/lib/gcc/x86_64-linux-gnu/6.3.0/../../../../include/c++/6.3.0/backward -internal-isystem /usr/local/include -internal-isystem /root/llvm/llvm80/build/lib/clang/8.0.1/include -internal-externc-isystem /usr/include/x86_64-linux-gnu -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdeprecated-macro -fdebug-compilation-dir /root/llvm/codesample/39apps/libproxy-0.4.8/libproxy/CMakeFiles/CMakeTmp -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fcxx-exceptions -fexceptions -fdiagnostics-show-option -o CMakeFiles/cmTC_2bfeb.dir/testCXXCompiler.cxx.o -x c++ /root/llvm/codesample/39apps/libproxy-0.4.8/libproxy/CMakeFiles/CMakeTmp/testCXXCompiler.cxx -faddrsig
+clang -cc1 version 8.0.1 based upon LLVM 8.0.1 default target x86_64-unknown-linux-gnu
+ignoring nonexistent directory "/include"
+ignoring duplicate directory "/usr/lib/gcc/x86_64-linux-gnu/6.3.0/../../../../include/x86_64-linux-gnu/c++/6.3.0"
+#include "..." search starts here:
+#include <...> search starts here:
+ /usr/lib/gcc/x86_64-linux-gnu/6.3.0/../../../../include/c++/6.3.0
+ /usr/lib/gcc/x86_64-linux-gnu/6.3.0/../../../../include/x86_64-linux-gnu/c++/6.3.0
+ /usr/lib/gcc/x86_64-linux-gnu/6.3.0/../../../../include/c++/6.3.0/backward
+ /usr/local/include
+ /root/llvm/llvm80/build/lib/clang/8.0.1/include
+ /usr/include/x86_64-linux-gnu
+ /usr/include
+End of search list.
+Linking CXX executable cmTC_2bfeb
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_2bfeb.dir/link.txt --verbose=1
+/root/llvm/llvm80/build/bin/clang++   -flto -v -g     CMakeFiles/cmTC_2bfeb.dir/testCXXCompiler.cxx.o  -o cmTC_2bfeb -rdynamic 
+clang version 8.0.1 (https://github.com/llvm-mirror/clang.git 2e4c9c5fc864c2c432e4c262a67c42d824b265c6) (https://github.com/rqtian/llvm80-bufferoverflow.git 3b5df6d2abd65c292843e89e82bd69d3349a41e2)
+Target: x86_64-unknown-linux-gnu
+Thread model: posix
+InstalledDir: /root/llvm/llvm80/build/bin
+Found candidate GCC installation: /usr/lib/gcc/x86_64-linux-gnu/6
+Found candidate GCC installation: /usr/lib/gcc/x86_64-linux-gnu/6.3.0
+Selected GCC installation: /usr/lib/gcc/x86_64-linux-gnu/6.3.0
+Candidate multilib: .;@m64
+Selected multilib: .;@m64
+ "/usr/local/bin/ld" -export-dynamic --hash-style=both --eh-frame-hdr -m elf_x86_64 -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_2bfeb /usr/lib/gcc/x86_64-linux-gnu/6.3.0/../../../x86_64-linux-gnu/crt1.o /usr/lib/gcc/x86_64-linux-gnu/6.3.0/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/6.3.0/crtbegin.o -L/usr/lib/gcc/x86_64-linux-gnu/6.3.0 -L/usr/lib/gcc/x86_64-linux-gnu/6.3.0/../../../x86_64-linux-gnu -L/lib/x86_64-linux-gnu -L/lib/../lib64 -L/usr/lib/x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/6.3.0/../../.. -L/root/llvm/llvm80/build/bin/../lib -L/lib -L/usr/lib -plugin /root/llvm/llvm80/build/bin/../lib/LLVMgold.so -plugin-opt=mcpu=x86-64 CMakeFiles/cmTC_2bfeb.dir/testCXXCompiler.cxx.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-linux-gnu/6.3.0/crtend.o /usr/lib/gcc/x86_64-linux-gnu/6.3.0/../../../x86_64-linux-gnu/crtn.o
+======= Start handling file: ld-temp.o =======
+malloc wrapper: malloc
+malloc wrapper: calloc
+malloc wrapper: realloc
+malloc wrapper: valloc
+malloc wrapper: g_malloc
+malloc wrapper: g_realloc
+======= Finish handling file: ld-temp.o =======
+make[1]: Leaving directory '/root/llvm/codesample/39apps/libproxy-0.4.8/libproxy/CMakeFiles/CMakeTmp'
+
+
+Detecting CXX compiler ABI info compiled with the following output:
+Change Dir: /root/llvm/codesample/39apps/libproxy-0.4.8/libproxy/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_3a745/fast"
+/usr/bin/make -f CMakeFiles/cmTC_3a745.dir/build.make CMakeFiles/cmTC_3a745.dir/build
+make[1]: Entering directory '/root/llvm/codesample/39apps/libproxy-0.4.8/libproxy/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_3a745.dir/CMakeCXXCompilerABI.cpp.o
+/root/llvm/llvm80/build/bin/clang++     -flto -v -g    -o CMakeFiles/cmTC_3a745.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake-3.7/Modules/CMakeCXXCompilerABI.cpp
+clang version 8.0.1 (https://github.com/llvm-mirror/clang.git 2e4c9c5fc864c2c432e4c262a67c42d824b265c6) (https://github.com/rqtian/llvm80-bufferoverflow.git 3b5df6d2abd65c292843e89e82bd69d3349a41e2)
+Target: x86_64-unknown-linux-gnu
+Thread model: posix
+InstalledDir: /root/llvm/llvm80/build/bin
+Found candidate GCC installation: /usr/lib/gcc/x86_64-linux-gnu/6
+Found candidate GCC installation: /usr/lib/gcc/x86_64-linux-gnu/6.3.0
+Selected GCC installation: /usr/lib/gcc/x86_64-linux-gnu/6.3.0
+Candidate multilib: .;@m64
+Selected multilib: .;@m64
+ "/root/llvm/llvm80/build/bin/clang-8" -cc1 -triple x86_64-unknown-linux-gnu -emit-llvm-bc -flto -flto-unit -disable-free -main-file-name CMakeCXXCompilerABI.cpp -mrelocation-model static -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debug-info-kind=limited -dwarf-version=4 -debugger-tuning=gdb -v -coverage-notes-file /root/llvm/codesample/39apps/libproxy-0.4.8/libproxy/CMakeFiles/CMakeTmp/CMakeFiles/cmTC_3a745.dir/CMakeCXXCompilerABI.cpp.gcno -resource-dir /root/llvm/llvm80/build/lib/clang/8.0.1 -internal-isystem /usr/lib/gcc/x86_64-linux-gnu/6.3.0/../../../../include/c++/6.3.0 -internal-isystem /usr/lib/gcc/x86_64-linux-gnu/6.3.0/../../../../include/x86_64-linux-gnu/c++/6.3.0 -internal-isystem /usr/lib/gcc/x86_64-linux-gnu/6.3.0/../../../../include/x86_64-linux-gnu/c++/6.3.0 -internal-isystem /usr/lib/gcc/x86_64-linux-gnu/6.3.0/../../../../include/c++/6.3.0/backward -internal-isystem /usr/local/include -internal-isystem /root/llvm/llvm80/build/lib/clang/8.0.1/include -internal-externc-isystem /usr/include/x86_64-linux-gnu -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdeprecated-macro -fdebug-compilation-dir /root/llvm/codesample/39apps/libproxy-0.4.8/libproxy/CMakeFiles/CMakeTmp -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fcxx-exceptions -fexceptions -fdiagnostics-show-option -o CMakeFiles/cmTC_3a745.dir/CMakeCXXCompilerABI.cpp.o -x c++ /usr/share/cmake-3.7/Modules/CMakeCXXCompilerABI.cpp -faddrsig
+clang -cc1 version 8.0.1 based upon LLVM 8.0.1 default target x86_64-unknown-linux-gnu
+ignoring nonexistent directory "/include"
+ignoring duplicate directory "/usr/lib/gcc/x86_64-linux-gnu/6.3.0/../../../../include/x86_64-linux-gnu/c++/6.3.0"
+#include "..." search starts here:
+#include <...> search starts here:
+ /usr/lib/gcc/x86_64-linux-gnu/6.3.0/../../../../include/c++/6.3.0
+ /usr/lib/gcc/x86_64-linux-gnu/6.3.0/../../../../include/x86_64-linux-gnu/c++/6.3.0
+ /usr/lib/gcc/x86_64-linux-gnu/6.3.0/../../../../include/c++/6.3.0/backward
+ /usr/local/include
+ /root/llvm/llvm80/build/lib/clang/8.0.1/include
+ /usr/include/x86_64-linux-gnu
+ /usr/include
+End of search list.
+Linking CXX executable cmTC_3a745
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_3a745.dir/link.txt --verbose=1
+/root/llvm/llvm80/build/bin/clang++   -flto -v -g    -v CMakeFiles/cmTC_3a745.dir/CMakeCXXCompilerABI.cpp.o  -o cmTC_3a745 -rdynamic  
+clang version 8.0.1 (https://github.com/llvm-mirror/clang.git 2e4c9c5fc864c2c432e4c262a67c42d824b265c6) (https://github.com/rqtian/llvm80-bufferoverflow.git 3b5df6d2abd65c292843e89e82bd69d3349a41e2)
+Target: x86_64-unknown-linux-gnu
+Thread model: posix
+InstalledDir: /root/llvm/llvm80/build/bin
+Found candidate GCC installation: /usr/lib/gcc/x86_64-linux-gnu/6
+Found candidate GCC installation: /usr/lib/gcc/x86_64-linux-gnu/6.3.0
+Selected GCC installation: /usr/lib/gcc/x86_64-linux-gnu/6.3.0
+Candidate multilib: .;@m64
+Selected multilib: .;@m64
+ "/usr/local/bin/ld" -export-dynamic --hash-style=both --eh-frame-hdr -m elf_x86_64 -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_3a745 /usr/lib/gcc/x86_64-linux-gnu/6.3.0/../../../x86_64-linux-gnu/crt1.o /usr/lib/gcc/x86_64-linux-gnu/6.3.0/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/6.3.0/crtbegin.o -L/usr/lib/gcc/x86_64-linux-gnu/6.3.0 -L/usr/lib/gcc/x86_64-linux-gnu/6.3.0/../../../x86_64-linux-gnu -L/lib/x86_64-linux-gnu -L/lib/../lib64 -L/usr/lib/x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/6.3.0/../../.. -L/root/llvm/llvm80/build/bin/../lib -L/lib -L/usr/lib -plugin /root/llvm/llvm80/build/bin/../lib/LLVMgold.so -plugin-opt=mcpu=x86-64 CMakeFiles/cmTC_3a745.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-linux-gnu/6.3.0/crtend.o /usr/lib/gcc/x86_64-linux-gnu/6.3.0/../../../x86_64-linux-gnu/crtn.o
+======= Start handling file: ld-temp.o =======
+malloc wrapper: malloc
+malloc wrapper: calloc
+malloc wrapper: realloc
+malloc wrapper: valloc
+malloc wrapper: g_malloc
+malloc wrapper: g_realloc
+======= Finish handling file: ld-temp.o =======
+make[1]: Leaving directory '/root/llvm/codesample/39apps/libproxy-0.4.8/libproxy/CMakeFiles/CMakeTmp'
+
+
+Parsed CXX implicit link information from above output:
+  link line regex: [^( *|.*[/\])(ld|([^/\]+-)?ld|collect2)[^/\]*( |$)]
+  ignore line: [Change Dir: /root/llvm/codesample/39apps/libproxy-0.4.8/libproxy/CMakeFiles/CMakeTmp]
+  ignore line: []
+  ignore line: [Run Build Command:"/usr/bin/make" "cmTC_3a745/fast"]
+  ignore line: [/usr/bin/make -f CMakeFiles/cmTC_3a745.dir/build.make CMakeFiles/cmTC_3a745.dir/build]
+  ignore line: [make[1]: Entering directory '/root/llvm/codesample/39apps/libproxy-0.4.8/libproxy/CMakeFiles/CMakeTmp']
+  ignore line: [Building CXX object CMakeFiles/cmTC_3a745.dir/CMakeCXXCompilerABI.cpp.o]
+  ignore line: [/root/llvm/llvm80/build/bin/clang++     -flto -v -g    -o CMakeFiles/cmTC_3a745.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake-3.7/Modules/CMakeCXXCompilerABI.cpp]
+  ignore line: [clang version 8.0.1 (https://github.com/llvm-mirror/clang.git 2e4c9c5fc864c2c432e4c262a67c42d824b265c6) (https://github.com/rqtian/llvm80-bufferoverflow.git 3b5df6d2abd65c292843e89e82bd69d3349a41e2)]
+  ignore line: [Target: x86_64-unknown-linux-gnu]
+  ignore line: [Thread model: posix]
+  ignore line: [InstalledDir: /root/llvm/llvm80/build/bin]
+  ignore line: [Found candidate GCC installation: /usr/lib/gcc/x86_64-linux-gnu/6]
+  ignore line: [Found candidate GCC installation: /usr/lib/gcc/x86_64-linux-gnu/6.3.0]
+  ignore line: [Selected GCC installation: /usr/lib/gcc/x86_64-linux-gnu/6.3.0]
+  ignore line: [Candidate multilib: .]
+  ignore line: [@m64]
+  ignore line: [Selected multilib: .]
+  ignore line: [@m64]
+  ignore line: [ "/root/llvm/llvm80/build/bin/clang-8" -cc1 -triple x86_64-unknown-linux-gnu -emit-llvm-bc -flto -flto-unit -disable-free -main-file-name CMakeCXXCompilerABI.cpp -mrelocation-model static -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debug-info-kind=limited -dwarf-version=4 -debugger-tuning=gdb -v -coverage-notes-file /root/llvm/codesample/39apps/libproxy-0.4.8/libproxy/CMakeFiles/CMakeTmp/CMakeFiles/cmTC_3a745.dir/CMakeCXXCompilerABI.cpp.gcno -resource-dir /root/llvm/llvm80/build/lib/clang/8.0.1 -internal-isystem /usr/lib/gcc/x86_64-linux-gnu/6.3.0/../../../../include/c++/6.3.0 -internal-isystem /usr/lib/gcc/x86_64-linux-gnu/6.3.0/../../../../include/x86_64-linux-gnu/c++/6.3.0 -internal-isystem /usr/lib/gcc/x86_64-linux-gnu/6.3.0/../../../../include/x86_64-linux-gnu/c++/6.3.0 -internal-isystem /usr/lib/gcc/x86_64-linux-gnu/6.3.0/../../../../include/c++/6.3.0/backward -internal-isystem /usr/local/include -internal-isystem /root/llvm/llvm80/build/lib/clang/8.0.1/include -internal-externc-isystem /usr/include/x86_64-linux-gnu -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdeprecated-macro -fdebug-compilation-dir /root/llvm/codesample/39apps/libproxy-0.4.8/libproxy/CMakeFiles/CMakeTmp -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fcxx-exceptions -fexceptions -fdiagnostics-show-option -o CMakeFiles/cmTC_3a745.dir/CMakeCXXCompilerABI.cpp.o -x c++ /usr/share/cmake-3.7/Modules/CMakeCXXCompilerABI.cpp -faddrsig]
+  ignore line: [clang -cc1 version 8.0.1 based upon LLVM 8.0.1 default target x86_64-unknown-linux-gnu]
+  ignore line: [ignoring nonexistent directory "/include"]
+  ignore line: [ignoring duplicate directory "/usr/lib/gcc/x86_64-linux-gnu/6.3.0/../../../../include/x86_64-linux-gnu/c++/6.3.0"]
+  ignore line: [#include "..." search starts here:]
+  ignore line: [#include <...> search starts here:]
+  ignore line: [ /usr/lib/gcc/x86_64-linux-gnu/6.3.0/../../../../include/c++/6.3.0]
+  ignore line: [ /usr/lib/gcc/x86_64-linux-gnu/6.3.0/../../../../include/x86_64-linux-gnu/c++/6.3.0]
+  ignore line: [ /usr/lib/gcc/x86_64-linux-gnu/6.3.0/../../../../include/c++/6.3.0/backward]
+  ignore line: [ /usr/local/include]
+  ignore line: [ /root/llvm/llvm80/build/lib/clang/8.0.1/include]
+  ignore line: [ /usr/include/x86_64-linux-gnu]
+  ignore line: [ /usr/include]
+  ignore line: [End of search list.]
+  ignore line: [Linking CXX executable cmTC_3a745]
+  ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_3a745.dir/link.txt --verbose=1]
+  ignore line: [/root/llvm/llvm80/build/bin/clang++   -flto -v -g    -v CMakeFiles/cmTC_3a745.dir/CMakeCXXCompilerABI.cpp.o  -o cmTC_3a745 -rdynamic  ]
+  ignore line: [clang version 8.0.1 (https://github.com/llvm-mirror/clang.git 2e4c9c5fc864c2c432e4c262a67c42d824b265c6) (https://github.com/rqtian/llvm80-bufferoverflow.git 3b5df6d2abd65c292843e89e82bd69d3349a41e2)]
+  ignore line: [Target: x86_64-unknown-linux-gnu]
+  ignore line: [Thread model: posix]
+  ignore line: [InstalledDir: /root/llvm/llvm80/build/bin]
+  ignore line: [Found candidate GCC installation: /usr/lib/gcc/x86_64-linux-gnu/6]
+  ignore line: [Found candidate GCC installation: /usr/lib/gcc/x86_64-linux-gnu/6.3.0]
+  ignore line: [Selected GCC installation: /usr/lib/gcc/x86_64-linux-gnu/6.3.0]
+  ignore line: [Candidate multilib: .]
+  ignore line: [@m64]
+  ignore line: [Selected multilib: .]
+  ignore line: [@m64]
+  link line: [ "/usr/local/bin/ld" -export-dynamic --hash-style=both --eh-frame-hdr -m elf_x86_64 -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_3a745 /usr/lib/gcc/x86_64-linux-gnu/6.3.0/../../../x86_64-linux-gnu/crt1.o /usr/lib/gcc/x86_64-linux-gnu/6.3.0/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/6.3.0/crtbegin.o -L/usr/lib/gcc/x86_64-linux-gnu/6.3.0 -L/usr/lib/gcc/x86_64-linux-gnu/6.3.0/../../../x86_64-linux-gnu -L/lib/x86_64-linux-gnu -L/lib/../lib64 -L/usr/lib/x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/6.3.0/../../.. -L/root/llvm/llvm80/build/bin/../lib -L/lib -L/usr/lib -plugin /root/llvm/llvm80/build/bin/../lib/LLVMgold.so -plugin-opt=mcpu=x86-64 CMakeFiles/cmTC_3a745.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-linux-gnu/6.3.0/crtend.o /usr/lib/gcc/x86_64-linux-gnu/6.3.0/../../../x86_64-linux-gnu/crtn.o]
+    arg [/usr/local/bin/ld] ==> ignore
+    arg [-export-dynamic] ==> ignore
+    arg [--hash-style=both] ==> ignore
+    arg [--eh-frame-hdr] ==> ignore
+    arg [-m] ==> ignore
+    arg [elf_x86_64] ==> ignore
+    arg [-export-dynamic] ==> ignore
+    arg [-dynamic-linker] ==> ignore
+    arg [/lib64/ld-linux-x86-64.so.2] ==> ignore
+    arg [-o] ==> ignore
+    arg [cmTC_3a745] ==> ignore
+    arg [/usr/lib/gcc/x86_64-linux-gnu/6.3.0/../../../x86_64-linux-gnu/crt1.o] ==> ignore
+    arg [/usr/lib/gcc/x86_64-linux-gnu/6.3.0/../../../x86_64-linux-gnu/crti.o] ==> ignore
+    arg [/usr/lib/gcc/x86_64-linux-gnu/6.3.0/crtbegin.o] ==> ignore
+    arg [-L/usr/lib/gcc/x86_64-linux-gnu/6.3.0] ==> dir [/usr/lib/gcc/x86_64-linux-gnu/6.3.0]
+    arg [-L/usr/lib/gcc/x86_64-linux-gnu/6.3.0/../../../x86_64-linux-gnu] ==> dir [/usr/lib/gcc/x86_64-linux-gnu/6.3.0/../../../x86_64-linux-gnu]
+    arg [-L/lib/x86_64-linux-gnu] ==> dir [/lib/x86_64-linux-gnu]
+    arg [-L/lib/../lib64] ==> dir [/lib/../lib64]
+    arg [-L/usr/lib/x86_64-linux-gnu] ==> dir [/usr/lib/x86_64-linux-gnu]
+    arg [-L/usr/lib/gcc/x86_64-linux-gnu/6.3.0/../../..] ==> dir [/usr/lib/gcc/x86_64-linux-gnu/6.3.0/../../..]
+    arg [-L/root/llvm/llvm80/build/bin/../lib] ==> dir [/root/llvm/llvm80/build/bin/../lib]
+    arg [-L/lib] ==> dir [/lib]
+    arg [-L/usr/lib] ==> dir [/usr/lib]
+    arg [-plugin] ==> ignore
+    arg [/root/llvm/llvm80/build/bin/../lib/LLVMgold.so] ==> ignore
+    arg [-plugin-opt=mcpu=x86-64] ==> ignore
+    arg [CMakeFiles/cmTC_3a745.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
+    arg [-lstdc++] ==> lib [stdc++]
+    arg [-lm] ==> lib [m]
+    arg [-lgcc_s] ==> lib [gcc_s]
+    arg [-lgcc] ==> lib [gcc]
+    arg [-lc] ==> lib [c]
+    arg [-lgcc_s] ==> lib [gcc_s]
+    arg [-lgcc] ==> lib [gcc]
+    arg [/usr/lib/gcc/x86_64-linux-gnu/6.3.0/crtend.o] ==> ignore
+    arg [/usr/lib/gcc/x86_64-linux-gnu/6.3.0/../../../x86_64-linux-gnu/crtn.o] ==> ignore
+  remove lib [gcc_s]
+  remove lib [gcc]
+  remove lib [gcc_s]
+  remove lib [gcc]
+  collapse library dir [/usr/lib/gcc/x86_64-linux-gnu/6.3.0] ==> [/usr/lib/gcc/x86_64-linux-gnu/6.3.0]
+  collapse library dir [/usr/lib/gcc/x86_64-linux-gnu/6.3.0/../../../x86_64-linux-gnu] ==> [/usr/lib/x86_64-linux-gnu]
+  collapse library dir [/lib/x86_64-linux-gnu] ==> [/lib/x86_64-linux-gnu]
+  collapse library dir [/lib/../lib64] ==> [/lib64]
+  collapse library dir [/usr/lib/x86_64-linux-gnu] ==> [/usr/lib/x86_64-linux-gnu]
+  collapse library dir [/usr/lib/gcc/x86_64-linux-gnu/6.3.0/../../..] ==> [/usr/lib]
+  collapse library dir [/root/llvm/llvm80/build/bin/../lib] ==> [/root/llvm/llvm80/build/lib]
+  collapse library dir [/lib] ==> [/lib]
+  collapse library dir [/usr/lib] ==> [/usr/lib]
+  implicit libs: [stdc++;m;c]
+  implicit dirs: [/usr/lib/gcc/x86_64-linux-gnu/6.3.0;/usr/lib/x86_64-linux-gnu;/lib/x86_64-linux-gnu;/lib64;/usr/lib;/root/llvm/llvm80/build/lib;/lib]
+  implicit fwks: []
+
+
+
+
+Detecting CXX [-std=c++14] compiler features compiled with the following output:
+Change Dir: /root/llvm/codesample/39apps/libproxy-0.4.8/libproxy/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_8af49/fast"
+/usr/bin/make -f CMakeFiles/cmTC_8af49.dir/build.make CMakeFiles/cmTC_8af49.dir/build
+make[1]: Entering directory '/root/llvm/codesample/39apps/libproxy-0.4.8/libproxy/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_8af49.dir/feature_tests.cxx.o
+/root/llvm/llvm80/build/bin/clang++     -flto -v -g    -std=c++14 -o CMakeFiles/cmTC_8af49.dir/feature_tests.cxx.o -c /root/llvm/codesample/39apps/libproxy-0.4.8/libproxy/CMakeFiles/feature_tests.cxx
+clang version 8.0.1 (https://github.com/llvm-mirror/clang.git 2e4c9c5fc864c2c432e4c262a67c42d824b265c6) (https://github.com/rqtian/llvm80-bufferoverflow.git 3b5df6d2abd65c292843e89e82bd69d3349a41e2)
+Target: x86_64-unknown-linux-gnu
+Thread model: posix
+InstalledDir: /root/llvm/llvm80/build/bin
+Found candidate GCC installation: /usr/lib/gcc/x86_64-linux-gnu/6
+Found candidate GCC installation: /usr/lib/gcc/x86_64-linux-gnu/6.3.0
+Selected GCC installation: /usr/lib/gcc/x86_64-linux-gnu/6.3.0
+Candidate multilib: .;@m64
+Selected multilib: .;@m64
+ "/root/llvm/llvm80/build/bin/clang-8" -cc1 -triple x86_64-unknown-linux-gnu -emit-llvm-bc -flto -flto-unit -disable-free -main-file-name feature_tests.cxx -mrelocation-model static -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debug-info-kind=limited -dwarf-version=4 -debugger-tuning=gdb -v -coverage-notes-file /root/llvm/codesample/39apps/libproxy-0.4.8/libproxy/CMakeFiles/CMakeTmp/CMakeFiles/cmTC_8af49.dir/feature_tests.cxx.gcno -resource-dir /root/llvm/llvm80/build/lib/clang/8.0.1 -internal-isystem /usr/lib/gcc/x86_64-linux-gnu/6.3.0/../../../../include/c++/6.3.0 -internal-isystem /usr/lib/gcc/x86_64-linux-gnu/6.3.0/../../../../include/x86_64-linux-gnu/c++/6.3.0 -internal-isystem /usr/lib/gcc/x86_64-linux-gnu/6.3.0/../../../../include/x86_64-linux-gnu/c++/6.3.0 -internal-isystem /usr/lib/gcc/x86_64-linux-gnu/6.3.0/../../../../include/c++/6.3.0/backward -internal-isystem /usr/local/include -internal-isystem /root/llvm/llvm80/build/lib/clang/8.0.1/include -internal-externc-isystem /usr/include/x86_64-linux-gnu -internal-externc-isystem /include -internal-externc-isystem /usr/include -std=c++14 -fdeprecated-macro -fdebug-compilation-dir /root/llvm/codesample/39apps/libproxy-0.4.8/libproxy/CMakeFiles/CMakeTmp -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fcxx-exceptions -fexceptions -fdiagnostics-show-option -o CMakeFiles/cmTC_8af49.dir/feature_tests.cxx.o -x c++ /root/llvm/codesample/39apps/libproxy-0.4.8/libproxy/CMakeFiles/feature_tests.cxx -faddrsig
+clang -cc1 version 8.0.1 based upon LLVM 8.0.1 default target x86_64-unknown-linux-gnu
+ignoring nonexistent directory "/include"
+ignoring duplicate directory "/usr/lib/gcc/x86_64-linux-gnu/6.3.0/../../../../include/x86_64-linux-gnu/c++/6.3.0"
+#include "..." search starts here:
+#include <...> search starts here:
+ /usr/lib/gcc/x86_64-linux-gnu/6.3.0/../../../../include/c++/6.3.0
+ /usr/lib/gcc/x86_64-linux-gnu/6.3.0/../../../../include/x86_64-linux-gnu/c++/6.3.0
+ /usr/lib/gcc/x86_64-linux-gnu/6.3.0/../../../../include/c++/6.3.0/backward
+ /usr/local/include
+ /root/llvm/llvm80/build/lib/clang/8.0.1/include
+ /usr/include/x86_64-linux-gnu
+ /usr/include
+End of search list.
+Linking CXX executable cmTC_8af49
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_8af49.dir/link.txt --verbose=1
+/root/llvm/llvm80/build/bin/clang++   -flto -v -g     CMakeFiles/cmTC_8af49.dir/feature_tests.cxx.o  -o cmTC_8af49 -rdynamic 
+clang version 8.0.1 (https://github.com/llvm-mirror/clang.git 2e4c9c5fc864c2c432e4c262a67c42d824b265c6) (https://github.com/rqtian/llvm80-bufferoverflow.git 3b5df6d2abd65c292843e89e82bd69d3349a41e2)
+Target: x86_64-unknown-linux-gnu
+Thread model: posix
+InstalledDir: /root/llvm/llvm80/build/bin
+Found candidate GCC installation: /usr/lib/gcc/x86_64-linux-gnu/6
+Found candidate GCC installation: /usr/lib/gcc/x86_64-linux-gnu/6.3.0
+Selected GCC installation: /usr/lib/gcc/x86_64-linux-gnu/6.3.0
+Candidate multilib: .;@m64
+Selected multilib: .;@m64
+ "/usr/local/bin/ld" -export-dynamic --hash-style=both --eh-frame-hdr -m elf_x86_64 -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_8af49 /usr/lib/gcc/x86_64-linux-gnu/6.3.0/../../../x86_64-linux-gnu/crt1.o /usr/lib/gcc/x86_64-linux-gnu/6.3.0/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/6.3.0/crtbegin.o -L/usr/lib/gcc/x86_64-linux-gnu/6.3.0 -L/usr/lib/gcc/x86_64-linux-gnu/6.3.0/../../../x86_64-linux-gnu -L/lib/x86_64-linux-gnu -L/lib/../lib64 -L/usr/lib/x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/6.3.0/../../.. -L/root/llvm/llvm80/build/bin/../lib -L/lib -L/usr/lib -plugin /root/llvm/llvm80/build/bin/../lib/LLVMgold.so -plugin-opt=mcpu=x86-64 CMakeFiles/cmTC_8af49.dir/feature_tests.cxx.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-linux-gnu/6.3.0/crtend.o /usr/lib/gcc/x86_64-linux-gnu/6.3.0/../../../x86_64-linux-gnu/crtn.o
+======= Start handling file: ld-temp.o =======
+malloc wrapper: malloc
+malloc wrapper: calloc
+malloc wrapper: realloc
+malloc wrapper: valloc
+malloc wrapper: g_malloc
+malloc wrapper: g_realloc
+======= Finish handling file: ld-temp.o =======
+make[1]: Leaving directory '/root/llvm/codesample/39apps/libproxy-0.4.8/libproxy/CMakeFiles/CMakeTmp'
+
+
+    Feature record: CXX_FEATURE:1cxx_aggregate_default_initializers
+    Feature record: CXX_FEATURE:1cxx_alias_templates
+    Feature record: CXX_FEATURE:1cxx_alignas
+    Feature record: CXX_FEATURE:1cxx_alignof
+    Feature record: CXX_FEATURE:1cxx_attributes
+    Feature record: CXX_FEATURE:1cxx_attribute_deprecated
+    Feature record: CXX_FEATURE:1cxx_auto_type
+    Feature record: CXX_FEATURE:1cxx_binary_literals
+    Feature record: CXX_FEATURE:1cxx_constexpr
+    Feature record: CXX_FEATURE:1cxx_contextual_conversions
+    Feature record: CXX_FEATURE:1cxx_decltype
+    Feature record: CXX_FEATURE:1cxx_decltype_auto
+    Feature record: CXX_FEATURE:1cxx_decltype_incomplete_return_types
+    Feature record: CXX_FEATURE:1cxx_default_function_template_args
+    Feature record: CXX_FEATURE:1cxx_defaulted_functions
+    Feature record: CXX_FEATURE:1cxx_defaulted_move_initializers
+    Feature record: CXX_FEATURE:1cxx_delegating_constructors
+    Feature record: CXX_FEATURE:1cxx_deleted_functions
+    Feature record: CXX_FEATURE:1cxx_digit_separators
+    Feature record: CXX_FEATURE:1cxx_enum_forward_declarations
+    Feature record: CXX_FEATURE:1cxx_explicit_conversions
+    Feature record: CXX_FEATURE:1cxx_extended_friend_declarations
+    Feature record: CXX_FEATURE:1cxx_extern_templates
+    Feature record: CXX_FEATURE:1cxx_final
+    Feature record: CXX_FEATURE:1cxx_func_identifier
+    Feature record: CXX_FEATURE:1cxx_generalized_initializers
+    Feature record: CXX_FEATURE:1cxx_generic_lambdas
+    Feature record: CXX_FEATURE:1cxx_inheriting_constructors
+    Feature record: CXX_FEATURE:1cxx_inline_namespaces
+    Feature record: CXX_FEATURE:1cxx_lambdas
+    Feature record: CXX_FEATURE:1cxx_lambda_init_captures
+    Feature record: CXX_FEATURE:1cxx_local_type_template_args
+    Feature record: CXX_FEATURE:1cxx_long_long_type
+    Feature record: CXX_FEATURE:1cxx_noexcept
+    Feature record: CXX_FEATURE:1cxx_nonstatic_member_init
+    Feature record: CXX_FEATURE:1cxx_nullptr
+    Feature record: CXX_FEATURE:1cxx_override
+    Feature record: CXX_FEATURE:1cxx_range_for
+    Feature record: CXX_FEATURE:1cxx_raw_string_literals
+    Feature record: CXX_FEATURE:1cxx_reference_qualified_functions
+    Feature record: CXX_FEATURE:1cxx_relaxed_constexpr
+    Feature record: CXX_FEATURE:1cxx_return_type_deduction
+    Feature record: CXX_FEATURE:1cxx_right_angle_brackets
+    Feature record: CXX_FEATURE:1cxx_rvalue_references
+    Feature record: CXX_FEATURE:1cxx_sizeof_member
+    Feature record: CXX_FEATURE:1cxx_static_assert
+    Feature record: CXX_FEATURE:1cxx_strong_enums
+    Feature record: CXX_FEATURE:1cxx_template_template_parameters
+    Feature record: CXX_FEATURE:1cxx_thread_local
+    Feature record: CXX_FEATURE:1cxx_trailing_return_types
+    Feature record: CXX_FEATURE:1cxx_unicode_literals
+    Feature record: CXX_FEATURE:1cxx_uniform_initialization
+    Feature record: CXX_FEATURE:1cxx_unrestricted_unions
+    Feature record: CXX_FEATURE:1cxx_user_literals
+    Feature record: CXX_FEATURE:1cxx_variable_templates
+    Feature record: CXX_FEATURE:1cxx_variadic_macros
+    Feature record: CXX_FEATURE:1cxx_variadic_templates
+
+
+Detecting CXX [-std=c++11] compiler features compiled with the following output:
+Change Dir: /root/llvm/codesample/39apps/libproxy-0.4.8/libproxy/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_a73e4/fast"
+/usr/bin/make -f CMakeFiles/cmTC_a73e4.dir/build.make CMakeFiles/cmTC_a73e4.dir/build
+make[1]: Entering directory '/root/llvm/codesample/39apps/libproxy-0.4.8/libproxy/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_a73e4.dir/feature_tests.cxx.o
+/root/llvm/llvm80/build/bin/clang++     -flto -v -g    -std=c++11 -o CMakeFiles/cmTC_a73e4.dir/feature_tests.cxx.o -c /root/llvm/codesample/39apps/libproxy-0.4.8/libproxy/CMakeFiles/feature_tests.cxx
+clang version 8.0.1 (https://github.com/llvm-mirror/clang.git 2e4c9c5fc864c2c432e4c262a67c42d824b265c6) (https://github.com/rqtian/llvm80-bufferoverflow.git 3b5df6d2abd65c292843e89e82bd69d3349a41e2)
+Target: x86_64-unknown-linux-gnu
+Thread model: posix
+InstalledDir: /root/llvm/llvm80/build/bin
+Found candidate GCC installation: /usr/lib/gcc/x86_64-linux-gnu/6
+Found candidate GCC installation: /usr/lib/gcc/x86_64-linux-gnu/6.3.0
+Selected GCC installation: /usr/lib/gcc/x86_64-linux-gnu/6.3.0
+Candidate multilib: .;@m64
+Selected multilib: .;@m64
+ "/root/llvm/llvm80/build/bin/clang-8" -cc1 -triple x86_64-unknown-linux-gnu -emit-llvm-bc -flto -flto-unit -disable-free -main-file-name feature_tests.cxx -mrelocation-model static -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debug-info-kind=limited -dwarf-version=4 -debugger-tuning=gdb -v -coverage-notes-file /root/llvm/codesample/39apps/libproxy-0.4.8/libproxy/CMakeFiles/CMakeTmp/CMakeFiles/cmTC_a73e4.dir/feature_tests.cxx.gcno -resource-dir /root/llvm/llvm80/build/lib/clang/8.0.1 -internal-isystem /usr/lib/gcc/x86_64-linux-gnu/6.3.0/../../../../include/c++/6.3.0 -internal-isystem /usr/lib/gcc/x86_64-linux-gnu/6.3.0/../../../../include/x86_64-linux-gnu/c++/6.3.0 -internal-isystem /usr/lib/gcc/x86_64-linux-gnu/6.3.0/../../../../include/x86_64-linux-gnu/c++/6.3.0 -internal-isystem /usr/lib/gcc/x86_64-linux-gnu/6.3.0/../../../../include/c++/6.3.0/backward -internal-isystem /usr/local/include -internal-isystem /root/llvm/llvm80/build/lib/clang/8.0.1/include -internal-externc-isystem /usr/include/x86_64-linux-gnu -internal-externc-isystem /include -internal-externc-isystem /usr/include -std=c++11 -fdeprecated-macro -fdebug-compilation-dir /root/llvm/codesample/39apps/libproxy-0.4.8/libproxy/CMakeFiles/CMakeTmp -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fcxx-exceptions -fexceptions -fdiagnostics-show-option -o CMakeFiles/cmTC_a73e4.dir/feature_tests.cxx.o -x c++ /root/llvm/codesample/39apps/libproxy-0.4.8/libproxy/CMakeFiles/feature_tests.cxx -faddrsig
+clang -cc1 version 8.0.1 based upon LLVM 8.0.1 default target x86_64-unknown-linux-gnu
+ignoring nonexistent directory "/include"
+ignoring duplicate directory "/usr/lib/gcc/x86_64-linux-gnu/6.3.0/../../../../include/x86_64-linux-gnu/c++/6.3.0"
+#include "..." search starts here:
+#include <...> search starts here:
+ /usr/lib/gcc/x86_64-linux-gnu/6.3.0/../../../../include/c++/6.3.0
+ /usr/lib/gcc/x86_64-linux-gnu/6.3.0/../../../../include/x86_64-linux-gnu/c++/6.3.0
+ /usr/lib/gcc/x86_64-linux-gnu/6.3.0/../../../../include/c++/6.3.0/backward
+ /usr/local/include
+ /root/llvm/llvm80/build/lib/clang/8.0.1/include
+ /usr/include/x86_64-linux-gnu
+ /usr/include
+End of search list.
+Linking CXX executable cmTC_a73e4
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_a73e4.dir/link.txt --verbose=1
+/root/llvm/llvm80/build/bin/clang++   -flto -v -g     CMakeFiles/cmTC_a73e4.dir/feature_tests.cxx.o  -o cmTC_a73e4 -rdynamic 
+clang version 8.0.1 (https://github.com/llvm-mirror/clang.git 2e4c9c5fc864c2c432e4c262a67c42d824b265c6) (https://github.com/rqtian/llvm80-bufferoverflow.git 3b5df6d2abd65c292843e89e82bd69d3349a41e2)
+Target: x86_64-unknown-linux-gnu
+Thread model: posix
+InstalledDir: /root/llvm/llvm80/build/bin
+Found candidate GCC installation: /usr/lib/gcc/x86_64-linux-gnu/6
+Found candidate GCC installation: /usr/lib/gcc/x86_64-linux-gnu/6.3.0
+Selected GCC installation: /usr/lib/gcc/x86_64-linux-gnu/6.3.0
+Candidate multilib: .;@m64
+Selected multilib: .;@m64
+ "/usr/local/bin/ld" -export-dynamic --hash-style=both --eh-frame-hdr -m elf_x86_64 -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_a73e4 /usr/lib/gcc/x86_64-linux-gnu/6.3.0/../../../x86_64-linux-gnu/crt1.o /usr/lib/gcc/x86_64-linux-gnu/6.3.0/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/6.3.0/crtbegin.o -L/usr/lib/gcc/x86_64-linux-gnu/6.3.0 -L/usr/lib/gcc/x86_64-linux-gnu/6.3.0/../../../x86_64-linux-gnu -L/lib/x86_64-linux-gnu -L/lib/../lib64 -L/usr/lib/x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/6.3.0/../../.. -L/root/llvm/llvm80/build/bin/../lib -L/lib -L/usr/lib -plugin /root/llvm/llvm80/build/bin/../lib/LLVMgold.so -plugin-opt=mcpu=x86-64 CMakeFiles/cmTC_a73e4.dir/feature_tests.cxx.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-linux-gnu/6.3.0/crtend.o /usr/lib/gcc/x86_64-linux-gnu/6.3.0/../../../x86_64-linux-gnu/crtn.o
+======= Start handling file: ld-temp.o =======
+malloc wrapper: malloc
+malloc wrapper: calloc
+malloc wrapper: realloc
+malloc wrapper: valloc
+malloc wrapper: g_malloc
+malloc wrapper: g_realloc
+======= Finish handling file: ld-temp.o =======
+make[1]: Leaving directory '/root/llvm/codesample/39apps/libproxy-0.4.8/libproxy/CMakeFiles/CMakeTmp'
+
+
+    Feature record: CXX_FEATURE:0cxx_aggregate_default_initializers
+    Feature record: CXX_FEATURE:1cxx_alias_templates
+    Feature record: CXX_FEATURE:1cxx_alignas
+    Feature record: CXX_FEATURE:1cxx_alignof
+    Feature record: CXX_FEATURE:1cxx_attributes
+    Feature record: CXX_FEATURE:0cxx_attribute_deprecated
+    Feature record: CXX_FEATURE:1cxx_auto_type
+    Feature record: CXX_FEATURE:0cxx_binary_literals
+    Feature record: CXX_FEATURE:1cxx_constexpr
+    Feature record: CXX_FEATURE:0cxx_contextual_conversions
+    Feature record: CXX_FEATURE:1cxx_decltype
+    Feature record: CXX_FEATURE:0cxx_decltype_auto
+    Feature record: CXX_FEATURE:1cxx_decltype_incomplete_return_types
+    Feature record: CXX_FEATURE:1cxx_default_function_template_args
+    Feature record: CXX_FEATURE:1cxx_defaulted_functions
+    Feature record: CXX_FEATURE:1cxx_defaulted_move_initializers
+    Feature record: CXX_FEATURE:1cxx_delegating_constructors
+    Feature record: CXX_FEATURE:1cxx_deleted_functions
+    Feature record: CXX_FEATURE:0cxx_digit_separators
+    Feature record: CXX_FEATURE:1cxx_enum_forward_declarations
+    Feature record: CXX_FEATURE:1cxx_explicit_conversions
+    Feature record: CXX_FEATURE:1cxx_extended_friend_declarations
+    Feature record: CXX_FEATURE:1cxx_extern_templates
+    Feature record: CXX_FEATURE:1cxx_final
+    Feature record: CXX_FEATURE:1cxx_func_identifier
+    Feature record: CXX_FEATURE:1cxx_generalized_initializers
+    Feature record: CXX_FEATURE:0cxx_generic_lambdas
+    Feature record: CXX_FEATURE:1cxx_inheriting_constructors
+    Feature record: CXX_FEATURE:1cxx_inline_namespaces
+    Feature record: CXX_FEATURE:1cxx_lambdas
+    Feature record: CXX_FEATURE:0cxx_lambda_init_captures
+    Feature record: CXX_FEATURE:1cxx_local_type_template_args
+    Feature record: CXX_FEATURE:1cxx_long_long_type
+    Feature record: CXX_FEATURE:1cxx_noexcept
+    Feature record: CXX_FEATURE:1cxx_nonstatic_member_init
+    Feature record: CXX_FEATURE:1cxx_nullptr
+    Feature record: CXX_FEATURE:1cxx_override
+    Feature record: CXX_FEATURE:1cxx_range_for
+    Feature record: CXX_FEATURE:1cxx_raw_string_literals
+    Feature record: CXX_FEATURE:1cxx_reference_qualified_functions
+    Feature record: CXX_FEATURE:0cxx_relaxed_constexpr
+    Feature record: CXX_FEATURE:0cxx_return_type_deduction
+    Feature record: CXX_FEATURE:1cxx_right_angle_brackets
+    Feature record: CXX_FEATURE:1cxx_rvalue_references
+    Feature record: CXX_FEATURE:1cxx_sizeof_member
+    Feature record: CXX_FEATURE:1cxx_static_assert
+    Feature record: CXX_FEATURE:1cxx_strong_enums
+    Feature record: CXX_FEATURE:1cxx_template_template_parameters
+    Feature record: CXX_FEATURE:1cxx_thread_local
+    Feature record: CXX_FEATURE:1cxx_trailing_return_types
+    Feature record: CXX_FEATURE:1cxx_unicode_literals
+    Feature record: CXX_FEATURE:1cxx_uniform_initialization
+    Feature record: CXX_FEATURE:1cxx_unrestricted_unions
+    Feature record: CXX_FEATURE:1cxx_user_literals
+    Feature record: CXX_FEATURE:0cxx_variable_templates
+    Feature record: CXX_FEATURE:1cxx_variadic_macros
+    Feature record: CXX_FEATURE:1cxx_variadic_templates
+
+
+Detecting CXX [-std=c++98] compiler features compiled with the following output:
+Change Dir: /root/llvm/codesample/39apps/libproxy-0.4.8/libproxy/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_dd0de/fast"
+/usr/bin/make -f CMakeFiles/cmTC_dd0de.dir/build.make CMakeFiles/cmTC_dd0de.dir/build
+make[1]: Entering directory '/root/llvm/codesample/39apps/libproxy-0.4.8/libproxy/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_dd0de.dir/feature_tests.cxx.o
+/root/llvm/llvm80/build/bin/clang++     -flto -v -g    -std=c++98 -o CMakeFiles/cmTC_dd0de.dir/feature_tests.cxx.o -c /root/llvm/codesample/39apps/libproxy-0.4.8/libproxy/CMakeFiles/feature_tests.cxx
+clang version 8.0.1 (https://github.com/llvm-mirror/clang.git 2e4c9c5fc864c2c432e4c262a67c42d824b265c6) (https://github.com/rqtian/llvm80-bufferoverflow.git 3b5df6d2abd65c292843e89e82bd69d3349a41e2)
+Target: x86_64-unknown-linux-gnu
+Thread model: posix
+InstalledDir: /root/llvm/llvm80/build/bin
+Found candidate GCC installation: /usr/lib/gcc/x86_64-linux-gnu/6
+Found candidate GCC installation: /usr/lib/gcc/x86_64-linux-gnu/6.3.0
+Selected GCC installation: /usr/lib/gcc/x86_64-linux-gnu/6.3.0
+Candidate multilib: .;@m64
+Selected multilib: .;@m64
+ "/root/llvm/llvm80/build/bin/clang-8" -cc1 -triple x86_64-unknown-linux-gnu -emit-llvm-bc -flto -flto-unit -disable-free -main-file-name feature_tests.cxx -mrelocation-model static -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debug-info-kind=limited -dwarf-version=4 -debugger-tuning=gdb -v -coverage-notes-file /root/llvm/codesample/39apps/libproxy-0.4.8/libproxy/CMakeFiles/CMakeTmp/CMakeFiles/cmTC_dd0de.dir/feature_tests.cxx.gcno -resource-dir /root/llvm/llvm80/build/lib/clang/8.0.1 -internal-isystem /usr/lib/gcc/x86_64-linux-gnu/6.3.0/../../../../include/c++/6.3.0 -internal-isystem /usr/lib/gcc/x86_64-linux-gnu/6.3.0/../../../../include/x86_64-linux-gnu/c++/6.3.0 -internal-isystem /usr/lib/gcc/x86_64-linux-gnu/6.3.0/../../../../include/x86_64-linux-gnu/c++/6.3.0 -internal-isystem /usr/lib/gcc/x86_64-linux-gnu/6.3.0/../../../../include/c++/6.3.0/backward -internal-isystem /usr/local/include -internal-isystem /root/llvm/llvm80/build/lib/clang/8.0.1/include -internal-externc-isystem /usr/include/x86_64-linux-gnu -internal-externc-isystem /include -internal-externc-isystem /usr/include -std=c++98 -fdeprecated-macro -fdebug-compilation-dir /root/llvm/codesample/39apps/libproxy-0.4.8/libproxy/CMakeFiles/CMakeTmp -ferror-limit 19 -fmessage-length 0 -fobjc-runtime=gcc -fcxx-exceptions -fexceptions -fdiagnostics-show-option -o CMakeFiles/cmTC_dd0de.dir/feature_tests.cxx.o -x c++ /root/llvm/codesample/39apps/libproxy-0.4.8/libproxy/CMakeFiles/feature_tests.cxx -faddrsig
+clang -cc1 version 8.0.1 based upon LLVM 8.0.1 default target x86_64-unknown-linux-gnu
+ignoring nonexistent directory "/include"
+ignoring duplicate directory "/usr/lib/gcc/x86_64-linux-gnu/6.3.0/../../../../include/x86_64-linux-gnu/c++/6.3.0"
+#include "..." search starts here:
+#include <...> search starts here:
+ /usr/lib/gcc/x86_64-linux-gnu/6.3.0/../../../../include/c++/6.3.0
+ /usr/lib/gcc/x86_64-linux-gnu/6.3.0/../../../../include/x86_64-linux-gnu/c++/6.3.0
+ /usr/lib/gcc/x86_64-linux-gnu/6.3.0/../../../../include/c++/6.3.0/backward
+ /usr/local/include
+ /root/llvm/llvm80/build/lib/clang/8.0.1/include
+ /usr/include/x86_64-linux-gnu
+ /usr/include
+End of search list.
+Linking CXX executable cmTC_dd0de
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_dd0de.dir/link.txt --verbose=1
+/root/llvm/llvm80/build/bin/clang++   -flto -v -g     CMakeFiles/cmTC_dd0de.dir/feature_tests.cxx.o  -o cmTC_dd0de -rdynamic 
+clang version 8.0.1 (https://github.com/llvm-mirror/clang.git 2e4c9c5fc864c2c432e4c262a67c42d824b265c6) (https://github.com/rqtian/llvm80-bufferoverflow.git 3b5df6d2abd65c292843e89e82bd69d3349a41e2)
+Target: x86_64-unknown-linux-gnu
+Thread model: posix
+InstalledDir: /root/llvm/llvm80/build/bin
+Found candidate GCC installation: /usr/lib/gcc/x86_64-linux-gnu/6
+Found candidate GCC installation: /usr/lib/gcc/x86_64-linux-gnu/6.3.0
+Selected GCC installation: /usr/lib/gcc/x86_64-linux-gnu/6.3.0
+Candidate multilib: .;@m64
+Selected multilib: .;@m64
+ "/usr/local/bin/ld" -export-dynamic --hash-style=both --eh-frame-hdr -m elf_x86_64 -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_dd0de /usr/lib/gcc/x86_64-linux-gnu/6.3.0/../../../x86_64-linux-gnu/crt1.o /usr/lib/gcc/x86_64-linux-gnu/6.3.0/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/6.3.0/crtbegin.o -L/usr/lib/gcc/x86_64-linux-gnu/6.3.0 -L/usr/lib/gcc/x86_64-linux-gnu/6.3.0/../../../x86_64-linux-gnu -L/lib/x86_64-linux-gnu -L/lib/../lib64 -L/usr/lib/x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/6.3.0/../../.. -L/root/llvm/llvm80/build/bin/../lib -L/lib -L/usr/lib -plugin /root/llvm/llvm80/build/bin/../lib/LLVMgold.so -plugin-opt=mcpu=x86-64 CMakeFiles/cmTC_dd0de.dir/feature_tests.cxx.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-linux-gnu/6.3.0/crtend.o /usr/lib/gcc/x86_64-linux-gnu/6.3.0/../../../x86_64-linux-gnu/crtn.o
+======= Start handling file: ld-temp.o =======
+malloc wrapper: malloc
+malloc wrapper: calloc
+malloc wrapper: realloc
+malloc wrapper: valloc
+malloc wrapper: g_malloc
+malloc wrapper: g_realloc
+======= Finish handling file: ld-temp.o =======
+make[1]: Leaving directory '/root/llvm/codesample/39apps/libproxy-0.4.8/libproxy/CMakeFiles/CMakeTmp'
+
+
+    Feature record: CXX_FEATURE:0cxx_aggregate_default_initializers
+    Feature record: CXX_FEATURE:0cxx_alias_templates
+    Feature record: CXX_FEATURE:0cxx_alignas
+    Feature record: CXX_FEATURE:0cxx_alignof
+    Feature record: CXX_FEATURE:0cxx_attributes
+    Feature record: CXX_FEATURE:0cxx_attribute_deprecated
+    Feature record: CXX_FEATURE:0cxx_auto_type
+    Feature record: CXX_FEATURE:0cxx_binary_literals
+    Feature record: CXX_FEATURE:0cxx_constexpr
+    Feature record: CXX_FEATURE:0cxx_contextual_conversions
+    Feature record: CXX_FEATURE:0cxx_decltype
+    Feature record: CXX_FEATURE:0cxx_decltype_auto
+    Feature record: CXX_FEATURE:0cxx_decltype_incomplete_return_types
+    Feature record: CXX_FEATURE:0cxx_default_function_template_args
+    Feature record: CXX_FEATURE:0cxx_defaulted_functions
+    Feature record: CXX_FEATURE:0cxx_defaulted_move_initializers
+    Feature record: CXX_FEATURE:0cxx_delegating_constructors
+    Feature record: CXX_FEATURE:0cxx_deleted_functions
+    Feature record: CXX_FEATURE:0cxx_digit_separators
+    Feature record: CXX_FEATURE:0cxx_enum_forward_declarations
+    Feature record: CXX_FEATURE:0cxx_explicit_conversions
+    Feature record: CXX_FEATURE:0cxx_extended_friend_declarations
+    Feature record: CXX_FEATURE:0cxx_extern_templates
+    Feature record: CXX_FEATURE:0cxx_final
+    Feature record: CXX_FEATURE:0cxx_func_identifier
+    Feature record: CXX_FEATURE:0cxx_generalized_initializers
+    Feature record: CXX_FEATURE:0cxx_generic_lambdas
+    Feature record: CXX_FEATURE:0cxx_inheriting_constructors
+    Feature record: CXX_FEATURE:0cxx_inline_namespaces
+    Feature record: CXX_FEATURE:0cxx_lambdas
+    Feature record: CXX_FEATURE:0cxx_lambda_init_captures
+    Feature record: CXX_FEATURE:0cxx_local_type_template_args
+    Feature record: CXX_FEATURE:0cxx_long_long_type
+    Feature record: CXX_FEATURE:0cxx_noexcept
+    Feature record: CXX_FEATURE:0cxx_nonstatic_member_init
+    Feature record: CXX_FEATURE:0cxx_nullptr
+    Feature record: CXX_FEATURE:0cxx_override
+    Feature record: CXX_FEATURE:0cxx_range_for
+    Feature record: CXX_FEATURE:0cxx_raw_string_literals
+    Feature record: CXX_FEATURE:0cxx_reference_qualified_functions
+    Feature record: CXX_FEATURE:0cxx_relaxed_constexpr
+    Feature record: CXX_FEATURE:0cxx_return_type_deduction
+    Feature record: CXX_FEATURE:0cxx_right_angle_brackets
+    Feature record: CXX_FEATURE:0cxx_rvalue_references
+    Feature record: CXX_FEATURE:0cxx_sizeof_member
+    Feature record: CXX_FEATURE:0cxx_static_assert
+    Feature record: CXX_FEATURE:0cxx_strong_enums
+    Feature record: CXX_FEATURE:1cxx_template_template_parameters
+    Feature record: CXX_FEATURE:0cxx_thread_local
+    Feature record: CXX_FEATURE:0cxx_trailing_return_types
+    Feature record: CXX_FEATURE:0cxx_unicode_literals
+    Feature record: CXX_FEATURE:0cxx_uniform_initialization
+    Feature record: CXX_FEATURE:0cxx_unrestricted_unions
+    Feature record: CXX_FEATURE:0cxx_user_literals
+    Feature record: CXX_FEATURE:0cxx_variable_templates
+    Feature record: CXX_FEATURE:0cxx_variadic_macros
+    Feature record: CXX_FEATURE:0cxx_variadic_templates

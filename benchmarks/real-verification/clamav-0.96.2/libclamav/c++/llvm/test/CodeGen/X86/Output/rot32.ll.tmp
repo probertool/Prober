@@ -1,0 +1,92 @@
+	.file	"<stdin>"
+	.text
+	.globl	foo
+	.align	16, 0x90
+	.type	foo,@function
+foo:                                    # @foo
+# BB#0:                                 # %entry
+	movb	12(%esp), %cl
+	movl	4(%esp), %eax
+	roll	%cl, %eax
+	ret
+	.size	foo, .-foo
+
+	.globl	bar
+	.align	16, 0x90
+	.type	bar,@function
+bar:                                    # @bar
+# BB#0:                                 # %entry
+	movl	12(%esp), %ecx
+	movl	4(%esp), %edx
+	movl	8(%esp), %eax
+	shldl	%cl, %edx, %eax
+	ret
+	.size	bar, .-bar
+
+	.globl	un
+	.align	16, 0x90
+	.type	un,@function
+un:                                     # @un
+# BB#0:                                 # %entry
+	movb	12(%esp), %cl
+	movl	4(%esp), %eax
+	rorl	%cl, %eax
+	ret
+	.size	un, .-un
+
+	.globl	bu
+	.align	16, 0x90
+	.type	bu,@function
+bu:                                     # @bu
+# BB#0:                                 # %entry
+	movl	12(%esp), %ecx
+	movl	4(%esp), %edx
+	movl	8(%esp), %eax
+	shrdl	%cl, %edx, %eax
+	ret
+	.size	bu, .-bu
+
+	.globl	xfoo
+	.align	16, 0x90
+	.type	xfoo,@function
+xfoo:                                   # @xfoo
+# BB#0:                                 # %entry
+	movl	4(%esp), %eax
+	roll	$7, %eax
+	ret
+	.size	xfoo, .-xfoo
+
+	.globl	xbar
+	.align	16, 0x90
+	.type	xbar,@function
+xbar:                                   # @xbar
+# BB#0:                                 # %entry
+	movl	4(%esp), %ecx
+	movl	8(%esp), %eax
+	shldl	$7, %ecx, %eax
+	ret
+	.size	xbar, .-xbar
+
+	.globl	xun
+	.align	16, 0x90
+	.type	xun,@function
+xun:                                    # @xun
+# BB#0:                                 # %entry
+	movl	4(%esp), %eax
+	roll	$25, %eax
+	ret
+	.size	xun, .-xun
+
+	.globl	xbu
+	.align	16, 0x90
+	.type	xbu,@function
+xbu:                                    # @xbu
+# BB#0:                                 # %entry
+	movl	4(%esp), %ecx
+	movl	8(%esp), %eax
+	shrdl	$7, %ecx, %eax
+	ret
+	.size	xbu, .-xbu
+
+
+	.section	.note.GNU-stack,"",@progbits

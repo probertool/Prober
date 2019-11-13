@@ -1,0 +1,36 @@
+	.file	"<stdin>"
+	.text
+	.globl	foo
+	.align	16, 0x90
+	.type	foo,@function
+foo:                                    # @foo
+# BB#0:                                 # %entry
+	pushl	%esi
+	movl	20(%esp), %eax
+	testl	%eax, %eax
+	jle	.LBB1_3
+# BB#1:                                 # %entry.bb_crit_edge
+	movl	16(%esp), %ecx
+	movl	12(%esp), %edx
+	movl	8(%esp), %esi
+	.align	16, 0x90
+.LBB1_2:                                # %bb
+                                        # =>This Inner Loop Header: Depth=1
+	movss	(%esi), %xmm0
+	addss	(%edx), %xmm0
+	movss	%xmm0, (%ecx)
+	movss	40(%esi), %xmm0
+	addss	40(%edx), %xmm0
+	movss	%xmm0, 40(%ecx)
+	addl	$4, %esi
+	addl	$4, %edx
+	addl	$4, %ecx
+	decl	%eax
+	jne	.LBB1_2
+.LBB1_3:                                # %return
+	popl	%esi
+	ret
+	.size	foo, .-foo
+
+
+	.section	.note.GNU-stack,"",@progbits

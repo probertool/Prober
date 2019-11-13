@@ -1,0 +1,109 @@
+	.file	"<stdin>"
+	.text
+	.globl	test_long_div
+	.align	16, 0x90
+	.type	test_long_div,@function
+test_long_div:                          # @test_long_div
+.Leh_func_begin1:
+# BB#0:
+	pushl	%ebp
+.Llabel1:
+	movl	%esp, %ebp
+.Llabel2:
+	andl	$-16, %esp
+	pushl	%esi
+	subl	$60, %esp
+.Llabel3:
+	movaps	%xmm1, 16(%esp)         # 16-byte Spill
+	movaps	%xmm0, 32(%esp)         # 16-byte Spill
+	pshufd	$3, %xmm1, %xmm0
+	movd	%xmm0, 12(%esp)
+	movaps	%xmm1, %xmm0            #  Reload Reuse
+	movhlps	%xmm0, %xmm0
+	movd	%xmm0, 8(%esp)
+	pshufd	$3, 32(%esp), %xmm0     # 16-byte Folded Reload
+	movd	%xmm0, 4(%esp)
+	movaps	32(%esp), %xmm0         # 16-byte Reload
+	movhlps	%xmm0, %xmm0
+	movd	%xmm0, (%esp)
+	call	__divdi3
+	movl	%eax, %esi
+	pshufd	$1, 16(%esp), %xmm0     # 16-byte Folded Reload
+	movd	%xmm0, 12(%esp)
+	movaps	16(%esp), %xmm1         # 16-byte Reload
+	movd	%xmm1, 8(%esp)
+	pshufd	$1, 32(%esp), %xmm0     # 16-byte Folded Reload
+	movd	%xmm0, 4(%esp)
+	movaps	32(%esp), %xmm0         # 16-byte Reload
+	movd	%xmm0, (%esp)
+	movd	%edx, %xmm0
+	movaps	%xmm0, 32(%esp)         # 16-byte Spill
+	call	__divdi3
+	movd	%edx, %xmm1
+	punpckldq	32(%esp), %xmm1 # 16-byte Folded Reload
+	movd	%esi, %xmm2
+	movd	%eax, %xmm0
+	punpckldq	%xmm2, %xmm0
+	punpckldq	%xmm1, %xmm0
+	addl	$60, %esp
+	popl	%esi
+	movl	%ebp, %esp
+	popl	%ebp
+	ret
+	.size	test_long_div, .-test_long_div
+.Leh_func_end1:
+
+	.section	.eh_frame,"aw",@progbits
+.LEH_frame0:
+.Lsection_eh_frame:
+.Leh_frame_common:
+	.set	.Lset1eh,.Leh_frame_common_end-.Leh_frame_common_begin
+	.long	.Lset1eh                # Length of Common Information Entry
+.Leh_frame_common_begin:
+	.long	0                       # CIE Identifier Tag
+	.byte	1                       # DW_CIE_VERSION
+	.byte	0
+                                        # CIE Augmentation
+	.uleb128	1               # CIE Code Alignment Factor
+	.sleb128	-4              # CIE Data Alignment Factor
+	.byte	8
+                                        # CIE Return Address Column
+	.byte	12                      # CFA_def_cfa
+	.uleb128	4               # Register
+	.uleb128	4               # Offset
+	.byte	136                     # DW_CFA_offset + Reg (8)
+	.uleb128	1               # Offset
+	.align	4
+.Leh_frame_common_end:
+
+.Ltest_long_div.eh:
+	.set	.Lset2eh,.Leh_frame_end1-.Leh_frame_begin1
+	.long	.Lset2eh                # Length of Frame Information Entry
+.Leh_frame_begin1:
+	.long	.Leh_frame_begin1-.Leh_frame_common # FDE CIE offset
+	.long	.Leh_func_begin1        # FDE initial location
+	.set	.Lset3eh,.Leh_func_end1-.Leh_func_begin1
+	.long	.Lset3eh                # FDE address range
+	.uleb128	0               # Augmentation size
+	.byte	4                       # CFA_advance_loc4
+	.set	.Lset4eh,.Llabel1-.Leh_func_begin1
+	.long	.Lset4eh
+	.byte	14                      # CFA_def_cfa_offset
+	.uleb128	8               # Offset
+	.byte	133                     # DW_CFA_offset + Reg (5)
+	.uleb128	2               # Offset
+	.byte	4                       # CFA_advance_loc4
+	.set	.Lset5eh,.Llabel2-.Llabel1
+	.long	.Lset5eh
+	.byte	13                      # CFA_def_cfa_register
+	.uleb128	5               # Register
+	.byte	4                       # CFA_advance_loc4
+	.set	.Lset6eh,.Llabel3-.Llabel2
+	.long	.Lset6eh
+	.byte	134                     # DW_CFA_offset + Reg (6)
+	.uleb128	3               # Offset
+	.align	4
+.Leh_frame_end1:
+
+
+	.section	.note.GNU-stack,"",@progbits

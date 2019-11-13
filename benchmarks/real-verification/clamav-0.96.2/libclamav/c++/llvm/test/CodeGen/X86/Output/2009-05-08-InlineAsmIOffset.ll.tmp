@@ -1,0 +1,17 @@
+	.section	__TEXT,__text,regular,pure_instructions
+	.globl	_x
+	.align	4, 0x90
+_x:                                     ## @x
+## BB#0:                                ## %entry
+	subl	$12, %esp
+	## InlineAsm Start
+	1: $_pv_cpu_ops+8
+	## InlineAsm End
+	## InlineAsm Start
+	2: $_G
+	## InlineAsm End
+	addl	$12, %esp
+	ret
+
+
+.subsections_via_symbols

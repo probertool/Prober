@@ -1,0 +1,12 @@
+prefix=/root/llvm/codesample/39apps/GraphicsMagick-1.2.2/build
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include/GraphicsMagick
+
+
+Name: GraphicsMagickWand
+Version: 1.2.2
+Description: GraphicsMagick Wand image processing library
+Requires: GraphicsMagick
+Libs: -lGraphicsMagickWand
+Cflags:

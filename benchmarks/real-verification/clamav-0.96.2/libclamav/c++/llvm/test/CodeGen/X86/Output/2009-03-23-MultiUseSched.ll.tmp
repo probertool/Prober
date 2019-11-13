@@ -1,0 +1,242 @@
+	.file	"<stdin>"
+	.text
+	.globl	foo
+	.align	16, 0x90
+	.type	foo,@function
+foo:                                    # @foo
+# BB#0:
+	pushq	%r14
+	pushq	%rbx
+	movq	X(%rip), %rax
+	movq	X(%rip), %rcx
+	movq	X(%rip), %rdx
+	leaq	(%rdx,%rcx), %rsi
+	leaq	(%rsi,%rax), %rdi
+	addq	%rsi, %rdi
+	addq	%rax, %rdi
+	movq	X(%rip), %rsi
+	movq	X(%rip), %r8
+	movq	X(%rip), %r9
+	movq	X(%rip), %r10
+	leaq	(%r10,%r9), %r11
+	addq	%r8, %r11
+	movq	%r8, %rbx
+	addq	X(%rip), %rbx
+	addq	%r11, %rbx
+	movq	X(%rip), %r11
+	bswapq	%r11
+	addq	%rbx, %r11
+	addq	%r11, %rdi
+	leaq	(%rcx,%rax), %rbx
+	leaq	(%rdi,%rbx), %r14
+	addq	%rbx, %r14
+	addq	%rdi, %r14
+	leaq	(%r8,%r9), %rbx
+	addq	%rsi, %r11
+	addq	%r11, %rbx
+	movq	X(%rip), %rsi
+	bswapq	%rsi
+	addq	%r10, %rsi
+	addq	%rbx, %rsi
+	addq	%r11, %rsi
+	addq	%rsi, %r14
+	leaq	(%rdi,%rax), %r10
+	leaq	(%r14,%r10), %rbx
+	addq	%r10, %rbx
+	addq	%r14, %rbx
+	addq	%rdx, %rsi
+	leaq	(%r11,%r8), %rdx
+	addq	%rsi, %rdx
+	movq	X(%rip), %r10
+	bswapq	%r10
+	addq	%r9, %r10
+	addq	%rdx, %r10
+	addq	%rsi, %r10
+	addq	%r10, %rbx
+	leaq	(%r14,%rdi), %rdx
+	leaq	(%rbx,%rdx), %r9
+	addq	%rdx, %r9
+	addq	%rbx, %r9
+	addq	%rcx, %r10
+	leaq	(%rsi,%r11), %rcx
+	addq	%r10, %rcx
+	movq	X(%rip), %rdx
+	bswapq	%rdx
+	addq	%r8, %rdx
+	addq	%rcx, %rdx
+	addq	%r10, %rdx
+	addq	%rdx, %r9
+	leaq	(%rbx,%r14), %rcx
+	leaq	(%r9,%rcx), %r8
+	addq	%rcx, %r8
+	addq	%r9, %r8
+	addq	%rax, %rdx
+	leaq	(%r10,%rsi), %rax
+	addq	%rdx, %rax
+	movq	X(%rip), %rcx
+	bswapq	%rcx
+	addq	%r11, %rcx
+	addq	%rax, %rcx
+	addq	%rdx, %rcx
+	addq	%rcx, %r8
+	leaq	(%r9,%rbx), %rax
+	leaq	(%r8,%rax), %r11
+	addq	%rax, %r11
+	addq	%r8, %r11
+	addq	%rdi, %rcx
+	leaq	(%rdx,%r10), %rax
+	addq	%rcx, %rax
+	movq	X(%rip), %rdi
+	bswapq	%rdi
+	addq	%rsi, %rdi
+	addq	%rax, %rdi
+	addq	%rcx, %rdi
+	addq	%rdi, %r11
+	leaq	(%r8,%r9), %rax
+	leaq	(%r11,%rax), %rsi
+	addq	%rax, %rsi
+	addq	%r11, %rsi
+	addq	%r14, %rdi
+	leaq	(%rcx,%rdx), %rax
+	addq	%rdi, %rax
+	movq	X(%rip), %r14
+	bswapq	%r14
+	addq	%r10, %r14
+	addq	%rax, %r14
+	addq	%rdi, %r14
+	addq	%r14, %rsi
+	leaq	(%r11,%r8), %rax
+	leaq	(%rsi,%rax), %r10
+	addq	%rax, %r10
+	addq	%rsi, %r10
+	addq	%rbx, %r14
+	leaq	(%rdi,%rcx), %rax
+	addq	%r14, %rax
+	movq	X(%rip), %rbx
+	bswapq	%rbx
+	addq	%rdx, %rbx
+	addq	%rax, %rbx
+	addq	%r14, %rbx
+	addq	%rbx, %r10
+	leaq	(%rsi,%r11), %rax
+	leaq	(%r10,%rax), %rdx
+	addq	%rax, %rdx
+	addq	%r10, %rdx
+	addq	%r9, %rbx
+	leaq	(%r14,%rdi), %rax
+	addq	%rbx, %rax
+	movq	X(%rip), %r9
+	bswapq	%r9
+	addq	%rcx, %r9
+	addq	%rax, %r9
+	addq	%rbx, %r9
+	addq	%r9, %rdx
+	leaq	(%r10,%rsi), %rax
+	leaq	(%rdx,%rax), %rcx
+	addq	%rax, %rcx
+	addq	%rdx, %rcx
+	addq	%r8, %r9
+	leaq	(%rbx,%r14), %rax
+	addq	%r9, %rax
+	movq	X(%rip), %r8
+	bswapq	%r8
+	addq	%rdi, %r8
+	addq	%rax, %r8
+	addq	%r9, %r8
+	addq	%r8, %rcx
+	leaq	(%rdx,%r10), %rax
+	leaq	(%rcx,%rax), %rdi
+	addq	%rax, %rdi
+	addq	%rcx, %rdi
+	addq	%r11, %r8
+	leaq	(%r9,%rbx), %rax
+	addq	%r8, %rax
+	movq	X(%rip), %r11
+	bswapq	%r11
+	addq	%r14, %r11
+	addq	%rax, %r11
+	addq	%r8, %r11
+	addq	%r11, %rdi
+	leaq	(%rcx,%rdx), %rax
+	leaq	(%rdi,%rax), %r14
+	addq	%rax, %r14
+	addq	%rdi, %r14
+	addq	%rsi, %r11
+	leaq	(%r8,%r9), %rax
+	addq	%r11, %rax
+	movq	X(%rip), %rsi
+	bswapq	%rsi
+	addq	%rbx, %rsi
+	addq	%rax, %rsi
+	addq	%r11, %rsi
+	addq	%rsi, %r14
+	leaq	(%rdi,%rcx), %rax
+	leaq	(%r14,%rax), %rbx
+	addq	%rax, %rbx
+	addq	%r14, %rbx
+	addq	%r10, %rsi
+	leaq	(%r11,%r8), %rax
+	addq	%rsi, %rax
+	movq	X(%rip), %r10
+	bswapq	%r10
+	addq	%r9, %r10
+	addq	%rax, %r10
+	addq	%rsi, %r10
+	addq	%r10, %rbx
+	leaq	(%r14,%rdi), %rax
+	leaq	(%rbx,%rax), %r9
+	addq	%rax, %r9
+	addq	%rbx, %r9
+	addq	%rdx, %r10
+	leaq	(%rsi,%r11), %rax
+	addq	%r10, %rax
+	movq	X(%rip), %rdx
+	bswapq	%rdx
+	addq	%r8, %rdx
+	addq	%rax, %rdx
+	addq	%r10, %rdx
+	addq	%rdx, %r9
+	addq	%r14, %rbx
+	leaq	(%r9,%rbx), %r8
+	addq	%rbx, %r8
+	addq	%r9, %r8
+	addq	%rcx, %rdx
+	leaq	(%r10,%rsi), %rax
+	addq	%rdx, %rax
+	movq	X(%rip), %rcx
+	bswapq	%rcx
+	addq	%r11, %rcx
+	addq	%rax, %rcx
+	addq	%rdx, %rcx
+	addq	%rcx, %r8
+	addq	%rdi, %rcx
+	addq	%r10, %rdx
+	addq	%rcx, %rdx
+	movq	X(%rip), %rax
+	bswapq	%rax
+	movq	%rax, X(%rip)
+	addq	%rsi, %rax
+	addq	%rdx, %rax
+	addq	%rcx, %rax
+	addq	%r8, %rax
+	popq	%rbx
+	popq	%r14
+	ret
+	.size	foo, .-foo
+
+
+	.section	.note.GNU-stack,"",@progbits
+===-------------------------------------------------------------------------===
+                          ... Statistics Collected ...
+===-------------------------------------------------------------------------===
+
+217 asm-printer   - Number of machine instrs printed
+216 liveintervals - Number of original intervals
+ 67 regalloc      - Number of iterations performed
+143 regcoalescing - Number of identity moves eliminated after coalescing
+143 regcoalescing - Number of interval joins performed
+  7 twoaddrinstr  - Number of instructions aggressively commuted
+ 20 twoaddrinstr  - Number of instructions commuted to coalesce
+ 44 twoaddrinstr  - Number of instructions promoted to 3-address
+187 twoaddrinstr  - Number of two-address instructions
+

@@ -1,0 +1,115 @@
+	.file	"<stdin>"
+	.section	.rodata.cst16,"aM",@progbits,16
+	.align	16
+.LCPI1_0:                               # constant pool <4 x i32>
+	.long	117                     # 0x75
+	.long	117                     # 0x75
+	.long	117                     # 0x75
+	.long	117                     # 0x75
+	.text
+	.globl	a
+	.align	16, 0x90
+	.type	a,@function
+a:                                      # @a
+# BB#0:
+	movaps	.LCPI1_0, %xmm1
+	pmulld	%xmm1, %xmm0
+	ret
+	.size	a, .-a
+
+	.section	.rodata.cst16,"aM",@progbits,16
+	.align	16
+.LCPI2_0:                               # constant pool <4 x i32>
+	.long	117                     # 0x75
+	.long	0                       # 0x0
+	.long	117                     # 0x75
+	.long	0                       # 0x0
+	.text
+	.globl	b
+	.align	16, 0x90
+	.type	b,@function
+b:                                      # @b
+# BB#0:
+	movaps	.LCPI2_0, %xmm1
+	movaps	%xmm0, %xmm2
+	pmuludq	%xmm1, %xmm2
+	movaps	%xmm1, %xmm3
+	psrlq	$32, %xmm3
+	pmuludq	%xmm0, %xmm3
+	psllq	$32, %xmm3
+	paddq	%xmm2, %xmm3
+	psrlq	$32, %xmm0
+	pmuludq	%xmm1, %xmm0
+	psllq	$32, %xmm0
+	paddq	%xmm3, %xmm0
+	ret
+	.size	b, .-b
+
+	.globl	c
+	.align	16, 0x90
+	.type	c,@function
+c:                                      # @c
+# BB#0:
+	pmulld	%xmm1, %xmm0
+	ret
+	.size	c, .-c
+
+	.globl	d
+	.align	16, 0x90
+	.type	d,@function
+d:                                      # @d
+# BB#0:
+	movaps	%xmm0, %xmm2
+	pmuludq	%xmm1, %xmm2
+	movaps	%xmm1, %xmm3
+	psrlq	$32, %xmm3
+	pmuludq	%xmm0, %xmm3
+	psllq	$32, %xmm3
+	paddq	%xmm2, %xmm3
+	psrlq	$32, %xmm0
+	pmuludq	%xmm1, %xmm0
+	psllq	$32, %xmm0
+	paddq	%xmm3, %xmm0
+	ret
+	.size	d, .-d
+
+	.globl	e
+	.align	16, 0x90
+	.type	e,@function
+e:                                      # @e
+# BB#0:
+	subl	$28, %esp
+	pmulld	%xmm1, %xmm0
+	movaps	%xmm0, (%esp)           # 16-byte Spill
+	call	foo
+	movaps	(%esp), %xmm0           # 16-byte Reload
+	addl	$28, %esp
+	ret
+	.size	e, .-e
+
+	.globl	f
+	.align	16, 0x90
+	.type	f,@function
+f:                                      # @f
+# BB#0:
+	subl	$28, %esp
+	movaps	%xmm0, %xmm2
+	pmuludq	%xmm1, %xmm2
+	movaps	%xmm1, %xmm3
+	psrlq	$32, %xmm3
+	pmuludq	%xmm0, %xmm3
+	psllq	$32, %xmm3
+	paddq	%xmm2, %xmm3
+	psrlq	$32, %xmm0
+	pmuludq	%xmm1, %xmm0
+	psllq	$32, %xmm0
+	paddq	%xmm3, %xmm0
+	movaps	%xmm0, (%esp)           # 16-byte Spill
+	call	foo
+	movaps	(%esp), %xmm0           # 16-byte Reload
+	addl	$28, %esp
+	ret
+	.size	f, .-f
+
+
+	.section	.note.GNU-stack,"",@progbits

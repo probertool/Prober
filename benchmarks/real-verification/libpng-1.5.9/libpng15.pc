@@ -1,0 +1,11 @@
+prefix=/root/llvm/codesample/39apps/libpng-1.5.9/build
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include/libpng15
+
+Name: libpng
+Description: Loads and saves PNG files
+Version: 1.5.9
+Libs: -L${libdir} -lpng15
+Libs.private: -lm -lz -lm 
+Cflags: -I${includedir}

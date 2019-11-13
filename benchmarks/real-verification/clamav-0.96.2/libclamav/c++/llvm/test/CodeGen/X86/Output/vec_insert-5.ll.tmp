@@ -1,0 +1,51 @@
+	.file	"<stdin>"
+	.text
+	.globl	t1
+	.align	16, 0x90
+	.type	t1,@function
+t1:                                     # @t1
+# BB#0:
+	movl	4(%esp), %eax
+	shll	$12, %eax
+	movd	%eax, %mm0
+	psllq	$32, %mm0
+	movl	8(%esp), %eax
+	movq	%mm0, (%eax)
+	ret
+	.size	t1, .-t1
+
+	.globl	t2
+	.align	16, 0x90
+	.type	t2,@function
+t2:                                     # @t2
+# BB#0:
+	movl	4(%esp), %eax
+	movaps	(%eax), %xmm0
+	pslldq	$12, %xmm0
+	ret
+	.size	t2, .-t2
+
+	.globl	t3
+	.align	16, 0x90
+	.type	t3,@function
+t3:                                     # @t3
+# BB#0:
+	movl	4(%esp), %eax
+	movaps	(%eax), %xmm0
+	psrldq	$8, %xmm0
+	ret
+	.size	t3, .-t3
+
+	.globl	t4
+	.align	16, 0x90
+	.type	t4,@function
+t4:                                     # @t4
+# BB#0:
+	movl	4(%esp), %eax
+	movaps	(%eax), %xmm0
+	psrldq	$12, %xmm0
+	ret
+	.size	t4, .-t4
+
+
+	.section	.note.GNU-stack,"",@progbits

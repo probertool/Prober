@@ -1,0 +1,51 @@
+	.file	"<stdin>"
+	.text
+	.globl	borf
+	.align	16, 0x90
+	.type	borf,@function
+borf:                                   # @borf
+# BB#0:                                 # %bb4.thread
+	pushl	%ebx
+	pushl	%edi
+	pushl	%esi
+	movl	$307680, %eax           # imm = 0x4B1E0
+	movl	20(%esp), %ecx
+	movl	16(%esp), %edx
+	.align	16, 0x90
+.LBB1_1:                                # %bb2.outer
+                                        # =>This Loop Header: Depth=1
+                                        #     Child Loop BB1_2 Depth 2
+	leal	(%edx,%eax), %esi
+	xorl	%edi, %edi
+	.align	16, 0x90
+.LBB1_2:                                # %bb2
+                                        #   Parent Loop BB1_1 Depth=1
+                                        # =>  This Inner Loop Header: Depth=2
+	movb	-961(%esi,%edi), %bl
+	addb	-962(%esi,%edi), %bl
+	addb	-960(%esi,%edi), %bl
+	addb	-482(%esi,%edi), %bl
+	addb	-481(%esi,%edi), %bl
+	addb	-480(%esi,%edi), %bl
+	addb	(%esi,%edi), %bl
+	addb	-1(%esi,%edi), %bl
+	addb	-2(%esi,%edi), %bl
+	movb	%bl, (%edi,%ecx)
+	decl	%edi
+	cmpl	$-478, %edi             # imm = 0xFFFFFFFFFFFFFE22
+	jne	.LBB1_2
+# BB#3:                                 # %bb4
+                                        #   in Loop: Header=BB1_1 Depth=1
+	addl	$-478, %ecx             # imm = 0xFFFFFFFFFFFFFE22
+	addl	$-480, %eax             # imm = 0xFFFFFFFFFFFFFE20
+	cmpl	$1440, %eax             # imm = 0x5A0
+	jne	.LBB1_1
+# BB#4:                                 # %return
+	popl	%esi
+	popl	%edi
+	popl	%ebx
+	ret
+	.size	borf, .-borf
+
+
+	.section	.note.GNU-stack,"",@progbits

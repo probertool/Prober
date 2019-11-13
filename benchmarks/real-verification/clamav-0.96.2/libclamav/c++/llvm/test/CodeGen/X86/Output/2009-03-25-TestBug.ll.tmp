@@ -1,0 +1,35 @@
+	.file	"<stdin>"
+	.text
+	.globl	func
+	.align	16, 0x90
+	.type	func,@function
+func:                                   # @func
+# BB#0:                                 # %bb1579.i.i
+	subl	$4, %esp
+	movl	8(%esp), %eax
+	testb	$2, (%eax)
+	jne	.LBB1_3
+# BB#1:                                 # %hello
+	movl	$hello, (%esp)
+.LBB1_2:                                # %hello
+	call	printf
+	addl	$4, %esp
+	ret
+.LBB1_3:                                # %world
+	movl	$world, (%esp)
+	jmp	.LBB1_2
+	.size	func, .-func
+
+	.type	hello,@object
+	.section	.rodata.str1.1,"aMS",@progbits,1
+hello:                                  # @hello
+	.asciz	 "hello\n"
+	.size	hello, 7
+
+	.type	world,@object
+world:                                  # @world
+	.asciz	 "world\n"
+	.size	world, 7
+
+
+	.section	.note.GNU-stack,"",@progbits

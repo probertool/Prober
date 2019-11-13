@@ -1,0 +1,1720 @@
+	.section	__TEXT,__text,regular,pure_instructions
+	.globl	_test_op_ignore
+	.align	4, 0x90
+_test_op_ignore:                        ## @test_op_ignore
+## BB#0:                                ## %entry
+	pushl	%ebp
+	pushl	%ebx
+	pushl	%edi
+	pushl	%esi
+	movl	L_sc$non_lazy_ptr, %ecx
+	lock
+	incb	(%ecx)
+	movl	L_uc$non_lazy_ptr, %eax
+	lock
+	incb	(%eax)
+	movl	L_ss$non_lazy_ptr, %edx
+	lock
+	incw	(%edx)
+	movl	L_us$non_lazy_ptr, %esi
+	lock
+	incw	(%esi)
+	movl	L_si$non_lazy_ptr, %edi
+	lock
+	incl	(%edi)
+	movl	L_ui$non_lazy_ptr, %ebx
+	lock
+	incl	(%ebx)
+	movl	L_sl$non_lazy_ptr, %ebp
+	lock
+	incl	(%ebp)
+	movl	L_ul$non_lazy_ptr, %ebp
+	lock
+	incl	(%ebp)
+	lock
+	decb	(%ecx)
+	lock
+	decb	(%eax)
+	lock
+	decw	(%edx)
+	lock
+	decw	(%esi)
+	lock
+	decl	(%edi)
+	lock
+	decl	(%ebx)
+	movl	L_sl$non_lazy_ptr, %ebp
+	lock
+	decl	(%ebp)
+	movl	L_ul$non_lazy_ptr, %ebp
+	lock
+	decl	(%ebp)
+	movb	$1, %dl
+	.align	4, 0x90
+LBB1_1:                                 ## %entry
+                                        ## =>This Inner Loop Header: Depth=1
+	movb	(%ecx), %al
+	movb	%al, %ah
+	orb	%dl, %ah
+	lock
+	cmpxchgb	%ah, (%ecx)
+	jne	LBB1_1
+	.align	4, 0x90
+LBB1_2:                                 ## %entry
+                                        ## =>This Inner Loop Header: Depth=1
+	movl	L_uc$non_lazy_ptr, %esi
+	movb	(%esi), %al
+	movb	%al, %ah
+	orb	%dl, %ah
+	lock
+	cmpxchgb	%ah, (%esi)
+	jne	LBB1_2
+## BB#3:                                ## %entry
+	movw	$1, %si
+	.align	4, 0x90
+LBB1_4:                                 ## %entry
+                                        ## =>This Inner Loop Header: Depth=1
+	movl	L_ss$non_lazy_ptr, %edi
+	movw	(%edi), %ax
+	movw	%ax, %bx
+	orw	%si, %bx
+	lock
+	cmpxchgw	%bx, (%edi)
+	jne	LBB1_4
+	.align	4, 0x90
+LBB1_5:                                 ## %entry
+                                        ## =>This Inner Loop Header: Depth=1
+	movl	L_us$non_lazy_ptr, %eax
+	movw	(%eax), %ax
+	movw	%ax, %di
+	orw	%si, %di
+	movl	L_us$non_lazy_ptr, %ebx
+	lock
+	cmpxchgw	%di, (%ebx)
+	jne	LBB1_5
+## BB#6:                                ## %entry
+	movl	$1, %edi
+	.align	4, 0x90
+LBB1_7:                                 ## %entry
+                                        ## =>This Inner Loop Header: Depth=1
+	movl	L_si$non_lazy_ptr, %ebx
+	movl	(%ebx), %eax
+	movl	%eax, %ebp
+	orl	%edi, %ebp
+	lock
+	cmpxchgl	%ebp, (%ebx)
+	jne	LBB1_7
+	.align	4, 0x90
+LBB1_8:                                 ## %entry
+                                        ## =>This Inner Loop Header: Depth=1
+	movl	L_ui$non_lazy_ptr, %ebx
+	movl	(%ebx), %eax
+	movl	%eax, %ebp
+	orl	%edi, %ebp
+	lock
+	cmpxchgl	%ebp, (%ebx)
+	jne	LBB1_8
+	.align	4, 0x90
+LBB1_9:                                 ## %entry
+                                        ## =>This Inner Loop Header: Depth=1
+	movl	L_sl$non_lazy_ptr, %ebx
+	movl	(%ebx), %eax
+	movl	%eax, %ebp
+	orl	%edi, %ebp
+	lock
+	cmpxchgl	%ebp, (%ebx)
+	jne	LBB1_9
+	.align	4, 0x90
+LBB1_10:                                ## %entry
+                                        ## =>This Inner Loop Header: Depth=1
+	movl	L_ul$non_lazy_ptr, %ebx
+	movl	(%ebx), %eax
+	movl	%eax, %ebp
+	orl	%edi, %ebp
+	lock
+	cmpxchgl	%ebp, (%ebx)
+	jne	LBB1_10
+	.align	4, 0x90
+LBB1_11:                                ## %entry
+                                        ## =>This Inner Loop Header: Depth=1
+	movb	(%ecx), %al
+	movb	%al, %dh
+	xorb	%dl, %dh
+	lock
+	cmpxchgb	%dh, (%ecx)
+	jne	LBB1_11
+	.align	4, 0x90
+LBB1_12:                                ## %entry
+                                        ## =>This Inner Loop Header: Depth=1
+	movl	L_uc$non_lazy_ptr, %ebx
+	movb	(%ebx), %al
+	movb	%al, %dh
+	xorb	%dl, %dh
+	lock
+	cmpxchgb	%dh, (%ebx)
+	jne	LBB1_12
+	.align	4, 0x90
+LBB1_13:                                ## %entry
+                                        ## =>This Inner Loop Header: Depth=1
+	movl	L_ss$non_lazy_ptr, %ebx
+	movw	(%ebx), %ax
+	movw	%ax, %bp
+	xorw	%si, %bp
+	lock
+	cmpxchgw	%bp, (%ebx)
+	jne	LBB1_13
+	.align	4, 0x90
+LBB1_14:                                ## %entry
+                                        ## =>This Inner Loop Header: Depth=1
+	movl	L_us$non_lazy_ptr, %ebx
+	movw	(%ebx), %ax
+	movw	%ax, %bp
+	xorw	%si, %bp
+	lock
+	cmpxchgw	%bp, (%ebx)
+	jne	LBB1_14
+	.align	4, 0x90
+LBB1_15:                                ## %entry
+                                        ## =>This Inner Loop Header: Depth=1
+	movl	L_si$non_lazy_ptr, %ebx
+	movl	(%ebx), %eax
+	movl	%eax, %ebp
+	xorl	%edi, %ebp
+	lock
+	cmpxchgl	%ebp, (%ebx)
+	jne	LBB1_15
+	.align	4, 0x90
+LBB1_16:                                ## %entry
+                                        ## =>This Inner Loop Header: Depth=1
+	movl	L_ui$non_lazy_ptr, %ebx
+	movl	(%ebx), %eax
+	movl	%eax, %ebp
+	xorl	%edi, %ebp
+	lock
+	cmpxchgl	%ebp, (%ebx)
+	jne	LBB1_16
+	.align	4, 0x90
+LBB1_17:                                ## %entry
+                                        ## =>This Inner Loop Header: Depth=1
+	movl	L_sl$non_lazy_ptr, %ebx
+	movl	(%ebx), %eax
+	movl	%eax, %ebp
+	xorl	%edi, %ebp
+	lock
+	cmpxchgl	%ebp, (%ebx)
+	jne	LBB1_17
+	.align	4, 0x90
+LBB1_18:                                ## %entry
+                                        ## =>This Inner Loop Header: Depth=1
+	movl	L_ul$non_lazy_ptr, %ebx
+	movl	(%ebx), %eax
+	movl	%eax, %ebp
+	xorl	%edi, %ebp
+	lock
+	cmpxchgl	%ebp, (%ebx)
+	jne	LBB1_18
+	.align	4, 0x90
+LBB1_19:                                ## %entry
+                                        ## =>This Inner Loop Header: Depth=1
+	movb	(%ecx), %al
+	movb	%al, %dh
+	andb	%dl, %dh
+	lock
+	cmpxchgb	%dh, (%ecx)
+	jne	LBB1_19
+	.align	4, 0x90
+LBB1_20:                                ## %entry
+                                        ## =>This Inner Loop Header: Depth=1
+	movl	L_uc$non_lazy_ptr, %ebx
+	movb	(%ebx), %al
+	movb	%al, %dh
+	andb	%dl, %dh
+	lock
+	cmpxchgb	%dh, (%ebx)
+	jne	LBB1_20
+	.align	4, 0x90
+LBB1_21:                                ## %entry
+                                        ## =>This Inner Loop Header: Depth=1
+	movl	L_ss$non_lazy_ptr, %ebx
+	movw	(%ebx), %ax
+	movw	%ax, %bp
+	andw	%si, %bp
+	lock
+	cmpxchgw	%bp, (%ebx)
+	jne	LBB1_21
+	.align	4, 0x90
+LBB1_22:                                ## %entry
+                                        ## =>This Inner Loop Header: Depth=1
+	movl	L_us$non_lazy_ptr, %ebx
+	movw	(%ebx), %ax
+	movw	%ax, %bp
+	andw	%si, %bp
+	lock
+	cmpxchgw	%bp, (%ebx)
+	jne	LBB1_22
+	.align	4, 0x90
+LBB1_23:                                ## %entry
+                                        ## =>This Inner Loop Header: Depth=1
+	movl	L_si$non_lazy_ptr, %ebx
+	movl	(%ebx), %eax
+	movl	%eax, %ebp
+	andl	%edi, %ebp
+	lock
+	cmpxchgl	%ebp, (%ebx)
+	jne	LBB1_23
+	.align	4, 0x90
+LBB1_24:                                ## %entry
+                                        ## =>This Inner Loop Header: Depth=1
+	movl	L_ui$non_lazy_ptr, %ebx
+	movl	(%ebx), %eax
+	movl	%eax, %ebp
+	andl	%edi, %ebp
+	lock
+	cmpxchgl	%ebp, (%ebx)
+	jne	LBB1_24
+	.align	4, 0x90
+LBB1_25:                                ## %entry
+                                        ## =>This Inner Loop Header: Depth=1
+	movl	L_sl$non_lazy_ptr, %ebx
+	movl	(%ebx), %eax
+	movl	%eax, %ebp
+	andl	%edi, %ebp
+	lock
+	cmpxchgl	%ebp, (%ebx)
+	jne	LBB1_25
+	.align	4, 0x90
+LBB1_26:                                ## %entry
+                                        ## =>This Inner Loop Header: Depth=1
+	movl	L_ul$non_lazy_ptr, %ebx
+	movl	(%ebx), %eax
+	movl	%eax, %ebp
+	andl	%edi, %ebp
+	lock
+	cmpxchgl	%ebp, (%ebx)
+	jne	LBB1_26
+	.align	4, 0x90
+LBB1_27:                                ## %entry
+                                        ## =>This Inner Loop Header: Depth=1
+	movb	(%ecx), %al
+	movb	%al, %dh
+	notb	%dh
+	andb	%dl, %dh
+	lock
+	cmpxchgb	%dh, (%ecx)
+	jne	LBB1_27
+	.align	4, 0x90
+LBB1_28:                                ## %entry
+                                        ## =>This Inner Loop Header: Depth=1
+	movl	L_uc$non_lazy_ptr, %ecx
+	movb	(%ecx), %al
+	movb	%al, %dh
+	notb	%dh
+	andb	%dl, %dh
+	lock
+	cmpxchgb	%dh, (%ecx)
+	jne	LBB1_28
+	.align	4, 0x90
+LBB1_29:                                ## %entry
+                                        ## =>This Inner Loop Header: Depth=1
+	movl	L_ss$non_lazy_ptr, %ecx
+	movw	(%ecx), %ax
+	movw	%ax, %dx
+	notw	%dx
+	andw	%si, %dx
+	lock
+	cmpxchgw	%dx, (%ecx)
+	jne	LBB1_29
+	.align	4, 0x90
+LBB1_30:                                ## %entry
+                                        ## =>This Inner Loop Header: Depth=1
+	movl	L_us$non_lazy_ptr, %ecx
+	movw	(%ecx), %ax
+	movw	%ax, %dx
+	notw	%dx
+	andw	%si, %dx
+	lock
+	cmpxchgw	%dx, (%ecx)
+	jne	LBB1_30
+	.align	4, 0x90
+LBB1_31:                                ## %entry
+                                        ## =>This Inner Loop Header: Depth=1
+	movl	L_si$non_lazy_ptr, %ecx
+	movl	(%ecx), %eax
+	movl	%eax, %edx
+	notl	%edx
+	andl	%edi, %edx
+	lock
+	cmpxchgl	%edx, (%ecx)
+	jne	LBB1_31
+	.align	4, 0x90
+LBB1_32:                                ## %entry
+                                        ## =>This Inner Loop Header: Depth=1
+	movl	L_ui$non_lazy_ptr, %ecx
+	movl	(%ecx), %eax
+	movl	%eax, %edx
+	notl	%edx
+	andl	%edi, %edx
+	lock
+	cmpxchgl	%edx, (%ecx)
+	jne	LBB1_32
+	.align	4, 0x90
+LBB1_33:                                ## %entry
+                                        ## =>This Inner Loop Header: Depth=1
+	movl	L_sl$non_lazy_ptr, %ecx
+	movl	(%ecx), %eax
+	movl	%eax, %edx
+	notl	%edx
+	andl	%edi, %edx
+	lock
+	cmpxchgl	%edx, (%ecx)
+	jne	LBB1_33
+	.align	4, 0x90
+LBB1_34:                                ## %entry
+                                        ## =>This Inner Loop Header: Depth=1
+	movl	L_ul$non_lazy_ptr, %ecx
+	movl	(%ecx), %eax
+	movl	%eax, %edx
+	notl	%edx
+	andl	%edi, %edx
+	lock
+	cmpxchgl	%edx, (%ecx)
+	jne	LBB1_34
+## BB#35:                               ## %return
+	popl	%esi
+	popl	%edi
+	popl	%ebx
+	popl	%ebp
+	ret
+
+	.globl	_test_fetch_and_op
+	.align	4, 0x90
+_test_fetch_and_op:                     ## @test_fetch_and_op
+## BB#0:                                ## %entry
+	pushl	%ebp
+	pushl	%ebx
+	pushl	%edi
+	pushl	%esi
+	movl	L_sc$non_lazy_ptr, %ecx
+	movb	$11, %al
+	lock
+	xaddb	%al, (%ecx)
+	movb	%al, (%ecx)
+	movb	$11, %al
+	movl	L_uc$non_lazy_ptr, %edx
+	lock
+	xaddb	%al, (%edx)
+	movb	%al, (%edx)
+	movl	L_ss$non_lazy_ptr, %esi
+	movw	$11, %ax
+	lock
+	xaddw	%ax, (%esi)
+	movw	%ax, (%esi)
+	movl	L_us$non_lazy_ptr, %edi
+	movw	$11, %ax
+	lock
+	xaddw	%ax, (%edi)
+	movw	%ax, (%edi)
+	movl	$11, %ebx
+	movl	$11, %eax
+	movl	L_si$non_lazy_ptr, %ebp
+	lock
+	xaddl	%eax, (%ebp)
+	movl	%eax, (%ebp)
+	movl	$11, %eax
+	movl	L_ui$non_lazy_ptr, %ebp
+	lock
+	xaddl	%eax, (%ebp)
+	movl	%eax, (%ebp)
+	movl	$11, %eax
+	movl	L_sl$non_lazy_ptr, %ebp
+	lock
+	xaddl	%eax, (%ebp)
+	movl	%eax, (%ebp)
+	movl	$11, %eax
+	movl	L_ul$non_lazy_ptr, %ebp
+	lock
+	xaddl	%eax, (%ebp)
+	movl	%eax, (%ebp)
+	movb	$-11, %al
+	lock
+	xaddb	%al, (%ecx)
+	movb	%al, (%ecx)
+	movb	$-11, %al
+	lock
+	xaddb	%al, (%edx)
+	movb	%al, (%edx)
+	movw	$-11, %ax
+	lock
+	xaddw	%ax, (%esi)
+	movw	%ax, (%esi)
+	movw	$-11, %ax
+	lock
+	xaddw	%ax, (%edi)
+	movw	%ax, (%edi)
+	movl	$-11, %eax
+	movl	L_si$non_lazy_ptr, %ebp
+	lock
+	xaddl	%eax, (%ebp)
+	movl	%eax, (%ebp)
+	movl	$-11, %eax
+	movl	L_ui$non_lazy_ptr, %ebp
+	lock
+	xaddl	%eax, (%ebp)
+	movl	%eax, (%ebp)
+	movl	$-11, %eax
+	movl	L_sl$non_lazy_ptr, %ebp
+	lock
+	xaddl	%eax, (%ebp)
+	movl	%eax, (%ebp)
+	movl	$-11, %eax
+	movl	L_ul$non_lazy_ptr, %ebp
+	lock
+	xaddl	%eax, (%ebp)
+	movl	%eax, (%ebp)
+	.align	4, 0x90
+LBB2_1:                                 ## %entry
+                                        ## =>This Inner Loop Header: Depth=1
+	movb	(%ecx), %al
+	movb	%al, %dl
+	movb	$11, %ah
+	orb	%ah, %dl
+	lock
+	cmpxchgb	%dl, (%ecx)
+	jne	LBB2_1
+## BB#2:                                ## %entry
+	movb	%al, (%ecx)
+	.align	4, 0x90
+LBB2_3:                                 ## %entry
+                                        ## =>This Inner Loop Header: Depth=1
+	movl	L_uc$non_lazy_ptr, %eax
+	movb	(%eax), %al
+	movb	%al, %dl
+	movb	$11, %dh
+	orb	%dh, %dl
+	movl	L_uc$non_lazy_ptr, %ebp
+	lock
+	cmpxchgb	%dl, (%ebp)
+	jne	LBB2_3
+## BB#4:                                ## %entry
+	movl	L_uc$non_lazy_ptr, %edx
+	movb	%al, (%edx)
+	.align	4, 0x90
+LBB2_5:                                 ## %entry
+                                        ## =>This Inner Loop Header: Depth=1
+	movw	(%esi), %ax
+	movw	%ax, %dx
+	movw	$11, %bp
+	orw	%bp, %dx
+	lock
+	cmpxchgw	%dx, (%esi)
+	jne	LBB2_5
+## BB#6:                                ## %entry
+	movw	%ax, (%esi)
+	.align	4, 0x90
+LBB2_7:                                 ## %entry
+                                        ## =>This Inner Loop Header: Depth=1
+	movw	(%edi), %ax
+	movw	%ax, %dx
+	movw	$11, %bp
+	orw	%bp, %dx
+	lock
+	cmpxchgw	%dx, (%edi)
+	jne	LBB2_7
+## BB#8:                                ## %entry
+	movw	%ax, (%edi)
+	.align	4, 0x90
+LBB2_9:                                 ## %entry
+                                        ## =>This Inner Loop Header: Depth=1
+	movl	L_si$non_lazy_ptr, %edx
+	movl	(%edx), %eax
+	movl	%eax, %ebp
+	orl	%ebx, %ebp
+	lock
+	cmpxchgl	%ebp, (%edx)
+	jne	LBB2_9
+## BB#10:                               ## %entry
+	movl	%eax, (%edx)
+	.align	4, 0x90
+LBB2_11:                                ## %entry
+                                        ## =>This Inner Loop Header: Depth=1
+	movl	L_ui$non_lazy_ptr, %edx
+	movl	(%edx), %eax
+	movl	%eax, %ebp
+	orl	%ebx, %ebp
+	lock
+	cmpxchgl	%ebp, (%edx)
+	jne	LBB2_11
+## BB#12:                               ## %entry
+	movl	%eax, (%edx)
+	.align	4, 0x90
+LBB2_13:                                ## %entry
+                                        ## =>This Inner Loop Header: Depth=1
+	movl	L_sl$non_lazy_ptr, %edx
+	movl	(%edx), %eax
+	movl	%eax, %ebp
+	orl	%ebx, %ebp
+	lock
+	cmpxchgl	%ebp, (%edx)
+	jne	LBB2_13
+## BB#14:                               ## %entry
+	movl	%eax, (%edx)
+	.align	4, 0x90
+LBB2_15:                                ## %entry
+                                        ## =>This Inner Loop Header: Depth=1
+	movl	L_ul$non_lazy_ptr, %edx
+	movl	(%edx), %eax
+	movl	%eax, %ebp
+	orl	%ebx, %ebp
+	lock
+	cmpxchgl	%ebp, (%edx)
+	jne	LBB2_15
+## BB#16:                               ## %entry
+	movl	%eax, (%edx)
+	.align	4, 0x90
+LBB2_17:                                ## %entry
+                                        ## =>This Inner Loop Header: Depth=1
+	movb	(%ecx), %al
+	movb	%al, %dl
+	movb	$11, %dh
+	xorb	%dh, %dl
+	lock
+	cmpxchgb	%dl, (%ecx)
+	jne	LBB2_17
+## BB#18:                               ## %entry
+	movb	%al, (%ecx)
+	.align	4, 0x90
+LBB2_19:                                ## %entry
+                                        ## =>This Inner Loop Header: Depth=1
+	movl	L_uc$non_lazy_ptr, %eax
+	movb	(%eax), %al
+	movb	%al, %dl
+	movb	$11, %dh
+	xorb	%dh, %dl
+	movl	L_uc$non_lazy_ptr, %ebp
+	lock
+	cmpxchgb	%dl, (%ebp)
+	jne	LBB2_19
+## BB#20:                               ## %entry
+	movl	L_uc$non_lazy_ptr, %edx
+	movb	%al, (%edx)
+	.align	4, 0x90
+LBB2_21:                                ## %entry
+                                        ## =>This Inner Loop Header: Depth=1
+	movw	(%esi), %ax
+	movw	%ax, %dx
+	movw	$11, %bp
+	xorw	%bp, %dx
+	lock
+	cmpxchgw	%dx, (%esi)
+	jne	LBB2_21
+## BB#22:                               ## %entry
+	movw	%ax, (%esi)
+	.align	4, 0x90
+LBB2_23:                                ## %entry
+                                        ## =>This Inner Loop Header: Depth=1
+	movw	(%edi), %ax
+	movw	%ax, %dx
+	movw	$11, %bp
+	xorw	%bp, %dx
+	lock
+	cmpxchgw	%dx, (%edi)
+	jne	LBB2_23
+## BB#24:                               ## %entry
+	movw	%ax, (%edi)
+	.align	4, 0x90
+LBB2_25:                                ## %entry
+                                        ## =>This Inner Loop Header: Depth=1
+	movl	L_si$non_lazy_ptr, %edx
+	movl	(%edx), %eax
+	movl	%eax, %ebp
+	xorl	%ebx, %ebp
+	lock
+	cmpxchgl	%ebp, (%edx)
+	jne	LBB2_25
+## BB#26:                               ## %entry
+	movl	%eax, (%edx)
+	.align	4, 0x90
+LBB2_27:                                ## %entry
+                                        ## =>This Inner Loop Header: Depth=1
+	movl	L_ui$non_lazy_ptr, %edx
+	movl	(%edx), %eax
+	movl	%eax, %ebp
+	xorl	%ebx, %ebp
+	lock
+	cmpxchgl	%ebp, (%edx)
+	jne	LBB2_27
+## BB#28:                               ## %entry
+	movl	%eax, (%edx)
+	.align	4, 0x90
+LBB2_29:                                ## %entry
+                                        ## =>This Inner Loop Header: Depth=1
+	movl	L_sl$non_lazy_ptr, %edx
+	movl	(%edx), %eax
+	movl	%eax, %ebp
+	xorl	%ebx, %ebp
+	lock
+	cmpxchgl	%ebp, (%edx)
+	jne	LBB2_29
+## BB#30:                               ## %entry
+	movl	%eax, (%edx)
+	.align	4, 0x90
+LBB2_31:                                ## %entry
+                                        ## =>This Inner Loop Header: Depth=1
+	movl	L_ul$non_lazy_ptr, %edx
+	movl	(%edx), %eax
+	movl	%eax, %ebp
+	xorl	%ebx, %ebp
+	lock
+	cmpxchgl	%ebp, (%edx)
+	jne	LBB2_31
+## BB#32:                               ## %entry
+	movl	%eax, (%edx)
+	.align	4, 0x90
+LBB2_33:                                ## %entry
+                                        ## =>This Inner Loop Header: Depth=1
+	movb	(%ecx), %al
+	movb	%al, %dl
+	movb	$11, %dh
+	andb	%dh, %dl
+	lock
+	cmpxchgb	%dl, (%ecx)
+	jne	LBB2_33
+## BB#34:                               ## %entry
+	movb	%al, (%ecx)
+	.align	4, 0x90
+LBB2_35:                                ## %entry
+                                        ## =>This Inner Loop Header: Depth=1
+	movl	L_uc$non_lazy_ptr, %eax
+	movb	(%eax), %al
+	movb	%al, %dl
+	movb	$11, %dh
+	andb	%dh, %dl
+	movl	L_uc$non_lazy_ptr, %ebp
+	lock
+	cmpxchgb	%dl, (%ebp)
+	jne	LBB2_35
+## BB#36:                               ## %entry
+	movl	L_uc$non_lazy_ptr, %edx
+	movb	%al, (%edx)
+	.align	4, 0x90
+LBB2_37:                                ## %entry
+                                        ## =>This Inner Loop Header: Depth=1
+	movw	(%esi), %ax
+	movw	%ax, %dx
+	movw	$11, %bp
+	andw	%bp, %dx
+	lock
+	cmpxchgw	%dx, (%esi)
+	jne	LBB2_37
+## BB#38:                               ## %entry
+	movw	%ax, (%esi)
+	.align	4, 0x90
+LBB2_39:                                ## %entry
+                                        ## =>This Inner Loop Header: Depth=1
+	movw	(%edi), %ax
+	movw	%ax, %dx
+	movw	$11, %bp
+	andw	%bp, %dx
+	lock
+	cmpxchgw	%dx, (%edi)
+	jne	LBB2_39
+## BB#40:                               ## %entry
+	movw	%ax, (%edi)
+	.align	4, 0x90
+LBB2_41:                                ## %entry
+                                        ## =>This Inner Loop Header: Depth=1
+	movl	L_si$non_lazy_ptr, %edx
+	movl	(%edx), %eax
+	movl	%eax, %ebp
+	andl	%ebx, %ebp
+	lock
+	cmpxchgl	%ebp, (%edx)
+	jne	LBB2_41
+## BB#42:                               ## %entry
+	movl	%eax, (%edx)
+	.align	4, 0x90
+LBB2_43:                                ## %entry
+                                        ## =>This Inner Loop Header: Depth=1
+	movl	L_ui$non_lazy_ptr, %edx
+	movl	(%edx), %eax
+	movl	%eax, %ebp
+	andl	%ebx, %ebp
+	lock
+	cmpxchgl	%ebp, (%edx)
+	jne	LBB2_43
+## BB#44:                               ## %entry
+	movl	%eax, (%edx)
+	.align	4, 0x90
+LBB2_45:                                ## %entry
+                                        ## =>This Inner Loop Header: Depth=1
+	movl	L_sl$non_lazy_ptr, %edx
+	movl	(%edx), %eax
+	movl	%eax, %ebp
+	andl	%ebx, %ebp
+	lock
+	cmpxchgl	%ebp, (%edx)
+	jne	LBB2_45
+## BB#46:                               ## %entry
+	movl	%eax, (%edx)
+	.align	4, 0x90
+LBB2_47:                                ## %entry
+                                        ## =>This Inner Loop Header: Depth=1
+	movl	L_ul$non_lazy_ptr, %edx
+	movl	(%edx), %eax
+	movl	%eax, %ebp
+	andl	%ebx, %ebp
+	lock
+	cmpxchgl	%ebp, (%edx)
+	jne	LBB2_47
+## BB#48:                               ## %entry
+	movl	%eax, (%edx)
+	.align	4, 0x90
+LBB2_49:                                ## %entry
+                                        ## =>This Inner Loop Header: Depth=1
+	movb	(%ecx), %al
+	movb	%al, %dl
+	notb	%dl
+	movb	$11, %dh
+	andb	%dh, %dl
+	lock
+	cmpxchgb	%dl, (%ecx)
+	jne	LBB2_49
+## BB#50:                               ## %entry
+	movb	%al, (%ecx)
+	.align	4, 0x90
+LBB2_51:                                ## %entry
+                                        ## =>This Inner Loop Header: Depth=1
+	movl	L_uc$non_lazy_ptr, %ecx
+	movb	(%ecx), %al
+	movb	%al, %dl
+	notb	%dl
+	movb	$11, %dh
+	andb	%dh, %dl
+	lock
+	cmpxchgb	%dl, (%ecx)
+	jne	LBB2_51
+## BB#52:                               ## %entry
+	movb	%al, (%ecx)
+	.align	4, 0x90
+LBB2_53:                                ## %entry
+                                        ## =>This Inner Loop Header: Depth=1
+	movw	(%esi), %ax
+	movw	%ax, %cx
+	notw	%cx
+	movw	$11, %dx
+	andw	%dx, %cx
+	lock
+	cmpxchgw	%cx, (%esi)
+	jne	LBB2_53
+## BB#54:                               ## %entry
+	movw	%ax, (%esi)
+	.align	4, 0x90
+LBB2_55:                                ## %entry
+                                        ## =>This Inner Loop Header: Depth=1
+	movw	(%edi), %ax
+	movw	%ax, %cx
+	notw	%cx
+	movw	$11, %dx
+	andw	%dx, %cx
+	lock
+	cmpxchgw	%cx, (%edi)
+	jne	LBB2_55
+## BB#56:                               ## %entry
+	movw	%ax, (%edi)
+	.align	4, 0x90
+LBB2_57:                                ## %entry
+                                        ## =>This Inner Loop Header: Depth=1
+	movl	L_si$non_lazy_ptr, %ecx
+	movl	(%ecx), %eax
+	movl	%eax, %edx
+	notl	%edx
+	andl	%ebx, %edx
+	lock
+	cmpxchgl	%edx, (%ecx)
+	jne	LBB2_57
+## BB#58:                               ## %entry
+	movl	%eax, (%ecx)
+	.align	4, 0x90
+LBB2_59:                                ## %entry
+                                        ## =>This Inner Loop Header: Depth=1
+	movl	L_ui$non_lazy_ptr, %ecx
+	movl	(%ecx), %eax
+	movl	%eax, %edx
+	notl	%edx
+	andl	%ebx, %edx
+	lock
+	cmpxchgl	%edx, (%ecx)
+	jne	LBB2_59
+## BB#60:                               ## %entry
+	movl	%eax, (%ecx)
+	.align	4, 0x90
+LBB2_61:                                ## %entry
+                                        ## =>This Inner Loop Header: Depth=1
+	movl	L_sl$non_lazy_ptr, %ecx
+	movl	(%ecx), %eax
+	movl	%eax, %edx
+	notl	%edx
+	andl	%ebx, %edx
+	lock
+	cmpxchgl	%edx, (%ecx)
+	jne	LBB2_61
+## BB#62:                               ## %entry
+	movl	%eax, (%ecx)
+	.align	4, 0x90
+LBB2_63:                                ## %entry
+                                        ## =>This Inner Loop Header: Depth=1
+	movl	L_ul$non_lazy_ptr, %ecx
+	movl	(%ecx), %eax
+	movl	%eax, %edx
+	notl	%edx
+	andl	%ebx, %edx
+	lock
+	cmpxchgl	%edx, (%ecx)
+	jne	LBB2_63
+## BB#64:                               ## %entry
+	movl	%eax, (%ecx)
+	popl	%esi
+	popl	%edi
+	popl	%ebx
+	popl	%ebp
+	ret
+
+	.globl	_test_op_and_fetch
+	.align	4, 0x90
+_test_op_and_fetch:                     ## @test_op_and_fetch
+## BB#0:                                ## %entry
+	pushl	%ebp
+	pushl	%ebx
+	pushl	%edi
+	pushl	%esi
+	movl	L_uc$non_lazy_ptr, %ecx
+	movb	(%ecx), %al
+	movl	L_sc$non_lazy_ptr, %edx
+	movb	%al, %ah
+	lock
+	xaddb	%ah, (%edx)
+	addb	%al, %ah
+	movb	%ah, (%edx)
+	movb	(%ecx), %al
+	movb	%al, %ah
+	lock
+	xaddb	%ah, (%ecx)
+	addb	%al, %ah
+	movb	%ah, (%ecx)
+	movzbl	(%ecx), %eax
+	movl	L_ss$non_lazy_ptr, %esi
+	movw	%ax, %di
+	lock
+	xaddw	%di, (%esi)
+	addw	%ax, %di
+	movw	%di, (%esi)
+	movzbl	(%ecx), %eax
+	movw	%ax, %di
+	movl	L_us$non_lazy_ptr, %ebx
+	lock
+	xaddw	%di, (%ebx)
+	addw	%ax, %di
+	movw	%di, (%ebx)
+	movzbl	(%ecx), %eax
+	movl	%eax, %edi
+	movl	L_si$non_lazy_ptr, %ebp
+	lock
+	xaddl	%edi, (%ebp)
+	addl	%eax, %edi
+	movl	%edi, (%ebp)
+	movzbl	(%ecx), %eax
+	movl	%eax, %edi
+	movl	L_ui$non_lazy_ptr, %ebp
+	lock
+	xaddl	%edi, (%ebp)
+	addl	%eax, %edi
+	movl	%edi, (%ebp)
+	movzbl	(%ecx), %eax
+	movl	%eax, %edi
+	movl	L_sl$non_lazy_ptr, %ebp
+	lock
+	xaddl	%edi, (%ebp)
+	addl	%eax, %edi
+	movl	%edi, (%ebp)
+	movzbl	(%ecx), %eax
+	movl	%eax, %edi
+	movl	L_ul$non_lazy_ptr, %ebp
+	lock
+	xaddl	%edi, (%ebp)
+	addl	%eax, %edi
+	movl	%edi, (%ebp)
+	movb	(%ecx), %al
+	movb	%al, %ah
+	negb	%ah
+	lock
+	xaddb	%ah, (%edx)
+	subb	%al, %ah
+	movb	%ah, (%edx)
+	movb	(%ecx), %al
+	movb	%al, %ah
+	negb	%ah
+	lock
+	xaddb	%ah, (%ecx)
+	subb	%al, %ah
+	movb	%ah, (%ecx)
+	movzbl	(%ecx), %eax
+	movw	%ax, %di
+	negw	%di
+	lock
+	xaddw	%di, (%esi)
+	subw	%ax, %di
+	movw	%di, (%esi)
+	movzbl	(%ecx), %eax
+	movw	%ax, %di
+	negw	%di
+	lock
+	xaddw	%di, (%ebx)
+	subw	%ax, %di
+	movw	%di, (%ebx)
+	movzbl	(%ecx), %eax
+	movl	%eax, %edi
+	negl	%edi
+	movl	L_si$non_lazy_ptr, %ebp
+	lock
+	xaddl	%edi, (%ebp)
+	subl	%eax, %edi
+	movl	%edi, (%ebp)
+	movzbl	(%ecx), %eax
+	movl	%eax, %edi
+	negl	%edi
+	movl	L_ui$non_lazy_ptr, %ebp
+	lock
+	xaddl	%edi, (%ebp)
+	subl	%eax, %edi
+	movl	%edi, (%ebp)
+	movzbl	(%ecx), %eax
+	movl	%eax, %edi
+	negl	%edi
+	movl	L_sl$non_lazy_ptr, %ebp
+	lock
+	xaddl	%edi, (%ebp)
+	subl	%eax, %edi
+	movl	%edi, (%ebp)
+	movzbl	(%ecx), %eax
+	movl	%eax, %edi
+	negl	%edi
+	movl	L_ul$non_lazy_ptr, %ebp
+	lock
+	xaddl	%edi, (%ebp)
+	subl	%eax, %edi
+	movl	%edi, (%ebp)
+	movb	(%ecx), %ah
+	.align	4, 0x90
+LBB3_1:                                 ## %entry
+                                        ## =>This Inner Loop Header: Depth=1
+	movb	(%edx), %al
+	movb	%al, %bl
+	orb	%ah, %bl
+	lock
+	cmpxchgb	%bl, (%edx)
+	jne	LBB3_1
+## BB#2:                                ## %entry
+	orb	%ah, %al
+	movb	%al, (%edx)
+	movb	(%ecx), %ah
+	.align	4, 0x90
+LBB3_3:                                 ## %entry
+                                        ## =>This Inner Loop Header: Depth=1
+	movb	(%ecx), %al
+	movb	%al, %bl
+	orb	%ah, %bl
+	lock
+	cmpxchgb	%bl, (%ecx)
+	jne	LBB3_3
+## BB#4:                                ## %entry
+	orb	%ah, %al
+	movb	%al, (%ecx)
+	movzbl	(%ecx), %edi
+	.align	4, 0x90
+LBB3_5:                                 ## %entry
+                                        ## =>This Inner Loop Header: Depth=1
+	movw	(%esi), %ax
+	movw	%ax, %bx
+	orw	%di, %bx
+	lock
+	cmpxchgw	%bx, (%esi)
+	jne	LBB3_5
+## BB#6:                                ## %entry
+	orw	%di, %ax
+	movw	%ax, (%esi)
+	movzbl	(%ecx), %edi
+	.align	4, 0x90
+LBB3_7:                                 ## %entry
+                                        ## =>This Inner Loop Header: Depth=1
+	movl	L_us$non_lazy_ptr, %ebx
+	movw	(%ebx), %ax
+	movw	%ax, %bp
+	orw	%di, %bp
+	lock
+	cmpxchgw	%bp, (%ebx)
+	jne	LBB3_7
+## BB#8:                                ## %entry
+	orw	%di, %ax
+	movl	%ebx, %edi              ##  Reload Reuse
+	movw	%ax, (%edi)
+	movzbl	(%ecx), %edi
+	.align	4, 0x90
+LBB3_9:                                 ## %entry
+                                        ## =>This Inner Loop Header: Depth=1
+	movl	L_si$non_lazy_ptr, %eax
+	movl	(%eax), %eax
+	movl	%eax, %ebx
+	orl	%edi, %ebx
+	movl	L_si$non_lazy_ptr, %ebp
+	lock
+	cmpxchgl	%ebx, (%ebp)
+	jne	LBB3_9
+## BB#10:                               ## %entry
+	orl	%edi, %eax
+	movl	L_si$non_lazy_ptr, %edi
+	movl	%eax, (%edi)
+	movzbl	(%ecx), %edi
+	.align	4, 0x90
+LBB3_11:                                ## %entry
+                                        ## =>This Inner Loop Header: Depth=1
+	movl	L_ui$non_lazy_ptr, %ebx
+	movl	(%ebx), %eax
+	movl	%eax, %ebp
+	orl	%edi, %ebp
+	lock
+	cmpxchgl	%ebp, (%ebx)
+	jne	LBB3_11
+## BB#12:                               ## %entry
+	orl	%edi, %eax
+	movl	%ebx, %edi              ##  Reload Reuse
+	movl	%eax, (%edi)
+	movzbl	(%ecx), %edi
+	.align	4, 0x90
+LBB3_13:                                ## %entry
+                                        ## =>This Inner Loop Header: Depth=1
+	movl	L_sl$non_lazy_ptr, %ebx
+	movl	(%ebx), %eax
+	movl	%eax, %ebp
+	orl	%edi, %ebp
+	lock
+	cmpxchgl	%ebp, (%ebx)
+	jne	LBB3_13
+## BB#14:                               ## %entry
+	orl	%edi, %eax
+	movl	%ebx, %edi              ##  Reload Reuse
+	movl	%eax, (%edi)
+	movzbl	(%ecx), %edi
+	.align	4, 0x90
+LBB3_15:                                ## %entry
+                                        ## =>This Inner Loop Header: Depth=1
+	movl	L_ul$non_lazy_ptr, %ebx
+	movl	(%ebx), %eax
+	movl	%eax, %ebp
+	orl	%edi, %ebp
+	lock
+	cmpxchgl	%ebp, (%ebx)
+	jne	LBB3_15
+## BB#16:                               ## %entry
+	orl	%edi, %eax
+	movl	%ebx, %edi              ##  Reload Reuse
+	movl	%eax, (%edi)
+	movb	(%ecx), %bl
+	.align	4, 0x90
+LBB3_17:                                ## %entry
+                                        ## =>This Inner Loop Header: Depth=1
+	movb	(%edx), %al
+	movb	%al, %bh
+	xorb	%bl, %bh
+	lock
+	cmpxchgb	%bh, (%edx)
+	jne	LBB3_17
+## BB#18:                               ## %entry
+	xorb	%bl, %al
+	movb	%al, (%edx)
+	movb	(%ecx), %bl
+	.align	4, 0x90
+LBB3_19:                                ## %entry
+                                        ## =>This Inner Loop Header: Depth=1
+	movb	(%ecx), %al
+	movb	%al, %bh
+	xorb	%bl, %bh
+	lock
+	cmpxchgb	%bh, (%ecx)
+	jne	LBB3_19
+## BB#20:                               ## %entry
+	xorb	%bl, %al
+	movb	%al, (%ecx)
+	movzbl	(%ecx), %edi
+	.align	4, 0x90
+LBB3_21:                                ## %entry
+                                        ## =>This Inner Loop Header: Depth=1
+	movw	(%esi), %ax
+	movw	%ax, %bx
+	xorw	%di, %bx
+	lock
+	cmpxchgw	%bx, (%esi)
+	jne	LBB3_21
+## BB#22:                               ## %entry
+	xorw	%di, %ax
+	movw	%ax, (%esi)
+	movzbl	(%ecx), %edi
+	.align	4, 0x90
+LBB3_23:                                ## %entry
+                                        ## =>This Inner Loop Header: Depth=1
+	movl	L_us$non_lazy_ptr, %ebx
+	movw	(%ebx), %ax
+	movw	%ax, %bp
+	xorw	%di, %bp
+	lock
+	cmpxchgw	%bp, (%ebx)
+	jne	LBB3_23
+## BB#24:                               ## %entry
+	xorw	%di, %ax
+	movl	%ebx, %edi              ##  Reload Reuse
+	movw	%ax, (%edi)
+	movzbl	(%ecx), %edi
+	.align	4, 0x90
+LBB3_25:                                ## %entry
+                                        ## =>This Inner Loop Header: Depth=1
+	movl	L_si$non_lazy_ptr, %ebx
+	movl	(%ebx), %eax
+	movl	%eax, %ebp
+	xorl	%edi, %ebp
+	lock
+	cmpxchgl	%ebp, (%ebx)
+	jne	LBB3_25
+## BB#26:                               ## %entry
+	xorl	%edi, %eax
+	movl	%ebx, %edi              ##  Reload Reuse
+	movl	%eax, (%edi)
+	movzbl	(%ecx), %edi
+	.align	4, 0x90
+LBB3_27:                                ## %entry
+                                        ## =>This Inner Loop Header: Depth=1
+	movl	L_ui$non_lazy_ptr, %ebx
+	movl	(%ebx), %eax
+	movl	%eax, %ebp
+	xorl	%edi, %ebp
+	lock
+	cmpxchgl	%ebp, (%ebx)
+	jne	LBB3_27
+## BB#28:                               ## %entry
+	xorl	%edi, %eax
+	movl	%ebx, %edi              ##  Reload Reuse
+	movl	%eax, (%edi)
+	movzbl	(%ecx), %edi
+	.align	4, 0x90
+LBB3_29:                                ## %entry
+                                        ## =>This Inner Loop Header: Depth=1
+	movl	L_sl$non_lazy_ptr, %ebx
+	movl	(%ebx), %eax
+	movl	%eax, %ebp
+	xorl	%edi, %ebp
+	lock
+	cmpxchgl	%ebp, (%ebx)
+	jne	LBB3_29
+## BB#30:                               ## %entry
+	xorl	%edi, %eax
+	movl	%ebx, %edi              ##  Reload Reuse
+	movl	%eax, (%edi)
+	movzbl	(%ecx), %edi
+	.align	4, 0x90
+LBB3_31:                                ## %entry
+                                        ## =>This Inner Loop Header: Depth=1
+	movl	L_ul$non_lazy_ptr, %ebx
+	movl	(%ebx), %eax
+	movl	%eax, %ebp
+	xorl	%edi, %ebp
+	lock
+	cmpxchgl	%ebp, (%ebx)
+	jne	LBB3_31
+## BB#32:                               ## %entry
+	xorl	%edi, %eax
+	movl	%ebx, %edi              ##  Reload Reuse
+	movl	%eax, (%edi)
+	movb	(%ecx), %bl
+	.align	4, 0x90
+LBB3_33:                                ## %entry
+                                        ## =>This Inner Loop Header: Depth=1
+	movb	(%edx), %al
+	movb	%al, %bh
+	andb	%bl, %bh
+	lock
+	cmpxchgb	%bh, (%edx)
+	jne	LBB3_33
+## BB#34:                               ## %entry
+	andb	%bl, %al
+	movb	%al, (%edx)
+	movb	(%ecx), %bl
+	.align	4, 0x90
+LBB3_35:                                ## %entry
+                                        ## =>This Inner Loop Header: Depth=1
+	movb	(%ecx), %al
+	movb	%al, %bh
+	andb	%bl, %bh
+	lock
+	cmpxchgb	%bh, (%ecx)
+	jne	LBB3_35
+## BB#36:                               ## %entry
+	andb	%bl, %al
+	movb	%al, (%ecx)
+	movzbl	(%ecx), %edi
+	.align	4, 0x90
+LBB3_37:                                ## %entry
+                                        ## =>This Inner Loop Header: Depth=1
+	movw	(%esi), %ax
+	movw	%ax, %bx
+	andw	%di, %bx
+	lock
+	cmpxchgw	%bx, (%esi)
+	jne	LBB3_37
+## BB#38:                               ## %entry
+	andw	%di, %ax
+	movw	%ax, (%esi)
+	movzbl	(%ecx), %edi
+	.align	4, 0x90
+LBB3_39:                                ## %entry
+                                        ## =>This Inner Loop Header: Depth=1
+	movl	L_us$non_lazy_ptr, %ebx
+	movw	(%ebx), %ax
+	movw	%ax, %bp
+	andw	%di, %bp
+	lock
+	cmpxchgw	%bp, (%ebx)
+	jne	LBB3_39
+## BB#40:                               ## %entry
+	andw	%di, %ax
+	movl	%ebx, %edi              ##  Reload Reuse
+	movw	%ax, (%edi)
+	movzbl	(%ecx), %edi
+	.align	4, 0x90
+LBB3_41:                                ## %entry
+                                        ## =>This Inner Loop Header: Depth=1
+	movl	L_si$non_lazy_ptr, %ebx
+	movl	(%ebx), %eax
+	movl	%eax, %ebp
+	andl	%edi, %ebp
+	lock
+	cmpxchgl	%ebp, (%ebx)
+	jne	LBB3_41
+## BB#42:                               ## %entry
+	andl	%edi, %eax
+	movl	%ebx, %edi              ##  Reload Reuse
+	movl	%eax, (%edi)
+	movzbl	(%ecx), %edi
+	.align	4, 0x90
+LBB3_43:                                ## %entry
+                                        ## =>This Inner Loop Header: Depth=1
+	movl	L_ui$non_lazy_ptr, %ebx
+	movl	(%ebx), %eax
+	movl	%eax, %ebp
+	andl	%edi, %ebp
+	lock
+	cmpxchgl	%ebp, (%ebx)
+	jne	LBB3_43
+## BB#44:                               ## %entry
+	andl	%edi, %eax
+	movl	%ebx, %edi              ##  Reload Reuse
+	movl	%eax, (%edi)
+	movzbl	(%ecx), %edi
+	.align	4, 0x90
+LBB3_45:                                ## %entry
+                                        ## =>This Inner Loop Header: Depth=1
+	movl	L_sl$non_lazy_ptr, %ebx
+	movl	(%ebx), %eax
+	movl	%eax, %ebp
+	andl	%edi, %ebp
+	lock
+	cmpxchgl	%ebp, (%ebx)
+	jne	LBB3_45
+## BB#46:                               ## %entry
+	andl	%edi, %eax
+	movl	%ebx, %edi              ##  Reload Reuse
+	movl	%eax, (%edi)
+	movzbl	(%ecx), %edi
+	.align	4, 0x90
+LBB3_47:                                ## %entry
+                                        ## =>This Inner Loop Header: Depth=1
+	movl	L_ul$non_lazy_ptr, %ebx
+	movl	(%ebx), %eax
+	movl	%eax, %ebp
+	andl	%edi, %ebp
+	lock
+	cmpxchgl	%ebp, (%ebx)
+	jne	LBB3_47
+## BB#48:                               ## %entry
+	andl	%edi, %eax
+	movl	%ebx, %edi              ##  Reload Reuse
+	movl	%eax, (%edi)
+	movb	(%ecx), %bl
+	.align	4, 0x90
+LBB3_49:                                ## %entry
+                                        ## =>This Inner Loop Header: Depth=1
+	movb	(%edx), %al
+	movb	%al, %bh
+	notb	%bh
+	andb	%bl, %bh
+	lock
+	cmpxchgb	%bh, (%edx)
+	jne	LBB3_49
+## BB#50:                               ## %entry
+	notb	%al
+	andb	%bl, %al
+	movb	%al, (%edx)
+	movb	(%ecx), %dl
+	.align	4, 0x90
+LBB3_51:                                ## %entry
+                                        ## =>This Inner Loop Header: Depth=1
+	movb	(%ecx), %al
+	movb	%al, %dh
+	notb	%dh
+	andb	%dl, %dh
+	lock
+	cmpxchgb	%dh, (%ecx)
+	jne	LBB3_51
+## BB#52:                               ## %entry
+	notb	%al
+	andb	%dl, %al
+	movb	%al, (%ecx)
+	movzbl	(%ecx), %edx
+	.align	4, 0x90
+LBB3_53:                                ## %entry
+                                        ## =>This Inner Loop Header: Depth=1
+	movw	(%esi), %ax
+	movw	%ax, %di
+	notw	%di
+	andw	%dx, %di
+	lock
+	cmpxchgw	%di, (%esi)
+	jne	LBB3_53
+## BB#54:                               ## %entry
+	notw	%ax
+	andw	%dx, %ax
+	movw	%ax, (%esi)
+	movzbl	(%ecx), %edx
+	.align	4, 0x90
+LBB3_55:                                ## %entry
+                                        ## =>This Inner Loop Header: Depth=1
+	movl	L_us$non_lazy_ptr, %esi
+	movw	(%esi), %ax
+	movw	%ax, %di
+	notw	%di
+	andw	%dx, %di
+	lock
+	cmpxchgw	%di, (%esi)
+	jne	LBB3_55
+## BB#56:                               ## %entry
+	notw	%ax
+	andw	%dx, %ax
+	movl	%esi, %edx              ##  Reload Reuse
+	movw	%ax, (%edx)
+	movzbl	(%ecx), %edx
+	.align	4, 0x90
+LBB3_57:                                ## %entry
+                                        ## =>This Inner Loop Header: Depth=1
+	movl	L_si$non_lazy_ptr, %esi
+	movl	(%esi), %eax
+	movl	%eax, %edi
+	notl	%edi
+	andl	%edx, %edi
+	lock
+	cmpxchgl	%edi, (%esi)
+	jne	LBB3_57
+## BB#58:                               ## %entry
+	notl	%eax
+	andl	%edx, %eax
+	movl	%esi, %edx              ##  Reload Reuse
+	movl	%eax, (%edx)
+	movzbl	(%ecx), %edx
+	.align	4, 0x90
+LBB3_59:                                ## %entry
+                                        ## =>This Inner Loop Header: Depth=1
+	movl	L_ui$non_lazy_ptr, %esi
+	movl	(%esi), %eax
+	movl	%eax, %edi
+	notl	%edi
+	andl	%edx, %edi
+	lock
+	cmpxchgl	%edi, (%esi)
+	jne	LBB3_59
+## BB#60:                               ## %entry
+	notl	%eax
+	andl	%edx, %eax
+	movl	%esi, %edx              ##  Reload Reuse
+	movl	%eax, (%edx)
+	movzbl	(%ecx), %edx
+	.align	4, 0x90
+LBB3_61:                                ## %entry
+                                        ## =>This Inner Loop Header: Depth=1
+	movl	L_sl$non_lazy_ptr, %esi
+	movl	(%esi), %eax
+	movl	%eax, %edi
+	notl	%edi
+	andl	%edx, %edi
+	lock
+	cmpxchgl	%edi, (%esi)
+	jne	LBB3_61
+## BB#62:                               ## %entry
+	notl	%eax
+	andl	%edx, %eax
+	movl	%esi, %edx              ##  Reload Reuse
+	movl	%eax, (%edx)
+	movzbl	(%ecx), %ecx
+	.align	4, 0x90
+LBB3_63:                                ## %entry
+                                        ## =>This Inner Loop Header: Depth=1
+	movl	L_ul$non_lazy_ptr, %edx
+	movl	(%edx), %eax
+	movl	%eax, %esi
+	notl	%esi
+	andl	%ecx, %esi
+	lock
+	cmpxchgl	%esi, (%edx)
+	jne	LBB3_63
+## BB#64:                               ## %entry
+	notl	%eax
+	andl	%ecx, %eax
+	movl	%edx, %ecx              ##  Reload Reuse
+	movl	%eax, (%ecx)
+	popl	%esi
+	popl	%edi
+	popl	%ebx
+	popl	%ebp
+	ret
+
+	.globl	_test_compare_and_swap
+	.align	4, 0x90
+_test_compare_and_swap:                 ## @test_compare_and_swap
+## BB#0:                                ## %entry
+	pushl	%ebp
+	pushl	%ebx
+	pushl	%edi
+	pushl	%esi
+	movl	L_uc$non_lazy_ptr, %ecx
+	movb	(%ecx), %al
+	movl	L_sc$non_lazy_ptr, %edx
+	movb	(%edx), %ah
+	lock
+	cmpxchgb	%ah, (%edx)
+	movb	%al, %ah
+	movb	%ah, (%edx)
+	movb	(%ecx), %al
+	lock
+	cmpxchgb	%ah, (%ecx)
+	movb	%al, (%ecx)
+	movzbl	(%ecx), %eax
+	movsbl	(%edx), %esi
+	movl	L_ss$non_lazy_ptr, %edi
+	lock
+	cmpxchgw	%si, (%edi)
+	movw	%ax, (%edi)
+	movzbl	(%ecx), %eax
+	movsbl	(%edx), %esi
+	movl	L_us$non_lazy_ptr, %ebx
+	lock
+	cmpxchgw	%si, (%ebx)
+	movw	%ax, (%ebx)
+	movzbl	(%ecx), %eax
+	movsbl	(%edx), %esi
+	movl	L_si$non_lazy_ptr, %ebp
+	lock
+	cmpxchgl	%esi, (%ebp)
+	movl	%eax, (%ebp)
+	movzbl	(%ecx), %eax
+	movsbl	(%edx), %esi
+	movl	L_ui$non_lazy_ptr, %ebx
+	lock
+	cmpxchgl	%esi, (%ebx)
+	movl	%eax, (%ebx)
+	movzbl	(%ecx), %eax
+	movsbl	(%edx), %esi
+	movl	L_sl$non_lazy_ptr, %ebp
+	lock
+	cmpxchgl	%esi, (%ebp)
+	movl	%eax, (%ebp)
+	movzbl	(%ecx), %eax
+	movsbl	(%edx), %esi
+	movl	L_ul$non_lazy_ptr, %ebx
+	lock
+	cmpxchgl	%esi, (%ebx)
+	movl	%eax, (%ebx)
+	movb	(%ecx), %ah
+	movb	(%edx), %bl
+	movb	%ah, %al
+	lock
+	cmpxchgb	%bl, (%edx)
+	cmpb	%ah, %al
+	sete	%al
+	movzbl	%al, %eax
+	movl	L_ui$non_lazy_ptr, %ebx
+	movl	%eax, (%ebx)
+	movb	(%ecx), %ah
+	movb	(%edx), %bl
+	movb	%ah, %al
+	lock
+	cmpxchgb	%bl, (%ecx)
+	cmpb	%ah, %al
+	sete	%al
+	movzbl	%al, %eax
+	movl	L_ui$non_lazy_ptr, %ebx
+	movl	%eax, (%ebx)
+	movb	(%ecx), %ah
+	movb	(%edx), %bl
+	movb	%ah, %al
+	lock
+	cmpxchgb	%bl, (%edi)
+	cmpb	%ah, %al
+	sete	%al
+	movzbl	%al, %eax
+	movl	L_ui$non_lazy_ptr, %ebx
+	movl	%eax, (%ebx)
+	movb	(%ecx), %ah
+	movb	(%edx), %bl
+	movb	%ah, %al
+	movl	L_us$non_lazy_ptr, %esi
+	lock
+	cmpxchgb	%bl, (%esi)
+	cmpb	%ah, %al
+	sete	%al
+	movzbl	%al, %eax
+	movl	L_ui$non_lazy_ptr, %ebx
+	movl	%eax, (%ebx)
+	movb	(%ecx), %ah
+	movb	(%edx), %bl
+	movb	%ah, %al
+	movl	L_si$non_lazy_ptr, %ebp
+	lock
+	cmpxchgb	%bl, (%ebp)
+	cmpb	%ah, %al
+	sete	%al
+	movzbl	%al, %eax
+	movl	L_ui$non_lazy_ptr, %ebx
+	movl	%eax, (%ebx)
+	movb	(%ecx), %ah
+	movb	(%edx), %bl
+	movb	%ah, %al
+	movl	L_ui$non_lazy_ptr, %esi
+	lock
+	cmpxchgb	%bl, (%esi)
+	cmpb	%ah, %al
+	sete	%al
+	movzbl	%al, %eax
+	movl	%eax, (%esi)
+	movb	(%ecx), %ah
+	movb	(%edx), %bl
+	movb	%ah, %al
+	movl	L_sl$non_lazy_ptr, %ebp
+	lock
+	cmpxchgb	%bl, (%ebp)
+	cmpb	%ah, %al
+	sete	%al
+	movzbl	%al, %eax
+	movl	%eax, (%esi)
+	movb	(%ecx), %cl
+	movb	(%edx), %dl
+	movb	%cl, %al
+	movl	L_ul$non_lazy_ptr, %ebx
+	lock
+	cmpxchgb	%dl, (%ebx)
+	cmpb	%cl, %al
+	sete	%al
+	movzbl	%al, %eax
+	movl	%eax, (%esi)
+	popl	%esi
+	popl	%edi
+	popl	%ebx
+	popl	%ebp
+	ret
+
+	.globl	_test_lock
+	.align	4, 0x90
+_test_lock:                             ## @test_lock
+## BB#0:                                ## %entry
+	pushl	%ebp
+	pushl	%ebx
+	pushl	%edi
+	pushl	%esi
+	movb	$1, %al
+	movl	L_sc$non_lazy_ptr, %ecx
+	xchgb	%al, (%ecx)
+	movb	%al, (%ecx)
+	movb	$1, %al
+	movl	L_uc$non_lazy_ptr, %ecx
+	xchgb	%al, (%ecx)
+	movb	%al, (%ecx)
+	movl	L_ss$non_lazy_ptr, %eax
+	movw	$1, %dx
+	xchgw	%dx, (%eax)
+	movw	%dx, (%eax)
+	movl	L_us$non_lazy_ptr, %edx
+	movw	$1, %si
+	xchgw	%si, (%edx)
+	movw	%si, (%edx)
+	movl	L_si$non_lazy_ptr, %esi
+	movl	$1, %edi
+	xchgl	%edi, (%esi)
+	movl	%edi, (%esi)
+	movl	L_ui$non_lazy_ptr, %edi
+	movl	$1, %ebx
+	xchgl	%ebx, (%edi)
+	movl	%ebx, (%edi)
+	movl	L_sl$non_lazy_ptr, %ebx
+	movl	$1, %ebp
+	xchgl	%ebp, (%ebx)
+	movl	%ebp, (%ebx)
+	movl	L_ul$non_lazy_ptr, %ebp
+	movl	$1, %ecx
+	xchgl	%ecx, (%ebp)
+	movl	%ecx, (%ebp)
+	movl	L_sc$non_lazy_ptr, %ecx
+	movb	$0, (%ecx)
+	movl	L_uc$non_lazy_ptr, %ecx
+	movb	$0, (%ecx)
+	movw	$0, (%eax)
+	movw	$0, (%edx)
+	movl	$0, (%esi)
+	movl	$0, (%edi)
+	movl	$0, (%ebx)
+	movl	$0, (%ebp)
+	popl	%esi
+	popl	%edi
+	popl	%ebx
+	popl	%ebp
+	ret
+
+	.comm	_sc,1,0                 ## @sc
+	.comm	_uc,1,0                 ## @uc
+	.comm	_ss,2,1                 ## @ss
+	.comm	_us,2,1                 ## @us
+	.comm	_si,4,2                 ## @si
+	.comm	_ui,4,2                 ## @ui
+	.comm	_sl,4,2                 ## @sl
+	.comm	_ul,4,2                 ## @ul
+
+	.section	__IMPORT,__pointers,non_lazy_symbol_pointers
+L_sc$non_lazy_ptr:
+.indirect_symbol _sc
+	.long	0
+L_si$non_lazy_ptr:
+.indirect_symbol _si
+	.long	0
+L_sl$non_lazy_ptr:
+.indirect_symbol _sl
+	.long	0
+L_ss$non_lazy_ptr:
+.indirect_symbol _ss
+	.long	0
+L_uc$non_lazy_ptr:
+.indirect_symbol _uc
+	.long	0
+L_ui$non_lazy_ptr:
+.indirect_symbol _ui
+	.long	0
+L_ul$non_lazy_ptr:
+.indirect_symbol _ul
+	.long	0
+L_us$non_lazy_ptr:
+.indirect_symbol _us
+	.long	0
+
+.subsections_via_symbols

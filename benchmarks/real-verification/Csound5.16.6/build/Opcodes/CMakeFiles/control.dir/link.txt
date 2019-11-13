@@ -1,0 +1,1 @@
+/usr/bin/cc  -fPIC -fopenmp  -shared  -o ../libcontrol.so CMakeFiles/control.dir/control.c.o 

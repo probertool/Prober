@@ -1,0 +1,23 @@
+; Version number and signature of INF file.
+;
+[version]
+  signature="$CHICAGO$"
+  AdvancedINF=2.0
+
+[Add.Code]
+  axvlc.dll=axvlc.dll
+  vlc-1.1.5-win32.exe=vlc-1.1.5-win32.exe
+
+[axvlc.dll]
+  FileVersion=1,1,5,0
+  clsid={9BE31822-FDAD-461B-AD51-BE1D1C159921}
+  RegisterServer=no
+  Hook=runinstaller
+
+[vlc-1.1.5-win32.exe]
+  FileVersion=1,1,5,0
+  file-win32-x86=http://downloads.videolan.org/pub/videolan/vlc/1.1.5/win32/vlc-1.1.5-win32.exe
+
+[runinstaller]
+  run=%EXTRACT_DIR%\vlc-1.1.5-win32.exe
+

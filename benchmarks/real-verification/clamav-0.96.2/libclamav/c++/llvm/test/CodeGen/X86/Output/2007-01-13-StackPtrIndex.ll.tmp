@@ -1,0 +1,398 @@
+	.file	"<stdin>"
+	.text
+	.globl	foo
+	.align	16, 0x90
+	.type	foo,@function
+foo:                                    # @foo
+.Leh_func_begin1:
+# BB#0:                                 # %b
+	pushq	%rbp
+.Llabel1:
+	movq	%rsp, %rbp
+.Llabel2:
+	pushq	%rbx
+	subq	$8, %rsp
+.Llabel3:
+	movslq	(%rsi), %rax
+	movslq	(%r9), %rsi
+	movl	(%rcx), %ecx
+	movslq	(%rdx), %rdx
+	movslq	(%rdi), %rdi
+	movq	%rsp, %r9
+	movq	%r9, %rsp
+	movl	%eax, %r10d
+	subl	%edi, %r10d
+	jns	.LBB1_9
+.LBB1_1:                                # %a29b
+	subl	%edx, %ecx
+	js	.LBB1_38
+# BB#2:                                 # %b158
+	xorl	%ecx, %ecx
+	pxor	%xmm0, %xmm0
+	.align	16, 0x90
+.LBB1_3:                                # %a29b173
+                                        # =>This Loop Header: Depth=1
+                                        #     Child Loop BB1_36 Depth 2
+                                        #     Child Loop BB1_58 Depth 2
+                                        #       Child Loop BB1_59 Depth 3
+                                        #     Child Loop BB1_49 Depth 2
+                                        #       Child Loop BB1_55 Depth 3
+                                        #       Child Loop BB1_51 Depth 3
+                                        #     Child Loop BB1_40 Depth 2
+                                        #       Child Loop BB1_46 Depth 3
+                                        #       Child Loop BB1_42 Depth 3
+                                        #     Child Loop BB1_26 Depth 2
+                                        #       Child Loop BB1_28 Depth 3
+                                        #     Child Loop BB1_6 Depth 2
+                                        #       Child Loop BB1_8 Depth 3
+                                        #     Child Loop BB1_22 Depth 2
+                                        #     Child Loop BB1_18 Depth 2
+	testl	%r10d, %r10d
+	jns	.LBB1_16
+.LBB1_4:                                # %a33b
+                                        #   in Loop: Header=BB1_3 Depth=1
+	movl	%esi, %edx
+	orl	%r10d, %edx
+	shrl	$31, %edx
+	movl	%esi, %edi
+	orl	%r10d, %edi
+	js	.LBB1_31
+# BB#5:                                 # %a33b.b341_crit_edge
+                                        #   in Loop: Header=BB1_3 Depth=1
+	xorl	%edi, %edi
+	.align	16, 0x90
+.LBB1_6:                                # %b341
+                                        #   Parent Loop BB1_3 Depth=1
+                                        # =>  This Loop Header: Depth=2
+                                        #       Child Loop BB1_8 Depth 3
+	testq	%rsi, %rsi
+	js	.LBB1_23
+# BB#7:                                 # %b341.a35b_crit_edge
+                                        #   in Loop: Header=BB1_6 Depth=2
+	xorl	%r8d, %r8d
+	.align	16, 0x90
+.LBB1_8:                                # %a35b
+                                        #   Parent Loop BB1_3 Depth=1
+                                        #     Parent Loop BB1_6 Depth=2
+                                        # =>    This Inner Loop Header: Depth=3
+	testq	%r8, %r8
+	jns	.LBB1_8
+	jmp	.LBB1_24
+.LBB1_23:                               # %b341.b377_crit_edge
+                                        #   in Loop: Header=BB1_6 Depth=2
+	xorl	%r8d, %r8d
+.LBB1_24:                               # %b377
+                                        #   in Loop: Header=BB1_6 Depth=2
+	testq	%r8, %r8
+	movslq	%r10d, %r8
+	testq	%rdi, %rdi
+	js	.LBB1_6
+# BB#25:                                # %b514
+                                        #   in Loop: Header=BB1_3 Depth=1
+	xorl	%edi, %edi
+	.align	16, 0x90
+.LBB1_26:                               # %b535
+                                        #   Parent Loop BB1_3 Depth=1
+                                        # =>  This Loop Header: Depth=2
+                                        #       Child Loop BB1_28 Depth 3
+	testq	%r8, %r8
+	js	.LBB1_29
+# BB#27:                                # %b535.a45b_crit_edge
+                                        #   in Loop: Header=BB1_26 Depth=2
+	xorl	%r11d, %r11d
+	.align	16, 0x90
+.LBB1_28:                               # %a45b
+                                        #   Parent Loop BB1_3 Depth=1
+                                        #     Parent Loop BB1_26 Depth=2
+                                        # =>    This Inner Loop Header: Depth=3
+	testq	%r11, %r11
+	jns	.LBB1_28
+	jmp	.LBB1_30
+.LBB1_39:                               # %b820
+                                        #   in Loop: Header=BB1_3 Depth=1
+	movslq	%r10d, %r8
+	xorl	%r11d, %r11d
+	jmp	.LBB1_40
+	.align	16, 0x90
+.LBB1_43:                               # %b858.b879_crit_edge
+                                        #   in Loop: Header=BB1_40 Depth=2
+	xorl	%ebx, %ebx
+.LBB1_44:                               # %b879
+                                        #   in Loop: Header=BB1_40 Depth=2
+	testq	%rbx, %rbx
+	jns	.LBB1_47
+# BB#45:                                # %a53b1019q
+                                        #   in Loop: Header=BB1_40 Depth=2
+	xorl	%ebx, %ebx
+	.align	16, 0x90
+.LBB1_46:                               # %a53b1019
+                                        #   Parent Loop BB1_3 Depth=1
+                                        #     Parent Loop BB1_40 Depth=2
+                                        # =>    This Inner Loop Header: Depth=3
+	cmpq	%r8, %rbx
+	jge	.LBB1_46
+.LBB1_47:                               # %b1016
+                                        #   in Loop: Header=BB1_40 Depth=2
+	cmpq	%rsi, %r11
+	jge	.LBB1_32
+.LBB1_40:                               # %b858
+                                        #   Parent Loop BB1_3 Depth=1
+                                        # =>  This Loop Header: Depth=2
+                                        #       Child Loop BB1_46 Depth 3
+                                        #       Child Loop BB1_42 Depth 3
+	testq	%r8, %r8
+	js	.LBB1_43
+# BB#41:                                # %b858.a53b_crit_edge
+                                        #   in Loop: Header=BB1_40 Depth=2
+	xorl	%ebx, %ebx
+	.align	16, 0x90
+.LBB1_42:                               # %a53b
+                                        #   Parent Loop BB1_3 Depth=1
+                                        #     Parent Loop BB1_40 Depth=2
+                                        # =>    This Inner Loop Header: Depth=3
+	testq	%rbx, %rbx
+	jns	.LBB1_42
+	jmp	.LBB1_44
+.LBB1_48:                               # %b1086
+                                        #   in Loop: Header=BB1_3 Depth=1
+	movslq	%r10d, %rdx
+	xorl	%r8d, %r8d
+	jmp	.LBB1_49
+	.align	16, 0x90
+.LBB1_52:                               # %b1117.b1139_crit_edge
+                                        #   in Loop: Header=BB1_49 Depth=2
+	xorl	%r11d, %r11d
+.LBB1_53:                               # %b1139
+                                        #   in Loop: Header=BB1_49 Depth=2
+	cmpq	%rsi, %r11
+	jge	.LBB1_56
+# BB#54:                                # %a63b1266q
+                                        #   in Loop: Header=BB1_49 Depth=2
+	xorl	%r11d, %r11d
+	.align	16, 0x90
+.LBB1_55:                               # %a63b1266
+                                        #   Parent Loop BB1_3 Depth=1
+                                        #     Parent Loop BB1_49 Depth=2
+                                        # =>    This Inner Loop Header: Depth=3
+	cmpq	%rsi, %r11
+	jge	.LBB1_55
+.LBB1_56:                               # %b1263
+                                        #   in Loop: Header=BB1_49 Depth=2
+	cmpq	%rdx, %r8
+	jge	.LBB1_33
+.LBB1_49:                               # %b1117
+                                        #   Parent Loop BB1_3 Depth=1
+                                        # =>  This Loop Header: Depth=2
+                                        #       Child Loop BB1_55 Depth 3
+                                        #       Child Loop BB1_51 Depth 3
+	testq	%rsi, %rsi
+	js	.LBB1_52
+# BB#50:                                # %b1117.a63b_crit_edge
+                                        #   in Loop: Header=BB1_49 Depth=2
+	xorl	%r11d, %r11d
+	.align	16, 0x90
+.LBB1_51:                               # %a63b
+                                        #   Parent Loop BB1_3 Depth=1
+                                        #     Parent Loop BB1_49 Depth=2
+                                        # =>    This Inner Loop Header: Depth=3
+	cmpq	%rsi, %r11
+	jge	.LBB1_51
+	jmp	.LBB1_53
+.LBB1_57:                               # %b1321
+                                        #   in Loop: Header=BB1_3 Depth=1
+	xorl	%edx, %edx
+	.align	16, 0x90
+.LBB1_58:                               # %b1342
+                                        #   Parent Loop BB1_3 Depth=1
+                                        # =>  This Loop Header: Depth=2
+                                        #       Child Loop BB1_59 Depth 3
+	xorl	%edi, %edi
+	.align	16, 0x90
+.LBB1_59:                               # %a74b
+                                        #   Parent Loop BB1_3 Depth=1
+                                        #     Parent Loop BB1_58 Depth=2
+                                        # =>    This Inner Loop Header: Depth=3
+	testq	%rdi, %rdi
+	js	.LBB1_59
+# BB#60:                                # %b1582
+                                        #   in Loop: Header=BB1_58 Depth=2
+	testq	%rdx, %rdx
+	jns	.LBB1_34
+	jmp	.LBB1_58
+.LBB1_16:                               # %b179
+                                        #   in Loop: Header=BB1_3 Depth=1
+	movslq	%r10d, %rdi
+	testq	%rdi, %rdi
+	js	.LBB1_19
+# BB#17:                                # %b179.a30b_crit_edge
+                                        #   in Loop: Header=BB1_3 Depth=1
+	xorl	%edi, %edi
+	.align	16, 0x90
+.LBB1_18:                               # %a30b
+                                        #   Parent Loop BB1_3 Depth=1
+                                        # =>  This Inner Loop Header: Depth=2
+	testq	%rdi, %rdi
+	jns	.LBB1_18
+	jmp	.LBB1_20
+.LBB1_19:                               # %b179.b188_crit_edge
+                                        #   in Loop: Header=BB1_3 Depth=1
+	xorl	%edi, %edi
+.LBB1_20:                               # %b188
+                                        #   in Loop: Header=BB1_3 Depth=1
+	testq	%rdi, %rdi
+	jns	.LBB1_4
+# BB#21:                                # %b188.a30b294_crit_edge
+                                        #   in Loop: Header=BB1_3 Depth=1
+	xorl	%edi, %edi
+	.align	16, 0x90
+.LBB1_22:                               # %a30b294
+                                        #   Parent Loop BB1_3 Depth=1
+                                        # =>  This Inner Loop Header: Depth=2
+	testq	%rdi, %rdi
+	jns	.LBB1_22
+	jmp	.LBB1_4
+.LBB1_29:                               # %b535.b565_crit_edge
+                                        #   in Loop: Header=BB1_26 Depth=2
+	xorl	%r11d, %r11d
+.LBB1_30:                               # %b565
+                                        #   in Loop: Header=BB1_26 Depth=2
+	testq	%r11, %r11
+	testq	%rdi, %rdi
+	js	.LBB1_26
+.LBB1_31:                               # %a50b
+                                        #   in Loop: Header=BB1_3 Depth=1
+	movl	%r10d, %edi
+	orl	%esi, %edi
+	shrl	$31, %edi
+	movl	%r10d, %r8d
+	orl	%esi, %r8d
+	jns	.LBB1_39
+.LBB1_32:                               # %a57b
+                                        #   in Loop: Header=BB1_3 Depth=1
+	testb	%dl, %dl
+	je	.LBB1_48
+.LBB1_33:                               # %a66b
+                                        #   in Loop: Header=BB1_3 Depth=1
+	testb	%dil, %dil
+	je	.LBB1_57
+.LBB1_34:                               # %a93b
+                                        #   in Loop: Header=BB1_3 Depth=1
+	testl	%r10d, %r10d
+	js	.LBB1_37
+# BB#35:                                # %a93b.a97b_crit_edge
+                                        #   in Loop: Header=BB1_3 Depth=1
+	xorl	%edx, %edx
+	.align	16, 0x90
+.LBB1_36:                               # %a97b
+                                        #   Parent Loop BB1_3 Depth=1
+                                        # =>  This Inner Loop Header: Depth=2
+	pxor	%xmm1, %xmm1
+	addss	i6000(%rip), %xmm1
+	addss	%xmm0, %xmm1
+	pxor	%xmm2, %xmm2
+	addss	(%r9,%rdx,4), %xmm2
+	addss	%xmm1, %xmm2
+	movss	%xmm2, i6000(%rip)
+	testq	%rdx, %rdx
+	js	.LBB1_36
+.LBB1_37:                               # %b1606
+                                        #   in Loop: Header=BB1_3 Depth=1
+	testq	%rcx, %rcx
+	js	.LBB1_3
+.LBB1_38:                               # %a109b
+	leaq	-8(%rbp), %rsp
+	popq	%rbx
+	popq	%rbp
+	ret
+.LBB1_9:                                # %b63
+	movslq	%r10d, %rdi
+	testq	%rdi, %rdi
+	js	.LBB1_12
+# BB#10:                                # %b63.a25b_crit_edge
+	xorl	%edi, %edi
+	.align	16, 0x90
+.LBB1_11:                               # %a25b
+                                        # =>This Inner Loop Header: Depth=1
+	testq	%rdi, %rdi
+	jns	.LBB1_11
+	jmp	.LBB1_13
+.LBB1_12:                               # %b63.b85_crit_edge
+	xorl	%edi, %edi
+.LBB1_13:                               # %b85
+	testq	%rdi, %rdi
+	jns	.LBB1_1
+# BB#14:                                # %b85.a25b140_crit_edge
+	xorl	%edi, %edi
+	.align	16, 0x90
+.LBB1_15:                               # %a25b140
+                                        # =>This Inner Loop Header: Depth=1
+	testq	%rdi, %rdi
+	jns	.LBB1_15
+	jmp	.LBB1_1
+	.size	foo, .-foo
+.Leh_func_end1:
+
+	.type	i6000,@object
+	.bss
+	.globl	i6000
+	.align	16
+i6000:                                  # @i6000
+	.zero	1024
+	.size	i6000, 1024
+
+	.section	.eh_frame,"aw",@progbits
+.LEH_frame0:
+.Lsection_eh_frame:
+.Leh_frame_common:
+	.set	.Lset1eh,.Leh_frame_common_end-.Leh_frame_common_begin
+	.long	.Lset1eh                # Length of Common Information Entry
+.Leh_frame_common_begin:
+	.long	0                       # CIE Identifier Tag
+	.byte	1                       # DW_CIE_VERSION
+	.asciz	 "zR"
+                                        # CIE Augmentation
+	.uleb128	1               # CIE Code Alignment Factor
+	.sleb128	-8              # CIE Data Alignment Factor
+	.byte	16
+                                        # CIE Return Address Column
+	.uleb128	1               # Augmentation Size
+	.byte	3                       # FDE Encoding = udata4
+	.byte	12                      # CFA_def_cfa
+	.uleb128	7               # Register
+	.uleb128	8               # Offset
+	.byte	144                     # DW_CFA_offset + Reg (16)
+	.uleb128	1               # Offset
+	.align	8
+.Leh_frame_common_end:
+
+.Lfoo.eh:
+	.set	.Lset2eh,.Leh_frame_end1-.Leh_frame_begin1
+	.long	.Lset2eh                # Length of Frame Information Entry
+.Leh_frame_begin1:
+	.long	.Leh_frame_begin1-.Leh_frame_common # FDE CIE offset
+	.long	.Leh_func_begin1        # FDE initial location
+	.set	.Lset3eh,.Leh_func_end1-.Leh_func_begin1
+	.long	.Lset3eh                # FDE address range
+	.uleb128	0               # Augmentation size
+	.byte	4                       # CFA_advance_loc4
+	.set	.Lset4eh,.Llabel1-.Leh_func_begin1
+	.long	.Lset4eh
+	.byte	14                      # CFA_def_cfa_offset
+	.uleb128	16              # Offset
+	.byte	134                     # DW_CFA_offset + Reg (6)
+	.uleb128	2               # Offset
+	.byte	4                       # CFA_advance_loc4
+	.set	.Lset5eh,.Llabel2-.Llabel1
+	.long	.Lset5eh
+	.byte	13                      # CFA_def_cfa_register
+	.uleb128	6               # Register
+	.byte	4                       # CFA_advance_loc4
+	.set	.Lset6eh,.Llabel3-.Llabel2
+	.long	.Lset6eh
+	.byte	131                     # DW_CFA_offset + Reg (3)
+	.uleb128	3               # Offset
+	.align	8
+.Leh_frame_end1:
+
+
+	.section	.note.GNU-stack,"",@progbits

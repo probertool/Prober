@@ -1,0 +1,25 @@
+	.file	"<stdin>"
+	.section	.rodata.cst16,"aM",@progbits,16
+	.align	16
+.LCPI1_0:                               # constant pool <4 x float>
+	.long	1065353216              # float 1.000000e+00
+	.long	1065353216              # float 1.000000e+00
+	.long	1065353216              # float 1.000000e+00
+	.long	1065353216              # float 1.000000e+00
+	.text
+	.globl	test
+	.align	16, 0x90
+	.type	test,@function
+test:                                   # @test
+# BB#0:
+	movaps	0, %xmm0
+	xorps	%xmm1, %xmm1
+	movhlps	%xmm0, %xmm1
+	shufps	$-28, .LCPI1_0, %xmm0
+	addps	%xmm1, %xmm0
+	movaps	%xmm0, 0
+	ret
+	.size	test, .-test
+
+
+	.section	.note.GNU-stack,"",@progbits

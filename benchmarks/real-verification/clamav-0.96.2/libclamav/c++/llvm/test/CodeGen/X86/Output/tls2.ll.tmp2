@@ -1,0 +1,51 @@
+	.file	"<stdin>"
+	.text
+	.globl	f
+	.align	16, 0x90
+	.type	f,@function
+f:                                      # @f
+.Leh_func_begin1:
+# BB#0:                                 # %entry
+	movq	%fs:0, %rax
+	leaq	i@TPOFF(%rax), %rax
+	ret
+	.size	f, .-f
+.Leh_func_end1:
+
+	.type	i,@object
+	.section	.tdata,"awT",@progbits
+	.globl	i
+	.align	4
+i:                                      # @i
+	.long	15                      # 0xf
+	.size	i, 4
+
+	.section	.eh_frame,"aw",@progbits
+.LEH_frame0:
+.Lsection_eh_frame:
+.Leh_frame_common:
+	.set	.Lset1eh,.Leh_frame_common_end-.Leh_frame_common_begin
+	.long	.Lset1eh                # Length of Common Information Entry
+.Leh_frame_common_begin:
+	.long	0                       # CIE Identifier Tag
+	.byte	1                       # DW_CIE_VERSION
+	.asciz	 "zR"
+                                        # CIE Augmentation
+	.uleb128	1               # CIE Code Alignment Factor
+	.sleb128	-8              # CIE Data Alignment Factor
+	.byte	16
+                                        # CIE Return Address Column
+	.uleb128	1               # Augmentation Size
+	.byte	3                       # FDE Encoding = udata4
+	.byte	12                      # CFA_def_cfa
+	.uleb128	7               # Register
+	.uleb128	8               # Offset
+	.byte	144                     # DW_CFA_offset + Reg (16)
+	.uleb128	1               # Offset
+	.align	8
+.Leh_frame_common_end:
+
+.Lf.eh = 0
+
+
+	.section	.note.GNU-stack,"",@progbits

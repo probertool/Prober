@@ -1,0 +1,40 @@
+	.file	"<stdin>"
+	.text
+	.globl	var_insert
+	.align	16, 0x90
+	.type	var_insert,@function
+var_insert:                             # @var_insert
+# BB#0:                                 # %entry
+	pushl	%ebp
+	movl	%esp, %ebp
+	andl	$-16, %esp
+	subl	$32, %esp
+	movaps	%xmm0, (%esp)
+	movl	8(%ebp), %eax
+	movl	12(%ebp), %ecx
+	movl	%eax, (%esp,%ecx,4)
+	movaps	(%esp), %xmm0
+	movl	%ebp, %esp
+	popl	%ebp
+	ret
+	.size	var_insert, .-var_insert
+
+	.globl	var_extract
+	.align	16, 0x90
+	.type	var_extract,@function
+var_extract:                            # @var_extract
+# BB#0:                                 # %entry
+	pushl	%ebp
+	movl	%esp, %ebp
+	andl	$-16, %esp
+	subl	$32, %esp
+	movaps	%xmm0, (%esp)
+	movl	8(%ebp), %eax
+	movl	(%esp,%eax,4), %eax
+	movl	%ebp, %esp
+	popl	%ebp
+	ret
+	.size	var_extract, .-var_extract
+
+
+	.section	.note.GNU-stack,"",@progbits

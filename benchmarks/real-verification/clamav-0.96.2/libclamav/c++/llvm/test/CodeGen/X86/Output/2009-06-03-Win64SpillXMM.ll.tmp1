@@ -1,0 +1,21 @@
+	.file	"<stdin>"
+	.def	 a;	.scl	2;	.type	32;	.endef
+	.text
+	.globl	a
+	.align	16, 0x90
+	.type	a,@function
+a:                                      # @a
+# BB#0:                                 # %entry
+	subq	$72, %rsp
+	movaps	%xmm8, 32(%rsp)         # 16-byte Spill
+	movaps	%xmm7, 48(%rsp)         # 16-byte Spill
+	#APP
+	#NO_APP
+	movaps	48(%rsp), %xmm7         # 16-byte Reload
+	movaps	32(%rsp), %xmm8         # 16-byte Reload
+	addq	$72, %rsp
+	ret
+	.size	a, .-a
+
+
+	.section	.note.GNU-stack,"",@progbits

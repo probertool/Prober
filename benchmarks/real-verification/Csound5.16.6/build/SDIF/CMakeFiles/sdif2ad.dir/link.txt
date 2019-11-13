@@ -1,0 +1,1 @@
+/usr/bin/cc  -fopenmp   CMakeFiles/sdif2ad.dir/sdif2adsyn.c.o CMakeFiles/sdif2ad.dir/sdif.c.o CMakeFiles/sdif2ad.dir/sdif-mem.c.o  -o ../sdif2ad -rdynamic 

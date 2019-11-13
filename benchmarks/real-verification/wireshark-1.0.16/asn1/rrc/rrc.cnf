@@ -1,0 +1,36 @@
+# rrc.cnf
+# rrc conformation file
+# Copyright 2006 Anders Broman 
+# $Id: rrc.cnf 24095 2008-01-15 06:54:30Z etxrab $
+
+#.OPT
+PER
+UNALIGNED
+#.END
+
+#.PDU
+
+DL-DCCH-Message    @dl.dcch
+UL-DCCH-Message    @ul.dcch
+DL-CCCH-Message    @dl.ccch
+UL-CCCH-Message    @ul.ccch
+PCCH-Message       @pcch
+DL-SHCCH-Message   @dl.shcch
+UL-SHCCH-Message   @ul.shcch
+BCCH-FACH-Message  @bcch.fach
+BCCH-BCH-Message   @bcch.bch
+MCCH-Message       @mcch
+MSCH-Message       @msch
+
+#.END
+
+#.FN_BODY NAS-Message VAL_PTR = &nas_message_tvb
+  tvbuff_t *nas_message_tvb=NULL;
+
+%(DEFAULT_BODY)s
+
+	if (nas_message_tvb)
+		call_dissector(gsm_a_dtap_handle,nas_message_tvb,%(ACTX)s->pinfo, proto_tree_get_root(tree));
+
+#.END
+

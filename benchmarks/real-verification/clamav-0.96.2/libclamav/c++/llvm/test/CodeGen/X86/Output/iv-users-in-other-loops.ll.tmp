@@ -1,0 +1,181 @@
+	.file	"<stdin>"
+	.text
+	.globl	foo
+	.align	16, 0x90
+	.type	foo,@function
+foo:                                    # @foo
+# BB#0:                                 # %entry
+	subq	$8, %rsp
+	movl	%esi, %eax
+	xorl	$1, %eax
+	movl	%ecx, %r10d
+	xorl	$1, %r10d
+	orl	%eax, %r10d
+	je	.LBB1_2
+# BB#1:                                 # %entry.bb13_crit_edge
+	xorps	%xmm0, %xmm0
+	pxor	%xmm1, %xmm1
+	movaps	%xmm0, %xmm2
+	movaps	%xmm0, %xmm3
+	movaps	%xmm0, %xmm4
+	jmp	.LBB1_19
+.LBB1_2:                                # %entry.bb2_crit_edge
+	pxor	%xmm1, %xmm1
+	jmp	.LBB1_4
+	.align	16, 0x90
+.LBB1_3:                                # %bb
+                                        #   in Loop: Header=BB1_4 Depth=1
+	movss	(%rdi), %xmm0
+	mulss	(%rdx), %xmm0
+	addss	%xmm0, %xmm1
+	decl	%r9d
+	addq	$4, %rdi
+	addq	$4, %rdx
+.LBB1_4:                                # %bb2
+                                        # =>This Inner Loop Header: Depth=1
+	testl	%r9d, %r9d
+	jle	.LBB1_6
+# BB#5:                                 # %bb3
+                                        #   in Loop: Header=BB1_4 Depth=1
+	testb	$15, %dil
+	jne	.LBB1_3
+.LBB1_6:                                # %bb4
+	testb	$15, %dl
+	je	.LBB1_9
+# BB#7:                                 # %bb10.preheader
+	cmpl	$15, %r9d
+	jg	.LBB1_15
+# BB#8:                                 # %bb10.preheader.bb12.loopexit_crit_edge
+	xorps	%xmm4, %xmm4
+	movaps	%xmm4, %xmm3
+	movaps	%xmm4, %xmm2
+	movaps	%xmm4, %xmm0
+	jmp	.LBB1_18
+.LBB1_9:                                # %bb6.preheader
+	cmpl	$15, %r9d
+	jg	.LBB1_13
+# BB#10:                                # %bb6.preheader.bb8.loopexit_crit_edge
+	xorps	%xmm4, %xmm4
+	movaps	%xmm4, %xmm3
+	movaps	%xmm4, %xmm2
+	movaps	%xmm4, %xmm0
+	.align	16, 0x90
+.LBB1_11:                               # %bb8.loopexit
+                                        # =>This Inner Loop Header: Depth=1
+	cmpl	$3, %r9d
+	jle	.LBB1_19
+# BB#12:                                # %bb7
+                                        #   in Loop: Header=BB1_11 Depth=1
+	movaps	(%rdi), %xmm5
+	mulps	(%rdx), %xmm5
+	addps	%xmm5, %xmm4
+	addq	$16, %rdi
+	addq	$16, %rdx
+	addl	$-4, %r9d
+	jmp	.LBB1_11
+.LBB1_13:                               # %bb6.preheader.bb5_crit_edge
+	xorps	%xmm4, %xmm4
+	movaps	%xmm4, %xmm3
+	movaps	%xmm4, %xmm2
+	movaps	%xmm4, %xmm0
+	.align	16, 0x90
+.LBB1_14:                               # %bb5
+                                        # =>This Inner Loop Header: Depth=1
+	#APP
+	;# foo
+	#NO_APP
+	movaps	(%rdi), %xmm5
+	movaps	16(%rdi), %xmm6
+	movaps	32(%rdi), %xmm7
+	movaps	48(%rdi), %xmm8
+	mulps	48(%rdx), %xmm8
+	addps	%xmm8, %xmm0
+	mulps	32(%rdx), %xmm7
+	addps	%xmm7, %xmm2
+	mulps	16(%rdx), %xmm6
+	addps	%xmm6, %xmm3
+	mulps	(%rdx), %xmm5
+	addps	%xmm5, %xmm4
+	addq	$64, %rdi
+	addq	$64, %rdx
+	addl	$-16, %r9d
+	cmpl	$15, %r9d
+	jg	.LBB1_14
+	jmp	.LBB1_11
+.LBB1_15:                               # %bb10.preheader.bb9_crit_edge
+	xorps	%xmm4, %xmm4
+	movaps	%xmm4, %xmm3
+	movaps	%xmm4, %xmm2
+	movaps	%xmm4, %xmm0
+	.align	16, 0x90
+.LBB1_16:                               # %bb9
+                                        # =>This Inner Loop Header: Depth=1
+	movups	(%rdx), %xmm5
+	movups	16(%rdx), %xmm6
+	movups	32(%rdx), %xmm7
+	movups	48(%rdx), %xmm8
+	mulps	48(%rdi), %xmm8
+	addps	%xmm8, %xmm0
+	mulps	32(%rdi), %xmm7
+	addps	%xmm7, %xmm2
+	mulps	16(%rdi), %xmm6
+	addps	%xmm6, %xmm3
+	mulps	(%rdi), %xmm5
+	addps	%xmm5, %xmm4
+	addq	$64, %rdx
+	addq	$64, %rdi
+	addl	$-16, %r9d
+	cmpl	$15, %r9d
+	jg	.LBB1_16
+	jmp	.LBB1_18
+	.align	16, 0x90
+.LBB1_17:                               # %bb11
+                                        #   in Loop: Header=BB1_18 Depth=1
+	movups	(%rdx), %xmm5
+	mulps	(%rdi), %xmm5
+	addps	%xmm5, %xmm4
+	addq	$16, %rdx
+	addq	$16, %rdi
+	addl	$-4, %r9d
+.LBB1_18:                               # %bb11
+                                        # =>This Inner Loop Header: Depth=1
+	cmpl	$3, %r9d
+	jg	.LBB1_17
+.LBB1_19:                               # %bb13
+	addps	%xmm0, %xmm3
+	addps	%xmm2, %xmm4
+	addps	%xmm3, %xmm4
+	pshufd	$1, %xmm4, %xmm0
+	pshufd	$3, %xmm4, %xmm2
+	movaps	%xmm4, %xmm3
+	movhlps	%xmm3, %xmm3
+	addss	%xmm2, %xmm3
+	addss	%xmm4, %xmm0
+	addss	%xmm3, %xmm0
+	addss	%xmm1, %xmm0
+	testl	%r9d, %r9d
+	jle	.LBB1_22
+# BB#20:                                # %bb.nph56
+	movl	%r9d, %eax
+	movslq	%ecx, %rcx
+	shlq	$2, %rcx
+	movslq	%esi, %rsi
+	shlq	$2, %rsi
+	.align	16, 0x90
+.LBB1_21:                               # %bb14
+                                        # =>This Inner Loop Header: Depth=1
+	movss	(%rdi), %xmm1
+	addq	%rsi, %rdi
+	mulss	(%rdx), %xmm1
+	addq	%rcx, %rdx
+	addss	%xmm1, %xmm0
+	decq	%rax
+	jne	.LBB1_21
+.LBB1_22:                               # %bb16
+	movss	%xmm0, (%r8)
+	addq	$8, %rsp
+	ret
+	.size	foo, .-foo
+
+
+	.section	.note.GNU-stack,"",@progbits

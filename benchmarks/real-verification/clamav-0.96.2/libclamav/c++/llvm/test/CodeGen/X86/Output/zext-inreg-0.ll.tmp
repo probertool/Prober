@@ -1,0 +1,123 @@
+	.file	"<stdin>"
+	.text
+	.globl	a
+	.align	16, 0x90
+	.type	a,@function
+a:                                      # @a
+# BB#0:
+	incl	%edi
+                                        # kill: DIL<def> EDI<kill>
+	movzbl	%dil, %eax
+	ret
+	.size	a, .-a
+
+	.globl	b
+	.align	16, 0x90
+	.type	b,@function
+b:                                      # @b
+# BB#0:
+	cvttss2si	%xmm0, %eax
+	movzbl	%al, %eax
+	ret
+	.size	b, .-b
+
+	.globl	c
+	.align	16, 0x90
+	.type	c,@function
+c:                                      # @c
+# BB#0:
+	incl	%edi
+                                        # kill: DI<def> EDI<kill>
+	movzwl	%di, %eax
+	ret
+	.size	c, .-c
+
+	.globl	d
+	.align	16, 0x90
+	.type	d,@function
+d:                                      # @d
+# BB#0:
+                                        # kill: EDI<def> RDI<kill>
+	incl	%edi
+                                        # kill: DIL<def> RDI<kill>
+	movzbl	%dil, %eax
+	ret
+	.size	d, .-d
+
+	.globl	e
+	.align	16, 0x90
+	.type	e,@function
+e:                                      # @e
+# BB#0:
+                                        # kill: EDI<def> RDI<kill>
+	incl	%edi
+                                        # kill: DI<def> RDI<kill>
+	movzwl	%di, %eax
+	ret
+	.size	e, .-e
+
+	.globl	f
+	.align	16, 0x90
+	.type	f,@function
+f:                                      # @f
+# BB#0:
+                                        # kill: EDI<def> RDI<kill>
+	leal	1(%rdi), %eax
+	ret
+	.size	f, .-f
+
+	.globl	g
+	.align	16, 0x90
+	.type	g,@function
+g:                                      # @g
+# BB#0:
+                                        # kill: DIL<def> EDI<kill>
+	incb	%dil
+	movzbl	%dil, %eax
+	ret
+	.size	g, .-g
+
+	.globl	h
+	.align	16, 0x90
+	.type	h,@function
+h:                                      # @h
+# BB#0:
+                                        # kill: DI<def> EDI<kill>
+	incw	%di
+	movzwl	%di, %eax
+	ret
+	.size	h, .-h
+
+	.globl	i
+	.align	16, 0x90
+	.type	i,@function
+i:                                      # @i
+# BB#0:
+                                        # kill: DIL<def> EDI<kill>
+	incb	%dil
+	movzbl	%dil, %eax
+	ret
+	.size	i, .-i
+
+	.globl	j
+	.align	16, 0x90
+	.type	j,@function
+j:                                      # @j
+# BB#0:
+                                        # kill: DI<def> EDI<kill>
+	incw	%di
+	movzwl	%di, %eax
+	ret
+	.size	j, .-j
+
+	.globl	k
+	.align	16, 0x90
+	.type	k,@function
+k:                                      # @k
+# BB#0:
+	leal	1(%rdi), %eax
+	ret
+	.size	k, .-k
+
+
+	.section	.note.GNU-stack,"",@progbits

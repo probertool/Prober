@@ -1,0 +1,1054 @@
+[Thu Jul 11 15:39:19 UTC]root@3e7fa76cc3dc:~# cd llvm/codesample/39apps/xvidcore/
+[Thu Jul 11 15:39:30 UTC]root@3e7fa76cc3dc:xvidcore# ls
+AUTHORS  ChangeLog  ChangeLog-1.0  CodingStyle  LICENSE  README  TODO  build  debian  doc  dshow  examples  src  vfw
+[Thu Jul 11 15:39:31 UTC]root@3e7fa76cc3dc:xvidcore# cd build/generic/
+[Thu Jul 11 15:39:56 UTC]root@3e7fa76cc3dc:generic# CC="/root/llvm/llvm80/build/bin/clang" CXX="/root/llvm/llvm80/build/bin/clang++" CFLAGS="-flto -v -g" CXXFLAGS="-flto -v -g" ./configure
+checking build system type... x86_64-unknown-linux
+checking host system type... x86_64-unknown-linux
+checking target system type... x86_64-unknown-linux
+checking whether to use default CFLAGS... no
+checking for gcc... /root/llvm/llvm80/build/bin/clang
+checking for C compiler default output file name... a.out
+checking whether the C compiler works... yes
+checking whether we are cross compiling... no
+checking for suffix of executables... 
+checking for suffix of object files... o
+checking whether we are using the GNU C compiler... yes
+checking whether /root/llvm/llvm80/build/bin/clang accepts -g... yes
+checking for /root/llvm/llvm80/build/bin/clang option to accept ANSI C... none needed
+checking for a BSD-compatible install... /usr/bin/install -c
+checking for ranlib... ranlib
+checking for whether to use assembly code... yes
+checking for architecture type... x86_64
+checking how to run the C preprocessor... /root/llvm/llvm80/build/bin/clang -E
+checking for egrep... grep -E
+checking for ANSI C header files... yes
+checking for sys/types.h... yes
+checking for sys/stat.h... yes
+checking for stdlib.h... yes
+checking for string.h... yes
+checking for memory.h... yes
+checking for strings.h... yes
+checking for inttypes.h... yes
+checking for stdint.h... yes
+checking for unistd.h... yes
+checking for int *... yes
+checking size of int *... 8
+checking whether byte ordering is bigendian... no
+checking for build extensions... .so .a .o
+checking for platform specific LDFLAGS/CFLAGS... ok
+checking for nasm... no
+configure: WARNING: no correct assembler was found - Compiling generic sources only
+checking stdio.h usability... yes
+checking stdio.h presence... yes
+checking for stdio.h... yes
+checking signal.h usability... yes
+checking signal.h presence... yes
+checking for signal.h... yes
+checking for stdlib.h... (cached) yes
+checking for string.h... (cached) yes
+checking assert.h usability... yes
+checking assert.h presence... yes
+checking for assert.h... yes
+checking math.h usability... yes
+checking math.h presence... yes
+checking for math.h... yes
+checking pthread.h usability... yes
+checking pthread.h presence... yes
+checking for pthread.h... yes
+checking for pthread_create in -lpthread... yes
+checking for pthread_join in -lpthread... yes
+configure: creating ./config.status
+config.status: creating platform.inc
+[Thu Jul 11 15:40:35 UTC]root@3e7fa76cc3dc:generic# make
+  C: ./decoder.c
+clang version 8.0.1 (https://github.com/llvm-mirror/clang.git 2e4c9c5fc864c2c432e4c262a67c42d824b265c6) (https://github.com/rqtian/llvm80-bufferoverflow.git 38b4a62b0634ac2bc4b67addab5698d2f1a5c23e)
+Target: x86_64-unknown-linux-gnu
+Thread model: posix
+InstalledDir: /root/llvm/llvm80/build/bin
+Found candidate GCC installation: /usr/lib/gcc/x86_64-linux-gnu/6
+Found candidate GCC installation: /usr/lib/gcc/x86_64-linux-gnu/6.3.0
+Selected GCC installation: /usr/lib/gcc/x86_64-linux-gnu/6.3.0
+Candidate multilib: .;@m64
+Selected multilib: .;@m64
+ "/root/llvm/llvm80/build/bin/clang-8" -cc1 -triple x86_64-unknown-linux-gnu -emit-llvm-bc -flto -flto-unit -disable-free -main-file-name decoder.c -mrelocation-model pic -pic-level 2 -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debug-info-kind=limited -dwarf-version=4 -debugger-tuning=gdb -v -coverage-notes-file /root/llvm/codesample/39apps/xvidcore/build/generic/=build/decoder.gcno -resource-dir /root/llvm/llvm80/build/lib/clang/8.0.1 -D ARCH_IS_GENERIC -D ARCH_IS_64BIT -D ARCH_IS_LITTLE_ENDIAN -D HAVE_PTHREAD -internal-isystem /usr/local/include -internal-isystem /root/llvm/llvm80/build/lib/clang/8.0.1/include -internal-externc-isystem /usr/include/x86_64-linux-gnu -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdebug-compilation-dir /root/llvm/codesample/39apps/xvidcore/build/generic -ferror-limit 19 -fmessage-length 143 -fobjc-runtime=gcc -fdiagnostics-show-option -fcolor-diagnostics -o =build/decoder.o -x c ../../src/decoder.c -faddrsig
+clang -cc1 version 8.0.1 based upon LLVM 8.0.1 default target x86_64-unknown-linux-gnu
+ignoring nonexistent directory "/include"
+#include "..." search starts here:
+#include <...> search starts here:
+ /usr/local/include
+ /root/llvm/llvm80/build/lib/clang/8.0.1/include
+ /usr/include/x86_64-linux-gnu
+ /usr/include
+End of search list.
+  C: ./encoder.c
+clang version 8.0.1 (https://github.com/llvm-mirror/clang.git 2e4c9c5fc864c2c432e4c262a67c42d824b265c6) (https://github.com/rqtian/llvm80-bufferoverflow.git 38b4a62b0634ac2bc4b67addab5698d2f1a5c23e)
+Target: x86_64-unknown-linux-gnu
+Thread model: posix
+InstalledDir: /root/llvm/llvm80/build/bin
+Found candidate GCC installation: /usr/lib/gcc/x86_64-linux-gnu/6
+Found candidate GCC installation: /usr/lib/gcc/x86_64-linux-gnu/6.3.0
+Selected GCC installation: /usr/lib/gcc/x86_64-linux-gnu/6.3.0
+Candidate multilib: .;@m64
+Selected multilib: .;@m64
+ "/root/llvm/llvm80/build/bin/clang-8" -cc1 -triple x86_64-unknown-linux-gnu -emit-llvm-bc -flto -flto-unit -disable-free -main-file-name encoder.c -mrelocation-model pic -pic-level 2 -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debug-info-kind=limited -dwarf-version=4 -debugger-tuning=gdb -v -coverage-notes-file /root/llvm/codesample/39apps/xvidcore/build/generic/=build/encoder.gcno -resource-dir /root/llvm/llvm80/build/lib/clang/8.0.1 -D ARCH_IS_GENERIC -D ARCH_IS_64BIT -D ARCH_IS_LITTLE_ENDIAN -D HAVE_PTHREAD -internal-isystem /usr/local/include -internal-isystem /root/llvm/llvm80/build/lib/clang/8.0.1/include -internal-externc-isystem /usr/include/x86_64-linux-gnu -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdebug-compilation-dir /root/llvm/codesample/39apps/xvidcore/build/generic -ferror-limit 19 -fmessage-length 143 -fobjc-runtime=gcc -fdiagnostics-show-option -fcolor-diagnostics -o =build/encoder.o -x c ../../src/encoder.c -faddrsig
+clang -cc1 version 8.0.1 based upon LLVM 8.0.1 default target x86_64-unknown-linux-gnu
+ignoring nonexistent directory "/include"
+#include "..." search starts here:
+#include <...> search starts here:
+ /usr/local/include
+ /root/llvm/llvm80/build/lib/clang/8.0.1/include
+ /usr/include/x86_64-linux-gnu
+ /usr/include
+End of search list.
+  C: ./xvid.c
+clang version 8.0.1 (https://github.com/llvm-mirror/clang.git 2e4c9c5fc864c2c432e4c262a67c42d824b265c6) (https://github.com/rqtian/llvm80-bufferoverflow.git 38b4a62b0634ac2bc4b67addab5698d2f1a5c23e)
+Target: x86_64-unknown-linux-gnu
+Thread model: posix
+InstalledDir: /root/llvm/llvm80/build/bin
+Found candidate GCC installation: /usr/lib/gcc/x86_64-linux-gnu/6
+Found candidate GCC installation: /usr/lib/gcc/x86_64-linux-gnu/6.3.0
+Selected GCC installation: /usr/lib/gcc/x86_64-linux-gnu/6.3.0
+Candidate multilib: .;@m64
+Selected multilib: .;@m64
+ "/root/llvm/llvm80/build/bin/clang-8" -cc1 -triple x86_64-unknown-linux-gnu -emit-llvm-bc -flto -flto-unit -disable-free -main-file-name xvid.c -mrelocation-model pic -pic-level 2 -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debug-info-kind=limited -dwarf-version=4 -debugger-tuning=gdb -v -coverage-notes-file /root/llvm/codesample/39apps/xvidcore/build/generic/=build/xvid.gcno -resource-dir /root/llvm/llvm80/build/lib/clang/8.0.1 -D ARCH_IS_GENERIC -D ARCH_IS_64BIT -D ARCH_IS_LITTLE_ENDIAN -D HAVE_PTHREAD -internal-isystem /usr/local/include -internal-isystem /root/llvm/llvm80/build/lib/clang/8.0.1/include -internal-externc-isystem /usr/include/x86_64-linux-gnu -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdebug-compilation-dir /root/llvm/codesample/39apps/xvidcore/build/generic -ferror-limit 19 -fmessage-length 143 -fobjc-runtime=gcc -fdiagnostics-show-option -fcolor-diagnostics -o =build/xvid.o -x c ../../src/xvid.c -faddrsig
+clang -cc1 version 8.0.1 based upon LLVM 8.0.1 default target x86_64-unknown-linux-gnu
+ignoring nonexistent directory "/include"
+#include "..." search starts here:
+#include <...> search starts here:
+ /usr/local/include
+ /root/llvm/llvm80/build/lib/clang/8.0.1/include
+ /usr/include/x86_64-linux-gnu
+ /usr/include
+End of search list.
+  C: bitstream/bitstream.c
+clang version 8.0.1 (https://github.com/llvm-mirror/clang.git 2e4c9c5fc864c2c432e4c262a67c42d824b265c6) (https://github.com/rqtian/llvm80-bufferoverflow.git 38b4a62b0634ac2bc4b67addab5698d2f1a5c23e)
+Target: x86_64-unknown-linux-gnu
+Thread model: posix
+InstalledDir: /root/llvm/llvm80/build/bin
+Found candidate GCC installation: /usr/lib/gcc/x86_64-linux-gnu/6
+Found candidate GCC installation: /usr/lib/gcc/x86_64-linux-gnu/6.3.0
+Selected GCC installation: /usr/lib/gcc/x86_64-linux-gnu/6.3.0
+Candidate multilib: .;@m64
+Selected multilib: .;@m64
+ "/root/llvm/llvm80/build/bin/clang-8" -cc1 -triple x86_64-unknown-linux-gnu -emit-llvm-bc -flto -flto-unit -disable-free -main-file-name bitstream.c -mrelocation-model pic -pic-level 2 -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debug-info-kind=limited -dwarf-version=4 -debugger-tuning=gdb -v -coverage-notes-file /root/llvm/codesample/39apps/xvidcore/build/generic/=build/bitstream/bitstream.gcno -resource-dir /root/llvm/llvm80/build/lib/clang/8.0.1 -D ARCH_IS_GENERIC -D ARCH_IS_64BIT -D ARCH_IS_LITTLE_ENDIAN -D HAVE_PTHREAD -internal-isystem /usr/local/include -internal-isystem /root/llvm/llvm80/build/lib/clang/8.0.1/include -internal-externc-isystem /usr/include/x86_64-linux-gnu -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdebug-compilation-dir /root/llvm/codesample/39apps/xvidcore/build/generic -ferror-limit 19 -fmessage-length 143 -fobjc-runtime=gcc -fdiagnostics-show-option -fcolor-diagnostics -o =build/bitstream/bitstream.o -x c ../../src/bitstream/bitstream.c -faddrsig
+clang -cc1 version 8.0.1 based upon LLVM 8.0.1 default target x86_64-unknown-linux-gnu
+ignoring nonexistent directory "/include"
+#include "..." search starts here:
+#include <...> search starts here:
+ /usr/local/include
+ /root/llvm/llvm80/build/lib/clang/8.0.1/include
+ /usr/include/x86_64-linux-gnu
+ /usr/include
+End of search list.
+../../src/bitstream/bitstream.c:863:29: warning: if statement has empty body [-Wempty-body]
+                                if (BitstreamGetBit(bs));
+                                                        ^
+../../src/bitstream/bitstream.c:863:29: note: put the semicolon on a separate line to silence this warning
+1 warning generated.
+  C: bitstream/cbp.c
+clang version 8.0.1 (https://github.com/llvm-mirror/clang.git 2e4c9c5fc864c2c432e4c262a67c42d824b265c6) (https://github.com/rqtian/llvm80-bufferoverflow.git 38b4a62b0634ac2bc4b67addab5698d2f1a5c23e)
+Target: x86_64-unknown-linux-gnu
+Thread model: posix
+InstalledDir: /root/llvm/llvm80/build/bin
+Found candidate GCC installation: /usr/lib/gcc/x86_64-linux-gnu/6
+Found candidate GCC installation: /usr/lib/gcc/x86_64-linux-gnu/6.3.0
+Selected GCC installation: /usr/lib/gcc/x86_64-linux-gnu/6.3.0
+Candidate multilib: .;@m64
+Selected multilib: .;@m64
+ "/root/llvm/llvm80/build/bin/clang-8" -cc1 -triple x86_64-unknown-linux-gnu -emit-llvm-bc -flto -flto-unit -disable-free -main-file-name cbp.c -mrelocation-model pic -pic-level 2 -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debug-info-kind=limited -dwarf-version=4 -debugger-tuning=gdb -v -coverage-notes-file /root/llvm/codesample/39apps/xvidcore/build/generic/=build/bitstream/cbp.gcno -resource-dir /root/llvm/llvm80/build/lib/clang/8.0.1 -D ARCH_IS_GENERIC -D ARCH_IS_64BIT -D ARCH_IS_LITTLE_ENDIAN -D HAVE_PTHREAD -internal-isystem /usr/local/include -internal-isystem /root/llvm/llvm80/build/lib/clang/8.0.1/include -internal-externc-isystem /usr/include/x86_64-linux-gnu -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdebug-compilation-dir /root/llvm/codesample/39apps/xvidcore/build/generic -ferror-limit 19 -fmessage-length 143 -fobjc-runtime=gcc -fdiagnostics-show-option -fcolor-diagnostics -o =build/bitstream/cbp.o -x c ../../src/bitstream/cbp.c -faddrsig
+clang -cc1 version 8.0.1 based upon LLVM 8.0.1 default target x86_64-unknown-linux-gnu
+ignoring nonexistent directory "/include"
+#include "..." search starts here:
+#include <...> search starts here:
+ /usr/local/include
+ /root/llvm/llvm80/build/lib/clang/8.0.1/include
+ /usr/include/x86_64-linux-gnu
+ /usr/include
+End of search list.
+  C: bitstream/mbcoding.c
+clang version 8.0.1 (https://github.com/llvm-mirror/clang.git 2e4c9c5fc864c2c432e4c262a67c42d824b265c6) (https://github.com/rqtian/llvm80-bufferoverflow.git 38b4a62b0634ac2bc4b67addab5698d2f1a5c23e)
+Target: x86_64-unknown-linux-gnu
+Thread model: posix
+InstalledDir: /root/llvm/llvm80/build/bin
+Found candidate GCC installation: /usr/lib/gcc/x86_64-linux-gnu/6
+Found candidate GCC installation: /usr/lib/gcc/x86_64-linux-gnu/6.3.0
+Selected GCC installation: /usr/lib/gcc/x86_64-linux-gnu/6.3.0
+Candidate multilib: .;@m64
+Selected multilib: .;@m64
+ "/root/llvm/llvm80/build/bin/clang-8" -cc1 -triple x86_64-unknown-linux-gnu -emit-llvm-bc -flto -flto-unit -disable-free -main-file-name mbcoding.c -mrelocation-model pic -pic-level 2 -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debug-info-kind=limited -dwarf-version=4 -debugger-tuning=gdb -v -coverage-notes-file /root/llvm/codesample/39apps/xvidcore/build/generic/=build/bitstream/mbcoding.gcno -resource-dir /root/llvm/llvm80/build/lib/clang/8.0.1 -D ARCH_IS_GENERIC -D ARCH_IS_64BIT -D ARCH_IS_LITTLE_ENDIAN -D HAVE_PTHREAD -internal-isystem /usr/local/include -internal-isystem /root/llvm/llvm80/build/lib/clang/8.0.1/include -internal-externc-isystem /usr/include/x86_64-linux-gnu -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdebug-compilation-dir /root/llvm/codesample/39apps/xvidcore/build/generic -ferror-limit 19 -fmessage-length 143 -fobjc-runtime=gcc -fdiagnostics-show-option -fcolor-diagnostics -o =build/bitstream/mbcoding.o -x c ../../src/bitstream/mbcoding.c -faddrsig
+clang -cc1 version 8.0.1 based upon LLVM 8.0.1 default target x86_64-unknown-linux-gnu
+ignoring nonexistent directory "/include"
+#include "..." search starts here:
+#include <...> search starts here:
+ /usr/local/include
+ /root/llvm/llvm80/build/lib/clang/8.0.1/include
+ /usr/include/x86_64-linux-gnu
+ /usr/include
+End of search list.
+  C: dct/fdct.c
+clang version 8.0.1 (https://github.com/llvm-mirror/clang.git 2e4c9c5fc864c2c432e4c262a67c42d824b265c6) (https://github.com/rqtian/llvm80-bufferoverflow.git 38b4a62b0634ac2bc4b67addab5698d2f1a5c23e)
+Target: x86_64-unknown-linux-gnu
+Thread model: posix
+InstalledDir: /root/llvm/llvm80/build/bin
+Found candidate GCC installation: /usr/lib/gcc/x86_64-linux-gnu/6
+Found candidate GCC installation: /usr/lib/gcc/x86_64-linux-gnu/6.3.0
+Selected GCC installation: /usr/lib/gcc/x86_64-linux-gnu/6.3.0
+Candidate multilib: .;@m64
+Selected multilib: .;@m64
+ "/root/llvm/llvm80/build/bin/clang-8" -cc1 -triple x86_64-unknown-linux-gnu -emit-llvm-bc -flto -flto-unit -disable-free -main-file-name fdct.c -mrelocation-model pic -pic-level 2 -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debug-info-kind=limited -dwarf-version=4 -debugger-tuning=gdb -v -coverage-notes-file /root/llvm/codesample/39apps/xvidcore/build/generic/=build/dct/fdct.gcno -resource-dir /root/llvm/llvm80/build/lib/clang/8.0.1 -D ARCH_IS_GENERIC -D ARCH_IS_64BIT -D ARCH_IS_LITTLE_ENDIAN -D HAVE_PTHREAD -internal-isystem /usr/local/include -internal-isystem /root/llvm/llvm80/build/lib/clang/8.0.1/include -internal-externc-isystem /usr/include/x86_64-linux-gnu -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdebug-compilation-dir /root/llvm/codesample/39apps/xvidcore/build/generic -ferror-limit 19 -fmessage-length 143 -fobjc-runtime=gcc -fdiagnostics-show-option -fcolor-diagnostics -o =build/dct/fdct.o -x c ../../src/dct/fdct.c -faddrsig
+clang -cc1 version 8.0.1 based upon LLVM 8.0.1 default target x86_64-unknown-linux-gnu
+ignoring nonexistent directory "/include"
+#include "..." search starts here:
+#include <...> search starts here:
+ /usr/local/include
+ /root/llvm/llvm80/build/lib/clang/8.0.1/include
+ /usr/include/x86_64-linux-gnu
+ /usr/include
+End of search list.
+  C: dct/idct.c
+clang version 8.0.1 (https://github.com/llvm-mirror/clang.git 2e4c9c5fc864c2c432e4c262a67c42d824b265c6) (https://github.com/rqtian/llvm80-bufferoverflow.git 38b4a62b0634ac2bc4b67addab5698d2f1a5c23e)
+Target: x86_64-unknown-linux-gnu
+Thread model: posix
+InstalledDir: /root/llvm/llvm80/build/bin
+Found candidate GCC installation: /usr/lib/gcc/x86_64-linux-gnu/6
+Found candidate GCC installation: /usr/lib/gcc/x86_64-linux-gnu/6.3.0
+Selected GCC installation: /usr/lib/gcc/x86_64-linux-gnu/6.3.0
+Candidate multilib: .;@m64
+Selected multilib: .;@m64
+ "/root/llvm/llvm80/build/bin/clang-8" -cc1 -triple x86_64-unknown-linux-gnu -emit-llvm-bc -flto -flto-unit -disable-free -main-file-name idct.c -mrelocation-model pic -pic-level 2 -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debug-info-kind=limited -dwarf-version=4 -debugger-tuning=gdb -v -coverage-notes-file /root/llvm/codesample/39apps/xvidcore/build/generic/=build/dct/idct.gcno -resource-dir /root/llvm/llvm80/build/lib/clang/8.0.1 -D ARCH_IS_GENERIC -D ARCH_IS_64BIT -D ARCH_IS_LITTLE_ENDIAN -D HAVE_PTHREAD -internal-isystem /usr/local/include -internal-isystem /root/llvm/llvm80/build/lib/clang/8.0.1/include -internal-externc-isystem /usr/include/x86_64-linux-gnu -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdebug-compilation-dir /root/llvm/codesample/39apps/xvidcore/build/generic -ferror-limit 19 -fmessage-length 143 -fobjc-runtime=gcc -fdiagnostics-show-option -fcolor-diagnostics -o =build/dct/idct.o -x c ../../src/dct/idct.c -faddrsig
+clang -cc1 version 8.0.1 based upon LLVM 8.0.1 default target x86_64-unknown-linux-gnu
+ignoring nonexistent directory "/include"
+#include "..." search starts here:
+#include <...> search starts here:
+ /usr/local/include
+ /root/llvm/llvm80/build/lib/clang/8.0.1/include
+ /usr/include/x86_64-linux-gnu
+ /usr/include
+End of search list.
+  C: dct/simple_idct.c
+clang version 8.0.1 (https://github.com/llvm-mirror/clang.git 2e4c9c5fc864c2c432e4c262a67c42d824b265c6) (https://github.com/rqtian/llvm80-bufferoverflow.git 38b4a62b0634ac2bc4b67addab5698d2f1a5c23e)
+Target: x86_64-unknown-linux-gnu
+Thread model: posix
+InstalledDir: /root/llvm/llvm80/build/bin
+Found candidate GCC installation: /usr/lib/gcc/x86_64-linux-gnu/6
+Found candidate GCC installation: /usr/lib/gcc/x86_64-linux-gnu/6.3.0
+Selected GCC installation: /usr/lib/gcc/x86_64-linux-gnu/6.3.0
+Candidate multilib: .;@m64
+Selected multilib: .;@m64
+ "/root/llvm/llvm80/build/bin/clang-8" -cc1 -triple x86_64-unknown-linux-gnu -emit-llvm-bc -flto -flto-unit -disable-free -main-file-name simple_idct.c -mrelocation-model pic -pic-level 2 -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debug-info-kind=limited -dwarf-version=4 -debugger-tuning=gdb -v -coverage-notes-file /root/llvm/codesample/39apps/xvidcore/build/generic/=build/dct/simple_idct.gcno -resource-dir /root/llvm/llvm80/build/lib/clang/8.0.1 -D ARCH_IS_GENERIC -D ARCH_IS_64BIT -D ARCH_IS_LITTLE_ENDIAN -D HAVE_PTHREAD -internal-isystem /usr/local/include -internal-isystem /root/llvm/llvm80/build/lib/clang/8.0.1/include -internal-externc-isystem /usr/include/x86_64-linux-gnu -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdebug-compilation-dir /root/llvm/codesample/39apps/xvidcore/build/generic -ferror-limit 19 -fmessage-length 143 -fobjc-runtime=gcc -fdiagnostics-show-option -fcolor-diagnostics -o =build/dct/simple_idct.o -x c ../../src/dct/simple_idct.c -faddrsig
+clang -cc1 version 8.0.1 based upon LLVM 8.0.1 default target x86_64-unknown-linux-gnu
+ignoring nonexistent directory "/include"
+#include "..." search starts here:
+#include <...> search starts here:
+ /usr/local/include
+ /root/llvm/llvm80/build/lib/clang/8.0.1/include
+ /usr/include/x86_64-linux-gnu
+ /usr/include
+End of search list.
+  C: image/colorspace.c
+clang version 8.0.1 (https://github.com/llvm-mirror/clang.git 2e4c9c5fc864c2c432e4c262a67c42d824b265c6) (https://github.com/rqtian/llvm80-bufferoverflow.git 38b4a62b0634ac2bc4b67addab5698d2f1a5c23e)
+Target: x86_64-unknown-linux-gnu
+Thread model: posix
+InstalledDir: /root/llvm/llvm80/build/bin
+Found candidate GCC installation: /usr/lib/gcc/x86_64-linux-gnu/6
+Found candidate GCC installation: /usr/lib/gcc/x86_64-linux-gnu/6.3.0
+Selected GCC installation: /usr/lib/gcc/x86_64-linux-gnu/6.3.0
+Candidate multilib: .;@m64
+Selected multilib: .;@m64
+ "/root/llvm/llvm80/build/bin/clang-8" -cc1 -triple x86_64-unknown-linux-gnu -emit-llvm-bc -flto -flto-unit -disable-free -main-file-name colorspace.c -mrelocation-model pic -pic-level 2 -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debug-info-kind=limited -dwarf-version=4 -debugger-tuning=gdb -v -coverage-notes-file /root/llvm/codesample/39apps/xvidcore/build/generic/=build/image/colorspace.gcno -resource-dir /root/llvm/llvm80/build/lib/clang/8.0.1 -D ARCH_IS_GENERIC -D ARCH_IS_64BIT -D ARCH_IS_LITTLE_ENDIAN -D HAVE_PTHREAD -internal-isystem /usr/local/include -internal-isystem /root/llvm/llvm80/build/lib/clang/8.0.1/include -internal-externc-isystem /usr/include/x86_64-linux-gnu -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdebug-compilation-dir /root/llvm/codesample/39apps/xvidcore/build/generic -ferror-limit 19 -fmessage-length 143 -fobjc-runtime=gcc -fdiagnostics-show-option -fcolor-diagnostics -o =build/image/colorspace.o -x c ../../src/image/colorspace.c -faddrsig
+clang -cc1 version 8.0.1 based upon LLVM 8.0.1 default target x86_64-unknown-linux-gnu
+ignoring nonexistent directory "/include"
+#include "..." search starts here:
+#include <...> search starts here:
+ /usr/local/include
+ /root/llvm/llvm80/build/lib/clang/8.0.1/include
+ /usr/include/x86_64-linux-gnu
+ /usr/include
+End of search list.
+  C: image/image.c
+clang version 8.0.1 (https://github.com/llvm-mirror/clang.git 2e4c9c5fc864c2c432e4c262a67c42d824b265c6) (https://github.com/rqtian/llvm80-bufferoverflow.git 38b4a62b0634ac2bc4b67addab5698d2f1a5c23e)
+Target: x86_64-unknown-linux-gnu
+Thread model: posix
+InstalledDir: /root/llvm/llvm80/build/bin
+Found candidate GCC installation: /usr/lib/gcc/x86_64-linux-gnu/6
+Found candidate GCC installation: /usr/lib/gcc/x86_64-linux-gnu/6.3.0
+Selected GCC installation: /usr/lib/gcc/x86_64-linux-gnu/6.3.0
+Candidate multilib: .;@m64
+Selected multilib: .;@m64
+ "/root/llvm/llvm80/build/bin/clang-8" -cc1 -triple x86_64-unknown-linux-gnu -emit-llvm-bc -flto -flto-unit -disable-free -main-file-name image.c -mrelocation-model pic -pic-level 2 -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debug-info-kind=limited -dwarf-version=4 -debugger-tuning=gdb -v -coverage-notes-file /root/llvm/codesample/39apps/xvidcore/build/generic/=build/image/image.gcno -resource-dir /root/llvm/llvm80/build/lib/clang/8.0.1 -D ARCH_IS_GENERIC -D ARCH_IS_64BIT -D ARCH_IS_LITTLE_ENDIAN -D HAVE_PTHREAD -internal-isystem /usr/local/include -internal-isystem /root/llvm/llvm80/build/lib/clang/8.0.1/include -internal-externc-isystem /usr/include/x86_64-linux-gnu -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdebug-compilation-dir /root/llvm/codesample/39apps/xvidcore/build/generic -ferror-limit 19 -fmessage-length 143 -fobjc-runtime=gcc -fdiagnostics-show-option -fcolor-diagnostics -o =build/image/image.o -x c ../../src/image/image.c -faddrsig
+clang -cc1 version 8.0.1 based upon LLVM 8.0.1 default target x86_64-unknown-linux-gnu
+ignoring nonexistent directory "/include"
+#include "..." search starts here:
+#include <...> search starts here:
+ /usr/local/include
+ /root/llvm/llvm80/build/lib/clang/8.0.1/include
+ /usr/include/x86_64-linux-gnu
+ /usr/include
+End of search list.
+  C: image/interpolate8x8.c
+clang version 8.0.1 (https://github.com/llvm-mirror/clang.git 2e4c9c5fc864c2c432e4c262a67c42d824b265c6) (https://github.com/rqtian/llvm80-bufferoverflow.git 38b4a62b0634ac2bc4b67addab5698d2f1a5c23e)
+Target: x86_64-unknown-linux-gnu
+Thread model: posix
+InstalledDir: /root/llvm/llvm80/build/bin
+Found candidate GCC installation: /usr/lib/gcc/x86_64-linux-gnu/6
+Found candidate GCC installation: /usr/lib/gcc/x86_64-linux-gnu/6.3.0
+Selected GCC installation: /usr/lib/gcc/x86_64-linux-gnu/6.3.0
+Candidate multilib: .;@m64
+Selected multilib: .;@m64
+ "/root/llvm/llvm80/build/bin/clang-8" -cc1 -triple x86_64-unknown-linux-gnu -emit-llvm-bc -flto -flto-unit -disable-free -main-file-name interpolate8x8.c -mrelocation-model pic -pic-level 2 -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debug-info-kind=limited -dwarf-version=4 -debugger-tuning=gdb -v -coverage-notes-file /root/llvm/codesample/39apps/xvidcore/build/generic/=build/image/interpolate8x8.gcno -resource-dir /root/llvm/llvm80/build/lib/clang/8.0.1 -D ARCH_IS_GENERIC -D ARCH_IS_64BIT -D ARCH_IS_LITTLE_ENDIAN -D HAVE_PTHREAD -internal-isystem /usr/local/include -internal-isystem /root/llvm/llvm80/build/lib/clang/8.0.1/include -internal-externc-isystem /usr/include/x86_64-linux-gnu -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdebug-compilation-dir /root/llvm/codesample/39apps/xvidcore/build/generic -ferror-limit 19 -fmessage-length 143 -fobjc-runtime=gcc -fdiagnostics-show-option -fcolor-diagnostics -o =build/image/interpolate8x8.o -x c ../../src/image/interpolate8x8.c -faddrsig
+clang -cc1 version 8.0.1 based upon LLVM 8.0.1 default target x86_64-unknown-linux-gnu
+ignoring nonexistent directory "/include"
+#include "..." search starts here:
+#include <...> search starts here:
+ /usr/local/include
+ /root/llvm/llvm80/build/lib/clang/8.0.1/include
+ /usr/include/x86_64-linux-gnu
+ /usr/include
+End of search list.
+  C: image/font.c
+clang version 8.0.1 (https://github.com/llvm-mirror/clang.git 2e4c9c5fc864c2c432e4c262a67c42d824b265c6) (https://github.com/rqtian/llvm80-bufferoverflow.git 38b4a62b0634ac2bc4b67addab5698d2f1a5c23e)
+Target: x86_64-unknown-linux-gnu
+Thread model: posix
+InstalledDir: /root/llvm/llvm80/build/bin
+Found candidate GCC installation: /usr/lib/gcc/x86_64-linux-gnu/6
+Found candidate GCC installation: /usr/lib/gcc/x86_64-linux-gnu/6.3.0
+Selected GCC installation: /usr/lib/gcc/x86_64-linux-gnu/6.3.0
+Candidate multilib: .;@m64
+Selected multilib: .;@m64
+ "/root/llvm/llvm80/build/bin/clang-8" -cc1 -triple x86_64-unknown-linux-gnu -emit-llvm-bc -flto -flto-unit -disable-free -main-file-name font.c -mrelocation-model pic -pic-level 2 -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debug-info-kind=limited -dwarf-version=4 -debugger-tuning=gdb -v -coverage-notes-file /root/llvm/codesample/39apps/xvidcore/build/generic/=build/image/font.gcno -resource-dir /root/llvm/llvm80/build/lib/clang/8.0.1 -D ARCH_IS_GENERIC -D ARCH_IS_64BIT -D ARCH_IS_LITTLE_ENDIAN -D HAVE_PTHREAD -internal-isystem /usr/local/include -internal-isystem /root/llvm/llvm80/build/lib/clang/8.0.1/include -internal-externc-isystem /usr/include/x86_64-linux-gnu -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdebug-compilation-dir /root/llvm/codesample/39apps/xvidcore/build/generic -ferror-limit 19 -fmessage-length 143 -fobjc-runtime=gcc -fdiagnostics-show-option -fcolor-diagnostics -o =build/image/font.o -x c ../../src/image/font.c -faddrsig
+clang -cc1 version 8.0.1 based upon LLVM 8.0.1 default target x86_64-unknown-linux-gnu
+ignoring nonexistent directory "/include"
+#include "..." search starts here:
+#include <...> search starts here:
+ /usr/local/include
+ /root/llvm/llvm80/build/lib/clang/8.0.1/include
+ /usr/include/x86_64-linux-gnu
+ /usr/include
+End of search list.
+  C: image/postprocessing.c
+clang version 8.0.1 (https://github.com/llvm-mirror/clang.git 2e4c9c5fc864c2c432e4c262a67c42d824b265c6) (https://github.com/rqtian/llvm80-bufferoverflow.git 38b4a62b0634ac2bc4b67addab5698d2f1a5c23e)
+Target: x86_64-unknown-linux-gnu
+Thread model: posix
+InstalledDir: /root/llvm/llvm80/build/bin
+Found candidate GCC installation: /usr/lib/gcc/x86_64-linux-gnu/6
+Found candidate GCC installation: /usr/lib/gcc/x86_64-linux-gnu/6.3.0
+Selected GCC installation: /usr/lib/gcc/x86_64-linux-gnu/6.3.0
+Candidate multilib: .;@m64
+Selected multilib: .;@m64
+ "/root/llvm/llvm80/build/bin/clang-8" -cc1 -triple x86_64-unknown-linux-gnu -emit-llvm-bc -flto -flto-unit -disable-free -main-file-name postprocessing.c -mrelocation-model pic -pic-level 2 -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debug-info-kind=limited -dwarf-version=4 -debugger-tuning=gdb -v -coverage-notes-file /root/llvm/codesample/39apps/xvidcore/build/generic/=build/image/postprocessing.gcno -resource-dir /root/llvm/llvm80/build/lib/clang/8.0.1 -D ARCH_IS_GENERIC -D ARCH_IS_64BIT -D ARCH_IS_LITTLE_ENDIAN -D HAVE_PTHREAD -internal-isystem /usr/local/include -internal-isystem /root/llvm/llvm80/build/lib/clang/8.0.1/include -internal-externc-isystem /usr/include/x86_64-linux-gnu -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdebug-compilation-dir /root/llvm/codesample/39apps/xvidcore/build/generic -ferror-limit 19 -fmessage-length 143 -fobjc-runtime=gcc -fdiagnostics-show-option -fcolor-diagnostics -o =build/image/postprocessing.o -x c ../../src/image/postprocessing.c -faddrsig
+clang -cc1 version 8.0.1 based upon LLVM 8.0.1 default target x86_64-unknown-linux-gnu
+ignoring nonexistent directory "/include"
+#include "..." search starts here:
+#include <...> search starts here:
+ /usr/local/include
+ /root/llvm/llvm80/build/lib/clang/8.0.1/include
+ /usr/include/x86_64-linux-gnu
+ /usr/include
+End of search list.
+  C: image/qpel.c
+clang version 8.0.1 (https://github.com/llvm-mirror/clang.git 2e4c9c5fc864c2c432e4c262a67c42d824b265c6) (https://github.com/rqtian/llvm80-bufferoverflow.git 38b4a62b0634ac2bc4b67addab5698d2f1a5c23e)
+Target: x86_64-unknown-linux-gnu
+Thread model: posix
+InstalledDir: /root/llvm/llvm80/build/bin
+Found candidate GCC installation: /usr/lib/gcc/x86_64-linux-gnu/6
+Found candidate GCC installation: /usr/lib/gcc/x86_64-linux-gnu/6.3.0
+Selected GCC installation: /usr/lib/gcc/x86_64-linux-gnu/6.3.0
+Candidate multilib: .;@m64
+Selected multilib: .;@m64
+ "/root/llvm/llvm80/build/bin/clang-8" -cc1 -triple x86_64-unknown-linux-gnu -emit-llvm-bc -flto -flto-unit -disable-free -main-file-name qpel.c -mrelocation-model pic -pic-level 2 -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debug-info-kind=limited -dwarf-version=4 -debugger-tuning=gdb -v -coverage-notes-file /root/llvm/codesample/39apps/xvidcore/build/generic/=build/image/qpel.gcno -resource-dir /root/llvm/llvm80/build/lib/clang/8.0.1 -D ARCH_IS_GENERIC -D ARCH_IS_64BIT -D ARCH_IS_LITTLE_ENDIAN -D HAVE_PTHREAD -internal-isystem /usr/local/include -internal-isystem /root/llvm/llvm80/build/lib/clang/8.0.1/include -internal-externc-isystem /usr/include/x86_64-linux-gnu -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdebug-compilation-dir /root/llvm/codesample/39apps/xvidcore/build/generic -ferror-limit 19 -fmessage-length 143 -fobjc-runtime=gcc -fdiagnostics-show-option -fcolor-diagnostics -o =build/image/qpel.o -x c ../../src/image/qpel.c -faddrsig
+clang -cc1 version 8.0.1 based upon LLVM 8.0.1 default target x86_64-unknown-linux-gnu
+ignoring nonexistent directory "/include"
+#include "..." search starts here:
+#include <...> search starts here:
+ /usr/local/include
+ /root/llvm/llvm80/build/lib/clang/8.0.1/include
+ /usr/include/x86_64-linux-gnu
+ /usr/include
+End of search list.
+  C: image/reduced.c
+clang version 8.0.1 (https://github.com/llvm-mirror/clang.git 2e4c9c5fc864c2c432e4c262a67c42d824b265c6) (https://github.com/rqtian/llvm80-bufferoverflow.git 38b4a62b0634ac2bc4b67addab5698d2f1a5c23e)
+Target: x86_64-unknown-linux-gnu
+Thread model: posix
+InstalledDir: /root/llvm/llvm80/build/bin
+Found candidate GCC installation: /usr/lib/gcc/x86_64-linux-gnu/6
+Found candidate GCC installation: /usr/lib/gcc/x86_64-linux-gnu/6.3.0
+Selected GCC installation: /usr/lib/gcc/x86_64-linux-gnu/6.3.0
+Candidate multilib: .;@m64
+Selected multilib: .;@m64
+ "/root/llvm/llvm80/build/bin/clang-8" -cc1 -triple x86_64-unknown-linux-gnu -emit-llvm-bc -flto -flto-unit -disable-free -main-file-name reduced.c -mrelocation-model pic -pic-level 2 -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debug-info-kind=limited -dwarf-version=4 -debugger-tuning=gdb -v -coverage-notes-file /root/llvm/codesample/39apps/xvidcore/build/generic/=build/image/reduced.gcno -resource-dir /root/llvm/llvm80/build/lib/clang/8.0.1 -D ARCH_IS_GENERIC -D ARCH_IS_64BIT -D ARCH_IS_LITTLE_ENDIAN -D HAVE_PTHREAD -internal-isystem /usr/local/include -internal-isystem /root/llvm/llvm80/build/lib/clang/8.0.1/include -internal-externc-isystem /usr/include/x86_64-linux-gnu -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdebug-compilation-dir /root/llvm/codesample/39apps/xvidcore/build/generic -ferror-limit 19 -fmessage-length 143 -fobjc-runtime=gcc -fdiagnostics-show-option -fcolor-diagnostics -o =build/image/reduced.o -x c ../../src/image/reduced.c -faddrsig
+clang -cc1 version 8.0.1 based upon LLVM 8.0.1 default target x86_64-unknown-linux-gnu
+ignoring nonexistent directory "/include"
+#include "..." search starts here:
+#include <...> search starts here:
+ /usr/local/include
+ /root/llvm/llvm80/build/lib/clang/8.0.1/include
+ /usr/include/x86_64-linux-gnu
+ /usr/include
+End of search list.
+  C: motion/estimation_bvop.c
+clang version 8.0.1 (https://github.com/llvm-mirror/clang.git 2e4c9c5fc864c2c432e4c262a67c42d824b265c6) (https://github.com/rqtian/llvm80-bufferoverflow.git 38b4a62b0634ac2bc4b67addab5698d2f1a5c23e)
+Target: x86_64-unknown-linux-gnu
+Thread model: posix
+InstalledDir: /root/llvm/llvm80/build/bin
+Found candidate GCC installation: /usr/lib/gcc/x86_64-linux-gnu/6
+Found candidate GCC installation: /usr/lib/gcc/x86_64-linux-gnu/6.3.0
+Selected GCC installation: /usr/lib/gcc/x86_64-linux-gnu/6.3.0
+Candidate multilib: .;@m64
+Selected multilib: .;@m64
+ "/root/llvm/llvm80/build/bin/clang-8" -cc1 -triple x86_64-unknown-linux-gnu -emit-llvm-bc -flto -flto-unit -disable-free -main-file-name estimation_bvop.c -mrelocation-model pic -pic-level 2 -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debug-info-kind=limited -dwarf-version=4 -debugger-tuning=gdb -v -coverage-notes-file /root/llvm/codesample/39apps/xvidcore/build/generic/=build/motion/estimation_bvop.gcno -resource-dir /root/llvm/llvm80/build/lib/clang/8.0.1 -D ARCH_IS_GENERIC -D ARCH_IS_64BIT -D ARCH_IS_LITTLE_ENDIAN -D HAVE_PTHREAD -internal-isystem /usr/local/include -internal-isystem /root/llvm/llvm80/build/lib/clang/8.0.1/include -internal-externc-isystem /usr/include/x86_64-linux-gnu -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdebug-compilation-dir /root/llvm/codesample/39apps/xvidcore/build/generic -ferror-limit 19 -fmessage-length 143 -fobjc-runtime=gcc -fdiagnostics-show-option -fcolor-diagnostics -o =build/motion/estimation_bvop.o -x c ../../src/motion/estimation_bvop.c -faddrsig
+clang -cc1 version 8.0.1 based upon LLVM 8.0.1 default target x86_64-unknown-linux-gnu
+ignoring nonexistent directory "/include"
+#include "..." search starts here:
+#include <...> search starts here:
+ /usr/local/include
+ /root/llvm/llvm80/build/lib/clang/8.0.1/include
+ /usr/include/x86_64-linux-gnu
+ /usr/include
+End of search list.
+  C: motion/estimation_common.c
+clang version 8.0.1 (https://github.com/llvm-mirror/clang.git 2e4c9c5fc864c2c432e4c262a67c42d824b265c6) (https://github.com/rqtian/llvm80-bufferoverflow.git 38b4a62b0634ac2bc4b67addab5698d2f1a5c23e)
+Target: x86_64-unknown-linux-gnu
+Thread model: posix
+InstalledDir: /root/llvm/llvm80/build/bin
+Found candidate GCC installation: /usr/lib/gcc/x86_64-linux-gnu/6
+Found candidate GCC installation: /usr/lib/gcc/x86_64-linux-gnu/6.3.0
+Selected GCC installation: /usr/lib/gcc/x86_64-linux-gnu/6.3.0
+Candidate multilib: .;@m64
+Selected multilib: .;@m64
+ "/root/llvm/llvm80/build/bin/clang-8" -cc1 -triple x86_64-unknown-linux-gnu -emit-llvm-bc -flto -flto-unit -disable-free -main-file-name estimation_common.c -mrelocation-model pic -pic-level 2 -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debug-info-kind=limited -dwarf-version=4 -debugger-tuning=gdb -v -coverage-notes-file /root/llvm/codesample/39apps/xvidcore/build/generic/=build/motion/estimation_common.gcno -resource-dir /root/llvm/llvm80/build/lib/clang/8.0.1 -D ARCH_IS_GENERIC -D ARCH_IS_64BIT -D ARCH_IS_LITTLE_ENDIAN -D HAVE_PTHREAD -internal-isystem /usr/local/include -internal-isystem /root/llvm/llvm80/build/lib/clang/8.0.1/include -internal-externc-isystem /usr/include/x86_64-linux-gnu -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdebug-compilation-dir /root/llvm/codesample/39apps/xvidcore/build/generic -ferror-limit 19 -fmessage-length 143 -fobjc-runtime=gcc -fdiagnostics-show-option -fcolor-diagnostics -o =build/motion/estimation_common.o -x c ../../src/motion/estimation_common.c -faddrsig
+clang -cc1 version 8.0.1 based upon LLVM 8.0.1 default target x86_64-unknown-linux-gnu
+ignoring nonexistent directory "/include"
+#include "..." search starts here:
+#include <...> search starts here:
+ /usr/local/include
+ /root/llvm/llvm80/build/lib/clang/8.0.1/include
+ /usr/include/x86_64-linux-gnu
+ /usr/include
+End of search list.
+  C: motion/estimation_gmc.c
+clang version 8.0.1 (https://github.com/llvm-mirror/clang.git 2e4c9c5fc864c2c432e4c262a67c42d824b265c6) (https://github.com/rqtian/llvm80-bufferoverflow.git 38b4a62b0634ac2bc4b67addab5698d2f1a5c23e)
+Target: x86_64-unknown-linux-gnu
+Thread model: posix
+InstalledDir: /root/llvm/llvm80/build/bin
+Found candidate GCC installation: /usr/lib/gcc/x86_64-linux-gnu/6
+Found candidate GCC installation: /usr/lib/gcc/x86_64-linux-gnu/6.3.0
+Selected GCC installation: /usr/lib/gcc/x86_64-linux-gnu/6.3.0
+Candidate multilib: .;@m64
+Selected multilib: .;@m64
+ "/root/llvm/llvm80/build/bin/clang-8" -cc1 -triple x86_64-unknown-linux-gnu -emit-llvm-bc -flto -flto-unit -disable-free -main-file-name estimation_gmc.c -mrelocation-model pic -pic-level 2 -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debug-info-kind=limited -dwarf-version=4 -debugger-tuning=gdb -v -coverage-notes-file /root/llvm/codesample/39apps/xvidcore/build/generic/=build/motion/estimation_gmc.gcno -resource-dir /root/llvm/llvm80/build/lib/clang/8.0.1 -D ARCH_IS_GENERIC -D ARCH_IS_64BIT -D ARCH_IS_LITTLE_ENDIAN -D HAVE_PTHREAD -internal-isystem /usr/local/include -internal-isystem /root/llvm/llvm80/build/lib/clang/8.0.1/include -internal-externc-isystem /usr/include/x86_64-linux-gnu -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdebug-compilation-dir /root/llvm/codesample/39apps/xvidcore/build/generic -ferror-limit 19 -fmessage-length 143 -fobjc-runtime=gcc -fdiagnostics-show-option -fcolor-diagnostics -o =build/motion/estimation_gmc.o -x c ../../src/motion/estimation_gmc.c -faddrsig
+clang -cc1 version 8.0.1 based upon LLVM 8.0.1 default target x86_64-unknown-linux-gnu
+ignoring nonexistent directory "/include"
+#include "..." search starts here:
+#include <...> search starts here:
+ /usr/local/include
+ /root/llvm/llvm80/build/lib/clang/8.0.1/include
+ /usr/include/x86_64-linux-gnu
+ /usr/include
+End of search list.
+  C: motion/estimation_pvop.c
+clang version 8.0.1 (https://github.com/llvm-mirror/clang.git 2e4c9c5fc864c2c432e4c262a67c42d824b265c6) (https://github.com/rqtian/llvm80-bufferoverflow.git 38b4a62b0634ac2bc4b67addab5698d2f1a5c23e)
+Target: x86_64-unknown-linux-gnu
+Thread model: posix
+InstalledDir: /root/llvm/llvm80/build/bin
+Found candidate GCC installation: /usr/lib/gcc/x86_64-linux-gnu/6
+Found candidate GCC installation: /usr/lib/gcc/x86_64-linux-gnu/6.3.0
+Selected GCC installation: /usr/lib/gcc/x86_64-linux-gnu/6.3.0
+Candidate multilib: .;@m64
+Selected multilib: .;@m64
+ "/root/llvm/llvm80/build/bin/clang-8" -cc1 -triple x86_64-unknown-linux-gnu -emit-llvm-bc -flto -flto-unit -disable-free -main-file-name estimation_pvop.c -mrelocation-model pic -pic-level 2 -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debug-info-kind=limited -dwarf-version=4 -debugger-tuning=gdb -v -coverage-notes-file /root/llvm/codesample/39apps/xvidcore/build/generic/=build/motion/estimation_pvop.gcno -resource-dir /root/llvm/llvm80/build/lib/clang/8.0.1 -D ARCH_IS_GENERIC -D ARCH_IS_64BIT -D ARCH_IS_LITTLE_ENDIAN -D HAVE_PTHREAD -internal-isystem /usr/local/include -internal-isystem /root/llvm/llvm80/build/lib/clang/8.0.1/include -internal-externc-isystem /usr/include/x86_64-linux-gnu -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdebug-compilation-dir /root/llvm/codesample/39apps/xvidcore/build/generic -ferror-limit 19 -fmessage-length 143 -fobjc-runtime=gcc -fdiagnostics-show-option -fcolor-diagnostics -o =build/motion/estimation_pvop.o -x c ../../src/motion/estimation_pvop.c -faddrsig
+clang -cc1 version 8.0.1 based upon LLVM 8.0.1 default target x86_64-unknown-linux-gnu
+ignoring nonexistent directory "/include"
+#include "..." search starts here:
+#include <...> search starts here:
+ /usr/local/include
+ /root/llvm/llvm80/build/lib/clang/8.0.1/include
+ /usr/include/x86_64-linux-gnu
+ /usr/include
+End of search list.
+  C: motion/estimation_rd_based.c
+clang version 8.0.1 (https://github.com/llvm-mirror/clang.git 2e4c9c5fc864c2c432e4c262a67c42d824b265c6) (https://github.com/rqtian/llvm80-bufferoverflow.git 38b4a62b0634ac2bc4b67addab5698d2f1a5c23e)
+Target: x86_64-unknown-linux-gnu
+Thread model: posix
+InstalledDir: /root/llvm/llvm80/build/bin
+Found candidate GCC installation: /usr/lib/gcc/x86_64-linux-gnu/6
+Found candidate GCC installation: /usr/lib/gcc/x86_64-linux-gnu/6.3.0
+Selected GCC installation: /usr/lib/gcc/x86_64-linux-gnu/6.3.0
+Candidate multilib: .;@m64
+Selected multilib: .;@m64
+ "/root/llvm/llvm80/build/bin/clang-8" -cc1 -triple x86_64-unknown-linux-gnu -emit-llvm-bc -flto -flto-unit -disable-free -main-file-name estimation_rd_based.c -mrelocation-model pic -pic-level 2 -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debug-info-kind=limited -dwarf-version=4 -debugger-tuning=gdb -v -coverage-notes-file /root/llvm/codesample/39apps/xvidcore/build/generic/=build/motion/estimation_rd_based.gcno -resource-dir /root/llvm/llvm80/build/lib/clang/8.0.1 -D ARCH_IS_GENERIC -D ARCH_IS_64BIT -D ARCH_IS_LITTLE_ENDIAN -D HAVE_PTHREAD -internal-isystem /usr/local/include -internal-isystem /root/llvm/llvm80/build/lib/clang/8.0.1/include -internal-externc-isystem /usr/include/x86_64-linux-gnu -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdebug-compilation-dir /root/llvm/codesample/39apps/xvidcore/build/generic -ferror-limit 19 -fmessage-length 143 -fobjc-runtime=gcc -fdiagnostics-show-option -fcolor-diagnostics -o =build/motion/estimation_rd_based.o -x c ../../src/motion/estimation_rd_based.c -faddrsig
+clang -cc1 version 8.0.1 based upon LLVM 8.0.1 default target x86_64-unknown-linux-gnu
+ignoring nonexistent directory "/include"
+#include "..." search starts here:
+#include <...> search starts here:
+ /usr/local/include
+ /root/llvm/llvm80/build/lib/clang/8.0.1/include
+ /usr/include/x86_64-linux-gnu
+ /usr/include
+End of search list.
+  C: motion/estimation_rd_based_bvop.c
+clang version 8.0.1 (https://github.com/llvm-mirror/clang.git 2e4c9c5fc864c2c432e4c262a67c42d824b265c6) (https://github.com/rqtian/llvm80-bufferoverflow.git 38b4a62b0634ac2bc4b67addab5698d2f1a5c23e)
+Target: x86_64-unknown-linux-gnu
+Thread model: posix
+InstalledDir: /root/llvm/llvm80/build/bin
+Found candidate GCC installation: /usr/lib/gcc/x86_64-linux-gnu/6
+Found candidate GCC installation: /usr/lib/gcc/x86_64-linux-gnu/6.3.0
+Selected GCC installation: /usr/lib/gcc/x86_64-linux-gnu/6.3.0
+Candidate multilib: .;@m64
+Selected multilib: .;@m64
+ "/root/llvm/llvm80/build/bin/clang-8" -cc1 -triple x86_64-unknown-linux-gnu -emit-llvm-bc -flto -flto-unit -disable-free -main-file-name estimation_rd_based_bvop.c -mrelocation-model pic -pic-level 2 -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debug-info-kind=limited -dwarf-version=4 -debugger-tuning=gdb -v -coverage-notes-file /root/llvm/codesample/39apps/xvidcore/build/generic/=build/motion/estimation_rd_based_bvop.gcno -resource-dir /root/llvm/llvm80/build/lib/clang/8.0.1 -D ARCH_IS_GENERIC -D ARCH_IS_64BIT -D ARCH_IS_LITTLE_ENDIAN -D HAVE_PTHREAD -internal-isystem /usr/local/include -internal-isystem /root/llvm/llvm80/build/lib/clang/8.0.1/include -internal-externc-isystem /usr/include/x86_64-linux-gnu -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdebug-compilation-dir /root/llvm/codesample/39apps/xvidcore/build/generic -ferror-limit 19 -fmessage-length 143 -fobjc-runtime=gcc -fdiagnostics-show-option -fcolor-diagnostics -o =build/motion/estimation_rd_based_bvop.o -x c ../../src/motion/estimation_rd_based_bvop.c -faddrsig
+clang -cc1 version 8.0.1 based upon LLVM 8.0.1 default target x86_64-unknown-linux-gnu
+ignoring nonexistent directory "/include"
+#include "..." search starts here:
+#include <...> search starts here:
+ /usr/local/include
+ /root/llvm/llvm80/build/lib/clang/8.0.1/include
+ /usr/include/x86_64-linux-gnu
+ /usr/include
+End of search list.
+  C: motion/gmc.c
+clang version 8.0.1 (https://github.com/llvm-mirror/clang.git 2e4c9c5fc864c2c432e4c262a67c42d824b265c6) (https://github.com/rqtian/llvm80-bufferoverflow.git 38b4a62b0634ac2bc4b67addab5698d2f1a5c23e)
+Target: x86_64-unknown-linux-gnu
+Thread model: posix
+InstalledDir: /root/llvm/llvm80/build/bin
+Found candidate GCC installation: /usr/lib/gcc/x86_64-linux-gnu/6
+Found candidate GCC installation: /usr/lib/gcc/x86_64-linux-gnu/6.3.0
+Selected GCC installation: /usr/lib/gcc/x86_64-linux-gnu/6.3.0
+Candidate multilib: .;@m64
+Selected multilib: .;@m64
+ "/root/llvm/llvm80/build/bin/clang-8" -cc1 -triple x86_64-unknown-linux-gnu -emit-llvm-bc -flto -flto-unit -disable-free -main-file-name gmc.c -mrelocation-model pic -pic-level 2 -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debug-info-kind=limited -dwarf-version=4 -debugger-tuning=gdb -v -coverage-notes-file /root/llvm/codesample/39apps/xvidcore/build/generic/=build/motion/gmc.gcno -resource-dir /root/llvm/llvm80/build/lib/clang/8.0.1 -D ARCH_IS_GENERIC -D ARCH_IS_64BIT -D ARCH_IS_LITTLE_ENDIAN -D HAVE_PTHREAD -internal-isystem /usr/local/include -internal-isystem /root/llvm/llvm80/build/lib/clang/8.0.1/include -internal-externc-isystem /usr/include/x86_64-linux-gnu -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdebug-compilation-dir /root/llvm/codesample/39apps/xvidcore/build/generic -ferror-limit 19 -fmessage-length 143 -fobjc-runtime=gcc -fdiagnostics-show-option -fcolor-diagnostics -o =build/motion/gmc.o -x c ../../src/motion/gmc.c -faddrsig
+clang -cc1 version 8.0.1 based upon LLVM 8.0.1 default target x86_64-unknown-linux-gnu
+ignoring nonexistent directory "/include"
+#include "..." search starts here:
+#include <...> search starts here:
+ /usr/local/include
+ /root/llvm/llvm80/build/lib/clang/8.0.1/include
+ /usr/include/x86_64-linux-gnu
+ /usr/include
+End of search list.
+../../src/motion/gmc.c:283:14: warning: shifting a negative signed value is undefined [-Wshift-negative-value]
+        if (vo>=(-16<<4) && vo<=H) Offset = (vo>>4)*srcstride;
+                 ~~~^
+../../src/motion/gmc.c:289:14: warning: shifting a negative signed value is undefined [-Wshift-negative-value]
+        if (uo>=(-16<<4) && uo<=W) Offset += (uo>>4);
+                 ~~~^
+../../src/motion/gmc.c:335:13: warning: shifting a negative signed value is undefined [-Wshift-negative-value]
+        if (vo>=(-8<<4) && vo<=H) Offset = (vo>>4)*srcstride;
+                 ~~^
+../../src/motion/gmc.c:341:13: warning: shifting a negative signed value is undefined [-Wshift-negative-value]
+        if (uo>=(-8<<4) && uo<=W) Offset += (uo>>4);
+                 ~~^
+4 warnings generated.
+  C: motion/motion_comp.c
+clang version 8.0.1 (https://github.com/llvm-mirror/clang.git 2e4c9c5fc864c2c432e4c262a67c42d824b265c6) (https://github.com/rqtian/llvm80-bufferoverflow.git 38b4a62b0634ac2bc4b67addab5698d2f1a5c23e)
+Target: x86_64-unknown-linux-gnu
+Thread model: posix
+InstalledDir: /root/llvm/llvm80/build/bin
+Found candidate GCC installation: /usr/lib/gcc/x86_64-linux-gnu/6
+Found candidate GCC installation: /usr/lib/gcc/x86_64-linux-gnu/6.3.0
+Selected GCC installation: /usr/lib/gcc/x86_64-linux-gnu/6.3.0
+Candidate multilib: .;@m64
+Selected multilib: .;@m64
+ "/root/llvm/llvm80/build/bin/clang-8" -cc1 -triple x86_64-unknown-linux-gnu -emit-llvm-bc -flto -flto-unit -disable-free -main-file-name motion_comp.c -mrelocation-model pic -pic-level 2 -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debug-info-kind=limited -dwarf-version=4 -debugger-tuning=gdb -v -coverage-notes-file /root/llvm/codesample/39apps/xvidcore/build/generic/=build/motion/motion_comp.gcno -resource-dir /root/llvm/llvm80/build/lib/clang/8.0.1 -D ARCH_IS_GENERIC -D ARCH_IS_64BIT -D ARCH_IS_LITTLE_ENDIAN -D HAVE_PTHREAD -internal-isystem /usr/local/include -internal-isystem /root/llvm/llvm80/build/lib/clang/8.0.1/include -internal-externc-isystem /usr/include/x86_64-linux-gnu -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdebug-compilation-dir /root/llvm/codesample/39apps/xvidcore/build/generic -ferror-limit 19 -fmessage-length 143 -fobjc-runtime=gcc -fdiagnostics-show-option -fcolor-diagnostics -o =build/motion/motion_comp.o -x c ../../src/motion/motion_comp.c -faddrsig
+clang -cc1 version 8.0.1 based upon LLVM 8.0.1 default target x86_64-unknown-linux-gnu
+ignoring nonexistent directory "/include"
+#include "..." search starts here:
+#include <...> search starts here:
+ /usr/local/include
+ /root/llvm/llvm80/build/lib/clang/8.0.1/include
+ /usr/include/x86_64-linux-gnu
+ /usr/include
+End of search list.
+  C: motion/vop_type_decision.c
+clang version 8.0.1 (https://github.com/llvm-mirror/clang.git 2e4c9c5fc864c2c432e4c262a67c42d824b265c6) (https://github.com/rqtian/llvm80-bufferoverflow.git 38b4a62b0634ac2bc4b67addab5698d2f1a5c23e)
+Target: x86_64-unknown-linux-gnu
+Thread model: posix
+InstalledDir: /root/llvm/llvm80/build/bin
+Found candidate GCC installation: /usr/lib/gcc/x86_64-linux-gnu/6
+Found candidate GCC installation: /usr/lib/gcc/x86_64-linux-gnu/6.3.0
+Selected GCC installation: /usr/lib/gcc/x86_64-linux-gnu/6.3.0
+Candidate multilib: .;@m64
+Selected multilib: .;@m64
+ "/root/llvm/llvm80/build/bin/clang-8" -cc1 -triple x86_64-unknown-linux-gnu -emit-llvm-bc -flto -flto-unit -disable-free -main-file-name vop_type_decision.c -mrelocation-model pic -pic-level 2 -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debug-info-kind=limited -dwarf-version=4 -debugger-tuning=gdb -v -coverage-notes-file /root/llvm/codesample/39apps/xvidcore/build/generic/=build/motion/vop_type_decision.gcno -resource-dir /root/llvm/llvm80/build/lib/clang/8.0.1 -D ARCH_IS_GENERIC -D ARCH_IS_64BIT -D ARCH_IS_LITTLE_ENDIAN -D HAVE_PTHREAD -internal-isystem /usr/local/include -internal-isystem /root/llvm/llvm80/build/lib/clang/8.0.1/include -internal-externc-isystem /usr/include/x86_64-linux-gnu -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdebug-compilation-dir /root/llvm/codesample/39apps/xvidcore/build/generic -ferror-limit 19 -fmessage-length 143 -fobjc-runtime=gcc -fdiagnostics-show-option -fcolor-diagnostics -o =build/motion/vop_type_decision.o -x c ../../src/motion/vop_type_decision.c -faddrsig
+clang -cc1 version 8.0.1 based upon LLVM 8.0.1 default target x86_64-unknown-linux-gnu
+ignoring nonexistent directory "/include"
+#include "..." search starts here:
+#include <...> search starts here:
+ /usr/local/include
+ /root/llvm/llvm80/build/lib/clang/8.0.1/include
+ /usr/include/x86_64-linux-gnu
+ /usr/include
+End of search list.
+  C: motion/sad.c
+clang version 8.0.1 (https://github.com/llvm-mirror/clang.git 2e4c9c5fc864c2c432e4c262a67c42d824b265c6) (https://github.com/rqtian/llvm80-bufferoverflow.git 38b4a62b0634ac2bc4b67addab5698d2f1a5c23e)
+Target: x86_64-unknown-linux-gnu
+Thread model: posix
+InstalledDir: /root/llvm/llvm80/build/bin
+Found candidate GCC installation: /usr/lib/gcc/x86_64-linux-gnu/6
+Found candidate GCC installation: /usr/lib/gcc/x86_64-linux-gnu/6.3.0
+Selected GCC installation: /usr/lib/gcc/x86_64-linux-gnu/6.3.0
+Candidate multilib: .;@m64
+Selected multilib: .;@m64
+ "/root/llvm/llvm80/build/bin/clang-8" -cc1 -triple x86_64-unknown-linux-gnu -emit-llvm-bc -flto -flto-unit -disable-free -main-file-name sad.c -mrelocation-model pic -pic-level 2 -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debug-info-kind=limited -dwarf-version=4 -debugger-tuning=gdb -v -coverage-notes-file /root/llvm/codesample/39apps/xvidcore/build/generic/=build/motion/sad.gcno -resource-dir /root/llvm/llvm80/build/lib/clang/8.0.1 -D ARCH_IS_GENERIC -D ARCH_IS_64BIT -D ARCH_IS_LITTLE_ENDIAN -D HAVE_PTHREAD -internal-isystem /usr/local/include -internal-isystem /root/llvm/llvm80/build/lib/clang/8.0.1/include -internal-externc-isystem /usr/include/x86_64-linux-gnu -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdebug-compilation-dir /root/llvm/codesample/39apps/xvidcore/build/generic -ferror-limit 19 -fmessage-length 143 -fobjc-runtime=gcc -fdiagnostics-show-option -fcolor-diagnostics -o =build/motion/sad.o -x c ../../src/motion/sad.c -faddrsig
+clang -cc1 version 8.0.1 based upon LLVM 8.0.1 default target x86_64-unknown-linux-gnu
+ignoring nonexistent directory "/include"
+#include "..." search starts here:
+#include <...> search starts here:
+ /usr/local/include
+ /root/llvm/llvm80/build/lib/clang/8.0.1/include
+ /usr/include/x86_64-linux-gnu
+ /usr/include
+End of search list.
+  C: prediction/mbprediction.c
+clang version 8.0.1 (https://github.com/llvm-mirror/clang.git 2e4c9c5fc864c2c432e4c262a67c42d824b265c6) (https://github.com/rqtian/llvm80-bufferoverflow.git 38b4a62b0634ac2bc4b67addab5698d2f1a5c23e)
+Target: x86_64-unknown-linux-gnu
+Thread model: posix
+InstalledDir: /root/llvm/llvm80/build/bin
+Found candidate GCC installation: /usr/lib/gcc/x86_64-linux-gnu/6
+Found candidate GCC installation: /usr/lib/gcc/x86_64-linux-gnu/6.3.0
+Selected GCC installation: /usr/lib/gcc/x86_64-linux-gnu/6.3.0
+Candidate multilib: .;@m64
+Selected multilib: .;@m64
+ "/root/llvm/llvm80/build/bin/clang-8" -cc1 -triple x86_64-unknown-linux-gnu -emit-llvm-bc -flto -flto-unit -disable-free -main-file-name mbprediction.c -mrelocation-model pic -pic-level 2 -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debug-info-kind=limited -dwarf-version=4 -debugger-tuning=gdb -v -coverage-notes-file /root/llvm/codesample/39apps/xvidcore/build/generic/=build/prediction/mbprediction.gcno -resource-dir /root/llvm/llvm80/build/lib/clang/8.0.1 -D ARCH_IS_GENERIC -D ARCH_IS_64BIT -D ARCH_IS_LITTLE_ENDIAN -D HAVE_PTHREAD -internal-isystem /usr/local/include -internal-isystem /root/llvm/llvm80/build/lib/clang/8.0.1/include -internal-externc-isystem /usr/include/x86_64-linux-gnu -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdebug-compilation-dir /root/llvm/codesample/39apps/xvidcore/build/generic -ferror-limit 19 -fmessage-length 143 -fobjc-runtime=gcc -fdiagnostics-show-option -fcolor-diagnostics -o =build/prediction/mbprediction.o -x c ../../src/prediction/mbprediction.c -faddrsig
+clang -cc1 version 8.0.1 based upon LLVM 8.0.1 default target x86_64-unknown-linux-gnu
+ignoring nonexistent directory "/include"
+#include "..." search starts here:
+#include <...> search starts here:
+ /usr/local/include
+ /root/llvm/llvm80/build/lib/clang/8.0.1/include
+ /usr/include/x86_64-linux-gnu
+ /usr/include
+End of search list.
+  C: plugins/plugin_single.c
+clang version 8.0.1 (https://github.com/llvm-mirror/clang.git 2e4c9c5fc864c2c432e4c262a67c42d824b265c6) (https://github.com/rqtian/llvm80-bufferoverflow.git 38b4a62b0634ac2bc4b67addab5698d2f1a5c23e)
+Target: x86_64-unknown-linux-gnu
+Thread model: posix
+InstalledDir: /root/llvm/llvm80/build/bin
+Found candidate GCC installation: /usr/lib/gcc/x86_64-linux-gnu/6
+Found candidate GCC installation: /usr/lib/gcc/x86_64-linux-gnu/6.3.0
+Selected GCC installation: /usr/lib/gcc/x86_64-linux-gnu/6.3.0
+Candidate multilib: .;@m64
+Selected multilib: .;@m64
+ "/root/llvm/llvm80/build/bin/clang-8" -cc1 -triple x86_64-unknown-linux-gnu -emit-llvm-bc -flto -flto-unit -disable-free -main-file-name plugin_single.c -mrelocation-model pic -pic-level 2 -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debug-info-kind=limited -dwarf-version=4 -debugger-tuning=gdb -v -coverage-notes-file /root/llvm/codesample/39apps/xvidcore/build/generic/=build/plugins/plugin_single.gcno -resource-dir /root/llvm/llvm80/build/lib/clang/8.0.1 -D ARCH_IS_GENERIC -D ARCH_IS_64BIT -D ARCH_IS_LITTLE_ENDIAN -D HAVE_PTHREAD -internal-isystem /usr/local/include -internal-isystem /root/llvm/llvm80/build/lib/clang/8.0.1/include -internal-externc-isystem /usr/include/x86_64-linux-gnu -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdebug-compilation-dir /root/llvm/codesample/39apps/xvidcore/build/generic -ferror-limit 19 -fmessage-length 143 -fobjc-runtime=gcc -fdiagnostics-show-option -fcolor-diagnostics -o =build/plugins/plugin_single.o -x c ../../src/plugins/plugin_single.c -faddrsig
+clang -cc1 version 8.0.1 based upon LLVM 8.0.1 default target x86_64-unknown-linux-gnu
+ignoring nonexistent directory "/include"
+#include "..." search starts here:
+#include <...> search starts here:
+ /usr/local/include
+ /root/llvm/llvm80/build/lib/clang/8.0.1/include
+ /usr/include/x86_64-linux-gnu
+ /usr/include
+End of search list.
+  C: plugins/plugin_2pass1.c
+clang version 8.0.1 (https://github.com/llvm-mirror/clang.git 2e4c9c5fc864c2c432e4c262a67c42d824b265c6) (https://github.com/rqtian/llvm80-bufferoverflow.git 38b4a62b0634ac2bc4b67addab5698d2f1a5c23e)
+Target: x86_64-unknown-linux-gnu
+Thread model: posix
+InstalledDir: /root/llvm/llvm80/build/bin
+Found candidate GCC installation: /usr/lib/gcc/x86_64-linux-gnu/6
+Found candidate GCC installation: /usr/lib/gcc/x86_64-linux-gnu/6.3.0
+Selected GCC installation: /usr/lib/gcc/x86_64-linux-gnu/6.3.0
+Candidate multilib: .;@m64
+Selected multilib: .;@m64
+ "/root/llvm/llvm80/build/bin/clang-8" -cc1 -triple x86_64-unknown-linux-gnu -emit-llvm-bc -flto -flto-unit -disable-free -main-file-name plugin_2pass1.c -mrelocation-model pic -pic-level 2 -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debug-info-kind=limited -dwarf-version=4 -debugger-tuning=gdb -v -coverage-notes-file /root/llvm/codesample/39apps/xvidcore/build/generic/=build/plugins/plugin_2pass1.gcno -resource-dir /root/llvm/llvm80/build/lib/clang/8.0.1 -D ARCH_IS_GENERIC -D ARCH_IS_64BIT -D ARCH_IS_LITTLE_ENDIAN -D HAVE_PTHREAD -internal-isystem /usr/local/include -internal-isystem /root/llvm/llvm80/build/lib/clang/8.0.1/include -internal-externc-isystem /usr/include/x86_64-linux-gnu -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdebug-compilation-dir /root/llvm/codesample/39apps/xvidcore/build/generic -ferror-limit 19 -fmessage-length 143 -fobjc-runtime=gcc -fdiagnostics-show-option -fcolor-diagnostics -o =build/plugins/plugin_2pass1.o -x c ../../src/plugins/plugin_2pass1.c -faddrsig
+clang -cc1 version 8.0.1 based upon LLVM 8.0.1 default target x86_64-unknown-linux-gnu
+ignoring nonexistent directory "/include"
+#include "..." search starts here:
+#include <...> search starts here:
+ /usr/local/include
+ /root/llvm/llvm80/build/lib/clang/8.0.1/include
+ /usr/include/x86_64-linux-gnu
+ /usr/include
+End of search list.
+  C: plugins/plugin_2pass2.c
+clang version 8.0.1 (https://github.com/llvm-mirror/clang.git 2e4c9c5fc864c2c432e4c262a67c42d824b265c6) (https://github.com/rqtian/llvm80-bufferoverflow.git 38b4a62b0634ac2bc4b67addab5698d2f1a5c23e)
+Target: x86_64-unknown-linux-gnu
+Thread model: posix
+InstalledDir: /root/llvm/llvm80/build/bin
+Found candidate GCC installation: /usr/lib/gcc/x86_64-linux-gnu/6
+Found candidate GCC installation: /usr/lib/gcc/x86_64-linux-gnu/6.3.0
+Selected GCC installation: /usr/lib/gcc/x86_64-linux-gnu/6.3.0
+Candidate multilib: .;@m64
+Selected multilib: .;@m64
+ "/root/llvm/llvm80/build/bin/clang-8" -cc1 -triple x86_64-unknown-linux-gnu -emit-llvm-bc -flto -flto-unit -disable-free -main-file-name plugin_2pass2.c -mrelocation-model pic -pic-level 2 -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debug-info-kind=limited -dwarf-version=4 -debugger-tuning=gdb -v -coverage-notes-file /root/llvm/codesample/39apps/xvidcore/build/generic/=build/plugins/plugin_2pass2.gcno -resource-dir /root/llvm/llvm80/build/lib/clang/8.0.1 -D ARCH_IS_GENERIC -D ARCH_IS_64BIT -D ARCH_IS_LITTLE_ENDIAN -D HAVE_PTHREAD -internal-isystem /usr/local/include -internal-isystem /root/llvm/llvm80/build/lib/clang/8.0.1/include -internal-externc-isystem /usr/include/x86_64-linux-gnu -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdebug-compilation-dir /root/llvm/codesample/39apps/xvidcore/build/generic -ferror-limit 19 -fmessage-length 143 -fobjc-runtime=gcc -fdiagnostics-show-option -fcolor-diagnostics -o =build/plugins/plugin_2pass2.o -x c ../../src/plugins/plugin_2pass2.c -faddrsig
+clang -cc1 version 8.0.1 based upon LLVM 8.0.1 default target x86_64-unknown-linux-gnu
+ignoring nonexistent directory "/include"
+#include "..." search starts here:
+#include <...> search starts here:
+ /usr/local/include
+ /root/llvm/llvm80/build/lib/clang/8.0.1/include
+ /usr/include/x86_64-linux-gnu
+ /usr/include
+End of search list.
+  C: plugins/plugin_lumimasking.c
+clang version 8.0.1 (https://github.com/llvm-mirror/clang.git 2e4c9c5fc864c2c432e4c262a67c42d824b265c6) (https://github.com/rqtian/llvm80-bufferoverflow.git 38b4a62b0634ac2bc4b67addab5698d2f1a5c23e)
+Target: x86_64-unknown-linux-gnu
+Thread model: posix
+InstalledDir: /root/llvm/llvm80/build/bin
+Found candidate GCC installation: /usr/lib/gcc/x86_64-linux-gnu/6
+Found candidate GCC installation: /usr/lib/gcc/x86_64-linux-gnu/6.3.0
+Selected GCC installation: /usr/lib/gcc/x86_64-linux-gnu/6.3.0
+Candidate multilib: .;@m64
+Selected multilib: .;@m64
+ "/root/llvm/llvm80/build/bin/clang-8" -cc1 -triple x86_64-unknown-linux-gnu -emit-llvm-bc -flto -flto-unit -disable-free -main-file-name plugin_lumimasking.c -mrelocation-model pic -pic-level 2 -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debug-info-kind=limited -dwarf-version=4 -debugger-tuning=gdb -v -coverage-notes-file /root/llvm/codesample/39apps/xvidcore/build/generic/=build/plugins/plugin_lumimasking.gcno -resource-dir /root/llvm/llvm80/build/lib/clang/8.0.1 -D ARCH_IS_GENERIC -D ARCH_IS_64BIT -D ARCH_IS_LITTLE_ENDIAN -D HAVE_PTHREAD -internal-isystem /usr/local/include -internal-isystem /root/llvm/llvm80/build/lib/clang/8.0.1/include -internal-externc-isystem /usr/include/x86_64-linux-gnu -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdebug-compilation-dir /root/llvm/codesample/39apps/xvidcore/build/generic -ferror-limit 19 -fmessage-length 143 -fobjc-runtime=gcc -fdiagnostics-show-option -fcolor-diagnostics -o =build/plugins/plugin_lumimasking.o -x c ../../src/plugins/plugin_lumimasking.c -faddrsig
+clang -cc1 version 8.0.1 based upon LLVM 8.0.1 default target x86_64-unknown-linux-gnu
+ignoring nonexistent directory "/include"
+#include "..." search starts here:
+#include <...> search starts here:
+ /usr/local/include
+ /root/llvm/llvm80/build/lib/clang/8.0.1/include
+ /usr/include/x86_64-linux-gnu
+ /usr/include
+End of search list.
+  C: plugins/plugin_dump.c
+clang version 8.0.1 (https://github.com/llvm-mirror/clang.git 2e4c9c5fc864c2c432e4c262a67c42d824b265c6) (https://github.com/rqtian/llvm80-bufferoverflow.git 38b4a62b0634ac2bc4b67addab5698d2f1a5c23e)
+Target: x86_64-unknown-linux-gnu
+Thread model: posix
+InstalledDir: /root/llvm/llvm80/build/bin
+Found candidate GCC installation: /usr/lib/gcc/x86_64-linux-gnu/6
+Found candidate GCC installation: /usr/lib/gcc/x86_64-linux-gnu/6.3.0
+Selected GCC installation: /usr/lib/gcc/x86_64-linux-gnu/6.3.0
+Candidate multilib: .;@m64
+Selected multilib: .;@m64
+ "/root/llvm/llvm80/build/bin/clang-8" -cc1 -triple x86_64-unknown-linux-gnu -emit-llvm-bc -flto -flto-unit -disable-free -main-file-name plugin_dump.c -mrelocation-model pic -pic-level 2 -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debug-info-kind=limited -dwarf-version=4 -debugger-tuning=gdb -v -coverage-notes-file /root/llvm/codesample/39apps/xvidcore/build/generic/=build/plugins/plugin_dump.gcno -resource-dir /root/llvm/llvm80/build/lib/clang/8.0.1 -D ARCH_IS_GENERIC -D ARCH_IS_64BIT -D ARCH_IS_LITTLE_ENDIAN -D HAVE_PTHREAD -internal-isystem /usr/local/include -internal-isystem /root/llvm/llvm80/build/lib/clang/8.0.1/include -internal-externc-isystem /usr/include/x86_64-linux-gnu -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdebug-compilation-dir /root/llvm/codesample/39apps/xvidcore/build/generic -ferror-limit 19 -fmessage-length 143 -fobjc-runtime=gcc -fdiagnostics-show-option -fcolor-diagnostics -o =build/plugins/plugin_dump.o -x c ../../src/plugins/plugin_dump.c -faddrsig
+clang -cc1 version 8.0.1 based upon LLVM 8.0.1 default target x86_64-unknown-linux-gnu
+ignoring nonexistent directory "/include"
+#include "..." search starts here:
+#include <...> search starts here:
+ /usr/local/include
+ /root/llvm/llvm80/build/lib/clang/8.0.1/include
+ /usr/include/x86_64-linux-gnu
+ /usr/include
+End of search list.
+  C: plugins/plugin_psnr.c
+clang version 8.0.1 (https://github.com/llvm-mirror/clang.git 2e4c9c5fc864c2c432e4c262a67c42d824b265c6) (https://github.com/rqtian/llvm80-bufferoverflow.git 38b4a62b0634ac2bc4b67addab5698d2f1a5c23e)
+Target: x86_64-unknown-linux-gnu
+Thread model: posix
+InstalledDir: /root/llvm/llvm80/build/bin
+Found candidate GCC installation: /usr/lib/gcc/x86_64-linux-gnu/6
+Found candidate GCC installation: /usr/lib/gcc/x86_64-linux-gnu/6.3.0
+Selected GCC installation: /usr/lib/gcc/x86_64-linux-gnu/6.3.0
+Candidate multilib: .;@m64
+Selected multilib: .;@m64
+ "/root/llvm/llvm80/build/bin/clang-8" -cc1 -triple x86_64-unknown-linux-gnu -emit-llvm-bc -flto -flto-unit -disable-free -main-file-name plugin_psnr.c -mrelocation-model pic -pic-level 2 -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debug-info-kind=limited -dwarf-version=4 -debugger-tuning=gdb -v -coverage-notes-file /root/llvm/codesample/39apps/xvidcore/build/generic/=build/plugins/plugin_psnr.gcno -resource-dir /root/llvm/llvm80/build/lib/clang/8.0.1 -D ARCH_IS_GENERIC -D ARCH_IS_64BIT -D ARCH_IS_LITTLE_ENDIAN -D HAVE_PTHREAD -internal-isystem /usr/local/include -internal-isystem /root/llvm/llvm80/build/lib/clang/8.0.1/include -internal-externc-isystem /usr/include/x86_64-linux-gnu -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdebug-compilation-dir /root/llvm/codesample/39apps/xvidcore/build/generic -ferror-limit 19 -fmessage-length 143 -fobjc-runtime=gcc -fdiagnostics-show-option -fcolor-diagnostics -o =build/plugins/plugin_psnr.o -x c ../../src/plugins/plugin_psnr.c -faddrsig
+clang -cc1 version 8.0.1 based upon LLVM 8.0.1 default target x86_64-unknown-linux-gnu
+ignoring nonexistent directory "/include"
+#include "..." search starts here:
+#include <...> search starts here:
+ /usr/local/include
+ /root/llvm/llvm80/build/lib/clang/8.0.1/include
+ /usr/include/x86_64-linux-gnu
+ /usr/include
+End of search list.
+  C: plugins/plugin_ssim.c
+clang version 8.0.1 (https://github.com/llvm-mirror/clang.git 2e4c9c5fc864c2c432e4c262a67c42d824b265c6) (https://github.com/rqtian/llvm80-bufferoverflow.git 38b4a62b0634ac2bc4b67addab5698d2f1a5c23e)
+Target: x86_64-unknown-linux-gnu
+Thread model: posix
+InstalledDir: /root/llvm/llvm80/build/bin
+Found candidate GCC installation: /usr/lib/gcc/x86_64-linux-gnu/6
+Found candidate GCC installation: /usr/lib/gcc/x86_64-linux-gnu/6.3.0
+Selected GCC installation: /usr/lib/gcc/x86_64-linux-gnu/6.3.0
+Candidate multilib: .;@m64
+Selected multilib: .;@m64
+ "/root/llvm/llvm80/build/bin/clang-8" -cc1 -triple x86_64-unknown-linux-gnu -emit-llvm-bc -flto -flto-unit -disable-free -main-file-name plugin_ssim.c -mrelocation-model pic -pic-level 2 -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debug-info-kind=limited -dwarf-version=4 -debugger-tuning=gdb -v -coverage-notes-file /root/llvm/codesample/39apps/xvidcore/build/generic/=build/plugins/plugin_ssim.gcno -resource-dir /root/llvm/llvm80/build/lib/clang/8.0.1 -D ARCH_IS_GENERIC -D ARCH_IS_64BIT -D ARCH_IS_LITTLE_ENDIAN -D HAVE_PTHREAD -internal-isystem /usr/local/include -internal-isystem /root/llvm/llvm80/build/lib/clang/8.0.1/include -internal-externc-isystem /usr/include/x86_64-linux-gnu -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdebug-compilation-dir /root/llvm/codesample/39apps/xvidcore/build/generic -ferror-limit 19 -fmessage-length 143 -fobjc-runtime=gcc -fdiagnostics-show-option -fcolor-diagnostics -o =build/plugins/plugin_ssim.o -x c ../../src/plugins/plugin_ssim.c -faddrsig
+clang -cc1 version 8.0.1 based upon LLVM 8.0.1 default target x86_64-unknown-linux-gnu
+ignoring nonexistent directory "/include"
+#include "..." search starts here:
+#include <...> search starts here:
+ /usr/local/include
+ /root/llvm/llvm80/build/lib/clang/8.0.1/include
+ /usr/include/x86_64-linux-gnu
+ /usr/include
+End of search list.
+  C: quant/quant_h263.c
+clang version 8.0.1 (https://github.com/llvm-mirror/clang.git 2e4c9c5fc864c2c432e4c262a67c42d824b265c6) (https://github.com/rqtian/llvm80-bufferoverflow.git 38b4a62b0634ac2bc4b67addab5698d2f1a5c23e)
+Target: x86_64-unknown-linux-gnu
+Thread model: posix
+InstalledDir: /root/llvm/llvm80/build/bin
+Found candidate GCC installation: /usr/lib/gcc/x86_64-linux-gnu/6
+Found candidate GCC installation: /usr/lib/gcc/x86_64-linux-gnu/6.3.0
+Selected GCC installation: /usr/lib/gcc/x86_64-linux-gnu/6.3.0
+Candidate multilib: .;@m64
+Selected multilib: .;@m64
+ "/root/llvm/llvm80/build/bin/clang-8" -cc1 -triple x86_64-unknown-linux-gnu -emit-llvm-bc -flto -flto-unit -disable-free -main-file-name quant_h263.c -mrelocation-model pic -pic-level 2 -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debug-info-kind=limited -dwarf-version=4 -debugger-tuning=gdb -v -coverage-notes-file /root/llvm/codesample/39apps/xvidcore/build/generic/=build/quant/quant_h263.gcno -resource-dir /root/llvm/llvm80/build/lib/clang/8.0.1 -D ARCH_IS_GENERIC -D ARCH_IS_64BIT -D ARCH_IS_LITTLE_ENDIAN -D HAVE_PTHREAD -internal-isystem /usr/local/include -internal-isystem /root/llvm/llvm80/build/lib/clang/8.0.1/include -internal-externc-isystem /usr/include/x86_64-linux-gnu -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdebug-compilation-dir /root/llvm/codesample/39apps/xvidcore/build/generic -ferror-limit 19 -fmessage-length 143 -fobjc-runtime=gcc -fdiagnostics-show-option -fcolor-diagnostics -o =build/quant/quant_h263.o -x c ../../src/quant/quant_h263.c -faddrsig
+clang -cc1 version 8.0.1 based upon LLVM 8.0.1 default target x86_64-unknown-linux-gnu
+ignoring nonexistent directory "/include"
+#include "..." search starts here:
+#include <...> search starts here:
+ /usr/local/include
+ /root/llvm/llvm80/build/lib/clang/8.0.1/include
+ /usr/include/x86_64-linux-gnu
+ /usr/include
+End of search list.
+  C: quant/quant_matrix.c
+clang version 8.0.1 (https://github.com/llvm-mirror/clang.git 2e4c9c5fc864c2c432e4c262a67c42d824b265c6) (https://github.com/rqtian/llvm80-bufferoverflow.git 38b4a62b0634ac2bc4b67addab5698d2f1a5c23e)
+Target: x86_64-unknown-linux-gnu
+Thread model: posix
+InstalledDir: /root/llvm/llvm80/build/bin
+Found candidate GCC installation: /usr/lib/gcc/x86_64-linux-gnu/6
+Found candidate GCC installation: /usr/lib/gcc/x86_64-linux-gnu/6.3.0
+Selected GCC installation: /usr/lib/gcc/x86_64-linux-gnu/6.3.0
+Candidate multilib: .;@m64
+Selected multilib: .;@m64
+ "/root/llvm/llvm80/build/bin/clang-8" -cc1 -triple x86_64-unknown-linux-gnu -emit-llvm-bc -flto -flto-unit -disable-free -main-file-name quant_matrix.c -mrelocation-model pic -pic-level 2 -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debug-info-kind=limited -dwarf-version=4 -debugger-tuning=gdb -v -coverage-notes-file /root/llvm/codesample/39apps/xvidcore/build/generic/=build/quant/quant_matrix.gcno -resource-dir /root/llvm/llvm80/build/lib/clang/8.0.1 -D ARCH_IS_GENERIC -D ARCH_IS_64BIT -D ARCH_IS_LITTLE_ENDIAN -D HAVE_PTHREAD -internal-isystem /usr/local/include -internal-isystem /root/llvm/llvm80/build/lib/clang/8.0.1/include -internal-externc-isystem /usr/include/x86_64-linux-gnu -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdebug-compilation-dir /root/llvm/codesample/39apps/xvidcore/build/generic -ferror-limit 19 -fmessage-length 143 -fobjc-runtime=gcc -fdiagnostics-show-option -fcolor-diagnostics -o =build/quant/quant_matrix.o -x c ../../src/quant/quant_matrix.c -faddrsig
+clang -cc1 version 8.0.1 based upon LLVM 8.0.1 default target x86_64-unknown-linux-gnu
+ignoring nonexistent directory "/include"
+#include "..." search starts here:
+#include <...> search starts here:
+ /usr/local/include
+ /root/llvm/llvm80/build/lib/clang/8.0.1/include
+ /usr/include/x86_64-linux-gnu
+ /usr/include
+End of search list.
+  C: quant/quant_mpeg.c
+clang version 8.0.1 (https://github.com/llvm-mirror/clang.git 2e4c9c5fc864c2c432e4c262a67c42d824b265c6) (https://github.com/rqtian/llvm80-bufferoverflow.git 38b4a62b0634ac2bc4b67addab5698d2f1a5c23e)
+Target: x86_64-unknown-linux-gnu
+Thread model: posix
+InstalledDir: /root/llvm/llvm80/build/bin
+Found candidate GCC installation: /usr/lib/gcc/x86_64-linux-gnu/6
+Found candidate GCC installation: /usr/lib/gcc/x86_64-linux-gnu/6.3.0
+Selected GCC installation: /usr/lib/gcc/x86_64-linux-gnu/6.3.0
+Candidate multilib: .;@m64
+Selected multilib: .;@m64
+ "/root/llvm/llvm80/build/bin/clang-8" -cc1 -triple x86_64-unknown-linux-gnu -emit-llvm-bc -flto -flto-unit -disable-free -main-file-name quant_mpeg.c -mrelocation-model pic -pic-level 2 -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debug-info-kind=limited -dwarf-version=4 -debugger-tuning=gdb -v -coverage-notes-file /root/llvm/codesample/39apps/xvidcore/build/generic/=build/quant/quant_mpeg.gcno -resource-dir /root/llvm/llvm80/build/lib/clang/8.0.1 -D ARCH_IS_GENERIC -D ARCH_IS_64BIT -D ARCH_IS_LITTLE_ENDIAN -D HAVE_PTHREAD -internal-isystem /usr/local/include -internal-isystem /root/llvm/llvm80/build/lib/clang/8.0.1/include -internal-externc-isystem /usr/include/x86_64-linux-gnu -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdebug-compilation-dir /root/llvm/codesample/39apps/xvidcore/build/generic -ferror-limit 19 -fmessage-length 143 -fobjc-runtime=gcc -fdiagnostics-show-option -fcolor-diagnostics -o =build/quant/quant_mpeg.o -x c ../../src/quant/quant_mpeg.c -faddrsig
+clang -cc1 version 8.0.1 based upon LLVM 8.0.1 default target x86_64-unknown-linux-gnu
+ignoring nonexistent directory "/include"
+#include "..." search starts here:
+#include <...> search starts here:
+ /usr/local/include
+ /root/llvm/llvm80/build/lib/clang/8.0.1/include
+ /usr/include/x86_64-linux-gnu
+ /usr/include
+End of search list.
+  C: utils/emms.c
+clang version 8.0.1 (https://github.com/llvm-mirror/clang.git 2e4c9c5fc864c2c432e4c262a67c42d824b265c6) (https://github.com/rqtian/llvm80-bufferoverflow.git 38b4a62b0634ac2bc4b67addab5698d2f1a5c23e)
+Target: x86_64-unknown-linux-gnu
+Thread model: posix
+InstalledDir: /root/llvm/llvm80/build/bin
+Found candidate GCC installation: /usr/lib/gcc/x86_64-linux-gnu/6
+Found candidate GCC installation: /usr/lib/gcc/x86_64-linux-gnu/6.3.0
+Selected GCC installation: /usr/lib/gcc/x86_64-linux-gnu/6.3.0
+Candidate multilib: .;@m64
+Selected multilib: .;@m64
+ "/root/llvm/llvm80/build/bin/clang-8" -cc1 -triple x86_64-unknown-linux-gnu -emit-llvm-bc -flto -flto-unit -disable-free -main-file-name emms.c -mrelocation-model pic -pic-level 2 -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debug-info-kind=limited -dwarf-version=4 -debugger-tuning=gdb -v -coverage-notes-file /root/llvm/codesample/39apps/xvidcore/build/generic/=build/utils/emms.gcno -resource-dir /root/llvm/llvm80/build/lib/clang/8.0.1 -D ARCH_IS_GENERIC -D ARCH_IS_64BIT -D ARCH_IS_LITTLE_ENDIAN -D HAVE_PTHREAD -internal-isystem /usr/local/include -internal-isystem /root/llvm/llvm80/build/lib/clang/8.0.1/include -internal-externc-isystem /usr/include/x86_64-linux-gnu -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdebug-compilation-dir /root/llvm/codesample/39apps/xvidcore/build/generic -ferror-limit 19 -fmessage-length 143 -fobjc-runtime=gcc -fdiagnostics-show-option -fcolor-diagnostics -o =build/utils/emms.o -x c ../../src/utils/emms.c -faddrsig
+clang -cc1 version 8.0.1 based upon LLVM 8.0.1 default target x86_64-unknown-linux-gnu
+ignoring nonexistent directory "/include"
+#include "..." search starts here:
+#include <...> search starts here:
+ /usr/local/include
+ /root/llvm/llvm80/build/lib/clang/8.0.1/include
+ /usr/include/x86_64-linux-gnu
+ /usr/include
+End of search list.
+  C: utils/mbtransquant.c
+clang version 8.0.1 (https://github.com/llvm-mirror/clang.git 2e4c9c5fc864c2c432e4c262a67c42d824b265c6) (https://github.com/rqtian/llvm80-bufferoverflow.git 38b4a62b0634ac2bc4b67addab5698d2f1a5c23e)
+Target: x86_64-unknown-linux-gnu
+Thread model: posix
+InstalledDir: /root/llvm/llvm80/build/bin
+Found candidate GCC installation: /usr/lib/gcc/x86_64-linux-gnu/6
+Found candidate GCC installation: /usr/lib/gcc/x86_64-linux-gnu/6.3.0
+Selected GCC installation: /usr/lib/gcc/x86_64-linux-gnu/6.3.0
+Candidate multilib: .;@m64
+Selected multilib: .;@m64
+ "/root/llvm/llvm80/build/bin/clang-8" -cc1 -triple x86_64-unknown-linux-gnu -emit-llvm-bc -flto -flto-unit -disable-free -main-file-name mbtransquant.c -mrelocation-model pic -pic-level 2 -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debug-info-kind=limited -dwarf-version=4 -debugger-tuning=gdb -v -coverage-notes-file /root/llvm/codesample/39apps/xvidcore/build/generic/=build/utils/mbtransquant.gcno -resource-dir /root/llvm/llvm80/build/lib/clang/8.0.1 -D ARCH_IS_GENERIC -D ARCH_IS_64BIT -D ARCH_IS_LITTLE_ENDIAN -D HAVE_PTHREAD -internal-isystem /usr/local/include -internal-isystem /root/llvm/llvm80/build/lib/clang/8.0.1/include -internal-externc-isystem /usr/include/x86_64-linux-gnu -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdebug-compilation-dir /root/llvm/codesample/39apps/xvidcore/build/generic -ferror-limit 19 -fmessage-length 143 -fobjc-runtime=gcc -fdiagnostics-show-option -fcolor-diagnostics -o =build/utils/mbtransquant.o -x c ../../src/utils/mbtransquant.c -faddrsig
+clang -cc1 version 8.0.1 based upon LLVM 8.0.1 default target x86_64-unknown-linux-gnu
+ignoring nonexistent directory "/include"
+#include "..." search starts here:
+#include <...> search starts here:
+ /usr/local/include
+ /root/llvm/llvm80/build/lib/clang/8.0.1/include
+ /usr/include/x86_64-linux-gnu
+ /usr/include
+End of search list.
+  C: utils/mem_align.c
+clang version 8.0.1 (https://github.com/llvm-mirror/clang.git 2e4c9c5fc864c2c432e4c262a67c42d824b265c6) (https://github.com/rqtian/llvm80-bufferoverflow.git 38b4a62b0634ac2bc4b67addab5698d2f1a5c23e)
+Target: x86_64-unknown-linux-gnu
+Thread model: posix
+InstalledDir: /root/llvm/llvm80/build/bin
+Found candidate GCC installation: /usr/lib/gcc/x86_64-linux-gnu/6
+Found candidate GCC installation: /usr/lib/gcc/x86_64-linux-gnu/6.3.0
+Selected GCC installation: /usr/lib/gcc/x86_64-linux-gnu/6.3.0
+Candidate multilib: .;@m64
+Selected multilib: .;@m64
+ "/root/llvm/llvm80/build/bin/clang-8" -cc1 -triple x86_64-unknown-linux-gnu -emit-llvm-bc -flto -flto-unit -disable-free -main-file-name mem_align.c -mrelocation-model pic -pic-level 2 -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debug-info-kind=limited -dwarf-version=4 -debugger-tuning=gdb -v -coverage-notes-file /root/llvm/codesample/39apps/xvidcore/build/generic/=build/utils/mem_align.gcno -resource-dir /root/llvm/llvm80/build/lib/clang/8.0.1 -D ARCH_IS_GENERIC -D ARCH_IS_64BIT -D ARCH_IS_LITTLE_ENDIAN -D HAVE_PTHREAD -internal-isystem /usr/local/include -internal-isystem /root/llvm/llvm80/build/lib/clang/8.0.1/include -internal-externc-isystem /usr/include/x86_64-linux-gnu -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdebug-compilation-dir /root/llvm/codesample/39apps/xvidcore/build/generic -ferror-limit 19 -fmessage-length 143 -fobjc-runtime=gcc -fdiagnostics-show-option -fcolor-diagnostics -o =build/utils/mem_align.o -x c ../../src/utils/mem_align.c -faddrsig
+clang -cc1 version 8.0.1 based upon LLVM 8.0.1 default target x86_64-unknown-linux-gnu
+ignoring nonexistent directory "/include"
+#include "..." search starts here:
+#include <...> search starts here:
+ /usr/local/include
+ /root/llvm/llvm80/build/lib/clang/8.0.1/include
+ /usr/include/x86_64-linux-gnu
+ /usr/include
+End of search list.
+  C: utils/mem_transfer.c
+clang version 8.0.1 (https://github.com/llvm-mirror/clang.git 2e4c9c5fc864c2c432e4c262a67c42d824b265c6) (https://github.com/rqtian/llvm80-bufferoverflow.git 38b4a62b0634ac2bc4b67addab5698d2f1a5c23e)
+Target: x86_64-unknown-linux-gnu
+Thread model: posix
+InstalledDir: /root/llvm/llvm80/build/bin
+Found candidate GCC installation: /usr/lib/gcc/x86_64-linux-gnu/6
+Found candidate GCC installation: /usr/lib/gcc/x86_64-linux-gnu/6.3.0
+Selected GCC installation: /usr/lib/gcc/x86_64-linux-gnu/6.3.0
+Candidate multilib: .;@m64
+Selected multilib: .;@m64
+ "/root/llvm/llvm80/build/bin/clang-8" -cc1 -triple x86_64-unknown-linux-gnu -emit-llvm-bc -flto -flto-unit -disable-free -main-file-name mem_transfer.c -mrelocation-model pic -pic-level 2 -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debug-info-kind=limited -dwarf-version=4 -debugger-tuning=gdb -v -coverage-notes-file /root/llvm/codesample/39apps/xvidcore/build/generic/=build/utils/mem_transfer.gcno -resource-dir /root/llvm/llvm80/build/lib/clang/8.0.1 -D ARCH_IS_GENERIC -D ARCH_IS_64BIT -D ARCH_IS_LITTLE_ENDIAN -D HAVE_PTHREAD -internal-isystem /usr/local/include -internal-isystem /root/llvm/llvm80/build/lib/clang/8.0.1/include -internal-externc-isystem /usr/include/x86_64-linux-gnu -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdebug-compilation-dir /root/llvm/codesample/39apps/xvidcore/build/generic -ferror-limit 19 -fmessage-length 143 -fobjc-runtime=gcc -fdiagnostics-show-option -fcolor-diagnostics -o =build/utils/mem_transfer.o -x c ../../src/utils/mem_transfer.c -faddrsig
+clang -cc1 version 8.0.1 based upon LLVM 8.0.1 default target x86_64-unknown-linux-gnu
+ignoring nonexistent directory "/include"
+#include "..." search starts here:
+#include <...> search starts here:
+ /usr/local/include
+ /root/llvm/llvm80/build/lib/clang/8.0.1/include
+ /usr/include/x86_64-linux-gnu
+ /usr/include
+End of search list.
+  C: utils/timer.c
+clang version 8.0.1 (https://github.com/llvm-mirror/clang.git 2e4c9c5fc864c2c432e4c262a67c42d824b265c6) (https://github.com/rqtian/llvm80-bufferoverflow.git 38b4a62b0634ac2bc4b67addab5698d2f1a5c23e)
+Target: x86_64-unknown-linux-gnu
+Thread model: posix
+InstalledDir: /root/llvm/llvm80/build/bin
+Found candidate GCC installation: /usr/lib/gcc/x86_64-linux-gnu/6
+Found candidate GCC installation: /usr/lib/gcc/x86_64-linux-gnu/6.3.0
+Selected GCC installation: /usr/lib/gcc/x86_64-linux-gnu/6.3.0
+Candidate multilib: .;@m64
+Selected multilib: .;@m64
+ "/root/llvm/llvm80/build/bin/clang-8" -cc1 -triple x86_64-unknown-linux-gnu -emit-llvm-bc -flto -flto-unit -disable-free -main-file-name timer.c -mrelocation-model pic -pic-level 2 -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debug-info-kind=limited -dwarf-version=4 -debugger-tuning=gdb -v -coverage-notes-file /root/llvm/codesample/39apps/xvidcore/build/generic/=build/utils/timer.gcno -resource-dir /root/llvm/llvm80/build/lib/clang/8.0.1 -D ARCH_IS_GENERIC -D ARCH_IS_64BIT -D ARCH_IS_LITTLE_ENDIAN -D HAVE_PTHREAD -internal-isystem /usr/local/include -internal-isystem /root/llvm/llvm80/build/lib/clang/8.0.1/include -internal-externc-isystem /usr/include/x86_64-linux-gnu -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdebug-compilation-dir /root/llvm/codesample/39apps/xvidcore/build/generic -ferror-limit 19 -fmessage-length 143 -fobjc-runtime=gcc -fdiagnostics-show-option -fcolor-diagnostics -o =build/utils/timer.o -x c ../../src/utils/timer.c -faddrsig
+clang -cc1 version 8.0.1 based upon LLVM 8.0.1 default target x86_64-unknown-linux-gnu
+ignoring nonexistent directory "/include"
+#include "..." search starts here:
+#include <...> search starts here:
+ /usr/local/include
+ /root/llvm/llvm80/build/lib/clang/8.0.1/include
+ /usr/include/x86_64-linux-gnu
+ /usr/include
+End of search list.
+  L: libxvidcore.a
+  L: libxvidcore.so.4.1
+/usr/local/bin/ld: error: decoder.o:1:3: invalid character
+/usr/local/bin/ld: error: decoder.o:1:3: syntax error, unexpected $end
+/usr/local/bin/ld: error: decoder.o: not an object or archive
+/usr/local/bin/ld: error: encoder.o:1:3: invalid character
+/usr/local/bin/ld: error: encoder.o:1:3: syntax error, unexpected $end
+/usr/local/bin/ld: error: encoder.o: not an object or archive
+/usr/local/bin/ld: error: xvid.o:1:3: invalid character
+/usr/local/bin/ld: error: xvid.o:1:3: syntax error, unexpected $end
+/usr/local/bin/ld: error: xvid.o: not an object or archive
+/usr/local/bin/ld: error: bitstream/bitstream.o:1:3: invalid character
+/usr/local/bin/ld: error: bitstream/bitstream.o:1:3: syntax error, unexpected $end
+/usr/local/bin/ld: error: bitstream/bitstream.o: not an object or archive
+/usr/local/bin/ld: error: bitstream/cbp.o:1:3: invalid character
+/usr/local/bin/ld: error: bitstream/cbp.o:1:3: syntax error, unexpected $end
+/usr/local/bin/ld: error: bitstream/cbp.o: not an object or archive
+/usr/local/bin/ld: error: bitstream/mbcoding.o:1:3: invalid character
+/usr/local/bin/ld: error: bitstream/mbcoding.o:1:3: syntax error, unexpected $end
+/usr/local/bin/ld: error: bitstream/mbcoding.o: not an object or archive
+/usr/local/bin/ld: error: dct/fdct.o:1:3: invalid character
+/usr/local/bin/ld: error: dct/fdct.o:1:3: syntax error, unexpected $end
+/usr/local/bin/ld: error: dct/fdct.o: not an object or archive
+/usr/local/bin/ld: error: dct/idct.o:1:3: invalid character
+/usr/local/bin/ld: error: dct/idct.o:1:3: syntax error, unexpected $end
+/usr/local/bin/ld: error: dct/idct.o: not an object or archive
+/usr/local/bin/ld: error: dct/simple_idct.o:1:3: invalid character
+/usr/local/bin/ld: error: dct/simple_idct.o:1:3: syntax error, unexpected $end
+/usr/local/bin/ld: error: dct/simple_idct.o: not an object or archive
+/usr/local/bin/ld: error: image/colorspace.o:1:3: invalid character
+/usr/local/bin/ld: error: image/colorspace.o:1:3: syntax error, unexpected $end
+/usr/local/bin/ld: error: image/colorspace.o: not an object or archive
+/usr/local/bin/ld: error: image/image.o:1:3: invalid character
+/usr/local/bin/ld: error: image/image.o:1:3: syntax error, unexpected $end
+/usr/local/bin/ld: error: image/image.o: not an object or archive
+/usr/local/bin/ld: error: image/interpolate8x8.o:1:3: invalid character
+/usr/local/bin/ld: error: image/interpolate8x8.o:1:3: syntax error, unexpected $end
+/usr/local/bin/ld: error: image/interpolate8x8.o: not an object or archive
+/usr/local/bin/ld: error: image/font.o:1:3: invalid character
+/usr/local/bin/ld: error: image/font.o:1:3: syntax error, unexpected $end
+/usr/local/bin/ld: error: image/font.o: not an object or archive
+/usr/local/bin/ld: error: image/postprocessing.o:1:3: invalid character
+/usr/local/bin/ld: error: image/postprocessing.o:1:3: syntax error, unexpected $end
+/usr/local/bin/ld: error: image/postprocessing.o: not an object or archive
+/usr/local/bin/ld: error: image/qpel.o:1:3: invalid character
+/usr/local/bin/ld: error: image/qpel.o:1:3: syntax error, unexpected $end
+/usr/local/bin/ld: error: image/qpel.o: not an object or archive
+/usr/local/bin/ld: error: image/reduced.o:1:3: invalid character
+/usr/local/bin/ld: error: image/reduced.o:1:3: syntax error, unexpected $end
+/usr/local/bin/ld: error: image/reduced.o: not an object or archive
+/usr/local/bin/ld: error: motion/estimation_bvop.o:1:3: invalid character
+/usr/local/bin/ld: error: motion/estimation_bvop.o:1:3: syntax error, unexpected $end
+/usr/local/bin/ld: error: motion/estimation_bvop.o: not an object or archive
+/usr/local/bin/ld: error: motion/estimation_common.o:1:3: invalid character
+/usr/local/bin/ld: error: motion/estimation_common.o:1:3: syntax error, unexpected $end
+/usr/local/bin/ld: error: motion/estimation_common.o: not an object or archive
+/usr/local/bin/ld: error: motion/estimation_gmc.o:1:3: invalid character
+/usr/local/bin/ld: error: motion/estimation_gmc.o:1:3: syntax error, unexpected $end
+/usr/local/bin/ld: error: motion/estimation_gmc.o: not an object or archive
+/usr/local/bin/ld: error: motion/estimation_pvop.o:1:3: invalid character
+/usr/local/bin/ld: error: motion/estimation_pvop.o:1:3: syntax error, unexpected $end
+/usr/local/bin/ld: error: motion/estimation_pvop.o: not an object or archive
+/usr/local/bin/ld: error: motion/estimation_rd_based.o:1:3: invalid character
+/usr/local/bin/ld: error: motion/estimation_rd_based.o:1:3: syntax error, unexpected $end
+/usr/local/bin/ld: error: motion/estimation_rd_based.o: not an object or archive
+/usr/local/bin/ld: error: motion/estimation_rd_based_bvop.o:1:3: invalid character
+/usr/local/bin/ld: error: motion/estimation_rd_based_bvop.o:1:3: syntax error, unexpected $end
+/usr/local/bin/ld: error: motion/estimation_rd_based_bvop.o: not an object or archive
+/usr/local/bin/ld: error: motion/gmc.o:1:3: invalid character
+/usr/local/bin/ld: error: motion/gmc.o:1:3: syntax error, unexpected $end
+/usr/local/bin/ld: error: motion/gmc.o: not an object or archive
+/usr/local/bin/ld: error: motion/motion_comp.o:1:3: invalid character
+/usr/local/bin/ld: error: motion/motion_comp.o:1:3: syntax error, unexpected $end
+/usr/local/bin/ld: error: motion/motion_comp.o: not an object or archive
+/usr/local/bin/ld: error: motion/vop_type_decision.o:1:3: invalid character
+/usr/local/bin/ld: error: motion/vop_type_decision.o:1:3: syntax error, unexpected $end
+/usr/local/bin/ld: error: motion/vop_type_decision.o: not an object or archive
+/usr/local/bin/ld: error: motion/sad.o:1:3: invalid character
+/usr/local/bin/ld: error: motion/sad.o:1:3: syntax error, unexpected $end
+/usr/local/bin/ld: error: motion/sad.o: not an object or archive
+/usr/local/bin/ld: error: prediction/mbprediction.o:1:3: invalid character
+/usr/local/bin/ld: error: prediction/mbprediction.o:1:3: syntax error, unexpected $end
+/usr/local/bin/ld: error: prediction/mbprediction.o: not an object or archive
+/usr/local/bin/ld: error: plugins/plugin_single.o:1:3: invalid character
+/usr/local/bin/ld: error: plugins/plugin_single.o:1:3: syntax error, unexpected $end
+/usr/local/bin/ld: error: plugins/plugin_single.o: not an object or archive
+/usr/local/bin/ld: error: plugins/plugin_2pass1.o:1:3: invalid character
+/usr/local/bin/ld: error: plugins/plugin_2pass1.o:1:3: syntax error, unexpected $end
+/usr/local/bin/ld: error: plugins/plugin_2pass1.o: not an object or archive
+/usr/local/bin/ld: error: plugins/plugin_2pass2.o:1:3: invalid character
+/usr/local/bin/ld: error: plugins/plugin_2pass2.o:1:3: syntax error, unexpected $end
+/usr/local/bin/ld: error: plugins/plugin_2pass2.o: not an object or archive
+/usr/local/bin/ld: error: plugins/plugin_lumimasking.o:1:3: invalid character
+/usr/local/bin/ld: error: plugins/plugin_lumimasking.o:1:3: syntax error, unexpected $end
+/usr/local/bin/ld: error: plugins/plugin_lumimasking.o: not an object or archive
+/usr/local/bin/ld: error: plugins/plugin_dump.o:1:3: invalid character
+/usr/local/bin/ld: error: plugins/plugin_dump.o:1:3: syntax error, unexpected $end
+/usr/local/bin/ld: error: plugins/plugin_dump.o: not an object or archive
+/usr/local/bin/ld: error: plugins/plugin_psnr.o:1:3: invalid character
+/usr/local/bin/ld: error: plugins/plugin_psnr.o:1:3: syntax error, unexpected $end
+/usr/local/bin/ld: error: plugins/plugin_psnr.o: not an object or archive
+/usr/local/bin/ld: error: plugins/plugin_ssim.o:1:3: invalid character
+/usr/local/bin/ld: error: plugins/plugin_ssim.o:1:3: syntax error, unexpected $end
+/usr/local/bin/ld: error: plugins/plugin_ssim.o: not an object or archive
+/usr/local/bin/ld: error: quant/quant_h263.o:1:3: invalid character
+/usr/local/bin/ld: error: quant/quant_h263.o:1:3: syntax error, unexpected $end
+/usr/local/bin/ld: error: quant/quant_h263.o: not an object or archive
+/usr/local/bin/ld: error: quant/quant_matrix.o:1:3: invalid character
+/usr/local/bin/ld: error: quant/quant_matrix.o:1:3: syntax error, unexpected $end
+/usr/local/bin/ld: error: quant/quant_matrix.o: not an object or archive
+/usr/local/bin/ld: error: quant/quant_mpeg.o:1:3: invalid character
+/usr/local/bin/ld: error: quant/quant_mpeg.o:1:3: syntax error, unexpected $end
+/usr/local/bin/ld: error: quant/quant_mpeg.o: not an object or archive
+/usr/local/bin/ld: error: utils/emms.o:1:3: invalid character
+/usr/local/bin/ld: error: utils/emms.o:1:3: syntax error, unexpected $end
+/usr/local/bin/ld: error: utils/emms.o: not an object or archive
+/usr/local/bin/ld: error: utils/mbtransquant.o:1:3: invalid character
+/usr/local/bin/ld: error: utils/mbtransquant.o:1:3: syntax error, unexpected $end
+/usr/local/bin/ld: error: utils/mbtransquant.o: not an object or archive
+/usr/local/bin/ld: error: utils/mem_align.o:1:3: invalid character
+/usr/local/bin/ld: error: utils/mem_align.o:1:3: syntax error, unexpected $end
+/usr/local/bin/ld: error: utils/mem_align.o: not an object or archive
+/usr/local/bin/ld: error: utils/mem_transfer.o:1:3: invalid character
+/usr/local/bin/ld: error: utils/mem_transfer.o:1:3: syntax error, unexpected $end
+/usr/local/bin/ld: error: utils/mem_transfer.o: not an object or archive
+/usr/local/bin/ld: error: utils/timer.o:1:3: invalid character
+/usr/local/bin/ld: error: utils/timer.o:1:3: syntax error, unexpected $end
+/usr/local/bin/ld: error: utils/timer.o: not an object or archive
+clang-8: error: linker command failed with exit code 1 (use -v to see invocation)
+Makefile:130: recipe for target 'libxvidcore.so.4.1' failed
+make: *** [libxvidcore.so.4.1] Error 1
+[Thu Jul 11 15:40:54 UTC]root@3e7fa76cc3dc:generic# 
+

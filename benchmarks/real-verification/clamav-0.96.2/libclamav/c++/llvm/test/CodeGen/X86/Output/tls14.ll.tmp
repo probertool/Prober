@@ -1,0 +1,32 @@
+	.file	"<stdin>"
+	.text
+	.globl	f
+	.type	f,@function
+f:                                      # @f
+# BB#0:                                 # %entry
+	subl	$4, %esp
+	movsbl	%gs:i@NTPOFF, %eax
+	movl	%eax, (%esp)
+	call	g
+	movzbl	%gs:j@NTPOFF, %eax
+	movl	%eax, (%esp)
+	call	h
+	addl	$4, %esp
+	ret
+	.size	f, .-f
+
+	.type	i,@object
+	.section	.tbss,"awT",@nobits
+	.globl	i
+i:                                      # @i
+	.byte	0                       # 0x0
+	.size	i, 1
+
+	.type	j,@object
+	.globl	j
+j:                                      # @j
+	.byte	0                       # 0x0
+	.size	j, 1
+
+
+	.section	.note.GNU-stack,"",@progbits

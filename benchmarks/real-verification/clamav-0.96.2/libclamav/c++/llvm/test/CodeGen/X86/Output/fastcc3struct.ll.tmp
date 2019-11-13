@@ -1,0 +1,14 @@
+	.file	"<stdin>"
+	.text
+	.align	16, 0x90
+	.type	ReturnBigStruct,@function
+ReturnBigStruct:                        # @ReturnBigStruct
+# BB#0:                                 # %entry
+	movl	$12, %eax
+	movl	$24, %edx
+	movl	$48, %ecx
+	ret
+	.size	ReturnBigStruct, .-ReturnBigStruct
+
+
+	.section	.note.GNU-stack,"",@progbits

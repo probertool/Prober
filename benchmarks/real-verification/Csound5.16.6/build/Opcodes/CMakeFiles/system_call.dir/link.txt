@@ -1,0 +1,1 @@
+/usr/bin/cc  -fPIC -fopenmp  -shared  -o ../libsystem_call.so CMakeFiles/system_call.dir/system_call.c.o 

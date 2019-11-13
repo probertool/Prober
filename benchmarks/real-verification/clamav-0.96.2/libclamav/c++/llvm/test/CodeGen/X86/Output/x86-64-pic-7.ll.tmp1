@@ -1,0 +1,13 @@
+	.file	"<stdin>"
+	.text
+	.globl	g
+	.align	16, 0x90
+	.type	g,@function
+g:                                      # @g
+# BB#0:                                 # %entry
+	movq	f@GOTPCREL(%rip), %rax
+	ret
+	.size	g, .-g
+
+
+	.section	.note.GNU-stack,"",@progbits

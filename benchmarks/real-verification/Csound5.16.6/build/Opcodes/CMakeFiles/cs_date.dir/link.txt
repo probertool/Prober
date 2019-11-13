@@ -1,0 +1,1 @@
+/usr/bin/cc  -fPIC -fopenmp  -shared  -o ../libcs_date.so CMakeFiles/cs_date.dir/date.c.o 

@@ -1,0 +1,266 @@
+------------------------------------------------------------------------
+r33337 | gerald | 2010-06-27 08:24:16 -0700 (Sun, 27 Jun 2010) | 1 line
+Changed paths:
+   M /trunk-1.0/epan/enterprise-numbers
+   M /trunk-1.0/manuf
+
+[Automatic manuf and enterprise-numbers update for 2010-06-27]
+------------------------------------------------------------------------
+r33427 | gerald | 2010-07-04 08:24:09 -0700 (Sun, 04 Jul 2010) | 1 line
+Changed paths:
+   M /trunk-1.0/epan/enterprise-numbers
+   M /trunk-1.0/manuf
+
+[Automatic manuf and enterprise-numbers update for 2010-07-04]
+------------------------------------------------------------------------
+r33485 | gerald | 2010-07-11 08:24:12 -0700 (Sun, 11 Jul 2010) | 1 line
+Changed paths:
+   M /trunk-1.0/epan/enterprise-numbers
+   M /trunk-1.0/manuf
+
+[Automatic manuf and enterprise-numbers update for 2010-07-11]
+------------------------------------------------------------------------
+r33566 | gerald | 2010-07-18 08:24:10 -0700 (Sun, 18 Jul 2010) | 1 line
+Changed paths:
+   M /trunk-1.0/epan/enterprise-numbers
+   M /trunk-1.0/manuf
+
+[Automatic manuf and enterprise-numbers update for 2010-07-18]
+------------------------------------------------------------------------
+r33626 | gerald | 2010-07-25 08:24:21 -0700 (Sun, 25 Jul 2010) | 1 line
+Changed paths:
+   M /trunk-1.0/epan/enterprise-numbers
+   M /trunk-1.0/manuf
+
+[Automatic manuf and enterprise-numbers update for 2010-07-25]
+------------------------------------------------------------------------
+r33662 | gerald | 2010-07-28 16:39:00 -0700 (Wed, 28 Jul 2010) | 3 lines
+Changed paths:
+   M /trunk-1.0/docbook/release-notes.xml
+   M /trunk-1.0/epan/dissectors/packet-ber.c
+
+Replace get_ber_length() and try_get_ber_length() with versions from the
+trunk.
+
+------------------------------------------------------------------------
+r33663 | gerald | 2010-07-28 16:51:20 -0700 (Wed, 28 Jul 2010) | 16 lines
+Changed paths:
+   M /trunk-1.0/docbook/release-notes.xml
+   M /trunk-1.0/epan/sigcomp-udvm.c
+   M /trunk-1.0/epan/sigcomp_state_hdlr.c
+
+Copy over r33321 from the trunk.
+
+------------------------------------------------------------------------
+r33321 | gerald | 2010-06-25 10:14:41 -0700 (Fri, 25 Jun 2010) | 6 lines
+Changed paths:
+   M /trunk/epan/sigcomp-udvm.c
+   M /trunk/epan/sigcomp_state_hdlr.c
+
+Make sure our addresses are modulo 2^16 in a lot of places. Fixes a
+crash found while fuzzing, and hopefully fixes bug 4867.
+
+In sigcomp_init_udvm() initialize the first 8 bytes of our buffers,
+which squelches a valgrind complaint.
+------------------------------------------------------------------------
+
+
+------------------------------------------------------------------------
+r33664 | gerald | 2010-07-28 16:55:00 -0700 (Wed, 28 Jul 2010) | 2 lines
+Changed paths:
+   M /trunk-1.0/ChangeLog
+   M /trunk-1.0/NEWS
+   M /trunk-1.0/version.conf
+
+Build 1.0.15.
+
+------------------------------------------------------------------------
+r33670 | gerald | 2010-07-29 09:43:38 -0700 (Thu, 29 Jul 2010) | 2 lines
+Changed paths:
+   M /trunk-1.0/docbook/release-notes.xml
+   M /trunk-1.0/version.conf
+
+Fix the advisory link.
+
+------------------------------------------------------------------------
+r33672 | gerald | 2010-07-29 10:39:29 -0700 (Thu, 29 Jul 2010) | 2 lines
+Changed paths:
+   M /trunk-1.0/config.nmake
+   M /trunk-1.0/configure.in
+   M /trunk-1.0/debian/changelog
+   M /trunk-1.0/docbook/release-notes.xml
+
+1.0.15 -> 1.0.16.
+
+------------------------------------------------------------------------
+r33686 | gerald | 2010-08-01 08:34:11 -0700 (Sun, 01 Aug 2010) | 1 line
+Changed paths:
+   M /trunk-1.0/epan/enterprise-numbers
+   M /trunk-1.0/manuf
+
+[Automatic manuf and enterprise-numbers update for 2010-08-01]
+------------------------------------------------------------------------
+r33731 | gerald | 2010-08-08 08:34:13 -0700 (Sun, 08 Aug 2010) | 1 line
+Changed paths:
+   M /trunk-1.0/epan/enterprise-numbers
+   M /trunk-1.0/manuf
+
+[Automatic manuf and enterprise-numbers update for 2010-08-08]
+------------------------------------------------------------------------
+r33803 | gerald | 2010-08-15 08:34:10 -0700 (Sun, 15 Aug 2010) | 1 line
+Changed paths:
+   M /trunk-1.0/epan/enterprise-numbers
+   M /trunk-1.0/manuf
+
+[Automatic manuf and enterprise-numbers update for 2010-08-15]
+------------------------------------------------------------------------
+r33882 | gerald | 2010-08-22 08:34:06 -0700 (Sun, 22 Aug 2010) | 1 line
+Changed paths:
+   M /trunk-1.0/epan/enterprise-numbers
+   M /trunk-1.0/manuf
+
+[Automatic manuf and enterprise-numbers update for 2010-08-22]
+------------------------------------------------------------------------
+r33937 | gerald | 2010-08-26 11:14:37 -0700 (Thu, 26 Aug 2010) | 2 lines
+Changed paths:
+   M /trunk-1.0/nio-ie5.c
+
+Fix line endings.
+
+------------------------------------------------------------------------
+r33940 | gerald | 2010-08-26 13:10:28 -0700 (Thu, 26 Aug 2010) | 48 lines
+Changed paths:
+   M /trunk-1.0/airpcap_loader.c
+   M /trunk-1.0/capture-wpcap.c
+   M /trunk-1.0/capture_wpcap_packet.c
+   M /trunk-1.0/doc/README.capture
+   M /trunk-1.0/dumpcap.c
+   M /trunk-1.0/epan/filesystem.c
+   M /trunk-1.0/epan/unicode-utils.h
+   M /trunk-1.0/epan/xmlstub.c
+   M /trunk-1.0/gtk/main.c
+   M /trunk-1.0/nio-ie5.c
+   M /trunk-1.0/wiretap/file_util.c
+   M /trunk-1.0/wiretap/file_util.h
+   M /trunk-1.0/wiretap/wtap.def
+
+Copy over revisions by hand:
+
+------------------------------------------------------------------------
+r33916 | gerald | 2010-08-24 16:39:29 -0700 (Tue, 24 Aug 2010) | 5 lines
+Changed paths:
+   M /trunk/dumpcap.c
+   M /trunk/gtk/main.c
+
+Partial fix for bug 5133. On Windows, call SetDllDirectory at startup if
+it's present in Wireshark and dumpcap. This takes care of the airpcap.dll
+PoC but we need to load wpcap.dll from a full path. We might want to
+call SetDllDirectory from our other executables as well.
+------------------------------------------------------------------------
+r33917 | gerald | 2010-08-24 17:20:50 -0700 (Tue, 24 Aug 2010) | 2 lines
+Changed paths:
+   M /trunk/dumpcap.c
+
+Fix !Windows compilation.
+------------------------------------------------------------------------
+r33924 | gerald | 2010-08-25 13:30:59 -0700 (Wed, 25 Aug 2010) | 6 lines
+Changed paths:
+   M /trunk/airpcap_loader.c
+   M /trunk/capture-wpcap.c
+   M /trunk/capture_wpcap_packet.c
+   M /trunk/config.nmake
+   M /trunk/doc/README.capture
+   M /trunk/epan/filesystem.c
+   M /trunk/epan/wspython/wspy_libws.py
+   M /trunk/gtk/main.c
+   M /trunk/nio-ie5.c
+   M /trunk/wsutil/file_util.c
+   M /trunk/wsutil/file_util.h
+   M /trunk/wsutil/libwsutil.def
+
+Add ws_load_library and ws_module_open, which respectively call
+LoadLibrary and g_module_open only for the program directory and system
+directory on Windows. Use them to replace a bunch of LoadLibrary and
+g_module_open calls. Use the extension ".dll" for all the DLLs that we
+load. Add comments about DLL loading in Python.
+------------------------------------------------------------------------
+r33925 | gerald | 2010-08-25 15:41:26 -0700 (Wed, 25 Aug 2010) | 2 lines
+Changed paths:
+   M /trunk/wsutil/file_util.h
+
+Move Windows-specific material inside an appropriate #ifdef.
+------------------------------------------------------------------------
+
+
+------------------------------------------------------------------------
+r33943 | gerald | 2010-08-26 15:01:32 -0700 (Thu, 26 Aug 2010) | 2 lines
+Changed paths:
+   M /trunk-1.0/wiretap/file_util.h
+
+Fix xmlstub compilation.
+
+------------------------------------------------------------------------
+r33944 | gerald | 2010-08-26 16:06:55 -0700 (Thu, 26 Aug 2010) | 2 lines
+Changed paths:
+   M /trunk-1.0/epan/unicode-utils.h
+
+Try to fix Windows compilation.
+
+------------------------------------------------------------------------
+r33953 | gerald | 2010-08-27 09:45:47 -0700 (Fri, 27 Aug 2010) | 6 lines
+Changed paths:
+   M /trunk-1.0/dumpcap.c
+   M /trunk-1.0/gtk/main.c
+   M /trunk-1.0/wiretap/file_util.c
+   M /trunk-1.0/wiretap/file_util.h
+   M /trunk-1.0/wiretap/wtap.def
+
+Move the SetDllDirectory calls to ws_init_dll_search_path. If
+SetDllDirectory fails, pass the Wireshark program path to
+SetCurrentDirectory.
+
+This appears to fix the problem on Windows 2000.
+
+------------------------------------------------------------------------
+r33960 | gerald | 2010-08-27 13:06:26 -0700 (Fri, 27 Aug 2010) | 14 lines
+Changed paths:
+   M /trunk-1.0/config.guess
+   M /trunk-1.0/config.sub
+   M /trunk-1.0/docbook/release-notes.xml
+
+Copy over r33894 from the trunk:
+
+------------------------------------------------------------------------
+r33894 | jake | 2010-08-23 11:16:22 -0700 (Mon, 23 Aug 2010) | 2 lines
+Changed paths:
+   M /trunk/config.guess
+   M /trunk/config.sub
+
+On request from Albert Chin:
+Update libtoolize files
+------------------------------------------------------------------------
+
+Update the release notes.
+
+------------------------------------------------------------------------
+r33968 | gerald | 2010-08-27 14:26:37 -0700 (Fri, 27 Aug 2010) | 2 lines
+Changed paths:
+   M /trunk-1.0/docbook/release-notes.xml
+
+Update the release notes.
+
+------------------------------------------------------------------------
+r33980 | gerald | 2010-08-28 10:22:41 -0700 (Sat, 28 Aug 2010) | 2 lines
+Changed paths:
+   M /trunk-1.0/docbook/release-notes.xml
+
+Add a CVE ID.
+
+------------------------------------------------------------------------
+r33998 | gerald | 2010-08-29 09:35:19 -0700 (Sun, 29 Aug 2010) | 1 line
+Changed paths:
+   M /trunk-1.0/epan/enterprise-numbers
+   M /trunk-1.0/manuf
+
+[Automatic manuf and enterprise-numbers update for 2010-08-29]
+------------------------------------------------------------------------

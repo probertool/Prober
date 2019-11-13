@@ -1,0 +1,607 @@
+mkdir build
+CC="/root/llvm/llvm80/build/bin/clang" CXX="/root/llvm/llvm80/build/bin/clang++" CFLAGS="-flto -v -g" CXXFLAGS="-flto -v -g" LDFLAGS="/root/llvm/Prober/libprober.so" ./configure --prefix=$PWD/build
+make
+
+
+
+[Tue Jul 16 14:53:18 UTC]root@3e7fa76cc3dc:libpng-1.5.9# CC="/root/llvm/llvm80/build/bin/clang" CXX="/root/llvm/llvm80/build/bin/clang++" CFLAGS="-flto -fPIC -v -g" CXXFLAGS="-flto -fPIC -v -g" LDFLAGS="/root/llvm/Prober/libprober.so" ./configure --prefix=$PWD/build
+checking for a BSD-compatible install... /usr/bin/install -c
+checking whether build environment is sane... yes
+checking for a thread-safe mkdir -p... /bin/mkdir -p
+checking for gawk... gawk
+checking whether make sets $(MAKE)... yes
+checking whether to enable maintainer-specific portions of Makefiles... no
+checking for gcc... /root/llvm/llvm80/build/bin/clang
+checking whether the C compiler works... yes
+checking for C compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... no
+checking for suffix of object files... o
+checking whether we are using the GNU C compiler... yes
+checking whether /root/llvm/llvm80/build/bin/clang accepts -g... yes
+checking for /root/llvm/llvm80/build/bin/clang option to accept ISO C89... none needed
+checking for style of include used by make... GNU
+checking dependency style of /root/llvm/llvm80/build/bin/clang... gcc3
+checking dependency style of /root/llvm/llvm80/build/bin/clang... gcc3
+checking build system type... x86_64-unknown-linux-gnu
+checking host system type... x86_64-unknown-linux-gnu
+checking for a sed that does not truncate output... /bin/sed
+checking for grep that handles long lines and -e... /bin/grep
+checking for egrep... /bin/grep -E
+checking for fgrep... /bin/grep -F
+checking how to print strings... printf
+checking for ld used by /root/llvm/llvm80/build/bin/clang... /usr/local/bin/ld
+checking if the linker (/usr/local/bin/ld) is GNU ld... yes
+checking how to run the C preprocessor... /root/llvm/llvm80/build/bin/clang -E
+checking for sed... /bin/sed
+checking whether ln -s works... yes
+checking whether make sets $(MAKE)... (cached) yes
+checking for BSD- or MS-compatible name lister (nm)... /usr/local/bin/nm -B
+checking the name lister (/usr/local/bin/nm -B) interface... BSD nm
+checking the maximum length of command line arguments... 1572864
+checking whether the shell understands some XSI constructs... yes
+checking whether the shell understands "+="... yes
+checking how to convert x86_64-unknown-linux-gnu file names to x86_64-unknown-linux-gnu format... func_convert_file_noop
+checking how to convert x86_64-unknown-linux-gnu file names to toolchain format... func_convert_file_noop
+checking for /usr/local/bin/ld option to reload object files... -r
+checking for objdump... objdump
+checking how to recognize dependent libraries... pass_all
+checking for dlltool... no
+checking how to associate runtime and link libraries... printf %s\n
+checking for ar... ar
+checking for archiver @FILE support... @
+checking for strip... strip
+checking for ranlib... ranlib
+checking command to parse /usr/local/bin/nm -B output from /root/llvm/llvm80/build/bin/clang object... failed
+checking for sysroot... no
+checking for mt... no
+checking if : is a manifest tool... no
+checking for ANSI C header files... yes
+checking for sys/types.h... yes
+checking for sys/stat.h... yes
+checking for stdlib.h... yes
+checking for string.h... yes
+checking for memory.h... yes
+checking for strings.h... yes
+checking for inttypes.h... yes
+checking for stdint.h... yes
+checking for unistd.h... yes
+checking for dlfcn.h... yes
+checking for objdir... .libs
+checking if /root/llvm/llvm80/build/bin/clang supports -fno-rtti -fno-exceptions... yes
+checking for /root/llvm/llvm80/build/bin/clang option to produce PIC... -fPIC -DPIC
+checking if /root/llvm/llvm80/build/bin/clang PIC flag -fPIC -DPIC works... no
+checking if /root/llvm/llvm80/build/bin/clang static flag -static works... no
+checking if /root/llvm/llvm80/build/bin/clang supports -c -o file.o... no
+checking if /root/llvm/llvm80/build/bin/clang supports -c -o file.o... (cached) no
+checking if we can lock with hard links... yes
+checking whether the /root/llvm/llvm80/build/bin/clang linker (/usr/local/bin/ld) supports shared libraries... yes
+checking whether -lc should be explicitly linked in... no
+checking dynamic linker characteristics... GNU/Linux ld.so
+checking how to hardcode library paths into programs... immediate
+checking whether stripping libraries is possible... yes
+checking if libtool supports shared libraries... yes
+checking whether to build shared libraries... yes
+checking whether to build static libraries... yes
+checking for a C preprocessor that does not parse its input... /root/llvm/llvm80/build/bin/clang -E
+checking for ANSI C header files... (cached) yes
+checking malloc.h usability... yes
+checking malloc.h presence... yes
+checking for malloc.h... yes
+checking for stdlib.h... (cached) yes
+checking for string.h... (cached) yes
+checking for strings.h... (cached) yes
+checking for an ANSI C-conforming const... yes
+checking for size_t... yes
+checking whether struct tm is in sys/time.h or time.h... time.h
+checking for C/C++ restrict keyword... __restrict
+checking for working strtod... yes
+checking for memset... yes
+checking for pow... no
+checking for pow in -lm... yes
+checking for zlibVersion in -lz... yes
+checking for feenableexcept in -lm... yes
+checking for feenableexcept... yes
+checking if using Solaris linker... no
+checking if libraries can be versioned... yes
+checking for symbol prefix... 
+configure: pkgconfig directory is ${libdir}/pkgconfig
+configure: creating ./config.status
+config.status: creating Makefile
+config.status: creating libpng.pc
+config.status: creating libpng-config
+config.status: creating config.h
+config.status: config.h is unchanged
+config.status: executing depfiles commands
+config.status: executing libtool commands
+[Tue Jul 16 14:53:39 UTC]root@3e7fa76cc3dc:libpng-1.5.9# make
+make  all-am
+make[1]: Entering directory '/root/llvm/codesample/39apps/libpng-1.5.9'
+rm -f pnglibconf.dfn dfn?.out
+gawk -f ./scripts/options.awk out=dfn1.out version=search\
+    ./pngconf.h ./scripts/pnglibconf.dfa\
+     1>&2
+gawk -f ./scripts/options.awk out=dfn2.out dfn1.out 1>&2
+rm dfn1.out
+mv dfn2.out pnglibconf.dfn
+rm -f pnglibconf.out dfn.c dfn?.out
+test -d scripts || mkdir scripts
+echo '#include "pnglibconf.dfn"' >dfn.c
+/root/llvm/llvm80/build/bin/clang -E -DHAVE_CONFIG_H -I.  -DPNG_CONFIGURE_LIBPNG\
+     -DPNGLIB_LIBNAME='PNG15_0' -DPNGLIB_VERSION='1.5.9' -DSYMBOL_PREFIX='' -DPNG_NO_USE_READ_MACROS -DPNG_BUILDING_SYMBOL_TABLE dfn.c > dfn1.out
+/bin/sed -n -e 's|^.*PNG_DEFN_MAGIC *-\(.*\)- *PNG_DEFN_END.*$|\1|p'\
+    dfn1.out >dfn2.out
+/bin/sed -e 's| *PNG_JOIN *||g' -e 's| *$||' dfn2.out >dfn3.out
+rm -f dfn.c dfn[12].out
+mv dfn3.out pnglibconf.out
+rm -f pnglibconf.h
+cp pnglibconf.out pnglibconf.h
+/bin/bash ./libtool  --tag=CC   --mode=compile /root/llvm/llvm80/build/bin/clang -DHAVE_CONFIG_H -I.  -DPNG_CONFIGURE_LIBPNG   -flto -fPIC -v -g -MT libpng15_la-png.lo -MD -MP -MF .deps/libpng15_la-png.Tpo -c -o libpng15_la-png.lo `test -f 'png.c' || echo './'`png.c
+libtool: compile:  /root/llvm/llvm80/build/bin/clang -DHAVE_CONFIG_H -I. -DPNG_CONFIGURE_LIBPNG -flto -fPIC -v -g -MT libpng15_la-png.lo -MD -MP -MF .deps/libpng15_la-png.Tpo -c png.c 
+clang version 8.0.1 (https://github.com/llvm-mirror/clang.git 2e4c9c5fc864c2c432e4c262a67c42d824b265c6) (https://github.com/rqtian/llvm80-bufferoverflow.git 38b4a62b0634ac2bc4b67addab5698d2f1a5c23e)
+Target: x86_64-unknown-linux-gnu
+Thread model: posix
+InstalledDir: /root/llvm/llvm80/build/bin
+Found candidate GCC installation: /usr/lib/gcc/x86_64-linux-gnu/6
+Found candidate GCC installation: /usr/lib/gcc/x86_64-linux-gnu/6.3.0
+Selected GCC installation: /usr/lib/gcc/x86_64-linux-gnu/6.3.0
+Candidate multilib: .;@m64
+Selected multilib: .;@m64
+ "/root/llvm/llvm80/build/bin/clang-8" -cc1 -triple x86_64-unknown-linux-gnu -emit-llvm-bc -flto -flto-unit -disable-free -main-file-name png.c -mrelocation-model pic -pic-level 2 -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debug-info-kind=limited -dwarf-version=4 -debugger-tuning=gdb -v -coverage-notes-file /root/llvm/codesample/39apps/libpng-1.5.9/png.gcno -resource-dir /root/llvm/llvm80/build/lib/clang/8.0.1 -dependency-file .deps/libpng15_la-png.Tpo -sys-header-deps -MP -MT libpng15_la-png.lo -D HAVE_CONFIG_H -I . -D PNG_CONFIGURE_LIBPNG -internal-isystem /usr/local/include -internal-isystem /root/llvm/llvm80/build/lib/clang/8.0.1/include -internal-externc-isystem /usr/include/x86_64-linux-gnu -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdebug-compilation-dir /root/llvm/codesample/39apps/libpng-1.5.9 -ferror-limit 19 -fmessage-length 143 -fobjc-runtime=gcc -fdiagnostics-show-option -fcolor-diagnostics -o png.o -x c png.c -faddrsig
+clang -cc1 version 8.0.1 based upon LLVM 8.0.1 default target x86_64-unknown-linux-gnu
+ignoring nonexistent directory "/include"
+#include "..." search starts here:
+#include <...> search starts here:
+ .
+ /usr/local/include
+ /root/llvm/llvm80/build/lib/clang/8.0.1/include
+ /usr/include/x86_64-linux-gnu
+ /usr/include
+End of search list.
+libtool: compile: mv -f "png.o" ".libs/libpng15_la-png.o"
+libtool: compile:  /root/llvm/llvm80/build/bin/clang -DHAVE_CONFIG_H -I. -DPNG_CONFIGURE_LIBPNG -flto -fPIC -v -g -MT libpng15_la-png.lo -MD -MP -MF .deps/libpng15_la-png.Tpo -c png.c >/dev/null 2>&1
+libtool: compile: mv -f "png.o" "libpng15_la-png.o"
+mv -f .deps/libpng15_la-png.Tpo .deps/libpng15_la-png.Plo
+/bin/bash ./libtool  --tag=CC   --mode=compile /root/llvm/llvm80/build/bin/clang -DHAVE_CONFIG_H -I.  -DPNG_CONFIGURE_LIBPNG   -flto -fPIC -v -g -MT libpng15_la-pngerror.lo -MD -MP -MF .deps/libpng15_la-pngerror.Tpo -c -o libpng15_la-pngerror.lo `test -f 'pngerror.c' || echo './'`pngerror.c
+libtool: compile:  /root/llvm/llvm80/build/bin/clang -DHAVE_CONFIG_H -I. -DPNG_CONFIGURE_LIBPNG -flto -fPIC -v -g -MT libpng15_la-pngerror.lo -MD -MP -MF .deps/libpng15_la-pngerror.Tpo -c pngerror.c 
+clang version 8.0.1 (https://github.com/llvm-mirror/clang.git 2e4c9c5fc864c2c432e4c262a67c42d824b265c6) (https://github.com/rqtian/llvm80-bufferoverflow.git 38b4a62b0634ac2bc4b67addab5698d2f1a5c23e)
+Target: x86_64-unknown-linux-gnu
+Thread model: posix
+InstalledDir: /root/llvm/llvm80/build/bin
+Found candidate GCC installation: /usr/lib/gcc/x86_64-linux-gnu/6
+Found candidate GCC installation: /usr/lib/gcc/x86_64-linux-gnu/6.3.0
+Selected GCC installation: /usr/lib/gcc/x86_64-linux-gnu/6.3.0
+Candidate multilib: .;@m64
+Selected multilib: .;@m64
+ "/root/llvm/llvm80/build/bin/clang-8" -cc1 -triple x86_64-unknown-linux-gnu -emit-llvm-bc -flto -flto-unit -disable-free -main-file-name pngerror.c -mrelocation-model pic -pic-level 2 -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debug-info-kind=limited -dwarf-version=4 -debugger-tuning=gdb -v -coverage-notes-file /root/llvm/codesample/39apps/libpng-1.5.9/pngerror.gcno -resource-dir /root/llvm/llvm80/build/lib/clang/8.0.1 -dependency-file .deps/libpng15_la-pngerror.Tpo -sys-header-deps -MP -MT libpng15_la-pngerror.lo -D HAVE_CONFIG_H -I . -D PNG_CONFIGURE_LIBPNG -internal-isystem /usr/local/include -internal-isystem /root/llvm/llvm80/build/lib/clang/8.0.1/include -internal-externc-isystem /usr/include/x86_64-linux-gnu -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdebug-compilation-dir /root/llvm/codesample/39apps/libpng-1.5.9 -ferror-limit 19 -fmessage-length 143 -fobjc-runtime=gcc -fdiagnostics-show-option -fcolor-diagnostics -o pngerror.o -x c pngerror.c -faddrsig
+clang -cc1 version 8.0.1 based upon LLVM 8.0.1 default target x86_64-unknown-linux-gnu
+ignoring nonexistent directory "/include"
+#include "..." search starts here:
+#include <...> search starts here:
+ .
+ /usr/local/include
+ /root/llvm/llvm80/build/lib/clang/8.0.1/include
+ /usr/include/x86_64-linux-gnu
+ /usr/include
+End of search list.
+libtool: compile: mv -f "pngerror.o" ".libs/libpng15_la-pngerror.o"
+libtool: compile:  /root/llvm/llvm80/build/bin/clang -DHAVE_CONFIG_H -I. -DPNG_CONFIGURE_LIBPNG -flto -fPIC -v -g -MT libpng15_la-pngerror.lo -MD -MP -MF .deps/libpng15_la-pngerror.Tpo -c pngerror.c >/dev/null 2>&1
+libtool: compile: mv -f "pngerror.o" "libpng15_la-pngerror.o"
+mv -f .deps/libpng15_la-pngerror.Tpo .deps/libpng15_la-pngerror.Plo
+/bin/bash ./libtool  --tag=CC   --mode=compile /root/llvm/llvm80/build/bin/clang -DHAVE_CONFIG_H -I.  -DPNG_CONFIGURE_LIBPNG   -flto -fPIC -v -g -MT libpng15_la-pngget.lo -MD -MP -MF .deps/libpng15_la-pngget.Tpo -c -o libpng15_la-pngget.lo `test -f 'pngget.c' || echo './'`pngget.c
+libtool: compile:  /root/llvm/llvm80/build/bin/clang -DHAVE_CONFIG_H -I. -DPNG_CONFIGURE_LIBPNG -flto -fPIC -v -g -MT libpng15_la-pngget.lo -MD -MP -MF .deps/libpng15_la-pngget.Tpo -c pngget.c 
+clang version 8.0.1 (https://github.com/llvm-mirror/clang.git 2e4c9c5fc864c2c432e4c262a67c42d824b265c6) (https://github.com/rqtian/llvm80-bufferoverflow.git 38b4a62b0634ac2bc4b67addab5698d2f1a5c23e)
+Target: x86_64-unknown-linux-gnu
+Thread model: posix
+InstalledDir: /root/llvm/llvm80/build/bin
+Found candidate GCC installation: /usr/lib/gcc/x86_64-linux-gnu/6
+Found candidate GCC installation: /usr/lib/gcc/x86_64-linux-gnu/6.3.0
+Selected GCC installation: /usr/lib/gcc/x86_64-linux-gnu/6.3.0
+Candidate multilib: .;@m64
+Selected multilib: .;@m64
+ "/root/llvm/llvm80/build/bin/clang-8" -cc1 -triple x86_64-unknown-linux-gnu -emit-llvm-bc -flto -flto-unit -disable-free -main-file-name pngget.c -mrelocation-model pic -pic-level 2 -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debug-info-kind=limited -dwarf-version=4 -debugger-tuning=gdb -v -coverage-notes-file /root/llvm/codesample/39apps/libpng-1.5.9/pngget.gcno -resource-dir /root/llvm/llvm80/build/lib/clang/8.0.1 -dependency-file .deps/libpng15_la-pngget.Tpo -sys-header-deps -MP -MT libpng15_la-pngget.lo -D HAVE_CONFIG_H -I . -D PNG_CONFIGURE_LIBPNG -internal-isystem /usr/local/include -internal-isystem /root/llvm/llvm80/build/lib/clang/8.0.1/include -internal-externc-isystem /usr/include/x86_64-linux-gnu -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdebug-compilation-dir /root/llvm/codesample/39apps/libpng-1.5.9 -ferror-limit 19 -fmessage-length 143 -fobjc-runtime=gcc -fdiagnostics-show-option -fcolor-diagnostics -o pngget.o -x c pngget.c -faddrsig
+clang -cc1 version 8.0.1 based upon LLVM 8.0.1 default target x86_64-unknown-linux-gnu
+ignoring nonexistent directory "/include"
+#include "..." search starts here:
+#include <...> search starts here:
+ .
+ /usr/local/include
+ /root/llvm/llvm80/build/lib/clang/8.0.1/include
+ /usr/include/x86_64-linux-gnu
+ /usr/include
+End of search list.
+libtool: compile: mv -f "pngget.o" ".libs/libpng15_la-pngget.o"
+libtool: compile:  /root/llvm/llvm80/build/bin/clang -DHAVE_CONFIG_H -I. -DPNG_CONFIGURE_LIBPNG -flto -fPIC -v -g -MT libpng15_la-pngget.lo -MD -MP -MF .deps/libpng15_la-pngget.Tpo -c pngget.c >/dev/null 2>&1
+libtool: compile: mv -f "pngget.o" "libpng15_la-pngget.o"
+mv -f .deps/libpng15_la-pngget.Tpo .deps/libpng15_la-pngget.Plo
+/bin/bash ./libtool  --tag=CC   --mode=compile /root/llvm/llvm80/build/bin/clang -DHAVE_CONFIG_H -I.  -DPNG_CONFIGURE_LIBPNG   -flto -fPIC -v -g -MT libpng15_la-pngmem.lo -MD -MP -MF .deps/libpng15_la-pngmem.Tpo -c -o libpng15_la-pngmem.lo `test -f 'pngmem.c' || echo './'`pngmem.c
+libtool: compile:  /root/llvm/llvm80/build/bin/clang -DHAVE_CONFIG_H -I. -DPNG_CONFIGURE_LIBPNG -flto -fPIC -v -g -MT libpng15_la-pngmem.lo -MD -MP -MF .deps/libpng15_la-pngmem.Tpo -c pngmem.c 
+clang version 8.0.1 (https://github.com/llvm-mirror/clang.git 2e4c9c5fc864c2c432e4c262a67c42d824b265c6) (https://github.com/rqtian/llvm80-bufferoverflow.git 38b4a62b0634ac2bc4b67addab5698d2f1a5c23e)
+Target: x86_64-unknown-linux-gnu
+Thread model: posix
+InstalledDir: /root/llvm/llvm80/build/bin
+Found candidate GCC installation: /usr/lib/gcc/x86_64-linux-gnu/6
+Found candidate GCC installation: /usr/lib/gcc/x86_64-linux-gnu/6.3.0
+Selected GCC installation: /usr/lib/gcc/x86_64-linux-gnu/6.3.0
+Candidate multilib: .;@m64
+Selected multilib: .;@m64
+ "/root/llvm/llvm80/build/bin/clang-8" -cc1 -triple x86_64-unknown-linux-gnu -emit-llvm-bc -flto -flto-unit -disable-free -main-file-name pngmem.c -mrelocation-model pic -pic-level 2 -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debug-info-kind=limited -dwarf-version=4 -debugger-tuning=gdb -v -coverage-notes-file /root/llvm/codesample/39apps/libpng-1.5.9/pngmem.gcno -resource-dir /root/llvm/llvm80/build/lib/clang/8.0.1 -dependency-file .deps/libpng15_la-pngmem.Tpo -sys-header-deps -MP -MT libpng15_la-pngmem.lo -D HAVE_CONFIG_H -I . -D PNG_CONFIGURE_LIBPNG -internal-isystem /usr/local/include -internal-isystem /root/llvm/llvm80/build/lib/clang/8.0.1/include -internal-externc-isystem /usr/include/x86_64-linux-gnu -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdebug-compilation-dir /root/llvm/codesample/39apps/libpng-1.5.9 -ferror-limit 19 -fmessage-length 143 -fobjc-runtime=gcc -fdiagnostics-show-option -fcolor-diagnostics -o pngmem.o -x c pngmem.c -faddrsig
+clang -cc1 version 8.0.1 based upon LLVM 8.0.1 default target x86_64-unknown-linux-gnu
+ignoring nonexistent directory "/include"
+#include "..." search starts here:
+#include <...> search starts here:
+ .
+ /usr/local/include
+ /root/llvm/llvm80/build/lib/clang/8.0.1/include
+ /usr/include/x86_64-linux-gnu
+ /usr/include
+End of search list.
+libtool: compile: mv -f "pngmem.o" ".libs/libpng15_la-pngmem.o"
+libtool: compile:  /root/llvm/llvm80/build/bin/clang -DHAVE_CONFIG_H -I. -DPNG_CONFIGURE_LIBPNG -flto -fPIC -v -g -MT libpng15_la-pngmem.lo -MD -MP -MF .deps/libpng15_la-pngmem.Tpo -c pngmem.c >/dev/null 2>&1
+libtool: compile: mv -f "pngmem.o" "libpng15_la-pngmem.o"
+mv -f .deps/libpng15_la-pngmem.Tpo .deps/libpng15_la-pngmem.Plo
+/bin/bash ./libtool  --tag=CC   --mode=compile /root/llvm/llvm80/build/bin/clang -DHAVE_CONFIG_H -I.  -DPNG_CONFIGURE_LIBPNG   -flto -fPIC -v -g -MT libpng15_la-pngpread.lo -MD -MP -MF .deps/libpng15_la-pngpread.Tpo -c -o libpng15_la-pngpread.lo `test -f 'pngpread.c' || echo './'`pngpread.c
+libtool: compile:  /root/llvm/llvm80/build/bin/clang -DHAVE_CONFIG_H -I. -DPNG_CONFIGURE_LIBPNG -flto -fPIC -v -g -MT libpng15_la-pngpread.lo -MD -MP -MF .deps/libpng15_la-pngpread.Tpo -c pngpread.c 
+clang version 8.0.1 (https://github.com/llvm-mirror/clang.git 2e4c9c5fc864c2c432e4c262a67c42d824b265c6) (https://github.com/rqtian/llvm80-bufferoverflow.git 38b4a62b0634ac2bc4b67addab5698d2f1a5c23e)
+Target: x86_64-unknown-linux-gnu
+Thread model: posix
+InstalledDir: /root/llvm/llvm80/build/bin
+Found candidate GCC installation: /usr/lib/gcc/x86_64-linux-gnu/6
+Found candidate GCC installation: /usr/lib/gcc/x86_64-linux-gnu/6.3.0
+Selected GCC installation: /usr/lib/gcc/x86_64-linux-gnu/6.3.0
+Candidate multilib: .;@m64
+Selected multilib: .;@m64
+ "/root/llvm/llvm80/build/bin/clang-8" -cc1 -triple x86_64-unknown-linux-gnu -emit-llvm-bc -flto -flto-unit -disable-free -main-file-name pngpread.c -mrelocation-model pic -pic-level 2 -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debug-info-kind=limited -dwarf-version=4 -debugger-tuning=gdb -v -coverage-notes-file /root/llvm/codesample/39apps/libpng-1.5.9/pngpread.gcno -resource-dir /root/llvm/llvm80/build/lib/clang/8.0.1 -dependency-file .deps/libpng15_la-pngpread.Tpo -sys-header-deps -MP -MT libpng15_la-pngpread.lo -D HAVE_CONFIG_H -I . -D PNG_CONFIGURE_LIBPNG -internal-isystem /usr/local/include -internal-isystem /root/llvm/llvm80/build/lib/clang/8.0.1/include -internal-externc-isystem /usr/include/x86_64-linux-gnu -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdebug-compilation-dir /root/llvm/codesample/39apps/libpng-1.5.9 -ferror-limit 19 -fmessage-length 143 -fobjc-runtime=gcc -fdiagnostics-show-option -fcolor-diagnostics -o pngpread.o -x c pngpread.c -faddrsig
+clang -cc1 version 8.0.1 based upon LLVM 8.0.1 default target x86_64-unknown-linux-gnu
+ignoring nonexistent directory "/include"
+#include "..." search starts here:
+#include <...> search starts here:
+ .
+ /usr/local/include
+ /root/llvm/llvm80/build/lib/clang/8.0.1/include
+ /usr/include/x86_64-linux-gnu
+ /usr/include
+End of search list.
+libtool: compile: mv -f "pngpread.o" ".libs/libpng15_la-pngpread.o"
+libtool: compile:  /root/llvm/llvm80/build/bin/clang -DHAVE_CONFIG_H -I. -DPNG_CONFIGURE_LIBPNG -flto -fPIC -v -g -MT libpng15_la-pngpread.lo -MD -MP -MF .deps/libpng15_la-pngpread.Tpo -c pngpread.c >/dev/null 2>&1
+libtool: compile: mv -f "pngpread.o" "libpng15_la-pngpread.o"
+mv -f .deps/libpng15_la-pngpread.Tpo .deps/libpng15_la-pngpread.Plo
+/bin/bash ./libtool  --tag=CC   --mode=compile /root/llvm/llvm80/build/bin/clang -DHAVE_CONFIG_H -I.  -DPNG_CONFIGURE_LIBPNG   -flto -fPIC -v -g -MT libpng15_la-pngread.lo -MD -MP -MF .deps/libpng15_la-pngread.Tpo -c -o libpng15_la-pngread.lo `test -f 'pngread.c' || echo './'`pngread.c
+libtool: compile:  /root/llvm/llvm80/build/bin/clang -DHAVE_CONFIG_H -I. -DPNG_CONFIGURE_LIBPNG -flto -fPIC -v -g -MT libpng15_la-pngread.lo -MD -MP -MF .deps/libpng15_la-pngread.Tpo -c pngread.c 
+clang version 8.0.1 (https://github.com/llvm-mirror/clang.git 2e4c9c5fc864c2c432e4c262a67c42d824b265c6) (https://github.com/rqtian/llvm80-bufferoverflow.git 38b4a62b0634ac2bc4b67addab5698d2f1a5c23e)
+Target: x86_64-unknown-linux-gnu
+Thread model: posix
+InstalledDir: /root/llvm/llvm80/build/bin
+Found candidate GCC installation: /usr/lib/gcc/x86_64-linux-gnu/6
+Found candidate GCC installation: /usr/lib/gcc/x86_64-linux-gnu/6.3.0
+Selected GCC installation: /usr/lib/gcc/x86_64-linux-gnu/6.3.0
+Candidate multilib: .;@m64
+Selected multilib: .;@m64
+ "/root/llvm/llvm80/build/bin/clang-8" -cc1 -triple x86_64-unknown-linux-gnu -emit-llvm-bc -flto -flto-unit -disable-free -main-file-name pngread.c -mrelocation-model pic -pic-level 2 -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debug-info-kind=limited -dwarf-version=4 -debugger-tuning=gdb -v -coverage-notes-file /root/llvm/codesample/39apps/libpng-1.5.9/pngread.gcno -resource-dir /root/llvm/llvm80/build/lib/clang/8.0.1 -dependency-file .deps/libpng15_la-pngread.Tpo -sys-header-deps -MP -MT libpng15_la-pngread.lo -D HAVE_CONFIG_H -I . -D PNG_CONFIGURE_LIBPNG -internal-isystem /usr/local/include -internal-isystem /root/llvm/llvm80/build/lib/clang/8.0.1/include -internal-externc-isystem /usr/include/x86_64-linux-gnu -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdebug-compilation-dir /root/llvm/codesample/39apps/libpng-1.5.9 -ferror-limit 19 -fmessage-length 143 -fobjc-runtime=gcc -fdiagnostics-show-option -fcolor-diagnostics -o pngread.o -x c pngread.c -faddrsig
+clang -cc1 version 8.0.1 based upon LLVM 8.0.1 default target x86_64-unknown-linux-gnu
+ignoring nonexistent directory "/include"
+#include "..." search starts here:
+#include <...> search starts here:
+ .
+ /usr/local/include
+ /root/llvm/llvm80/build/lib/clang/8.0.1/include
+ /usr/include/x86_64-linux-gnu
+ /usr/include
+End of search list.
+libtool: compile: mv -f "pngread.o" ".libs/libpng15_la-pngread.o"
+libtool: compile:  /root/llvm/llvm80/build/bin/clang -DHAVE_CONFIG_H -I. -DPNG_CONFIGURE_LIBPNG -flto -fPIC -v -g -MT libpng15_la-pngread.lo -MD -MP -MF .deps/libpng15_la-pngread.Tpo -c pngread.c >/dev/null 2>&1
+libtool: compile: mv -f "pngread.o" "libpng15_la-pngread.o"
+mv -f .deps/libpng15_la-pngread.Tpo .deps/libpng15_la-pngread.Plo
+/bin/bash ./libtool  --tag=CC   --mode=compile /root/llvm/llvm80/build/bin/clang -DHAVE_CONFIG_H -I.  -DPNG_CONFIGURE_LIBPNG   -flto -fPIC -v -g -MT libpng15_la-pngrio.lo -MD -MP -MF .deps/libpng15_la-pngrio.Tpo -c -o libpng15_la-pngrio.lo `test -f 'pngrio.c' || echo './'`pngrio.c
+libtool: compile:  /root/llvm/llvm80/build/bin/clang -DHAVE_CONFIG_H -I. -DPNG_CONFIGURE_LIBPNG -flto -fPIC -v -g -MT libpng15_la-pngrio.lo -MD -MP -MF .deps/libpng15_la-pngrio.Tpo -c pngrio.c 
+clang version 8.0.1 (https://github.com/llvm-mirror/clang.git 2e4c9c5fc864c2c432e4c262a67c42d824b265c6) (https://github.com/rqtian/llvm80-bufferoverflow.git 38b4a62b0634ac2bc4b67addab5698d2f1a5c23e)
+Target: x86_64-unknown-linux-gnu
+Thread model: posix
+InstalledDir: /root/llvm/llvm80/build/bin
+Found candidate GCC installation: /usr/lib/gcc/x86_64-linux-gnu/6
+Found candidate GCC installation: /usr/lib/gcc/x86_64-linux-gnu/6.3.0
+Selected GCC installation: /usr/lib/gcc/x86_64-linux-gnu/6.3.0
+Candidate multilib: .;@m64
+Selected multilib: .;@m64
+ "/root/llvm/llvm80/build/bin/clang-8" -cc1 -triple x86_64-unknown-linux-gnu -emit-llvm-bc -flto -flto-unit -disable-free -main-file-name pngrio.c -mrelocation-model pic -pic-level 2 -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debug-info-kind=limited -dwarf-version=4 -debugger-tuning=gdb -v -coverage-notes-file /root/llvm/codesample/39apps/libpng-1.5.9/pngrio.gcno -resource-dir /root/llvm/llvm80/build/lib/clang/8.0.1 -dependency-file .deps/libpng15_la-pngrio.Tpo -sys-header-deps -MP -MT libpng15_la-pngrio.lo -D HAVE_CONFIG_H -I . -D PNG_CONFIGURE_LIBPNG -internal-isystem /usr/local/include -internal-isystem /root/llvm/llvm80/build/lib/clang/8.0.1/include -internal-externc-isystem /usr/include/x86_64-linux-gnu -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdebug-compilation-dir /root/llvm/codesample/39apps/libpng-1.5.9 -ferror-limit 19 -fmessage-length 143 -fobjc-runtime=gcc -fdiagnostics-show-option -fcolor-diagnostics -o pngrio.o -x c pngrio.c -faddrsig
+clang -cc1 version 8.0.1 based upon LLVM 8.0.1 default target x86_64-unknown-linux-gnu
+ignoring nonexistent directory "/include"
+#include "..." search starts here:
+#include <...> search starts here:
+ .
+ /usr/local/include
+ /root/llvm/llvm80/build/lib/clang/8.0.1/include
+ /usr/include/x86_64-linux-gnu
+ /usr/include
+End of search list.
+libtool: compile: mv -f "pngrio.o" ".libs/libpng15_la-pngrio.o"
+libtool: compile:  /root/llvm/llvm80/build/bin/clang -DHAVE_CONFIG_H -I. -DPNG_CONFIGURE_LIBPNG -flto -fPIC -v -g -MT libpng15_la-pngrio.lo -MD -MP -MF .deps/libpng15_la-pngrio.Tpo -c pngrio.c >/dev/null 2>&1
+libtool: compile: mv -f "pngrio.o" "libpng15_la-pngrio.o"
+mv -f .deps/libpng15_la-pngrio.Tpo .deps/libpng15_la-pngrio.Plo
+/bin/bash ./libtool  --tag=CC   --mode=compile /root/llvm/llvm80/build/bin/clang -DHAVE_CONFIG_H -I.  -DPNG_CONFIGURE_LIBPNG   -flto -fPIC -v -g -MT libpng15_la-pngrtran.lo -MD -MP -MF .deps/libpng15_la-pngrtran.Tpo -c -o libpng15_la-pngrtran.lo `test -f 'pngrtran.c' || echo './'`pngrtran.c
+libtool: compile:  /root/llvm/llvm80/build/bin/clang -DHAVE_CONFIG_H -I. -DPNG_CONFIGURE_LIBPNG -flto -fPIC -v -g -MT libpng15_la-pngrtran.lo -MD -MP -MF .deps/libpng15_la-pngrtran.Tpo -c pngrtran.c 
+clang version 8.0.1 (https://github.com/llvm-mirror/clang.git 2e4c9c5fc864c2c432e4c262a67c42d824b265c6) (https://github.com/rqtian/llvm80-bufferoverflow.git 38b4a62b0634ac2bc4b67addab5698d2f1a5c23e)
+Target: x86_64-unknown-linux-gnu
+Thread model: posix
+InstalledDir: /root/llvm/llvm80/build/bin
+Found candidate GCC installation: /usr/lib/gcc/x86_64-linux-gnu/6
+Found candidate GCC installation: /usr/lib/gcc/x86_64-linux-gnu/6.3.0
+Selected GCC installation: /usr/lib/gcc/x86_64-linux-gnu/6.3.0
+Candidate multilib: .;@m64
+Selected multilib: .;@m64
+ "/root/llvm/llvm80/build/bin/clang-8" -cc1 -triple x86_64-unknown-linux-gnu -emit-llvm-bc -flto -flto-unit -disable-free -main-file-name pngrtran.c -mrelocation-model pic -pic-level 2 -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debug-info-kind=limited -dwarf-version=4 -debugger-tuning=gdb -v -coverage-notes-file /root/llvm/codesample/39apps/libpng-1.5.9/pngrtran.gcno -resource-dir /root/llvm/llvm80/build/lib/clang/8.0.1 -dependency-file .deps/libpng15_la-pngrtran.Tpo -sys-header-deps -MP -MT libpng15_la-pngrtran.lo -D HAVE_CONFIG_H -I . -D PNG_CONFIGURE_LIBPNG -internal-isystem /usr/local/include -internal-isystem /root/llvm/llvm80/build/lib/clang/8.0.1/include -internal-externc-isystem /usr/include/x86_64-linux-gnu -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdebug-compilation-dir /root/llvm/codesample/39apps/libpng-1.5.9 -ferror-limit 19 -fmessage-length 143 -fobjc-runtime=gcc -fdiagnostics-show-option -fcolor-diagnostics -o pngrtran.o -x c pngrtran.c -faddrsig
+clang -cc1 version 8.0.1 based upon LLVM 8.0.1 default target x86_64-unknown-linux-gnu
+ignoring nonexistent directory "/include"
+#include "..." search starts here:
+#include <...> search starts here:
+ .
+ /usr/local/include
+ /root/llvm/llvm80/build/lib/clang/8.0.1/include
+ /usr/include/x86_64-linux-gnu
+ /usr/include
+End of search list.
+libtool: compile: mv -f "pngrtran.o" ".libs/libpng15_la-pngrtran.o"
+libtool: compile:  /root/llvm/llvm80/build/bin/clang -DHAVE_CONFIG_H -I. -DPNG_CONFIGURE_LIBPNG -flto -fPIC -v -g -MT libpng15_la-pngrtran.lo -MD -MP -MF .deps/libpng15_la-pngrtran.Tpo -c pngrtran.c >/dev/null 2>&1
+libtool: compile: mv -f "pngrtran.o" "libpng15_la-pngrtran.o"
+mv -f .deps/libpng15_la-pngrtran.Tpo .deps/libpng15_la-pngrtran.Plo
+/bin/bash ./libtool  --tag=CC   --mode=compile /root/llvm/llvm80/build/bin/clang -DHAVE_CONFIG_H -I.  -DPNG_CONFIGURE_LIBPNG   -flto -fPIC -v -g -MT libpng15_la-pngrutil.lo -MD -MP -MF .deps/libpng15_la-pngrutil.Tpo -c -o libpng15_la-pngrutil.lo `test -f 'pngrutil.c' || echo './'`pngrutil.c
+libtool: compile:  /root/llvm/llvm80/build/bin/clang -DHAVE_CONFIG_H -I. -DPNG_CONFIGURE_LIBPNG -flto -fPIC -v -g -MT libpng15_la-pngrutil.lo -MD -MP -MF .deps/libpng15_la-pngrutil.Tpo -c pngrutil.c 
+clang version 8.0.1 (https://github.com/llvm-mirror/clang.git 2e4c9c5fc864c2c432e4c262a67c42d824b265c6) (https://github.com/rqtian/llvm80-bufferoverflow.git 38b4a62b0634ac2bc4b67addab5698d2f1a5c23e)
+Target: x86_64-unknown-linux-gnu
+Thread model: posix
+InstalledDir: /root/llvm/llvm80/build/bin
+Found candidate GCC installation: /usr/lib/gcc/x86_64-linux-gnu/6
+Found candidate GCC installation: /usr/lib/gcc/x86_64-linux-gnu/6.3.0
+Selected GCC installation: /usr/lib/gcc/x86_64-linux-gnu/6.3.0
+Candidate multilib: .;@m64
+Selected multilib: .;@m64
+ "/root/llvm/llvm80/build/bin/clang-8" -cc1 -triple x86_64-unknown-linux-gnu -emit-llvm-bc -flto -flto-unit -disable-free -main-file-name pngrutil.c -mrelocation-model pic -pic-level 2 -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debug-info-kind=limited -dwarf-version=4 -debugger-tuning=gdb -v -coverage-notes-file /root/llvm/codesample/39apps/libpng-1.5.9/pngrutil.gcno -resource-dir /root/llvm/llvm80/build/lib/clang/8.0.1 -dependency-file .deps/libpng15_la-pngrutil.Tpo -sys-header-deps -MP -MT libpng15_la-pngrutil.lo -D HAVE_CONFIG_H -I . -D PNG_CONFIGURE_LIBPNG -internal-isystem /usr/local/include -internal-isystem /root/llvm/llvm80/build/lib/clang/8.0.1/include -internal-externc-isystem /usr/include/x86_64-linux-gnu -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdebug-compilation-dir /root/llvm/codesample/39apps/libpng-1.5.9 -ferror-limit 19 -fmessage-length 143 -fobjc-runtime=gcc -fdiagnostics-show-option -fcolor-diagnostics -o pngrutil.o -x c pngrutil.c -faddrsig
+clang -cc1 version 8.0.1 based upon LLVM 8.0.1 default target x86_64-unknown-linux-gnu
+ignoring nonexistent directory "/include"
+#include "..." search starts here:
+#include <...> search starts here:
+ .
+ /usr/local/include
+ /root/llvm/llvm80/build/lib/clang/8.0.1/include
+ /usr/include/x86_64-linux-gnu
+ /usr/include
+End of search list.
+libtool: compile: mv -f "pngrutil.o" ".libs/libpng15_la-pngrutil.o"
+libtool: compile:  /root/llvm/llvm80/build/bin/clang -DHAVE_CONFIG_H -I. -DPNG_CONFIGURE_LIBPNG -flto -fPIC -v -g -MT libpng15_la-pngrutil.lo -MD -MP -MF .deps/libpng15_la-pngrutil.Tpo -c pngrutil.c >/dev/null 2>&1
+libtool: compile: mv -f "pngrutil.o" "libpng15_la-pngrutil.o"
+mv -f .deps/libpng15_la-pngrutil.Tpo .deps/libpng15_la-pngrutil.Plo
+/bin/bash ./libtool  --tag=CC   --mode=compile /root/llvm/llvm80/build/bin/clang -DHAVE_CONFIG_H -I.  -DPNG_CONFIGURE_LIBPNG   -flto -fPIC -v -g -MT libpng15_la-pngset.lo -MD -MP -MF .deps/libpng15_la-pngset.Tpo -c -o libpng15_la-pngset.lo `test -f 'pngset.c' || echo './'`pngset.c
+libtool: compile:  /root/llvm/llvm80/build/bin/clang -DHAVE_CONFIG_H -I. -DPNG_CONFIGURE_LIBPNG -flto -fPIC -v -g -MT libpng15_la-pngset.lo -MD -MP -MF .deps/libpng15_la-pngset.Tpo -c pngset.c 
+clang version 8.0.1 (https://github.com/llvm-mirror/clang.git 2e4c9c5fc864c2c432e4c262a67c42d824b265c6) (https://github.com/rqtian/llvm80-bufferoverflow.git 38b4a62b0634ac2bc4b67addab5698d2f1a5c23e)
+Target: x86_64-unknown-linux-gnu
+Thread model: posix
+InstalledDir: /root/llvm/llvm80/build/bin
+Found candidate GCC installation: /usr/lib/gcc/x86_64-linux-gnu/6
+Found candidate GCC installation: /usr/lib/gcc/x86_64-linux-gnu/6.3.0
+Selected GCC installation: /usr/lib/gcc/x86_64-linux-gnu/6.3.0
+Candidate multilib: .;@m64
+Selected multilib: .;@m64
+ "/root/llvm/llvm80/build/bin/clang-8" -cc1 -triple x86_64-unknown-linux-gnu -emit-llvm-bc -flto -flto-unit -disable-free -main-file-name pngset.c -mrelocation-model pic -pic-level 2 -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debug-info-kind=limited -dwarf-version=4 -debugger-tuning=gdb -v -coverage-notes-file /root/llvm/codesample/39apps/libpng-1.5.9/pngset.gcno -resource-dir /root/llvm/llvm80/build/lib/clang/8.0.1 -dependency-file .deps/libpng15_la-pngset.Tpo -sys-header-deps -MP -MT libpng15_la-pngset.lo -D HAVE_CONFIG_H -I . -D PNG_CONFIGURE_LIBPNG -internal-isystem /usr/local/include -internal-isystem /root/llvm/llvm80/build/lib/clang/8.0.1/include -internal-externc-isystem /usr/include/x86_64-linux-gnu -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdebug-compilation-dir /root/llvm/codesample/39apps/libpng-1.5.9 -ferror-limit 19 -fmessage-length 143 -fobjc-runtime=gcc -fdiagnostics-show-option -fcolor-diagnostics -o pngset.o -x c pngset.c -faddrsig
+clang -cc1 version 8.0.1 based upon LLVM 8.0.1 default target x86_64-unknown-linux-gnu
+ignoring nonexistent directory "/include"
+#include "..." search starts here:
+#include <...> search starts here:
+ .
+ /usr/local/include
+ /root/llvm/llvm80/build/lib/clang/8.0.1/include
+ /usr/include/x86_64-linux-gnu
+ /usr/include
+End of search list.
+libtool: compile: mv -f "pngset.o" ".libs/libpng15_la-pngset.o"
+libtool: compile:  /root/llvm/llvm80/build/bin/clang -DHAVE_CONFIG_H -I. -DPNG_CONFIGURE_LIBPNG -flto -fPIC -v -g -MT libpng15_la-pngset.lo -MD -MP -MF .deps/libpng15_la-pngset.Tpo -c pngset.c >/dev/null 2>&1
+libtool: compile: mv -f "pngset.o" "libpng15_la-pngset.o"
+mv -f .deps/libpng15_la-pngset.Tpo .deps/libpng15_la-pngset.Plo
+/bin/bash ./libtool  --tag=CC   --mode=compile /root/llvm/llvm80/build/bin/clang -DHAVE_CONFIG_H -I.  -DPNG_CONFIGURE_LIBPNG   -flto -fPIC -v -g -MT libpng15_la-pngtrans.lo -MD -MP -MF .deps/libpng15_la-pngtrans.Tpo -c -o libpng15_la-pngtrans.lo `test -f 'pngtrans.c' || echo './'`pngtrans.c
+libtool: compile:  /root/llvm/llvm80/build/bin/clang -DHAVE_CONFIG_H -I. -DPNG_CONFIGURE_LIBPNG -flto -fPIC -v -g -MT libpng15_la-pngtrans.lo -MD -MP -MF .deps/libpng15_la-pngtrans.Tpo -c pngtrans.c 
+clang version 8.0.1 (https://github.com/llvm-mirror/clang.git 2e4c9c5fc864c2c432e4c262a67c42d824b265c6) (https://github.com/rqtian/llvm80-bufferoverflow.git 38b4a62b0634ac2bc4b67addab5698d2f1a5c23e)
+Target: x86_64-unknown-linux-gnu
+Thread model: posix
+InstalledDir: /root/llvm/llvm80/build/bin
+Found candidate GCC installation: /usr/lib/gcc/x86_64-linux-gnu/6
+Found candidate GCC installation: /usr/lib/gcc/x86_64-linux-gnu/6.3.0
+Selected GCC installation: /usr/lib/gcc/x86_64-linux-gnu/6.3.0
+Candidate multilib: .;@m64
+Selected multilib: .;@m64
+ "/root/llvm/llvm80/build/bin/clang-8" -cc1 -triple x86_64-unknown-linux-gnu -emit-llvm-bc -flto -flto-unit -disable-free -main-file-name pngtrans.c -mrelocation-model pic -pic-level 2 -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debug-info-kind=limited -dwarf-version=4 -debugger-tuning=gdb -v -coverage-notes-file /root/llvm/codesample/39apps/libpng-1.5.9/pngtrans.gcno -resource-dir /root/llvm/llvm80/build/lib/clang/8.0.1 -dependency-file .deps/libpng15_la-pngtrans.Tpo -sys-header-deps -MP -MT libpng15_la-pngtrans.lo -D HAVE_CONFIG_H -I . -D PNG_CONFIGURE_LIBPNG -internal-isystem /usr/local/include -internal-isystem /root/llvm/llvm80/build/lib/clang/8.0.1/include -internal-externc-isystem /usr/include/x86_64-linux-gnu -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdebug-compilation-dir /root/llvm/codesample/39apps/libpng-1.5.9 -ferror-limit 19 -fmessage-length 143 -fobjc-runtime=gcc -fdiagnostics-show-option -fcolor-diagnostics -o pngtrans.o -x c pngtrans.c -faddrsig
+clang -cc1 version 8.0.1 based upon LLVM 8.0.1 default target x86_64-unknown-linux-gnu
+ignoring nonexistent directory "/include"
+#include "..." search starts here:
+#include <...> search starts here:
+ .
+ /usr/local/include
+ /root/llvm/llvm80/build/lib/clang/8.0.1/include
+ /usr/include/x86_64-linux-gnu
+ /usr/include
+End of search list.
+libtool: compile: mv -f "pngtrans.o" ".libs/libpng15_la-pngtrans.o"
+libtool: compile:  /root/llvm/llvm80/build/bin/clang -DHAVE_CONFIG_H -I. -DPNG_CONFIGURE_LIBPNG -flto -fPIC -v -g -MT libpng15_la-pngtrans.lo -MD -MP -MF .deps/libpng15_la-pngtrans.Tpo -c pngtrans.c >/dev/null 2>&1
+libtool: compile: mv -f "pngtrans.o" "libpng15_la-pngtrans.o"
+mv -f .deps/libpng15_la-pngtrans.Tpo .deps/libpng15_la-pngtrans.Plo
+/bin/bash ./libtool  --tag=CC   --mode=compile /root/llvm/llvm80/build/bin/clang -DHAVE_CONFIG_H -I.  -DPNG_CONFIGURE_LIBPNG   -flto -fPIC -v -g -MT libpng15_la-pngwio.lo -MD -MP -MF .deps/libpng15_la-pngwio.Tpo -c -o libpng15_la-pngwio.lo `test -f 'pngwio.c' || echo './'`pngwio.c
+libtool: compile:  /root/llvm/llvm80/build/bin/clang -DHAVE_CONFIG_H -I. -DPNG_CONFIGURE_LIBPNG -flto -fPIC -v -g -MT libpng15_la-pngwio.lo -MD -MP -MF .deps/libpng15_la-pngwio.Tpo -c pngwio.c 
+clang version 8.0.1 (https://github.com/llvm-mirror/clang.git 2e4c9c5fc864c2c432e4c262a67c42d824b265c6) (https://github.com/rqtian/llvm80-bufferoverflow.git 38b4a62b0634ac2bc4b67addab5698d2f1a5c23e)
+Target: x86_64-unknown-linux-gnu
+Thread model: posix
+InstalledDir: /root/llvm/llvm80/build/bin
+Found candidate GCC installation: /usr/lib/gcc/x86_64-linux-gnu/6
+Found candidate GCC installation: /usr/lib/gcc/x86_64-linux-gnu/6.3.0
+Selected GCC installation: /usr/lib/gcc/x86_64-linux-gnu/6.3.0
+Candidate multilib: .;@m64
+Selected multilib: .;@m64
+ "/root/llvm/llvm80/build/bin/clang-8" -cc1 -triple x86_64-unknown-linux-gnu -emit-llvm-bc -flto -flto-unit -disable-free -main-file-name pngwio.c -mrelocation-model pic -pic-level 2 -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debug-info-kind=limited -dwarf-version=4 -debugger-tuning=gdb -v -coverage-notes-file /root/llvm/codesample/39apps/libpng-1.5.9/pngwio.gcno -resource-dir /root/llvm/llvm80/build/lib/clang/8.0.1 -dependency-file .deps/libpng15_la-pngwio.Tpo -sys-header-deps -MP -MT libpng15_la-pngwio.lo -D HAVE_CONFIG_H -I . -D PNG_CONFIGURE_LIBPNG -internal-isystem /usr/local/include -internal-isystem /root/llvm/llvm80/build/lib/clang/8.0.1/include -internal-externc-isystem /usr/include/x86_64-linux-gnu -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdebug-compilation-dir /root/llvm/codesample/39apps/libpng-1.5.9 -ferror-limit 19 -fmessage-length 143 -fobjc-runtime=gcc -fdiagnostics-show-option -fcolor-diagnostics -o pngwio.o -x c pngwio.c -faddrsig
+clang -cc1 version 8.0.1 based upon LLVM 8.0.1 default target x86_64-unknown-linux-gnu
+ignoring nonexistent directory "/include"
+#include "..." search starts here:
+#include <...> search starts here:
+ .
+ /usr/local/include
+ /root/llvm/llvm80/build/lib/clang/8.0.1/include
+ /usr/include/x86_64-linux-gnu
+ /usr/include
+End of search list.
+libtool: compile: mv -f "pngwio.o" ".libs/libpng15_la-pngwio.o"
+libtool: compile:  /root/llvm/llvm80/build/bin/clang -DHAVE_CONFIG_H -I. -DPNG_CONFIGURE_LIBPNG -flto -fPIC -v -g -MT libpng15_la-pngwio.lo -MD -MP -MF .deps/libpng15_la-pngwio.Tpo -c pngwio.c >/dev/null 2>&1
+libtool: compile: mv -f "pngwio.o" "libpng15_la-pngwio.o"
+mv -f .deps/libpng15_la-pngwio.Tpo .deps/libpng15_la-pngwio.Plo
+/bin/bash ./libtool  --tag=CC   --mode=compile /root/llvm/llvm80/build/bin/clang -DHAVE_CONFIG_H -I.  -DPNG_CONFIGURE_LIBPNG   -flto -fPIC -v -g -MT libpng15_la-pngwrite.lo -MD -MP -MF .deps/libpng15_la-pngwrite.Tpo -c -o libpng15_la-pngwrite.lo `test -f 'pngwrite.c' || echo './'`pngwrite.c
+libtool: compile:  /root/llvm/llvm80/build/bin/clang -DHAVE_CONFIG_H -I. -DPNG_CONFIGURE_LIBPNG -flto -fPIC -v -g -MT libpng15_la-pngwrite.lo -MD -MP -MF .deps/libpng15_la-pngwrite.Tpo -c pngwrite.c 
+clang version 8.0.1 (https://github.com/llvm-mirror/clang.git 2e4c9c5fc864c2c432e4c262a67c42d824b265c6) (https://github.com/rqtian/llvm80-bufferoverflow.git 38b4a62b0634ac2bc4b67addab5698d2f1a5c23e)
+Target: x86_64-unknown-linux-gnu
+Thread model: posix
+InstalledDir: /root/llvm/llvm80/build/bin
+Found candidate GCC installation: /usr/lib/gcc/x86_64-linux-gnu/6
+Found candidate GCC installation: /usr/lib/gcc/x86_64-linux-gnu/6.3.0
+Selected GCC installation: /usr/lib/gcc/x86_64-linux-gnu/6.3.0
+Candidate multilib: .;@m64
+Selected multilib: .;@m64
+ "/root/llvm/llvm80/build/bin/clang-8" -cc1 -triple x86_64-unknown-linux-gnu -emit-llvm-bc -flto -flto-unit -disable-free -main-file-name pngwrite.c -mrelocation-model pic -pic-level 2 -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debug-info-kind=limited -dwarf-version=4 -debugger-tuning=gdb -v -coverage-notes-file /root/llvm/codesample/39apps/libpng-1.5.9/pngwrite.gcno -resource-dir /root/llvm/llvm80/build/lib/clang/8.0.1 -dependency-file .deps/libpng15_la-pngwrite.Tpo -sys-header-deps -MP -MT libpng15_la-pngwrite.lo -D HAVE_CONFIG_H -I . -D PNG_CONFIGURE_LIBPNG -internal-isystem /usr/local/include -internal-isystem /root/llvm/llvm80/build/lib/clang/8.0.1/include -internal-externc-isystem /usr/include/x86_64-linux-gnu -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdebug-compilation-dir /root/llvm/codesample/39apps/libpng-1.5.9 -ferror-limit 19 -fmessage-length 143 -fobjc-runtime=gcc -fdiagnostics-show-option -fcolor-diagnostics -o pngwrite.o -x c pngwrite.c -faddrsig
+clang -cc1 version 8.0.1 based upon LLVM 8.0.1 default target x86_64-unknown-linux-gnu
+ignoring nonexistent directory "/include"
+#include "..." search starts here:
+#include <...> search starts here:
+ .
+ /usr/local/include
+ /root/llvm/llvm80/build/lib/clang/8.0.1/include
+ /usr/include/x86_64-linux-gnu
+ /usr/include
+End of search list.
+libtool: compile: mv -f "pngwrite.o" ".libs/libpng15_la-pngwrite.o"
+libtool: compile:  /root/llvm/llvm80/build/bin/clang -DHAVE_CONFIG_H -I. -DPNG_CONFIGURE_LIBPNG -flto -fPIC -v -g -MT libpng15_la-pngwrite.lo -MD -MP -MF .deps/libpng15_la-pngwrite.Tpo -c pngwrite.c >/dev/null 2>&1
+libtool: compile: mv -f "pngwrite.o" "libpng15_la-pngwrite.o"
+mv -f .deps/libpng15_la-pngwrite.Tpo .deps/libpng15_la-pngwrite.Plo
+/bin/bash ./libtool  --tag=CC   --mode=compile /root/llvm/llvm80/build/bin/clang -DHAVE_CONFIG_H -I.  -DPNG_CONFIGURE_LIBPNG   -flto -fPIC -v -g -MT libpng15_la-pngwtran.lo -MD -MP -MF .deps/libpng15_la-pngwtran.Tpo -c -o libpng15_la-pngwtran.lo `test -f 'pngwtran.c' || echo './'`pngwtran.c
+libtool: compile:  /root/llvm/llvm80/build/bin/clang -DHAVE_CONFIG_H -I. -DPNG_CONFIGURE_LIBPNG -flto -fPIC -v -g -MT libpng15_la-pngwtran.lo -MD -MP -MF .deps/libpng15_la-pngwtran.Tpo -c pngwtran.c 
+clang version 8.0.1 (https://github.com/llvm-mirror/clang.git 2e4c9c5fc864c2c432e4c262a67c42d824b265c6) (https://github.com/rqtian/llvm80-bufferoverflow.git 38b4a62b0634ac2bc4b67addab5698d2f1a5c23e)
+Target: x86_64-unknown-linux-gnu
+Thread model: posix
+InstalledDir: /root/llvm/llvm80/build/bin
+Found candidate GCC installation: /usr/lib/gcc/x86_64-linux-gnu/6
+Found candidate GCC installation: /usr/lib/gcc/x86_64-linux-gnu/6.3.0
+Selected GCC installation: /usr/lib/gcc/x86_64-linux-gnu/6.3.0
+Candidate multilib: .;@m64
+Selected multilib: .;@m64
+ "/root/llvm/llvm80/build/bin/clang-8" -cc1 -triple x86_64-unknown-linux-gnu -emit-llvm-bc -flto -flto-unit -disable-free -main-file-name pngwtran.c -mrelocation-model pic -pic-level 2 -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debug-info-kind=limited -dwarf-version=4 -debugger-tuning=gdb -v -coverage-notes-file /root/llvm/codesample/39apps/libpng-1.5.9/pngwtran.gcno -resource-dir /root/llvm/llvm80/build/lib/clang/8.0.1 -dependency-file .deps/libpng15_la-pngwtran.Tpo -sys-header-deps -MP -MT libpng15_la-pngwtran.lo -D HAVE_CONFIG_H -I . -D PNG_CONFIGURE_LIBPNG -internal-isystem /usr/local/include -internal-isystem /root/llvm/llvm80/build/lib/clang/8.0.1/include -internal-externc-isystem /usr/include/x86_64-linux-gnu -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdebug-compilation-dir /root/llvm/codesample/39apps/libpng-1.5.9 -ferror-limit 19 -fmessage-length 143 -fobjc-runtime=gcc -fdiagnostics-show-option -fcolor-diagnostics -o pngwtran.o -x c pngwtran.c -faddrsig
+clang -cc1 version 8.0.1 based upon LLVM 8.0.1 default target x86_64-unknown-linux-gnu
+ignoring nonexistent directory "/include"
+#include "..." search starts here:
+#include <...> search starts here:
+ .
+ /usr/local/include
+ /root/llvm/llvm80/build/lib/clang/8.0.1/include
+ /usr/include/x86_64-linux-gnu
+ /usr/include
+End of search list.
+libtool: compile: mv -f "pngwtran.o" ".libs/libpng15_la-pngwtran.o"
+libtool: compile:  /root/llvm/llvm80/build/bin/clang -DHAVE_CONFIG_H -I. -DPNG_CONFIGURE_LIBPNG -flto -fPIC -v -g -MT libpng15_la-pngwtran.lo -MD -MP -MF .deps/libpng15_la-pngwtran.Tpo -c pngwtran.c >/dev/null 2>&1
+libtool: compile: mv -f "pngwtran.o" "libpng15_la-pngwtran.o"
+mv -f .deps/libpng15_la-pngwtran.Tpo .deps/libpng15_la-pngwtran.Plo
+/bin/bash ./libtool  --tag=CC   --mode=compile /root/llvm/llvm80/build/bin/clang -DHAVE_CONFIG_H -I.  -DPNG_CONFIGURE_LIBPNG   -flto -fPIC -v -g -MT libpng15_la-pngwutil.lo -MD -MP -MF .deps/libpng15_la-pngwutil.Tpo -c -o libpng15_la-pngwutil.lo `test -f 'pngwutil.c' || echo './'`pngwutil.c
+libtool: compile:  /root/llvm/llvm80/build/bin/clang -DHAVE_CONFIG_H -I. -DPNG_CONFIGURE_LIBPNG -flto -fPIC -v -g -MT libpng15_la-pngwutil.lo -MD -MP -MF .deps/libpng15_la-pngwutil.Tpo -c pngwutil.c 
+clang version 8.0.1 (https://github.com/llvm-mirror/clang.git 2e4c9c5fc864c2c432e4c262a67c42d824b265c6) (https://github.com/rqtian/llvm80-bufferoverflow.git 38b4a62b0634ac2bc4b67addab5698d2f1a5c23e)
+Target: x86_64-unknown-linux-gnu
+Thread model: posix
+InstalledDir: /root/llvm/llvm80/build/bin
+Found candidate GCC installation: /usr/lib/gcc/x86_64-linux-gnu/6
+Found candidate GCC installation: /usr/lib/gcc/x86_64-linux-gnu/6.3.0
+Selected GCC installation: /usr/lib/gcc/x86_64-linux-gnu/6.3.0
+Candidate multilib: .;@m64
+Selected multilib: .;@m64
+ "/root/llvm/llvm80/build/bin/clang-8" -cc1 -triple x86_64-unknown-linux-gnu -emit-llvm-bc -flto -flto-unit -disable-free -main-file-name pngwutil.c -mrelocation-model pic -pic-level 2 -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debug-info-kind=limited -dwarf-version=4 -debugger-tuning=gdb -v -coverage-notes-file /root/llvm/codesample/39apps/libpng-1.5.9/pngwutil.gcno -resource-dir /root/llvm/llvm80/build/lib/clang/8.0.1 -dependency-file .deps/libpng15_la-pngwutil.Tpo -sys-header-deps -MP -MT libpng15_la-pngwutil.lo -D HAVE_CONFIG_H -I . -D PNG_CONFIGURE_LIBPNG -internal-isystem /usr/local/include -internal-isystem /root/llvm/llvm80/build/lib/clang/8.0.1/include -internal-externc-isystem /usr/include/x86_64-linux-gnu -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdebug-compilation-dir /root/llvm/codesample/39apps/libpng-1.5.9 -ferror-limit 19 -fmessage-length 143 -fobjc-runtime=gcc -fdiagnostics-show-option -fcolor-diagnostics -o pngwutil.o -x c pngwutil.c -faddrsig
+clang -cc1 version 8.0.1 based upon LLVM 8.0.1 default target x86_64-unknown-linux-gnu
+ignoring nonexistent directory "/include"
+#include "..." search starts here:
+#include <...> search starts here:
+ .
+ /usr/local/include
+ /root/llvm/llvm80/build/lib/clang/8.0.1/include
+ /usr/include/x86_64-linux-gnu
+ /usr/include
+End of search list.
+libtool: compile: mv -f "pngwutil.o" ".libs/libpng15_la-pngwutil.o"
+libtool: compile:  /root/llvm/llvm80/build/bin/clang -DHAVE_CONFIG_H -I. -DPNG_CONFIGURE_LIBPNG -flto -fPIC -v -g -MT libpng15_la-pngwutil.lo -MD -MP -MF .deps/libpng15_la-pngwutil.Tpo -c pngwutil.c >/dev/null 2>&1
+libtool: compile: mv -f "pngwutil.o" "libpng15_la-pngwutil.o"
+mv -f .deps/libpng15_la-pngwutil.Tpo .deps/libpng15_la-pngwutil.Plo
+rm -f scripts/vers.out dfn.c dfn?.out
+test -d scripts || mkdir scripts
+echo '#include "scripts/vers.dfn"' >dfn.c
+/root/llvm/llvm80/build/bin/clang -E -DHAVE_CONFIG_H -I.  -DPNG_CONFIGURE_LIBPNG\
+     -DPNGLIB_LIBNAME='PNG15_0' -DPNGLIB_VERSION='1.5.9' -DSYMBOL_PREFIX='' -DPNG_NO_USE_READ_MACROS -DPNG_BUILDING_SYMBOL_TABLE dfn.c > dfn1.out
+/bin/sed -n -e 's|^.*PNG_DEFN_MAGIC *-\(.*\)- *PNG_DEFN_END.*$|\1|p'\
+    dfn1.out >dfn2.out
+/bin/sed -e 's| *PNG_JOIN *||g' -e 's| *$||' dfn2.out >dfn3.out
+rm -f dfn.c dfn[12].out
+mv dfn3.out scripts/vers.out
+rm -f libpng.vers
+cp scripts/vers.out libpng.vers
+/bin/bash ./libtool --tag=CC   --mode=link /root/llvm/llvm80/build/bin/clang  -flto -fPIC -v -g -no-undefined -export-dynamic -version-number 15:9:0  -Wl,--version-script=libpng.vers  /root/llvm/Prober/libprober.so -o libpng15.la -rpath /root/llvm/codesample/39apps/libpng-1.5.9/build/lib libpng15_la-png.lo libpng15_la-pngerror.lo libpng15_la-pngget.lo libpng15_la-pngmem.lo libpng15_la-pngpread.lo libpng15_la-pngread.lo libpng15_la-pngrio.lo libpng15_la-pngrtran.lo libpng15_la-pngrutil.lo libpng15_la-pngset.lo libpng15_la-pngtrans.lo libpng15_la-pngwio.lo libpng15_la-pngwrite.lo libpng15_la-pngwtran.lo libpng15_la-pngwutil.lo    -lm -lz -lm 
+libtool: link: /root/llvm/llvm80/build/bin/clang -shared   .libs/libpng15_la-png.o .libs/libpng15_la-pngerror.o .libs/libpng15_la-pngget.o .libs/libpng15_la-pngmem.o .libs/libpng15_la-pngpread.o .libs/libpng15_la-pngread.o .libs/libpng15_la-pngrio.o .libs/libpng15_la-pngrtran.o .libs/libpng15_la-pngrutil.o .libs/libpng15_la-pngset.o .libs/libpng15_la-pngtrans.o .libs/libpng15_la-pngwio.o .libs/libpng15_la-pngwrite.o .libs/libpng15_la-pngwtran.o .libs/libpng15_la-pngwutil.o    -lz -lm  -flto -Wl,--version-script=libpng.vers   -Wl,-soname -Wl,libpng15.so.15 -o .libs/libpng15.so.15.9.0
+======= Start handling file: ld-temp.o =======
+malloc wrapper: malloc
+malloc wrapper: realloc
+malloc wrapper: calloc
+malloc wrapper: valloc
+malloc wrapper: png_get_libpng_ver
+malloc wrapper: png_chunk_unknown_handling
+malloc wrapper: png_get_pixels_per_inch
+malloc wrapper: png_get_x_pixels_per_inch
+malloc wrapper: png_get_y_pixels_per_inch
+malloc wrapper: png_get_x_offset_inches_fixed
+malloc wrapper: png_fixed_inches_from_microns
+malloc wrapper: png_get_y_offset_inches_fixed
+malloc wrapper: png_create_struct
+malloc wrapper: png_create_struct_2
+malloc wrapper: png_malloc_default
+malloc wrapper: png_push_handle_unknown
+malloc wrapper: png_create_read_struct
+malloc wrapper: png_handle_unknown
+malloc wrapper: png_create_write_struct
+malloc wrapper: png_info_init_3
+malloc wrapper: png_info_destroy
+malloc wrapper: png_malloc
+malloc wrapper: png_malloc_warn
+malloc wrapper: png_read_destroy
+======= Finish handling file: ld-temp.o =======
+libtool: link: (cd ".libs" && rm -f "libpng15.so.15" && ln -s "libpng15.so.15.9.0" "libpng15.so.15")
+libtool: link: (cd ".libs" && rm -f "libpng15.so" && ln -s "libpng15.so.15.9.0" "libpng15.so")
+libtool: link: ar cru .libs/libpng15.a  libpng15_la-png.o libpng15_la-pngerror.o libpng15_la-pngget.o libpng15_la-pngmem.o libpng15_la-pngpread.o libpng15_la-pngread.o libpng15_la-pngrio.o libpng15_la-pngrtran.o libpng15_la-pngrutil.o libpng15_la-pngset.o libpng15_la-pngtrans.o libpng15_la-pngwio.o libpng15_la-pngwrite.o libpng15_la-pngwtran.o libpng15_la-pngwutil.o
+libtool: link: ranlib .libs/libpng15.a
+libtool: link: ( cd ".libs" && rm -f "libpng15.la" && ln -s "../libpng15.la" "libpng15.la" )
+cp libpng-config libpng15-config
+cp libpng.pc libpng15.pc
+make[1]: Leaving directory '/root/llvm/codesample/39apps/libpng-1.5.9'
+[Tue Jul 16 14:53:55 UTC]root@3e7fa76cc3dc:libpng-1.5.9# 
+[Tue Jul 30 16:07:34 UTC]root@3e7fa76cc3dc:libpng-1.5.9# grep -Ern "png_set_text_2\(" .
+./ld-temp.o1563288834336000.inst.ll:13996:  %109 = call i32 @png_set_text_2(%struct.png_struct_def* %106, %struct.png_info_def* %107, %struct.png_text_struct* %108, i32 1), !dbg !12287
+./ld-temp.o1563288834336000.inst.ll:14515:  %350 = call i32 @png_set_text_2(%struct.png_struct_def* %347, %struct.png_info_def* %348, %struct.png_text_struct* %349, i32 1), !dbg !12685
+./ld-temp.o1563288834336000.inst.ll:14803:  %170 = call i32 @png_set_text_2(%struct.png_struct_def* %167, %struct.png_info_def* %168, %struct.png_text_struct* %169, i32 1), !dbg !12886
+./ld-temp.o1563288834336000.inst.ll:44800:  %155 = call i32 @png_set_text_2(%struct.png_struct_def* %152, %struct.png_info_def* %153, %struct.png_text_struct* %154, i32 1), !dbg !32117
+./ld-temp.o1563288834336000.inst.ll:45117:  %194 = call i32 @png_set_text_2(%struct.png_struct_def* %191, %struct.png_info_def* %192, %struct.png_text_struct* %193, i32 1), !dbg !32354
+./ld-temp.o1563288834336000.inst.ll:45599:  %303 = call i32 @png_set_text_2(%struct.png_struct_def* %300, %struct.png_info_def* %301, %struct.png_text_struct* %302, i32 1), !dbg !32701
+./ld-temp.o1563288834336000.inst.ll:51558:  %14 = call i32 @png_set_text_2(%struct.png_struct_def* %10, %struct.png_info_def* %11, %struct.png_text_struct* %12, i32 %13), !dbg !36850
+./ld-temp.o1563288834336000.inst.ll:51574:define internal i32 @png_set_text_2(%struct.png_struct_def*, %struct.png_info_def*, %struct.png_text_struct*, i32) #0 !dbg !36858 {
+./CHANGES:1301:  Plugged various memory leaks; added png_malloc_warn() and png_set_text_2()
+./CHANGES:2353:  Avoid a possible NULL dereference in debug build, in png_set_text_2().
+./ld-temp.o.ll:13995:  %109 = call i32 @png_set_text_2(%struct.png_struct_def* %106, %struct.png_info_def* %107, %struct.png_text_struct* %108, i32 1), !dbg !12287
+./ld-temp.o.ll:14514:  %350 = call i32 @png_set_text_2(%struct.png_struct_def* %347, %struct.png_info_def* %348, %struct.png_text_struct* %349, i32 1), !dbg !12685
+./ld-temp.o.ll:14802:  %170 = call i32 @png_set_text_2(%struct.png_struct_def* %167, %struct.png_info_def* %168, %struct.png_text_struct* %169, i32 1), !dbg !12886
+./ld-temp.o.ll:44799:  %155 = call i32 @png_set_text_2(%struct.png_struct_def* %152, %struct.png_info_def* %153, %struct.png_text_struct* %154, i32 1), !dbg !32117
+./ld-temp.o.ll:45116:  %194 = call i32 @png_set_text_2(%struct.png_struct_def* %191, %struct.png_info_def* %192, %struct.png_text_struct* %193, i32 1), !dbg !32354
+./ld-temp.o.ll:45598:  %303 = call i32 @png_set_text_2(%struct.png_struct_def* %300, %struct.png_info_def* %301, %struct.png_text_struct* %302, i32 1), !dbg !32701
+./ld-temp.o.ll:51557:  %14 = call i32 @png_set_text_2(%struct.png_struct_def* %10, %struct.png_info_def* %11, %struct.png_text_struct* %12, i32 %13), !dbg !36850
+./ld-temp.o.ll:51573:define internal i32 @png_set_text_2(%struct.png_struct_def*, %struct.png_info_def*, %struct.png_text_struct*, i32) #0 !dbg !36858 {
+./pngrutil.c:2305:   ret = png_set_text_2(png_ptr, info_ptr, text_ptr, 1);
+./pngrutil.c:2435:   ret = png_set_text_2(png_ptr, info_ptr, text_ptr, 1);
+./pngrutil.c:2605:   ret = png_set_text_2(png_ptr, info_ptr, text_ptr, 1);
+./pngpread.c:1350:      ret = png_set_text_2(png_ptr, info_ptr, text_ptr, 1);
+./pngpread.c:1554:      ret = png_set_text_2(png_ptr, info_ptr, text_ptr, 1);
+./pngpread.c:1676:      ret = png_set_text_2(png_ptr, info_ptr, text_ptr, 1);
+./pngset.c:672:   ret = png_set_text_2(png_ptr, info_ptr, text_ptr, num_text);
+./pngset.c:679:png_set_text_2(png_structp png_ptr, png_infop info_ptr,
+[Tue Jul 30 16:07:44 UTC]root@3e7fa76cc3dc:libpng-1.5.9# nano ./ld-temp.o1563288834336000.inst.ll
+
+

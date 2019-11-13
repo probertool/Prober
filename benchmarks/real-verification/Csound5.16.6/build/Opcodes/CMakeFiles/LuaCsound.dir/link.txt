@@ -1,0 +1,1 @@
+/usr/bin/c++  -fPIC -fopenmp  -shared  -o ../libLuaCsound.so CMakeFiles/LuaCsound.dir/LuaCsound.cpp.o -llua5.1 -lm 

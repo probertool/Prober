@@ -1,0 +1,36 @@
+	.file	"<stdin>"
+	.text
+	.globl	variable_union
+	.align	16, 0x90
+	.type	variable_union,@function
+variable_union:                         # @variable_union
+# BB#0:                                 # %entry
+	xorb	%al, %al
+	testb	%al, %al
+	xorb	%al, %al
+	testb	%al, %al
+	xorb	%al, %al
+	testb	%al, %al
+	xorb	%al, %al
+	testb	%al, %al
+	xorb	%al, %al
+	testb	%al, %al
+	.align	16, 0x90
+.LBB1_1:                                # %68
+                                        # =>This Inner Loop Header: Depth=1
+	xorb	%al, %al
+	testb	%al, %al
+	jne	.LBB1_1
+# BB#2:                                 # %153
+                                        #   in Loop: Header=BB1_1 Depth=1
+	xorb	%al, %al
+	testb	%al, %al
+	jne	.LBB1_1
+# BB#3:                                 # %154
+                                        #   in Loop: Header=BB1_1 Depth=1
+	movl	%eax, (%eax)
+	jmp	.LBB1_1
+	.size	variable_union, .-variable_union
+
+
+	.section	.note.GNU-stack,"",@progbits

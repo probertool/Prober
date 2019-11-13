@@ -1,0 +1,44 @@
+	.file	"<stdin>"
+	.text
+	.globl	a
+	.align	16, 0x90
+	.type	a,@function
+a:                                      # @a
+# BB#0:
+	movups	(%rdi), %xmm0
+	pshufd	$27, %xmm0, %xmm0
+	ret
+	.size	a, .-a
+
+	.globl	b
+	.align	16, 0x90
+	.type	b,@function
+b:                                      # @b
+# BB#0:
+	movups	(%rdi), %xmm1
+	unpckhps	%xmm1, %xmm0
+	ret
+	.size	b, .-b
+
+	.globl	c
+	.align	16, 0x90
+	.type	c,@function
+c:                                      # @c
+# BB#0:
+	movupd	(%rdi), %xmm0
+	shufpd	$1, %xmm0, %xmm0
+	ret
+	.size	c, .-c
+
+	.globl	d
+	.align	16, 0x90
+	.type	d,@function
+d:                                      # @d
+# BB#0:
+	movupd	(%rdi), %xmm1
+	unpckhpd	%xmm1, %xmm0
+	ret
+	.size	d, .-d
+
+
+	.section	.note.GNU-stack,"",@progbits

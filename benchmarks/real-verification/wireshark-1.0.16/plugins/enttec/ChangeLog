@@ -1,0 +1,10 @@
+$Id: ChangeLog 12587 2004-11-24 03:35:17Z guy $
+
+Overview of changes in ENTTEC Ethereal plugin
+
+Version 0.0.2:
+* Better dissection of DMX data
+* Better packet descriptions
+
+Version 0.0.1:
+* Intial version

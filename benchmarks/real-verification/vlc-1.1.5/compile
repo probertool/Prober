@@ -1,0 +1,9 @@
+#! /bin/bash
+rm -f .error$$
+ERROR=0
+export PATH=/root/llvm/install-bufferoverflow-llvm90-lto/bin:/root/llvm/install-bufferoverflow-llvm90-lto/lib:/root/llvm/llvm90-binutils/binutils/binutils-2.28/include:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin LANG=C
+(make V=1 $@ 2>&1 || touch .error$$)| \
+`sed -ne "s/^top_srcdir *= *//p" < Makefile`/extras/buildsystem/make.pl
+test -f .error$$ && ERROR=1
+rm -f .error$$
+exit $ERROR

@@ -1,0 +1,228 @@
+Determining if the include file io.h exists failed with the following output:
+Change Dir: /root/llvm/codesample/39apps/Csound5.16.6/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_0ae8a/fast"
+/usr/bin/make -f CMakeFiles/cmTC_0ae8a.dir/build.make CMakeFiles/cmTC_0ae8a.dir/build
+make[1]: Entering directory '/root/llvm/codesample/39apps/Csound5.16.6/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_0ae8a.dir/CheckIncludeFile.c.o
+/usr/bin/cc   -I/root/llvm/codesample/39apps/Csound5.16.6/build/CMakeFiles/CMakeTmp/pthread.h   -o CMakeFiles/cmTC_0ae8a.dir/CheckIncludeFile.c.o   -c /root/llvm/codesample/39apps/Csound5.16.6/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+/root/llvm/codesample/39apps/Csound5.16.6/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c:1:16: fatal error: io.h: No such file or directory
+ #include <io.h>
+                ^
+compilation terminated.
+CMakeFiles/cmTC_0ae8a.dir/build.make:65: recipe for target 'CMakeFiles/cmTC_0ae8a.dir/CheckIncludeFile.c.o' failed
+make[1]: *** [CMakeFiles/cmTC_0ae8a.dir/CheckIncludeFile.c.o] Error 1
+make[1]: Leaving directory '/root/llvm/codesample/39apps/Csound5.16.6/build/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_0ae8a/fast' failed
+make: *** [cmTC_0ae8a/fast] Error 2
+
+
+Determining if the include file winsock.h exists failed with the following output:
+Change Dir: /root/llvm/codesample/39apps/Csound5.16.6/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_3d9e2/fast"
+/usr/bin/make -f CMakeFiles/cmTC_3d9e2.dir/build.make CMakeFiles/cmTC_3d9e2.dir/build
+make[1]: Entering directory '/root/llvm/codesample/39apps/Csound5.16.6/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_3d9e2.dir/CheckIncludeFile.c.o
+/usr/bin/cc   -I/root/llvm/codesample/39apps/Csound5.16.6/build/CMakeFiles/CMakeTmp/pthread.h   -o CMakeFiles/cmTC_3d9e2.dir/CheckIncludeFile.c.o   -c /root/llvm/codesample/39apps/Csound5.16.6/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+/root/llvm/codesample/39apps/Csound5.16.6/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c:1:21: fatal error: winsock.h: No such file or directory
+ #include <winsock.h>
+                     ^
+compilation terminated.
+CMakeFiles/cmTC_3d9e2.dir/build.make:65: recipe for target 'CMakeFiles/cmTC_3d9e2.dir/CheckIncludeFile.c.o' failed
+make[1]: *** [CMakeFiles/cmTC_3d9e2.dir/CheckIncludeFile.c.o] Error 1
+make[1]: Leaving directory '/root/llvm/codesample/39apps/Csound5.16.6/build/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_3d9e2/fast' failed
+make: *** [cmTC_3d9e2/fast] Error 2
+
+
+Determining if the include file ladspa.h exists failed with the following output:
+Change Dir: /root/llvm/codesample/39apps/Csound5.16.6/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_76a6c/fast"
+/usr/bin/make -f CMakeFiles/cmTC_76a6c.dir/build.make CMakeFiles/cmTC_76a6c.dir/build
+make[1]: Entering directory '/root/llvm/codesample/39apps/Csound5.16.6/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_76a6c.dir/CheckIncludeFile.c.o
+/usr/bin/cc   -I/root/llvm/codesample/39apps/Csound5.16.6/build/CMakeFiles/CMakeTmp/pthread.h  -fopenmp    -o CMakeFiles/cmTC_76a6c.dir/CheckIncludeFile.c.o   -c /root/llvm/codesample/39apps/Csound5.16.6/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+/root/llvm/codesample/39apps/Csound5.16.6/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c:1:20: fatal error: ladspa.h: No such file or directory
+ #include <ladspa.h>
+                    ^
+compilation terminated.
+CMakeFiles/cmTC_76a6c.dir/build.make:65: recipe for target 'CMakeFiles/cmTC_76a6c.dir/CheckIncludeFile.c.o' failed
+make[1]: *** [CMakeFiles/cmTC_76a6c.dir/CheckIncludeFile.c.o] Error 1
+make[1]: Leaving directory '/root/llvm/codesample/39apps/Csound5.16.6/build/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_76a6c/fast' failed
+make: *** [cmTC_76a6c/fast] Error 2
+
+
+Determining if the include file fluidsynth.h exists failed with the following output:
+Change Dir: /root/llvm/codesample/39apps/Csound5.16.6/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_37867/fast"
+/usr/bin/make -f CMakeFiles/cmTC_37867.dir/build.make CMakeFiles/cmTC_37867.dir/build
+make[1]: Entering directory '/root/llvm/codesample/39apps/Csound5.16.6/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_37867.dir/CheckIncludeFile.c.o
+/usr/bin/cc   -I/root/llvm/codesample/39apps/Csound5.16.6/build/CMakeFiles/CMakeTmp/pthread.h  -fopenmp    -o CMakeFiles/cmTC_37867.dir/CheckIncludeFile.c.o   -c /root/llvm/codesample/39apps/Csound5.16.6/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+/root/llvm/codesample/39apps/Csound5.16.6/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c:1:24: fatal error: fluidsynth.h: No such file or directory
+ #include <fluidsynth.h>
+                        ^
+compilation terminated.
+CMakeFiles/cmTC_37867.dir/build.make:65: recipe for target 'CMakeFiles/cmTC_37867.dir/CheckIncludeFile.c.o' failed
+make[1]: *** [CMakeFiles/cmTC_37867.dir/CheckIncludeFile.c.o] Error 1
+make[1]: Leaving directory '/root/llvm/codesample/39apps/Csound5.16.6/build/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_37867/fast' failed
+make: *** [cmTC_37867/fast] Error 2
+
+
+Determining if the include file jack/jack.h exists failed with the following output:
+Change Dir: /root/llvm/codesample/39apps/Csound5.16.6/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_35385/fast"
+/usr/bin/make -f CMakeFiles/cmTC_35385.dir/build.make CMakeFiles/cmTC_35385.dir/build
+make[1]: Entering directory '/root/llvm/codesample/39apps/Csound5.16.6/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_35385.dir/CheckIncludeFile.c.o
+/usr/bin/cc   -I/root/llvm/codesample/39apps/Csound5.16.6/build/CMakeFiles/CMakeTmp/pthread.h  -fopenmp    -o CMakeFiles/cmTC_35385.dir/CheckIncludeFile.c.o   -c /root/llvm/codesample/39apps/Csound5.16.6/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+/root/llvm/codesample/39apps/Csound5.16.6/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c:1:23: fatal error: jack/jack.h: No such file or directory
+ #include <jack/jack.h>
+                       ^
+compilation terminated.
+CMakeFiles/cmTC_35385.dir/build.make:65: recipe for target 'CMakeFiles/cmTC_35385.dir/CheckIncludeFile.c.o' failed
+make[1]: *** [CMakeFiles/cmTC_35385.dir/CheckIncludeFile.c.o] Error 1
+make[1]: Leaving directory '/root/llvm/codesample/39apps/Csound5.16.6/build/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_35385/fast' failed
+make: *** [cmTC_35385/fast] Error 2
+
+
+Determining if the include file gmm/gmm.h exists failed with the following output:
+Change Dir: /root/llvm/codesample/39apps/Csound5.16.6/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_4b1a2/fast"
+/usr/bin/make -f CMakeFiles/cmTC_4b1a2.dir/build.make CMakeFiles/cmTC_4b1a2.dir/build
+make[1]: Entering directory '/root/llvm/codesample/39apps/Csound5.16.6/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_4b1a2.dir/CheckIncludeFile.cxx.o
+/usr/bin/c++    -I/root/llvm/codesample/39apps/Csound5.16.6/build/CMakeFiles/CMakeTmp/pthread.h  -fopenmp    -o CMakeFiles/cmTC_4b1a2.dir/CheckIncludeFile.cxx.o -c /root/llvm/codesample/39apps/Csound5.16.6/build/CMakeFiles/CMakeTmp/CheckIncludeFile.cxx
+/root/llvm/codesample/39apps/Csound5.16.6/build/CMakeFiles/CMakeTmp/CheckIncludeFile.cxx:1:21: fatal error: gmm/gmm.h: No such file or directory
+ #include <gmm/gmm.h>
+                     ^
+compilation terminated.
+CMakeFiles/cmTC_4b1a2.dir/build.make:65: recipe for target 'CMakeFiles/cmTC_4b1a2.dir/CheckIncludeFile.cxx.o' failed
+make[1]: *** [CMakeFiles/cmTC_4b1a2.dir/CheckIncludeFile.cxx.o] Error 1
+make[1]: Leaving directory '/root/llvm/codesample/39apps/Csound5.16.6/build/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_4b1a2/fast' failed
+make: *** [cmTC_4b1a2/fast] Error 2
+
+
+Determining if the include file lo/lo.h exists failed with the following output:
+Change Dir: /root/llvm/codesample/39apps/Csound5.16.6/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_a22ab/fast"
+/usr/bin/make -f CMakeFiles/cmTC_a22ab.dir/build.make CMakeFiles/cmTC_a22ab.dir/build
+make[1]: Entering directory '/root/llvm/codesample/39apps/Csound5.16.6/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_a22ab.dir/CheckIncludeFile.c.o
+/usr/bin/cc   -I/root/llvm/codesample/39apps/Csound5.16.6/build/CMakeFiles/CMakeTmp/pthread.h  -fopenmp    -o CMakeFiles/cmTC_a22ab.dir/CheckIncludeFile.c.o   -c /root/llvm/codesample/39apps/Csound5.16.6/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+/root/llvm/codesample/39apps/Csound5.16.6/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c:1:19: fatal error: lo/lo.h: No such file or directory
+ #include <lo/lo.h>
+                   ^
+compilation terminated.
+CMakeFiles/cmTC_a22ab.dir/build.make:65: recipe for target 'CMakeFiles/cmTC_a22ab.dir/CheckIncludeFile.c.o' failed
+make[1]: *** [CMakeFiles/cmTC_a22ab.dir/CheckIncludeFile.c.o] Error 1
+make[1]: Leaving directory '/root/llvm/codesample/39apps/Csound5.16.6/build/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_a22ab/fast' failed
+make: *** [cmTC_a22ab/fast] Error 2
+
+
+Determining if the include file alsa/asoundlib.h exists failed with the following output:
+Change Dir: /root/llvm/codesample/39apps/Csound5.16.6/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_f192e/fast"
+/usr/bin/make -f CMakeFiles/cmTC_f192e.dir/build.make CMakeFiles/cmTC_f192e.dir/build
+make[1]: Entering directory '/root/llvm/codesample/39apps/Csound5.16.6/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_f192e.dir/CheckIncludeFile.c.o
+/usr/bin/cc   -I/root/llvm/codesample/39apps/Csound5.16.6/build/CMakeFiles/CMakeTmp/pthread.h  -fopenmp    -o CMakeFiles/cmTC_f192e.dir/CheckIncludeFile.c.o   -c /root/llvm/codesample/39apps/Csound5.16.6/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+/root/llvm/codesample/39apps/Csound5.16.6/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c:1:28: fatal error: alsa/asoundlib.h: No such file or directory
+ #include <alsa/asoundlib.h>
+                            ^
+compilation terminated.
+CMakeFiles/cmTC_f192e.dir/build.make:65: recipe for target 'CMakeFiles/cmTC_f192e.dir/CheckIncludeFile.c.o' failed
+make[1]: *** [CMakeFiles/cmTC_f192e.dir/CheckIncludeFile.c.o] Error 1
+make[1]: Leaving directory '/root/llvm/codesample/39apps/Csound5.16.6/build/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_f192e/fast' failed
+make: *** [cmTC_f192e/fast] Error 2
+
+
+Determining if the include file portaudio.h exists failed with the following output:
+Change Dir: /root/llvm/codesample/39apps/Csound5.16.6/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_e4e4a/fast"
+/usr/bin/make -f CMakeFiles/cmTC_e4e4a.dir/build.make CMakeFiles/cmTC_e4e4a.dir/build
+make[1]: Entering directory '/root/llvm/codesample/39apps/Csound5.16.6/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_e4e4a.dir/CheckIncludeFile.c.o
+/usr/bin/cc   -I/root/llvm/codesample/39apps/Csound5.16.6/build/CMakeFiles/CMakeTmp/pthread.h  -fopenmp    -o CMakeFiles/cmTC_e4e4a.dir/CheckIncludeFile.c.o   -c /root/llvm/codesample/39apps/Csound5.16.6/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+/root/llvm/codesample/39apps/Csound5.16.6/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c:1:23: fatal error: portaudio.h: No such file or directory
+ #include <portaudio.h>
+                       ^
+compilation terminated.
+CMakeFiles/cmTC_e4e4a.dir/build.make:65: recipe for target 'CMakeFiles/cmTC_e4e4a.dir/CheckIncludeFile.c.o' failed
+make[1]: *** [CMakeFiles/cmTC_e4e4a.dir/CheckIncludeFile.c.o] Error 1
+make[1]: Leaving directory '/root/llvm/codesample/39apps/Csound5.16.6/build/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_e4e4a/fast' failed
+make: *** [cmTC_e4e4a/fast] Error 2
+
+
+Determining if the include file portmidi.h exists failed with the following output:
+Change Dir: /root/llvm/codesample/39apps/Csound5.16.6/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_739fc/fast"
+/usr/bin/make -f CMakeFiles/cmTC_739fc.dir/build.make CMakeFiles/cmTC_739fc.dir/build
+make[1]: Entering directory '/root/llvm/codesample/39apps/Csound5.16.6/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_739fc.dir/CheckIncludeFile.c.o
+/usr/bin/cc   -I/root/llvm/codesample/39apps/Csound5.16.6/build/CMakeFiles/CMakeTmp/pthread.h  -fopenmp    -o CMakeFiles/cmTC_739fc.dir/CheckIncludeFile.c.o   -c /root/llvm/codesample/39apps/Csound5.16.6/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+/root/llvm/codesample/39apps/Csound5.16.6/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c:1:22: fatal error: portmidi.h: No such file or directory
+ #include <portmidi.h>
+                      ^
+compilation terminated.
+CMakeFiles/cmTC_739fc.dir/build.make:65: recipe for target 'CMakeFiles/cmTC_739fc.dir/CheckIncludeFile.c.o' failed
+make[1]: *** [CMakeFiles/cmTC_739fc.dir/CheckIncludeFile.c.o] Error 1
+make[1]: Leaving directory '/root/llvm/codesample/39apps/Csound5.16.6/build/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_739fc/fast' failed
+make: *** [cmTC_739fc/fast] Error 2
+
+
+Determining if the include file pulse/simple.h exists failed with the following output:
+Change Dir: /root/llvm/codesample/39apps/Csound5.16.6/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_306a0/fast"
+/usr/bin/make -f CMakeFiles/cmTC_306a0.dir/build.make CMakeFiles/cmTC_306a0.dir/build
+make[1]: Entering directory '/root/llvm/codesample/39apps/Csound5.16.6/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_306a0.dir/CheckIncludeFile.c.o
+/usr/bin/cc   -I/root/llvm/codesample/39apps/Csound5.16.6/build/CMakeFiles/CMakeTmp/pthread.h  -fopenmp    -o CMakeFiles/cmTC_306a0.dir/CheckIncludeFile.c.o   -c /root/llvm/codesample/39apps/Csound5.16.6/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+/root/llvm/codesample/39apps/Csound5.16.6/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c:1:26: fatal error: pulse/simple.h: No such file or directory
+ #include <pulse/simple.h>
+                          ^
+compilation terminated.
+CMakeFiles/cmTC_306a0.dir/build.make:65: recipe for target 'CMakeFiles/cmTC_306a0.dir/CheckIncludeFile.c.o' failed
+make[1]: *** [CMakeFiles/cmTC_306a0.dir/CheckIncludeFile.c.o] Error 1
+make[1]: Leaving directory '/root/llvm/codesample/39apps/Csound5.16.6/build/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_306a0/fast' failed
+make: *** [cmTC_306a0/fast] Error 2
+
+
+Determining if the include file m_pd.h exists failed with the following output:
+Change Dir: /root/llvm/codesample/39apps/Csound5.16.6/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_f9d41/fast"
+/usr/bin/make -f CMakeFiles/cmTC_f9d41.dir/build.make CMakeFiles/cmTC_f9d41.dir/build
+make[1]: Entering directory '/root/llvm/codesample/39apps/Csound5.16.6/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_f9d41.dir/CheckIncludeFile.c.o
+/usr/bin/cc   -I/root/llvm/codesample/39apps/Csound5.16.6/build/CMakeFiles/CMakeTmp/pthread.h  -fopenmp    -o CMakeFiles/cmTC_f9d41.dir/CheckIncludeFile.c.o   -c /root/llvm/codesample/39apps/Csound5.16.6/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+/root/llvm/codesample/39apps/Csound5.16.6/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c:1:18: fatal error: m_pd.h: No such file or directory
+ #include <m_pd.h>
+                  ^
+compilation terminated.
+CMakeFiles/cmTC_f9d41.dir/build.make:65: recipe for target 'CMakeFiles/cmTC_f9d41.dir/CheckIncludeFile.c.o' failed
+make[1]: *** [CMakeFiles/cmTC_f9d41.dir/CheckIncludeFile.c.o] Error 1
+make[1]: Leaving directory '/root/llvm/codesample/39apps/Csound5.16.6/build/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_f9d41/fast' failed
+make: *** [cmTC_f9d41/fast] Error 2
+
+

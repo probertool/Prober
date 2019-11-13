@@ -1,0 +1,28 @@
+	.file	"<stdin>"
+	.text
+	.globl	foo
+	.align	16, 0x90
+	.type	foo,@function
+foo:                                    # @foo
+# BB#0:
+	movq	$dst+64, ptr(%rip)
+	ret
+	.size	foo, .-foo
+
+	.type	ptr,@object
+	.bss
+	.globl	ptr
+	.align	8
+ptr:                                    # @ptr
+	.quad	0
+	.size	ptr, 8
+
+	.type	dst,@object
+	.globl	dst
+	.align	16
+dst:                                    # @dst
+	.zero	524288
+	.size	dst, 524288
+
+
+	.section	.note.GNU-stack,"",@progbits

@@ -1,0 +1,1 @@
+/usr/bin/cc  -fPIC -fopenmp  -shared  -o ../libimage.so CMakeFiles/image.dir/imageOpcodes.c.o -lpng -lz 

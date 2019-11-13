@@ -1,0 +1,1 @@
+/usr/bin/cc  -fopenmp   CMakeFiles/csbeats.dir/beats/main.c.o CMakeFiles/csbeats.dir/lex.yy.c.o CMakeFiles/csbeats.dir/beats.tab.c.o  -o ../csbeats -rdynamic -lm 

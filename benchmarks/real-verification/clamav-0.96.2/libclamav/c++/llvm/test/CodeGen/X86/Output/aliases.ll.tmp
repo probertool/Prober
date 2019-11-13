@@ -1,0 +1,123 @@
+	.file	"<stdin>"
+	.text
+	.globl	test
+	.align	16, 0x90
+	.type	test,@function
+test:
+.Leh_func_begin1:
+	pushl	%ebp
+.Llabel1:
+	pushl	%ebx
+.Llabel2:
+	pushl	%edi
+.Llabel3:
+	pushl	%esi
+.Llabel4:
+	subl	$4, %esp
+.Llabel5:
+	movl	bar_i, %esi
+	movl	foo2, %edi
+	movl	foo1, %ebx
+	call	foo_f
+	movl	%eax, %ebp
+	addl	%ebx, %ebp
+	call	bar_f
+	addl	%ebp, %eax
+	movl	%eax, %ecx
+	addl	%edi, %ecx
+	movl	%esi, %eax
+	addl	%ecx, %eax
+	addl	$4, %esp
+	popl	%esi
+	popl	%edi
+	popl	%ebx
+	popl	%ebp
+	ret
+	.size	test, .-test
+.Leh_func_end1:
+
+	.section	.eh_frame,"aw",@progbits
+.LEH_frame0:
+.Lsection_eh_frame:
+.Leh_frame_common:
+	.set	.Lset1eh,.Leh_frame_common_end-.Leh_frame_common_begin
+	.long	.Lset1eh
+.Leh_frame_common_begin:
+	.long	0
+	.byte	1
+	.byte	0
+
+	.uleb128	1
+	.sleb128	-4
+	.byte	8
+
+	.byte	12
+	.uleb128	4
+	.uleb128	4
+	.byte	136
+	.uleb128	1
+	.align	4
+.Leh_frame_common_end:
+
+.Ltest.eh:
+	.set	.Lset2eh,.Leh_frame_end1-.Leh_frame_begin1
+	.long	.Lset2eh
+.Leh_frame_begin1:
+	.long	.Leh_frame_begin1-.Leh_frame_common
+	.long	.Leh_func_begin1
+	.set	.Lset3eh,.Leh_func_end1-.Leh_func_begin1
+	.long	.Lset3eh
+	.uleb128	0
+	.byte	4
+	.set	.Lset4eh,.Llabel1-.Leh_func_begin1
+	.long	.Lset4eh
+	.byte	14
+	.uleb128	8
+	.byte	4
+	.set	.Lset5eh,.Llabel2-.Llabel1
+	.long	.Lset5eh
+	.byte	14
+	.uleb128	12
+	.byte	4
+	.set	.Lset6eh,.Llabel3-.Llabel2
+	.long	.Lset6eh
+	.byte	14
+	.uleb128	16
+	.byte	4
+	.set	.Lset7eh,.Llabel4-.Llabel3
+	.long	.Lset7eh
+	.byte	14
+	.uleb128	20
+	.byte	4
+	.set	.Lset8eh,.Llabel5-.Llabel4
+	.long	.Lset8eh
+	.byte	14
+	.uleb128	24
+	.byte	134
+	.uleb128	5
+	.byte	135
+	.uleb128	4
+	.byte	131
+	.uleb128	3
+	.byte	133
+	.uleb128	2
+	.align	4
+.Leh_frame_end1:
+
+
+	.globl	foo1
+foo1 = bar
+	.globl	foo2
+foo2 = bar
+	.weak	bar_f
+bar_f = foo_f
+bar_i = bar
+	.globl	A
+A = bar
+	.globl	bar_h
+.hidden bar_h
+bar_h = bar
+	.globl	bar_p
+.protected bar_p
+bar_p = bar
+	.section	.note.GNU-stack,"",@progbits

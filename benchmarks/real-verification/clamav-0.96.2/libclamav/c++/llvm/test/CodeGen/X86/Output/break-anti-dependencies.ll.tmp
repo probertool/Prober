@@ -1,0 +1,55 @@
+	.file	"<stdin>"
+	.section	.rodata.cst8,"aM",@progbits,8
+	.align	8
+.LCPI1_0:                               # constant pool double
+	.quad	4619679907765970534     # double 7.100000e+00
+.LCPI1_1:                               # constant pool double
+	.quad	4619792497756654797     # double 7.200000e+00
+.LCPI1_2:                               # constant pool double
+	.quad	4619905087747339059     # double 7.300000e+00
+.LCPI1_3:                               # constant pool double
+	.quad	4620017677738023322     # double 7.400000e+00
+.LCPI1_4:                               # constant pool double
+	.quad	4620130267728707584     # double 7.500000e+00
+.LCPI1_5:                               # constant pool double
+	.quad	4607632778762754458     # double 1.100000e+00
+.LCPI1_6:                               # constant pool double
+	.quad	4608083138725491507     # double 1.200000e+00
+.LCPI1_7:                               # constant pool double
+	.quad	4608533498688228557     # double 1.300000e+00
+.LCPI1_8:                               # constant pool double
+	.quad	4608983858650965606     # double 1.400000e+00
+.LCPI1_9:                               # constant pool double
+	.quad	4609434218613702656     # double 1.500000e+00
+	.text
+	.globl	goo
+	.align	16, 0x90
+	.type	goo,@function
+goo:                                    # @goo
+# BB#0:                                 # %entry
+	movsd	(%rdi), %xmm0
+	movsd	(%rsi), %xmm1
+	addsd	.LCPI1_0(%rip), %xmm0
+	addsd	.LCPI1_5(%rip), %xmm1
+	mulsd	.LCPI1_1(%rip), %xmm0
+	mulsd	.LCPI1_6(%rip), %xmm1
+	addsd	.LCPI1_2(%rip), %xmm0
+	addsd	.LCPI1_7(%rip), %xmm1
+	mulsd	.LCPI1_3(%rip), %xmm0
+	mulsd	.LCPI1_8(%rip), %xmm1
+	addsd	.LCPI1_4(%rip), %xmm0
+	addsd	.LCPI1_9(%rip), %xmm1
+	cvttsd2si	%xmm0, %eax
+	cvttsd2si	%xmm1, %ecx
+	cmpl	%eax, %ecx
+	jge	.LBB1_2
+# BB#1:                                 # %bb
+	movabsq	$4621425052621576602, %rax # imm = 0x402299999999999A
+	movq	%rax, (%rdx)
+	ret
+.LBB1_2:                                # %return
+	ret
+	.size	goo, .-goo
+
+
+	.section	.note.GNU-stack,"",@progbits

@@ -1,0 +1,1 @@
+/usr/bin/c++  -fPIC -fopenmp  -shared  -o ../libdoppler.so CMakeFiles/doppler.dir/doppler.cpp.o 

@@ -1,0 +1,1 @@
+/usr/bin/cc  -fopenmp   CMakeFiles/scot.dir/scot/scot_main.c.o CMakeFiles/scot.dir/scot/scot.c.o  -o ../scot -Wl,-rpath,/root/llvm/codesample/39apps/Csound5.16.6/build: -rdynamic ../libcsound64.so.5.2 

@@ -1,0 +1,1 @@
+/usr/bin/cc  -fopenmp   CMakeFiles/pv_import.dir/pvi_main.c.o  -o ../pv_import -Wl,-rpath,/root/llvm/codesample/39apps/Csound5.16.6/build: -rdynamic ../libcsound64.so.5.2 

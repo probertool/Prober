@@ -1,0 +1,84 @@
+	.file	"<stdin>"
+	.text
+	.globl	shuf_8i16_0
+	.align	16, 0x90
+	.type	shuf_8i16_0,@function
+shuf_8i16_0:                            # @shuf_8i16_0
+# BB#0:                                 # %entry
+	punpcklwd	%xmm0, %xmm0
+	pshufd	$0, %xmm0, %xmm0
+	ret
+	.size	shuf_8i16_0, .-shuf_8i16_0
+
+	.globl	shuf_8i16_1
+	.align	16, 0x90
+	.type	shuf_8i16_1,@function
+shuf_8i16_1:                            # @shuf_8i16_1
+# BB#0:                                 # %entry
+	punpcklwd	%xmm0, %xmm0
+	pshufd	$85, %xmm0, %xmm0
+	ret
+	.size	shuf_8i16_1, .-shuf_8i16_1
+
+	.globl	shuf_8i16_2
+	.align	16, 0x90
+	.type	shuf_8i16_2,@function
+shuf_8i16_2:                            # @shuf_8i16_2
+# BB#0:                                 # %entry
+	punpcklwd	%xmm0, %xmm0
+	pshufd	$-86, %xmm0, %xmm0
+	ret
+	.size	shuf_8i16_2, .-shuf_8i16_2
+
+	.globl	shuf_8i16_3
+	.align	16, 0x90
+	.type	shuf_8i16_3,@function
+shuf_8i16_3:                            # @shuf_8i16_3
+# BB#0:                                 # %entry
+	punpcklwd	%xmm0, %xmm0
+	pshufd	$-1, %xmm0, %xmm0
+	ret
+	.size	shuf_8i16_3, .-shuf_8i16_3
+
+	.globl	shuf_8i16_4
+	.align	16, 0x90
+	.type	shuf_8i16_4,@function
+shuf_8i16_4:                            # @shuf_8i16_4
+# BB#0:                                 # %entry
+	punpckhwd	%xmm0, %xmm0
+	pshufd	$0, %xmm0, %xmm0
+	ret
+	.size	shuf_8i16_4, .-shuf_8i16_4
+
+	.globl	shuf_8i16_5
+	.align	16, 0x90
+	.type	shuf_8i16_5,@function
+shuf_8i16_5:                            # @shuf_8i16_5
+# BB#0:                                 # %entry
+	punpckhwd	%xmm0, %xmm0
+	pshufd	$85, %xmm0, %xmm0
+	ret
+	.size	shuf_8i16_5, .-shuf_8i16_5
+
+	.globl	shuf_8i16_6
+	.align	16, 0x90
+	.type	shuf_8i16_6,@function
+shuf_8i16_6:                            # @shuf_8i16_6
+# BB#0:                                 # %entry
+	punpckhwd	%xmm0, %xmm0
+	pshufd	$-86, %xmm0, %xmm0
+	ret
+	.size	shuf_8i16_6, .-shuf_8i16_6
+
+	.globl	shuf_8i16_7
+	.align	16, 0x90
+	.type	shuf_8i16_7,@function
+shuf_8i16_7:                            # @shuf_8i16_7
+# BB#0:                                 # %entry
+	punpckhwd	%xmm0, %xmm0
+	pshufd	$-1, %xmm0, %xmm0
+	ret
+	.size	shuf_8i16_7, .-shuf_8i16_7
+
+
+	.section	.note.GNU-stack,"",@progbits

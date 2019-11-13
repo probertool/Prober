@@ -1,0 +1,50 @@
+[Wed Jul 31 02:23:18 UTC]root@3e7fa76cc3dc:40-libzip-0.10# bash run.sh
+clang version 8.0.1 (https://github.com/llvm-mirror/clang.git 2e4c9c5fc864c2c432e4c262a67c42d824b265c6) (https://github.com/rqtian/llvm80-bufferoverflow.git c257efa2d375141bf09ac0e6170370eae4521829)
+Target: x86_64-unknown-linux-gnu
+Thread model: posix
+InstalledDir: /root/llvm/llvm80/build/bin
+Found candidate GCC installation: /usr/lib/gcc/x86_64-linux-gnu/6
+Found candidate GCC installation: /usr/lib/gcc/x86_64-linux-gnu/6.3.0
+Selected GCC installation: /usr/lib/gcc/x86_64-linux-gnu/6.3.0
+Candidate multilib: .;@m64
+Selected multilib: .;@m64
+ "/usr/local/bin/ld" --hash-style=both --eh-frame-hdr -m elf_x86_64 -shared -o .libs/libzip.so.2.1.0 /usr/lib/gcc/x86_64-linux-gnu/6.3.0/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/6.3.0/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/6.3.0 -L/usr/lib/gcc/x86_64-linux-gnu/6.3.0/../../../x86_64-linux-gnu -L/lib/x86_64-linux-gnu -L/lib/../lib64 -L/usr/lib/x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/6.3.0/../../.. -L/root/llvm/llvm80/build/bin/../lib -L/lib -L/usr/lib -plugin /root/llvm/llvm80/build/bin/../lib/LLVMgold.so -plugin-opt=mcpu=x86-64 .libs/zip_add.o .libs/zip_add_dir.o .libs/zip_close.o .libs/zip_delete.o .libs/zip_dirent.o .libs/zip_entry_free.o .libs/zip_entry_new.o .libs/zip_err_str.o .libs/zip_error.o .libs/zip_error_clear.o .libs/zip_error_get.o .libs/zip_error_get_sys_type.o .libs/zip_error_strerror.o .libs/zip_error_to_str.o .libs/zip_fclose.o .libs/zip_fdopen.o .libs/zip_file_error_clear.o .libs/zip_file_error_get.o .libs/zip_file_get_offset.o .libs/zip_file_strerror.o .libs/zip_filerange_crc.o .libs/zip_fopen.o .libs/zip_fopen_encrypted.o .libs/zip_fopen_index.o .libs/zip_fopen_index_encrypted.o .libs/zip_fread.o .libs/zip_free.o .libs/zip_get_archive_comment.o .libs/zip_get_archive_flag.o .libs/zip_get_compression_implementation.o .libs/zip_get_encryption_implementation.o .libs/zip_get_file_comment.o .libs/zip_get_file_extra.o .libs/zip_get_num_entries.o .libs/zip_get_num_files.o .libs/zip_get_name.o .libs/zip_memdup.o .libs/zip_name_locate.o .libs/zip_new.o .libs/zip_open.o .libs/zip_rename.o .libs/zip_replace.o .libs/zip_set_archive_comment.o .libs/zip_set_archive_flag.o .libs/zip_set_default_password.o .libs/zip_set_file_comment.o .libs/zip_set_file_extra.o .libs/zip_source_buffer.o .libs/zip_source_close.o .libs/zip_source_crc.o .libs/zip_source_deflate.o .libs/zip_source_error.o .libs/zip_source_file.o .libs/zip_source_filep.o .libs/zip_source_free.o .libs/zip_source_function.o .libs/zip_source_layered.o .libs/zip_source_open.o .libs/zip_source_pkware.o .libs/zip_source_pop.o .libs/zip_source_read.o .libs/zip_source_stat.o .libs/zip_source_zip.o .libs/zip_set_name.o .libs/zip_stat.o .libs/zip_stat_index.o .libs/zip_stat_init.o .libs/zip_strerror.o .libs/zip_unchange.o .libs/zip_unchange_all.o .libs/zip_unchange_archive.o .libs/zip_unchange_data.o -lz -soname libzip.so.2 -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/lib/gcc/x86_64-linux-gnu/6.3.0/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/6.3.0/../../../x86_64-linux-gnu/crtn.o
+======= Start handling file: ld-temp.o =======
+find a malloc wrapper: zip_source_free
+find a malloc wrapper: _zip_memdup
+find a malloc wrapper: zip_source_stat
+find a malloc wrapper: zip_source_pop
+find a malloc wrapper: zip_source_open
+find a malloc wrapper: zip_source_read
+find a malloc wrapper: zip_source_close
+find a malloc wrapper: zip_source_error
+find a malloc wrapper: zip_fopen_index_encrypted
+find a malloc wrapper: zip_stat_index
+find a malloc wrapper: _zip_error_set_from_source
+find a malloc wrapper: compress_read
+find a malloc wrapper: decompress_read
+find a malloc wrapper: decrypt_header
+find a malloc wrapper: zip_fopen_index
+find a malloc wrapper: zip_fread
+======= Finish handling file: ld-temp.o =======
+Binary file ./zip_close.o matches
+./zip_close.c:112:    if ((cd=_zip_cdir_new(survivors, &za->error)) == NULL) {
+./zip_dirent.c:95:_zip_cdir_new(int nentry, struct zip_error *error)
+./ld-temp.o1564539803643000.inst.ll:410:  %65 = call %struct.zip_cdir* @_zip_cdir_new(i32 %62, %struct.zip_error* %64), !dbg !1576
+./ld-temp.o1564539803643000.inst.ll:2730:define %struct.zip_cdir* @_zip_cdir_new(i32, %struct.zip_error*) #0 !dbg !3181 {
+./ld-temp.o1564539803643000.inst.ll:8180:  %59 = call %struct.zip_cdir* @_zip_cdir_new(i32 %57, %struct.zip_error* %58), !dbg !10166
+./ld-temp.o1564539803643000.inst.ll:18269:!3181 = distinct !DISubprogram(name: "_zip_cdir_new", scope: !3, file: !3, line: 95, type: !3182, scopeLine: 96, flags: DIFlagPrototyped, spFlags: DISPFlagDefinition, unit: !37, retainedNodes: !38)
+./ld-temp.o.ll:405:  %65 = call %struct.zip_cdir* @_zip_cdir_new(i32 %62, %struct.zip_error* %64), !dbg !1576
+./ld-temp.o.ll:2719:define %struct.zip_cdir* @_zip_cdir_new(i32, %struct.zip_error*) #0 !dbg !3181 {
+./ld-temp.o.ll:8153:  %59 = call %struct.zip_cdir* @_zip_cdir_new(i32 %57, %struct.zip_error* %58), !dbg !10166
+./ld-temp.o.ll:18236:!3181 = distinct !DISubprogram(name: "_zip_cdir_new", scope: !3, file: !3, line: 95, type: !3182, scopeLine: 96, flags: DIFlagPrototyped, spFlags: DISPFlagDefinition, unit: !37, retainedNodes: !38)
+Binary file ./zip_dirent.o matches
+./zipint.h:308:struct zip_cdir *_zip_cdir_new(int, struct zip_error *);
+./zip_open.c:195:    if ((cd=_zip_cdir_new(nentry, error)) == NULL)
+Binary file ./zip_open.o matches
+Binary file ./.libs/zip_close.o matches
+Binary file ./.libs/zip_dirent.o matches
+Binary file ./.libs/zip_open.o matches
+Binary file ./.libs/libzip.so.2.1.0 matches
+[Wed Jul 31 02:23:24 UTC]root@3e7fa76cc3dc:40-libzip-0.10# 
+

@@ -1,0 +1,57 @@
+	.file	"<stdin>"
+	.text
+	.globl	test
+	.align	16, 0x90
+	.type	test,@function
+test:                                   # @test
+.Leh_func_begin1:
+# BB#0:
+	xorps	%xmm0, %xmm0
+	ret
+	.size	test, .-test
+.Leh_func_end1:
+
+	.section	.rodata.cst16,"aM",@progbits,16
+	.align	16
+.LCPI2_0:                               # constant pool <4 x i32>
+	.long	0                       # 0x0
+	.long	0                       # 0x0
+	.long	1                       # 0x1
+	.long	0                       # 0x0
+	.text
+	.globl	test2
+	.align	16, 0x90
+	.type	test2,@function
+test2:                                  # @test2
+# BB#0:
+	movaps	.LCPI2_0, %xmm0
+	ret
+	.size	test2, .-test2
+
+	.section	.eh_frame,"aw",@progbits
+.LEH_frame0:
+.Lsection_eh_frame:
+.Leh_frame_common:
+	.set	.Lset1eh,.Leh_frame_common_end-.Leh_frame_common_begin
+	.long	.Lset1eh                # Length of Common Information Entry
+.Leh_frame_common_begin:
+	.long	0                       # CIE Identifier Tag
+	.byte	1                       # DW_CIE_VERSION
+	.byte	0
+                                        # CIE Augmentation
+	.uleb128	1               # CIE Code Alignment Factor
+	.sleb128	-4              # CIE Data Alignment Factor
+	.byte	8
+                                        # CIE Return Address Column
+	.byte	12                      # CFA_def_cfa
+	.uleb128	4               # Register
+	.uleb128	4               # Offset
+	.byte	136                     # DW_CFA_offset + Reg (8)
+	.uleb128	1               # Offset
+	.align	4
+.Leh_frame_common_end:
+
+.Ltest.eh = 0
+
+
+	.section	.note.GNU-stack,"",@progbits

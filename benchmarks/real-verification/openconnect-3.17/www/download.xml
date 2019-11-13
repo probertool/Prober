@@ -1,0 +1,51 @@
+<PAGE>
+	<VAR match="VAR_ORIGIN" replace="" />
+	<VAR match="VAR_CVSID" replace="" />
+	<INCLUDE file="inc/header.tmpl" />
+
+	<VAR match="VAR_SEL_INDEX" replace="selected" />
+	<VAR match="VAR_SEL_DOWNLOAD" replace="selected" />
+	<PARSE file="menu1.xml" />
+	<PARSE file="menu2.xml" />
+	
+	<INCLUDE file="inc/content.tmpl" />
+
+    	<h1>Download</h1>
+
+<p>Released versions of OpenConnect are available from the FTP site:</p>
+<ul><li><a href="ftp://ftp.infradead.org/pub/openconnect/"><tt>ftp://ftp.infradead.org/pub/openconnect/</tt></a></li></ul>
+
+<p>Release tarballs (since 3.13) are signed with the PGP key <a href="http://pgp.mit.edu:11371/pks/lookup?op=vindex&amp;search=0x63762CDA67E2F359">67E2F359</a>.</p>
+
+<p>
+<!-- latest-release-start -->
+The latest release is <a href="ftp://ftp.infradead.org/pub/openconnect/openconnect-3.17.tar.gz">OpenConnect v3.17</a>
+<i>(<a href="ftp://ftp.infradead.org/pub/openconnect/openconnect-3.17.tar.gz.asc">PGP signature</a>)</i>,
+released on 2012-04-20 with the following changelog:</p>
+     <ul>
+       <li>Work around <tt>time()</tt> brokenness on Solaris.</li>
+       <li>Fix interface plumbing on Solaris 10.</li>
+       <li>Provide <tt>asprintf()</tt> function for (unpatched) Solaris 10.</li>
+       <li>Make <tt>vpnc-script</tt> mandatory, like it is for <tt>vpnc</tt></li>
+       <li>Don't set Legacy IP address on tun device; let <tt>vpnc-script</tt> do it.</li>
+       <li>Detect OpenSSL even without pkg-config.</li>
+       <li>Stop building static library by default.</li>
+       <li>Invoke <tt>vpnc-script</tt> with "pre-init" reason to load tun module if necessary.</li>
+     </ul>
+<!-- latest-release-end -->
+
+<p>For older releases and change logs, see the <a href="changelog.html">changelog page</a>.</p>
+
+<p><i>(Note: Due to a longstanding <a href="https://bugzilla.redhat.com/show_bug.cgi?id=450853">Fedora bug</a>
+you may occasionally find that the FTP server is accessible only by IPv6 and not Legacy IP. If this happens,
+please let me know by sending me an email. Or just join us in the 21st century and <a href="http://en.wikipedia.org/wiki/List_of_IPv6_tunnel_brokers">get IPv6</a>.)</i></p>
+
+<h2>Latest sources</h2>
+
+<p>The latest source code is available from the git repository at:</p>
+<ul><li><tt>git://git.infradead.org/users/dwmw2/openconnect.git</tt><br/>or browseable in gitweb at:</li>
+<li><a href="http://git.infradead.org/users/dwmw2/openconnect.git">
+http://git.infradead.org/users/dwmw2/openconnect.git</a></li></ul>
+
+	<INCLUDE file="inc/footer.tmpl" />
+</PAGE>

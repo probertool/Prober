@@ -1,0 +1,1 @@
+/usr/bin/c++  -fPIC -fopenmp  -shared  -o ../libmixer.so CMakeFiles/mixer.dir/mixer.cpp.o 

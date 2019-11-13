@@ -1,0 +1,1 @@
+/usr/bin/c++  -fPIC -fopenmp  -shared  -o ../libampmidid.so CMakeFiles/ampmidid.dir/ampmidid.cpp.o 

@@ -1,0 +1,137 @@
+[Fri Jul 26 01:25:48 UTC]root@3e7fa76cc3dc:clamav-0.96.2-sample# make
+/root/llvm/llvm80/build/bin/clang -flto -v -g -o main main.c -rdynamic /root/llvm/Prober/libprober.so
+clang version 8.0.1 (https://github.com/llvm-mirror/clang.git 2e4c9c5fc864c2c432e4c262a67c42d824b265c6) (https://github.com/rqtian/llvm80-bufferoverflow.git 3b5df6d2abd65c292843e89e82bd69d3349a41e2)
+Target: x86_64-unknown-linux-gnu
+Thread model: posix
+InstalledDir: /root/llvm/llvm80/build/bin
+Found candidate GCC installation: /usr/lib/gcc/x86_64-linux-gnu/6
+Found candidate GCC installation: /usr/lib/gcc/x86_64-linux-gnu/6.3.0
+Selected GCC installation: /usr/lib/gcc/x86_64-linux-gnu/6.3.0
+Candidate multilib: .;@m64
+Selected multilib: .;@m64
+ "/root/llvm/llvm80/build/bin/clang-8" -cc1 -triple x86_64-unknown-linux-gnu -emit-llvm-bc -flto -flto-unit -disable-free -main-file-name main.c -mrelocation-model static -mthread-model posix -mdisable-fp-elim -fmath-errno -masm-verbose -mconstructor-aliases -munwind-tables -fuse-init-array -target-cpu x86-64 -dwarf-column-info -debug-info-kind=limited -dwarf-version=4 -debugger-tuning=gdb -v -resource-dir /root/llvm/llvm80/build/lib/clang/8.0.1 -internal-isystem /usr/local/include -internal-isystem /root/llvm/llvm80/build/lib/clang/8.0.1/include -internal-externc-isystem /usr/include/x86_64-linux-gnu -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdebug-compilation-dir /root/llvm/codesample/39apps/clamav-0.96.2-sample -ferror-limit 19 -fmessage-length 143 -fobjc-runtime=gcc -fdiagnostics-show-option -fcolor-diagnostics -o /tmp/main-fc32da.o -x c main.c -faddrsig
+clang -cc1 version 8.0.1 based upon LLVM 8.0.1 default target x86_64-unknown-linux-gnu
+ignoring nonexistent directory "/include"
+#include "..." search starts here:
+#include <...> search starts here:
+ /usr/local/include
+ /root/llvm/llvm80/build/lib/clang/8.0.1/include
+ /usr/include/x86_64-linux-gnu
+ /usr/include
+End of search list.
+main.c:81:13: warning: implicit declaration of function 'cli_getpagesize' is invalid in C99 [-Wimplicit-function-declaration]
+        int pgsz = cli_getpagesize();
+                   ^
+1 warning generated.
+ "/usr/local/bin/ld" -export-dynamic --hash-style=both --eh-frame-hdr -m elf_x86_64 -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o main /usr/lib/gcc/x86_64-linux-gnu/6.3.0/../../../x86_64-linux-gnu/crt1.o /usr/lib/gcc/x86_64-linux-gnu/6.3.0/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/6.3.0/crtbegin.o -L/usr/lib/gcc/x86_64-linux-gnu/6.3.0 -L/usr/lib/gcc/x86_64-linux-gnu/6.3.0/../../../x86_64-linux-gnu -L/lib/x86_64-linux-gnu -L/lib/../lib64 -L/usr/lib/x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/6.3.0/../../.. -L/root/llvm/llvm80/build/bin/../lib -L/lib -L/usr/lib -plugin /root/llvm/llvm80/build/bin/../lib/LLVMgold.so -plugin-opt=mcpu=x86-64 /tmp/main-fc32da.o /root/llvm/Prober/libprober.so -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/lib/gcc/x86_64-linux-gnu/6.3.0/crtend.o /usr/lib/gcc/x86_64-linux-gnu/6.3.0/../../../x86_64-linux-gnu/crtn.o
+======= Start handling file: ld-temp.o =======
+Passing Module 'ld-temp.o'
+-----round 1
+mallocptrName: 
+mallocptrName: 
+mallocptrName: 
+mallocptrName: 
+mallocptrName: 
+mallocptrName: 
+mallocptrName: 
+mallocptrName: 
+mallocptrName: 
+mallocptrName: 
+mallocptrName: 
+mallocptrName: 
+mallocptrName: 
+mallocptrName: 
+mallocptrName: 
+mallocptrName: 
+mallocptrName: 
+mallocptrName: 
+mallocptrName: 
+mallocptrName: 
+mallocptrName: 
+----STOP scanning
+1. malloc wrapper: malloc
+1. malloc wrapper: calloc
+1. malloc wrapper: realloc
+1. malloc wrapper: valloc
+1. malloc wrapper: g_malloc
+1. malloc wrapper: g_realloc
+1214Checking in malloc wrapper: llvm.dbg.declare
+1393Checking in malloc wrapper: llvm.dbg.declare IS NOT malloc wrapper
+1214Checking in malloc wrapper: llvm.dbg.declare
+1393Checking in malloc wrapper: llvm.dbg.declare IS NOT malloc wrapper
+1214Checking in malloc wrapper: malloc
+1393Checking in malloc wrapper: malloc IS NOT malloc wrapper
+[BufferOverflow Pass] memory allocation function: malloc
+[BufferOverflow Pass] malloc args: i64 %0
+0x55abdeb77f00
+     Operand 0 is defined in value:   %12 = load i64, i64* %3, align 8, !dbg !54
+819     Operand 0 is defined in value:   %12 = load i64, i64* %3, align 8, !dbg !54, is a LoadInst
+822     operand 0: 
+858     Operand 0 is defined in value:   %3 = alloca i64, align 8
+864 load->store
+867  store i64 %0, i64* %3, align 8 is used in instruction:   store i64 %0, i64* %3, align 8
+1077     cur_inst is:   %13 = call noalias i8* @malloc(i64 %12) #4, !dbg !55
+     cur_inst is used in:   store i8* %13, i8** %4, align 8, !dbg !56
+     first operand is: 
+     second operand is: 
+     second operand is used as:      second operand is used as LoadInst in:   %18 = load i8*, i8** %4, align 8, !dbg !62
+     second operand is used as:      second operand is used as LoadInst in:   %14 = load i8*, i8** %4, align 8, !dbg !57
+     second operand is used as: [BufferOverflow Pass] malloc return type: 1214Checking in malloc wrapper: llvm.dbg.declare
+1393Checking in malloc wrapper: llvm.dbg.declare IS NOT malloc wrapper
+1214Checking in malloc wrapper: llvm.dbg.declare
+1393Checking in malloc wrapper: llvm.dbg.declare IS NOT malloc wrapper
+1214Checking in malloc wrapper: llvm.dbg.declare
+1393Checking in malloc wrapper: llvm.dbg.declare IS NOT malloc wrapper
+1214Checking in malloc wrapper: llvm.dbg.declare
+1393Checking in malloc wrapper: llvm.dbg.declare IS NOT malloc wrapper
+1214Checking in malloc wrapper: llvm.dbg.declare
+1393Checking in malloc wrapper: llvm.dbg.declare IS NOT malloc wrapper
+1214Checking in malloc wrapper: cli_getpagesize
+1393Checking in malloc wrapper: cli_getpagesize IS NOT malloc wrapper
+1214Checking in malloc wrapper: llvm.dbg.declare
+1393Checking in malloc wrapper: llvm.dbg.declare IS NOT malloc wrapper
+1214Checking in malloc wrapper: fmap_align_items
+1393Checking in malloc wrapper: fmap_align_items IS NOT malloc wrapper
+1214Checking in malloc wrapper: fmap_align_to
+1393Checking in malloc wrapper: fmap_align_to IS NOT malloc wrapper
+1214Checking in malloc wrapper: cli_malloc
+     Operand 0 is defined in value:   %12 = load i64, i64* %3, align 8, !dbg !54
+     Operand 0 is a AllocInst 
+find a malloc wrapper: cli_malloc
+[BufferOverflow Pass] memory allocation function: cli_malloc
+[BufferOverflow Pass] cli_malloc args: i64 %0
+0x55abdeb77f00
+     Operand 0 is defined in value:   %27 = zext i32 %26 to i64, !dbg !74
+current instruction:   %28 = call i8* @cli_malloc(i64 %27), !dbg !75
+parameter is:   %26 = load i32, i32* %4, align 4, !dbg !74
+value is:   %4 = alloca i32, align 4
+AllocaInst is:   %4 = alloca i32, align 4
+1031
+1036     ~~~Instrction is Add
+!!!! instrument instruction in function main, Instruction   %28 = call i8* @cli_malloc(i64 %27), !dbg !75!!!!
+1214Checking in malloc wrapper: llvm.dbg.declare
+1393Checking in malloc wrapper: llvm.dbg.declare IS NOT malloc wrapper
+1214Checking in malloc wrapper: llvm.dbg.declare
+1393Checking in malloc wrapper: llvm.dbg.declare IS NOT malloc wrapper
+1214Checking in malloc wrapper: llvm.dbg.declare
+1393Checking in malloc wrapper: llvm.dbg.declare IS NOT malloc wrapper
+1214Checking in malloc wrapper: llvm.dbg.declare
+1393Checking in malloc wrapper: llvm.dbg.declare IS NOT malloc wrapper
+1214Checking in malloc wrapper: fmap_align_items
+1393Checking in malloc wrapper: fmap_align_items IS NOT malloc wrapper
+malloc wrapper: malloc
+malloc wrapper: calloc
+malloc wrapper: realloc
+malloc wrapper: valloc
+malloc wrapper: g_malloc
+malloc wrapper: g_realloc
+malloc wrapper: cli_malloc
+[BufferOverflow pass] ld-temp.o
+======= Finish handling file: ld-temp.o =======
+/tmp/lto-llvm-929287.o:ld-temp.o:function main: error: undefined reference to 'cli_getpagesize'
+clang-8: error: linker command failed with exit code 1 (use -v to see invocation)
+Makefile:8: recipe for target 'main' failed
+make: *** [main] Error 1
+[Fri Jul 26 01:25:49 UTC]root@3e7fa76cc3dc:clamav-0.96.2-sample# nano ld-temp.o1564104349381000.inst.ll 
+[Fri Jul 26 01:26:09 UTC]root@3e7fa76cc3dc:clamav-0.96.2-sample# 
+

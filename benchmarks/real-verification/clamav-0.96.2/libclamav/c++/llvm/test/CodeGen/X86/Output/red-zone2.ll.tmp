@@ -1,0 +1,16 @@
+	.file	"<stdin>"
+	.text
+	.globl	f0
+	.align	16, 0x90
+	.type	f0,@function
+f0:                                     # @f0
+# BB#0:                                 # %entry
+	subq	$4, %rsp
+	movss	%xmm0, (%rsp)
+	flds	(%rsp)
+	addq	$4, %rsp
+	ret
+	.size	f0, .-f0
+
+
+	.section	.note.GNU-stack,"",@progbits

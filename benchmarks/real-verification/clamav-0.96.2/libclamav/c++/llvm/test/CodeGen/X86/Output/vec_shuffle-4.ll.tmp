@@ -1,0 +1,46 @@
+	.file	"<stdin>"
+	.text
+	.globl	test
+	.align	16, 0x90
+	.type	test,@function
+test:                                   # @test
+.Leh_func_begin1:
+# BB#0:
+	movl	12(%esp), %eax
+	movaps	(%eax), %xmm0
+	movl	16(%esp), %eax
+	shufps	$69, (%eax), %xmm0
+	pshufd	$-40, %xmm0, %xmm0
+	movl	4(%esp), %eax
+	movaps	%xmm0, (%eax)
+	ret
+	.size	test, .-test
+.Leh_func_end1:
+
+	.section	.eh_frame,"aw",@progbits
+.LEH_frame0:
+.Lsection_eh_frame:
+.Leh_frame_common:
+	.set	.Lset1eh,.Leh_frame_common_end-.Leh_frame_common_begin
+	.long	.Lset1eh                # Length of Common Information Entry
+.Leh_frame_common_begin:
+	.long	0                       # CIE Identifier Tag
+	.byte	1                       # DW_CIE_VERSION
+	.byte	0
+                                        # CIE Augmentation
+	.uleb128	1               # CIE Code Alignment Factor
+	.sleb128	-4              # CIE Data Alignment Factor
+	.byte	8
+                                        # CIE Return Address Column
+	.byte	12                      # CFA_def_cfa
+	.uleb128	4               # Register
+	.uleb128	4               # Offset
+	.byte	136                     # DW_CFA_offset + Reg (8)
+	.uleb128	1               # Offset
+	.align	4
+.Leh_frame_common_end:
+
+.Ltest.eh = 0
+
+
+	.section	.note.GNU-stack,"",@progbits

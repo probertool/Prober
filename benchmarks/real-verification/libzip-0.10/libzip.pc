@@ -1,0 +1,14 @@
+prefix=/root/llvm/codesample/39apps/libzip-0.10/build
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include
+libincludedir=${exec_prefix}/lib/libzip/include
+
+zipcmp=/root/llvm/codesample/39apps/libzip-0.10/build/bin/zipcmp
+
+Name: libzip
+Description: library for handling zip archives
+Version: 0.10
+Libs: -L${libdir} -lzip -lz 
+Cflags: -I${includedir} -I${libincludedir}
+

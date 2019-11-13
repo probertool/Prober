@@ -1,0 +1,107 @@
+	.file	"<stdin>"
+# Start of file scope inline assembly
+	.ident	"GCC: (GNU) 4.5.0 20100212 (experimental) LLVM: 95975"
+# End of file scope inline assembly
+	.text
+	.globl	get_computation_cost_at
+	.align	16, 0x90
+	.type	get_computation_cost_at,@function
+get_computation_cost_at:                # @get_computation_cost_at
+# BB#0:                                 # %entry
+	subq	$8, %rsp
+	xorb	%al, %al
+	testb	%al, %al
+	jne	.LBB1_2
+.LBB1_1:                                # %entry.100_crit_edge
+	movl	$10000000, %ecx         # imm = 0x989680
+	movl	%ecx, %eax
+	jmp	.LBB1_16
+.LBB1_2:                                # %4
+	xorb	%al, %al
+	testb	%al, %al
+	xorb	%al, %al
+	testb	%al, %al
+	xorb	%al, %al
+	testb	%al, %al
+	jne	.LBB1_1
+# BB#3:                                 # %10
+	xorb	%al, %al
+	testb	%al, %al
+	xorb	%al, %al
+	testb	%al, %al
+	xorb	%al, %al
+	testb	%al, %al
+	jne	.LBB1_14
+# BB#4:                                 # %20
+	xorb	%al, %al
+	testb	%al, %al
+	xorb	%al, %al
+	testb	%al, %al
+	jne	.LBB1_1
+# BB#5:                                 # %25
+	xorb	%al, %al
+	testb	%al, %al
+	jne	.LBB1_1
+# BB#6:                                 # %26
+	xorb	%al, %al
+	testb	%al, %al
+	xorb	%al, %al
+	testb	%al, %al
+	jne	.LBB1_9
+# BB#7:                                 # %51
+	xorb	%al, %al
+	testb	%al, %al
+	xorb	%al, %al
+	testb	%al, %al
+	xorb	%al, %al
+	testb	%al, %al
+	jne	.LBB1_9
+# BB#8:                                 # %54.i
+	xorb	%al, %al
+	testb	%al, %al
+.LBB1_9:                                # %59
+	xorb	%al, %al
+	testb	%al, %al
+	jne	.LBB1_14
+# BB#10:                                # %60
+	xorb	%al, %al
+	testb	%al, %al
+	jne	.LBB1_14
+# BB#11:                                # %61
+	xorb	%al, %al
+	testb	%al, %al
+	jne	.LBB1_14
+# BB#12:                                # %62
+	xorb	%al, %al
+	testb	%al, %al
+	je	.LBB1_16
+# BB#13:                                # %63
+	xorb	%al, %al
+	testb	%al, %al
+	xorb	%al, %al
+	testb	%al, %al
+	jmp	.LBB1_16
+.LBB1_14:                               # %93
+	movq	%r9, %rcx
+	callq	get_computation_at
+	xorb	%cl, %cl
+	testb	%cl, %cl
+	jne	.LBB1_1
+# BB#15:                                # %97
+	xorb	%cl, %cl
+	testb	%cl, %cl
+	movzbl	%al, %esi
+	movq	%rax, %rdi
+	callq	computation_cost
+	xorl	%ecx, %ecx
+.LBB1_16:                               # %100
+	movl	%eax, %edx
+	shlq	$32, %rcx
+	movq	%rcx, %rax
+	addq	%rdx, %rax
+	addq	$8, %rsp
+	ret
+	.size	get_computation_cost_at, .-get_computation_cost_at
+
+
+	.section	.note.GNU-stack,"",@progbits

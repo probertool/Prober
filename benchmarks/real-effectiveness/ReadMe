@@ -1,0 +1,7 @@
+The crashing input is contained in each benchmark folder.
+
+Run the run.sh script in each benchmark folder, can compile and run the benchmark with crashing input.
+
+The instrumentation pass is called automatically as a LLVM LTO pass.
+
+The paths appeared in the Makefile or script need to be changed adaptively.

@@ -1,0 +1,40 @@
+	.file	"<stdin>"
+	.text
+	.globl	test_v4sf
+	.align	16, 0x90
+	.type	test_v4sf,@function
+test_v4sf:                              # @test_v4sf
+# BB#0:
+	movss	12(%esp), %xmm0
+	movss	8(%esp), %xmm1
+	shufps	$0, %xmm0, %xmm1
+	movl	4(%esp), %eax
+	movaps	%xmm1, (%eax)
+	ret
+	.size	test_v4sf, .-test_v4sf
+
+	.globl	test_v2sd
+	.align	16, 0x90
+	.type	test_v2sd,@function
+test_v2sd:                              # @test_v2sd
+# BB#0:
+	movupd	8(%esp), %xmm0
+	movl	4(%esp), %eax
+	movapd	%xmm0, (%eax)
+	ret
+	.size	test_v2sd, .-test_v2sd
+
+	.globl	test_v8i16
+	.align	16, 0x90
+	.type	test_v8i16,@function
+test_v8i16:                             # @test_v8i16
+# BB#0:
+	movl	8(%esp), %eax
+	pshufhw	$-58, (%eax), %xmm0
+	movl	4(%esp), %eax
+	movaps	%xmm0, (%eax)
+	ret
+	.size	test_v8i16, .-test_v8i16
+
+
+	.section	.note.GNU-stack,"",@progbits

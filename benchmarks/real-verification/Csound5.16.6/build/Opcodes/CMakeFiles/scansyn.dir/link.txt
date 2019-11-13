@@ -1,0 +1,1 @@
+/usr/bin/cc  -fPIC -fopenmp  -shared  -o ../libscansyn.so CMakeFiles/scansyn.dir/scansyn.c.o CMakeFiles/scansyn.dir/scansynx.c.o -lm 

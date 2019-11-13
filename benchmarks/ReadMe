@@ -1,0 +1,7 @@
+real-effectiveness contains benchmarks with crashing input to show the effectiveness of Prober.
+
+real-verification contains benchmarks[1] to show our instrumentation can cover all the cases in these 38 real-world benchmarks.
+
+The LLVM is modified to make it support call our static instrumentation pass automatically in Link Time Optmization(LTO) stage.
+
+[1]T. Ye, L. Zhang, L. Wang, and X. Li. An empirical study on detecting and fixing buffer overflow bugs. In 2016 IEEE International Conference on Software Testing, Verification and Validation (ICST), pages 91–101, April 2016

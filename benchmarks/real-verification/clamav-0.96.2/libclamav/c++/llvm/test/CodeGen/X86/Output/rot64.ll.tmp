@@ -1,0 +1,88 @@
+	.file	"<stdin>"
+	.text
+	.globl	foo
+	.align	16, 0x90
+	.type	foo,@function
+foo:                                    # @foo
+# BB#0:                                 # %entry
+	movb	%dl, %cl
+	movq	%rdi, %rax
+	rolq	%cl, %rax
+	ret
+	.size	foo, .-foo
+
+	.globl	bar
+	.align	16, 0x90
+	.type	bar,@function
+bar:                                    # @bar
+# BB#0:                                 # %entry
+	movb	%dl, %cl
+	movq	%rsi, %rax
+	shldq	%cl, %rdi, %rax
+	ret
+	.size	bar, .-bar
+
+	.globl	un
+	.align	16, 0x90
+	.type	un,@function
+un:                                     # @un
+# BB#0:                                 # %entry
+	movb	%dl, %cl
+	movq	%rdi, %rax
+	rorq	%cl, %rax
+	ret
+	.size	un, .-un
+
+	.globl	bu
+	.align	16, 0x90
+	.type	bu,@function
+bu:                                     # @bu
+# BB#0:                                 # %entry
+	movb	%dl, %cl
+	movq	%rsi, %rax
+	shrdq	%cl, %rdi, %rax
+	ret
+	.size	bu, .-bu
+
+	.globl	xfoo
+	.align	16, 0x90
+	.type	xfoo,@function
+xfoo:                                   # @xfoo
+# BB#0:                                 # %entry
+	movq	%rdi, %rax
+	rolq	$7, %rax
+	ret
+	.size	xfoo, .-xfoo
+
+	.globl	xbar
+	.align	16, 0x90
+	.type	xbar,@function
+xbar:                                   # @xbar
+# BB#0:                                 # %entry
+	movq	%rdi, %rax
+	shrdq	$57, %rsi, %rax
+	ret
+	.size	xbar, .-xbar
+
+	.globl	xun
+	.align	16, 0x90
+	.type	xun,@function
+xun:                                    # @xun
+# BB#0:                                 # %entry
+	movq	%rdi, %rax
+	rolq	$57, %rax
+	ret
+	.size	xun, .-xun
+
+	.globl	xbu
+	.align	16, 0x90
+	.type	xbu,@function
+xbu:                                    # @xbu
+# BB#0:                                 # %entry
+	movq	%rdi, %rax
+	shldq	$57, %rsi, %rax
+	ret
+	.size	xbu, .-xbu
+
+
+	.section	.note.GNU-stack,"",@progbits

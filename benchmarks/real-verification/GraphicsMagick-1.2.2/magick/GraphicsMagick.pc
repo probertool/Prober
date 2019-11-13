@@ -1,0 +1,11 @@
+prefix=/root/llvm/codesample/39apps/GraphicsMagick-1.2.2/build
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include/GraphicsMagick
+
+
+Name: GraphicsMagick
+Version: 1.2.2
+Description: GraphicsMagick image processing library
+Libs: -L${libdir} -lGraphicsMagick
+Cflags: -I${includedir} 

@@ -1,0 +1,14 @@
+## Makefile for building wireshark.exe with Microsoft C and nmake
+## Use: $(MAKE) /$(MAKEFLAGS) -f makefile.nmake
+#
+# $Id: Makefile.nmake 18380 2006-06-07 04:37:26Z gerald $
+
+include ..\config.nmake
+
+############### no need to modify below this line #########
+
+clean:
+
+distclean: clean
+
+maintainer-clean: distclean

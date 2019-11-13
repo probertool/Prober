@@ -1,0 +1,330 @@
+#include<stdlib.h>
+#include<stdbool.h>
+
+// tttypes.h:57:
+  typedef unsigned char   Byte;
+
+  typedef unsigned short  UShort;
+  typedef signed   short  Short;
+
+  typedef unsigned long   ULong;
+  typedef signed   long   Long;
+
+  typedef int             Int;
+
+  typedef long            Integer;
+    
+  /* Simple access types: pointers and tables */
+
+  typedef Byte*    PByte;
+  typedef UShort*  PUShort;
+  typedef Short*   PShort;
+  typedef ULong*   PULong;
+  typedef Long*    PLong;
+
+  typedef Int*     PInt;
+
+  typedef void*    Pointer;
+
+  //typedef TT_F26Dot6*     PCoordinates;
+  typedef unsigned char*  PTouchTable;
+  
+// base/ttobjs.h:331:
+#ifndef TT_STATIC_INTERPRETER  /* indirect implementation */
+
+#define EXEC_OPS   PExecution_Context exc,
+#define EXEC_OP    PExecution_Context exc
+#define EXEC_ARGS  exc,
+#define EXEC_ARG   exc
+  
+#else                          /* static implementation */
+
+#define EXEC_OPS   /* void */
+#define EXEC_OP    /* void */
+#define EXEC_ARGS  /* void */
+#define EXEC_ARG   /* void */
+  
+#endif
+
+// ./base/gsmemory.h:248:
+#define gs_alloc_bytes(mem, nbytes, cname)\
+  (*(mem)->procs.alloc_bytes)(mem, nbytes, cname)
+  
+// base/ttfoutl.h:68
+typedef struct ttfMemory_s ttfMemory;
+struct ttfMemory_s {   
+    void *(*alloc_bytes)(ttfMemory *, int size,  const char *cname);
+    //void *(*alloc_struct)(ttfMemory *, const ttfMemoryDescriptor *,  const char *cname);
+    void (*free)(ttfMemory *, void *p,  const char *cname);
+} ;
+
+// base/ttobjs.c:210:
+#define ALLOC_ARRAY(ptr, old_count, count, type) \
+	(old_count >= count ? 0 : \
+	  !(free_aux(mem, ptr),   \
+	    ptr = mem->alloc_bytes(mem, (count) * sizeof(type), "ttobjs.c"))) 
+
+static int free_aux(ttfMemory *mem, void *ptr)
+{
+    mem->free(mem, ptr, "ttobjs.c");
+    return 0;
+}
+
+// base/tttables.h:119:
+  struct  _TMaxProfile
+  {
+    //TT_Fixed  version;
+    UShort    numGlyphs,
+              maxPoints,
+              maxContours,
+              maxCompositePoints,
+              maxCompositeContours,
+              maxZones,
+              maxTwilightPoints,
+              maxStorage,
+              maxFunctionDefs,
+              maxInstructionDefs,
+              maxStackElements,
+              maxSizeOfInstructions,
+              maxComponentElements,
+              maxComponentDepth;
+  };
+  
+// base/tttables.h:138:
+typedef struct _TMaxProfile  TMaxProfile;
+
+// base/ttfoutl.h:32:
+typedef struct _TExecution_Context TExecution_Context;
+
+// base/ttobjs.h:181:
+typedef TExecution_Context*         PExecution_Context;
+
+// base/tttypes.h:86:
+typedef int  Bool;
+
+// base/tttypes.h:101:
+typedef Long*    PStorage;
+
+// base/ttobjs.h:600:
+struct  _TExecution_Context 
+  {
+    //PFace           current_face;
+
+    /* instructions state */
+ 
+    Int             error;     /* last execution error */
+  
+    Int             curRange;  /* current code range number   */
+    PByte           code;      /* current code range          */
+    Int             IP;        /* current instruction pointer */
+    Int             codeSize;  /* size of current range       */
+  
+    Byte            opcode;    /* current opcode              */
+    Int             length;    /* length of current opcode    */
+  
+    Bool            step_ins;  /* true if the interpreter must */
+                                /* increment IP after ins. exec */
+  
+    Int             numFDefs;  /* number of function defs */
+    //PDefRecord      FDefs;     /* table of FDefs entries  */
+  
+    Int             numIDefs;  /* number of instruction defs */
+    //PDefRecord      IDefs;     /* table of IDefs entries     */
+    Int		    countIDefs;/* The number of defined IDefs (igorm). */
+    Byte	    IDefPtr[256]; /* Map opcodes to indices of IDefs (igorm). */
+
+    PByte           glyphIns;  /* glyph instructions buffer */
+    Int             glyphSize; /* glyph instructions buffer size */
+  
+    Int             callTop,    /* top of call stack during execution */
+                    callSize;   /* size of call stack */
+    //PCallStack      callStack;  /* call stack */
+  
+    //TCodeRangeTable codeRangeTable;  /* table of valid coderanges */
+                                     /* useful for the debugger   */
+  
+    Int             storeSize;  /* size of current storage */
+    PStorage        storage;    /* storage area            */
+  
+    Int             stackSize;  /* size of exec. stack */
+    Int             top;        /* top of exec. stack  */
+    PStorage        stack;      /* current exec. stack */
+  
+    Int             args,
+                    new_top;    /* new top after exec.    */
+  
+    //TT_F26Dot6      period;     /* values used for the */
+    //TT_F26Dot6      phase;      /* 'SuperRounding'     */
+    //TT_F26Dot6      threshold;
+
+    //TIns_Metrics    metrics;       /* instance metrics */
+
+    Int             cur_ppem;       /* ppem along the current proj vector */
+    Long            scale1;         /* scaling values along the current   */
+    Long            scale2;         /* projection vector too..            */
+    Bool            cached_metrics; /* the ppem is computed lazily. used  */
+                                    /* to trigger computation when needed */
+
+    //TGlyph_Zone     zp0,            /* zone records */
+    //                zp1,
+    //                zp2,
+    //                pts,
+    //                twilight;
+  
+    Bool            instruction_trap;  /* If True, the interpreter will */
+                                       /* exit after each instruction   */
+ 
+    //TGraphicsState  GS;            /* current graphics state */
+                                   
+    //TGraphicsState  default_GS;    /* graphics state resulting from  */
+                                   /* the prep program               */
+    Bool            is_composite;  /* ture if the glyph is composite */
+
+    Int             cvtSize;
+    PLong           cvt;
+  
+    /* latest interpreter additions */
+  
+    Long               F_dot_P;    /* dot product of freedom and projection */
+                                   /* vectors                               */
+    //TRound_Function    func_round; /* current rounding function             */
+    
+    //TProject_Function  func_project,   /* current projection function */
+    //                   func_dualproj,  /* current dual proj. function */
+    //                   func_freeProj;  /* current freedom proj. func  */
+ 
+    //TMove_Function     func_move;      /* current point move function */
+
+    //TGet_CVT_Function  func_read_cvt;  /* read a cvt entry              */
+    //TSet_CVT_Function  func_write_cvt; /* write a cvt entry (in pixels) */
+    //TSet_CVT_Function  func_move_cvt;  /* incr a cvt entry (in pixels)  */
+    /* GS extension */
+    //gsfix_jmp_buf      trap;           /* Error throw trap. */ 
+    Int                n_contours;
+    Int                n_points;
+    Int                maxGlyphSize;
+    Int                lock;
+    ttfMemory	       *memory;
+  };	
+  
+  
+// base/ttfoutl.h:22:
+typedef struct _TFace TFace;
+
+// base/ttfoutl.h:37:
+typedef struct ttfInterpreter_s ttfInterpreter;
+
+// base/ttfoutl.h:76:
+struct ttfInterpreter_s {
+    TExecution_Context *exec;
+    //ttfSubGlyphUsage *usage;
+    int usage_size;
+    int usage_top;
+    int lock;
+    ttfMemory *ttf_memory;
+};
+
+// base/ttfoutl.h:123:
+typedef struct ttfFont_s ttfFont;
+
+struct ttfFont_s {
+    //ttfPtrElem t_cvt_;
+    //ttfPtrElem t_fpgm;
+    //ttfPtrElem t_glyf;
+    //ttfPtrElem t_head;
+    //ttfPtrElem t_hhea;
+    //ttfPtrElem t_hmtx;
+    //ttfPtrElem t_vhea;
+    //ttfPtrElem t_vmtx;
+    //ttfPtrElem t_loca;
+    //ttfPtrElem t_maxp;
+    //ttfPtrElem t_prep;
+    //ttfPtrElem t_cmap;
+    unsigned short nUnitsPerEm;
+    unsigned int nFlags;
+    unsigned int nNumGlyphs;
+    unsigned int nMaxComponents;
+    unsigned int nLongMetricsVert;
+    unsigned int nLongMetricsHorz;
+    unsigned int nIndexToLocFormat;
+    bool    patented;
+    bool    design_grid;
+    TFace *face;
+    //TInstance *inst;
+    //TExecution_Context  *exec;
+    ttfInterpreter *tti;
+    //void (*DebugRepaint)(ttfFont *);
+    //int (*DebugPrint)(ttfFont *, const char *s, ...);
+};
+
+// ./base/ttobjs.h:169:  
+typedef TFace*         PFace;
+
+// base/ttobjs.h:509:
+struct  _TFace
+  {
+    //ttfReader *r;
+    ttfFont *font;
+
+    /* maximum profile table, as found in the TrueType file */
+    TMaxProfile  maxProfile;
+
+    /* Note:                                          */
+    /*  it seems that some maximum values cannot be   */
+    /*  taken directly from this table, but rather by */
+    /*  combining some of its fields; e.g. the max.   */
+    /*  number of points seems to be given by         */
+    /*  MAX( maxPoints, maxCompositePoints )          */
+    /*                                                */
+    /*  For this reason, we define later our own      */
+    /*  max values that are used to load and allocate */
+    /*  further tables.                               */
+
+    /* The glyph locations table */
+    Int       numLocations;
+
+    /* The HMTX table data, used to compute both left */
+    /* side bearing and advance width for all glyphs  */
+
+    /* the font program, if any */
+    Int    fontPgmSize;
+    PByte  fontProgram;
+
+    /* the cvt program, if any */
+    Int    cvtPgmSize;
+    PByte  cvtProgram;
+
+    /* the original, unscaled, control value table */
+    Int    cvtSize;
+    PShort cvt;
+
+    /* The following values _must_ be set by the */
+    /* maximum profile loader                    */
+
+    Int  numGlyphs;      /* the face's total number of glyphs */
+    Int  maxPoints;      /* max glyph points number, simple and composite */
+    Int  maxContours;    /* max glyph contours number, simple and composite */
+    Int  maxComponents;  /* max components in a composite glyph */
+
+  };
+
+    
+int main(){
+
+	void*  _context;
+	void*  _face;
+	PExecution_Context  exec = (PExecution_Context)_context;
+	
+	PFace        face = (PFace)_face;
+	ttfMemory   *mem = face->font->tti->ttf_memory;
+	TMaxProfile *maxp = &face->maxProfile;
+	
+	Int          callSize, stackSize;
+	stackSize = maxp->maxStackElements + 32;
+	
+	
+	// base/ttobjs.c:315:
+	ALLOC_ARRAY( exec->stack, exec->stackSize, stackSize, Long );
+
+	return 0;
+}

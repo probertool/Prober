@@ -1,0 +1,24 @@
+	.file	"<stdin>"
+	.text
+	.globl	test
+	.align	16, 0x90
+	.type	test,@function
+test:                                   # @test
+# BB#0:
+	movss	4(%esp), %xmm0
+	pshufd	$81, %xmm0, %xmm0
+	ret
+	.size	test, .-test
+
+	.globl	test2
+	.align	16, 0x90
+	.type	test2,@function
+test2:                                  # @test2
+# BB#0:
+	movd	4(%esp), %xmm0
+	pshufd	$69, %xmm0, %xmm0
+	ret
+	.size	test2, .-test2
+
+
+	.section	.note.GNU-stack,"",@progbits
